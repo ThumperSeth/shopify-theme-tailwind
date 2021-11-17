@@ -2350,7 +2350,7 @@ details-disclosure > details {
   } 
 }
 .make-menu a {
-    font-family: 'Teko';
+    font-family: 'Teko', sans-serif;
     color: #fff;
     font-size:2rem;
   }
