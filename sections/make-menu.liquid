@@ -1,12 +1,100 @@
+<style>
+  .make-menu { 
+    /*text-align:center;  
+    display:block; 
+    margin: 0rem 0 0 0rem;*/
+    width:inherit; 
+    max-height:46px;
+    height:46px;
+}
+  
+  .make-menu p,
+  .make-menu p a {
+    background-color: {{ collection.metafields.make.svg_color.value }} ;
+    font-family: 'Teko' !important;
+    font-size: 2rem;
+    letter-spacing: 0px;
+    text-decoration: none;
+    color: #fff;
+    margin: 0px;
+    /*padding: 10px 0 6px 0;*/
+    margin-bottom:0px;
+    top:0px;
+    text-transform:uppercase;
+    font-family: 'Teko-regular';
+    /*line-height:1;*/
+}
+
+.make-menu a:hover {
+    color: #000;
+    position: relative;
+    top: 4px;
+}
+  .make-menu a:active {
+    color: #000;
+    position: relative;
+    top: 4px;
+}
+  
+.col-1 {
+  background: rgb(153,153,153);
+  background: linear-gradient(180deg, rgba(153,153,153,1) 0%, rgba(204,204,204,1) 100%);
+  flex-basis: 400px; /* sets initial width to 70% */ 
+  height:46px;
+}
+  
+.col-2 {
+  background-color: {{ collection.metafields.make.svg_color.value }};
+  width:100%;
+  height:46px;
+}
+</style>
+
+
+<div style="position:relative; display:flex;">
+    <div class="col-1">
+      <a href="{{ collection.url }}"> 
+      <img
+          srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if collection.image.width >= 360 -%}{{ collection.image | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if collection.image.width >= 535 -%}{{ collection.image | img_url: '535x' }} 535w,{%- endif -%}
+            {%- if collection.image.width >= 750 -%}{{ collection.image | img_url: '750x' }} 750w,{%- endif -%}
+            {%- if collection.image.width >= 1070 -%}{{ collection.image | img_url: '1070x' }} 1070w,{%- endif -%}
+            {%- if collection.image.width >= 1500 -%}{{ collection.image | img_url: '1500x' }} 1500w,{%- endif -%}
+            {{ collection.image | img_url: 'master' }} {{ collection.image.width }}w"
+          src="{{ collection.image | img_url: '1024x' }}"
+          alt="{{ collection.title | escape }}"
+          loading="lazy"
+          width="400px"
+          height="46px"
+          style="max-height:46px;"
+        >
+      </a>
+      </div>
+	<div class="make-menu col-2">
+      <p>&nbsp;&nbsp;
+        {% for product_type in collection.all_types %}
+        {% unless product_type contains 'Option' %}
+        <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+         &nbsp;&nbsp;•&nbsp;   
+        {% endunless %}          
+        {% endfor %}
+        </p>
+    </div>
+</div>
+
+
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+
+{
+  "name": "Make Categories Menu",
+  "class": "make-menu"
+ 
+}
+
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
 
-{% javascript %}
-{% endjavascript %}
+
+
