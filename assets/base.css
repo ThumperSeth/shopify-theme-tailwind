@@ -1816,6 +1816,7 @@ input[type='checkbox'] {
 
 .announcement-bar__link .announcement-bar__message {
   padding: 0;
+  color: #fff;
 }
 
 .announcement-bar__message {
@@ -1823,7 +1824,7 @@ input[type='checkbox'] {
   padding: 1rem 2rem;
   margin: 0;
   letter-spacing: 0.1rem;
-  color: #bbb;
+  color: #fff;
 }
 
 /* section-header */
