@@ -1,4 +1,4 @@
-{% capture url_parts %}{{ request.path | split: "//" }}{% endcapture %}
+{% capture url_parts %}{{ request.path | split: "/" }}{% endcapture %}
 {% for part in url_parts %}
 [part: {{ part }}]
 {% case part %}
