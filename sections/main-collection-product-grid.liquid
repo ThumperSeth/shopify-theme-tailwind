@@ -39,7 +39,7 @@
             {% if collection.products_count == 4 %} lg:grid-cols-4 {% else %} md:grid-cols-4 {% endif %}
           {% endif %}">
           {%- for product in collection.products -%}
-            <li class="grid__item w-full">
+            <li class="grid__item w-full align-center text-center">
               {% render 'product-card',
                 product_card_product: product,
                 media_size: section.settings.image_ratio,
