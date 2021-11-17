@@ -2140,6 +2140,7 @@ details[open] .modal-overlay::after {
   opacity: 1;
   transform: scale(1);
   transition: transform 150ms ease, opacity 150ms ease;
+  color: #ccc;
 }
 
 details:not([open]) > .header__icon--menu .icon-close,
