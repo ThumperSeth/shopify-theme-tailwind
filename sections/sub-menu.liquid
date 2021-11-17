@@ -1,3 +1,26 @@
+{% capture url_parts %}{{ request.path | split: "/" }}{% endcapture %}
+{% for part in url_parts %}
+{% case part %}
+	{% when "polaris" %}
+		{% assign brandColor = "#305799" %}
+	{% when "yamaha" %}
+		{% assign brandColor = "#305799" %}
+	{% when "canam" %}
+		{% assign brandColor = "#305799" %}
+	{% when "tracker" %}
+		{% assign brandColor = "#305799" %}
+	{% when "honda" %}
+		{% assign brandColor = "#305799" %}
+	{% else %}
+		{% assign brandColor = "#FFFFFF" %}
+{% endcase %}
+{% endfor %}
+    	--tf-polaris: #305799;
+    	--tf-can-am: #fdc832;
+    	--tf-honda: #e0262f;
+    	--tf-yamaha: #CCCCCB;
+    	--tf-tracker: #262526;
+
 <section>
 <div class="h-full flex flex-wrap align-center justify-center text-center sticky p-4" style="background-color:{{ collection.metafields.make.svg_color.value }};">
 <div id="collection-SubMenu" class="w-full h-full flex justify-center">
