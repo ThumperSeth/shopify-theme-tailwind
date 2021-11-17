@@ -62,11 +62,20 @@
               "title": "WE INNOVATE",
               "text": "<p>Our team of engineers utilizes cutting edge technologies to create our unique, and incredibly resilient products. (?)<\/p>"
             }
+          },
+          "e74f9e4e-2e65-4ddc-969f-e54fc4f2b9e7": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hands_badge.png",
+              "title": "WE GIVE A CRAP",
+              "text": "<p>Installation question? Problem with your order? We can help! We strive to be the best at what we do & our dedication to our customer is unparalleled. (?)<\/p>"
+            }
           }
         },
         "block_order": [
           "d28ace49-f6c7-492c-af4b-f6376dace2d9",
-          "92592524-0600-4c08-90fc-1db6011c3901"
+          "92592524-0600-4c08-90fc-1db6011c3901",
+          "e74f9e4e-2e65-4ddc-969f-e54fc4f2b9e7"
         ],
         "settings": {
           "title": "Multicolumn",
