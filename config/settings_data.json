@@ -54,10 +54,19 @@
               "title": "WE KNOW OUR SHIP",
               "text": "<p>Our shipping process ensures a quick and safe journey from our warehouse to your door (<a href=\"\/policies\/shipping-policy\" title=\"Shipping Policy\">?<\/a>)<\/p>"
             }
+          },
+          "92592524-0600-4c08-90fc-1db6011c3901": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/robot_badge.png",
+              "title": "WE INNOVATE",
+              "text": "<p>Our team of engineers utilizes cutting edge technologies to create our unique, and incredibly resilient products. (?)<\/p>"
+            }
           }
         },
         "block_order": [
-          "d28ace49-f6c7-492c-af4b-f6376dace2d9"
+          "d28ace49-f6c7-492c-af4b-f6376dace2d9",
+          "92592524-0600-4c08-90fc-1db6011c3901"
         ],
         "settings": {
           "title": "Multicolumn",
