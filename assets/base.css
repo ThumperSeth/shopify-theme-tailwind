@@ -2199,7 +2199,6 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__menu {
   padding: 0 1rem;
-  text-align:center;
 }
 
 .header__menu-item {
@@ -2342,4 +2341,5 @@ details-disclosure > details {
     font-family: 'Teko';
     color: #fff;
     font-size:2rem;
+    text-align: center;
   }
