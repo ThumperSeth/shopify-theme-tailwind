@@ -33,11 +33,7 @@
       <div class="collection page-width">
         <div class="loading-overlay gradient"></div>
 
-        <ul id="product-grid" data-id="{{ section.id }}" class="
-          grid grid-cols-2 negative-margin product-grid
-          {% if collection.products_count < 4 %} md:grid-cols-4{% else %}
-            {% if collection.products_count == 4 %} md:grid-cols-4 lg:grid-cols-4{% endif %}
-          {% endif %}">
+        <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">
           {%- for product in collection.products -%}
             <li class="grid__item w-full align-center text-center">
               {% render 'product-card',
