@@ -1,14 +1,14 @@
 <section>
-<div class="h-full flex flex-wrap align-center justify-center text-center sticky p-4" style="background-color:{{ collection.metafields.make.svg_color.value }};">
+<div class="h-full flex flex-wrap align-center justify-center text-center sticky p-4" style="background-color:{{ collection.metafields.make.svg_color.value }}; box-shadow: 2px 2px 12px #555;">
 <div id="collection-SubMenu" class="w-full h-full flex justify-center">
-  <div class="block w-1/5 flex justify-center pl-4">
-    {{ collection.metafields.make.svg_data.value }}
+  <div class="block w-1/5">
+    <a href="{{ collection.url }}">{{ collection.metafields.make.svg_data.value }}</a>
   </div>
-  <div class="block w-full make-menu text-left pl-8 justify-center">
+  <div class="block w-full make-menu text-left pl-8">
     <span>&nbsp;&nbsp;
       {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
-      {% if product.url contains product_type %} 
+      {% if collection.url contains product_type %} 
       <a style="color:red;" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
       {% else %}
       <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
@@ -17,7 +17,6 @@
       {% endunless %}          
       {% endfor %}
     </span>
-</div>
 </div>
 </div>
 </section>
