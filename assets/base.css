@@ -2349,6 +2349,6 @@ details-disclosure > details {
     top: -4px;
   }
 .make-menu a:active {
-    color: #000;
-    font-weight:700;
+    color: #000 !important;
+    font-weight:700 !important;
   }
