@@ -2,7 +2,7 @@
   <div class="flex flex-wrap w-full p-8" style="background-color:{{ collection.metafields.make.svg_color.value }};">
     <div id="collection-SubMenu" class="w-full grid grid-cols-2 flex inline-block">
       <div class="block w-1/4">{{ collection.metafields.make.svg_data.value }}</div>
-      <div class="block w-full make-menu">
+      <div class="block w-full make-menu text-left">
         <span>&nbsp;&nbsp;
           {% for product_type in collection.all_types %}
           {% unless product_type contains 'Option' %}
