@@ -35,7 +35,7 @@
 
         <ul id="product-grid" data-id="{{ section.id }}" class="
           grid grid-cols-2 negative-margin product-grid
-          {% if collection.products_count < 4 %} md:grid-cols-{{ collection.products_count }}{% else %}
+          {% if collection.products_count < 4 %} md:grid-cols-4{% else %}
             {% if collection.products_count == 4 %} md:grid-cols-4 lg:grid-cols-4{% endif %}
           {% endif %}">
           {%- for product in collection.products -%}
