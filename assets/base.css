@@ -1786,6 +1786,8 @@ input[type='checkbox'] {
 /* section-announcement-bar */
 #shopify-section-announcement-bar {
   z-index: 4;
+  background-image: linear-gradient(
+    90deg, #ca0000, #bbb, #225aa2);
 }
 
 .announcement-bar {
