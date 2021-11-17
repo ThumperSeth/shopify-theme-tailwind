@@ -2337,7 +2337,7 @@ details-disclosure > details {
   }
 }
 
-.make-menu {
+.make-menu a {
     font-family: 'Teko';
     color: #fff;
     font-size:2rem;
