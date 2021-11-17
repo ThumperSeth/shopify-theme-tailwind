@@ -2345,6 +2345,7 @@ details-disclosure > details {
     font-family: 'Teko';
     color: #fff;
     font-size:2rem;
+    text-shadow:2px 2px 2px:#555;
   }
 .make-menu a:hover {
     color: #000;
