@@ -9,6 +9,9 @@
     "colors_background_2": "#F3F3F3",
     "type_header_font": "assistant_n4",
     "type_body_font": "assistant_n4",
+    "social_facebook_link": "https:\/\/facebook.com\/thumperfab",
+    "social_instagram_link": "http:\/\/instagram.com\/thumperfab",
+    "social_youtube_link": "https:\/\/www.youtube.com\/thumperfab",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
