@@ -1,0 +1,32 @@
+<section>
+<div class="flex flex-wrap align-center justify-center text-center">
+<div id="collection-SubMenu" class="w-full h-full tw-grid auto-cols-fr tw-grid-cols-2 flex bg-green-400 justify-center p-8">
+  <div class="w-full bg-red-100"><a href="{{ collection.url }}"> 
+      {% render 'svg-snippet' %}
+      </a></div>
+  <div class="w-full bg-green-900">  </div>
+	<div class="make-menu col-2">
+      <p>&nbsp;&nbsp;
+        {% for product_type in collection.all_types %}
+        {% unless product_type contains 'Option' %}
+        <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+         &nbsp;&nbsp;•&nbsp;   
+        {% endunless %}          
+        {% endfor %}
+        </p>
+    </div></div>
+</div>
+</div>
+</section>
+{% schema %}
+  {
+    "name": "Collection Sub Menu",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
