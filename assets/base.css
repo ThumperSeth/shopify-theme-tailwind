@@ -2342,6 +2342,13 @@ details-disclosure > details {
     top:0px;
     line-height:2;
   }
+@media screen and (min-width: 750px) {
+ .make-menu  {
+    text-align: left;
+    top:0px;
+    line-height:1;
+  } 
+}
 .make-menu a {
     font-family: 'Teko';
     color: #fff;
