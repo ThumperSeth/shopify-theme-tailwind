@@ -8,7 +8,7 @@
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<h2>{{ product_type | link_to_type }}</h2>
+<h2>{{ product_current_type | link_to_type }}</h2>
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
