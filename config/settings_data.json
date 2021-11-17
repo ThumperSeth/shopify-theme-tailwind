@@ -32,7 +32,6 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/TF_Nav_Logo_250x42_249ff5d2-ed9d-4d76-82c0-a8af4dc294c2_1.png",
           "logo_width": 100,
           "logo_position": "middle-left",
           "menu": "main-menu",
