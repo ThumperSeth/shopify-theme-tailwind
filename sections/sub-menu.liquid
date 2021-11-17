@@ -1,8 +1,8 @@
 <section>
 <div class="flex flex-wrap align-center justify-center text-center">
 <div id="collection-SubMenu" class="w-full h-full grid auto-cols-fr grid-cols-2 flex bg-green-400 justify-center p-8">
-  <div class="w-1/6 svg-style">{{ collection.metafields.make.svg_data.value }}</div>
-	<div class="make-menu">
+  <div class="w-1/6">{{ collection.metafields.make.svg_data.value }}</div>
+	<div class="w-full">
       <p>&nbsp;&nbsp;
         {% for product_type in collection.all_types %}
         {% unless product_type contains 'Option' %}
