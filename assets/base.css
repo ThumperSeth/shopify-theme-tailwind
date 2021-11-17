@@ -2343,3 +2343,7 @@ details-disclosure > details {
     font-size:2rem;
     text-align: center;
   }
+.make-menu:hover {
+    color: #000;
+    top: -4px;
+  }
