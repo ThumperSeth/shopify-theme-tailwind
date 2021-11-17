@@ -4,7 +4,7 @@
   <div class="block w-1/5">
     <a href="{{ collection.url }}">{{ collection.metafields.make.svg_data.value }}</a>
   </div>
-  <div class="block w-full make-menu text-left pl-12">
+  <div class="block w-full make-menu text-left pl-12 hover:animate-spin">
     <span>&nbsp;&nbsp;
       {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
