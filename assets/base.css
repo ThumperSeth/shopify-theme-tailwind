@@ -1786,13 +1786,13 @@ input[type='checkbox'] {
 /* section-announcement-bar */
 #shopify-section-announcement-bar {
   z-index: 4;
-  background-image: linear-gradient(
-    90deg, #ca0000, #bbb, #225aa2);
+
 }
 
 .announcement-bar {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  color: rgb(var(--color-foreground));
+  background-image: linear-gradient(
+    90deg, #ca0000, #bbb, #225aa2);
 }
 
 .announcement-bar__link {
