@@ -13,7 +13,7 @@
       {%- endif -%}
     </div>
     <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid sm:grid-cols-1 md:grid-cols-4 slider slider--mobile grid--peek"
+      <div class="multicolumn-list grid sm:grid-cols-1 md:grid-cols-4 slider slider--mobile grid--peek"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -26,7 +26,7 @@
           endfor
         -%}
         {%- for block in section.blocks -%}
-          <li class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}">
+          <div class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}">
             <div class="multicolumn-card">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
@@ -63,9 +63,9 @@
                 {%- endif -%}
               </div>
             </div>
-          </li>
+          </div>
         {%- endfor -%}
-      </ul>
+      </div>
 
       {%- if section.settings.swipe_on_mobile -%}
         <div class="slider-buttons no-js-hidden medium-hide{% if section.blocks.size < 2 %} small-hide{% endif %}">
