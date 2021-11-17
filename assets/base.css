@@ -1886,7 +1886,6 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
     column-gap: 2rem;
   }
 
@@ -2350,7 +2349,7 @@ details-disclosure > details {
   } 
 }
 .make-menu a {
-    font-family: 'Teko';
+    font-family: 'Teko', sans-serif;
     color: #fff;
     font-size:2rem;
   }
