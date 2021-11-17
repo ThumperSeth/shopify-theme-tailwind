@@ -2199,6 +2199,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__menu {
   padding: 0 1rem;
+  text-align:center;
 }
 
 .header__menu-item {
