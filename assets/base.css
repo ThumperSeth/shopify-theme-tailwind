@@ -2337,12 +2337,14 @@ details-disclosure > details {
   }
 }
 
+.make-menu  {
+    text-align: center;
+    top:0px;
+  }
 .make-menu a {
     font-family: 'Teko';
     color: #fff;
     font-size:2rem;
-    text-align: center;
-    top:0px;
   }
 .make-menu a:hover {
     color: #000;
