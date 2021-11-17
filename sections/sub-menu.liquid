@@ -10,6 +10,7 @@
       {% unless product_type contains 'Option' %}
       {% if request.path contains product_type %} 
       	<a style="color:red;" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+      	&nbsp;&nbsp;•&nbsp;
       {% else %}
       	<a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
       &nbsp;&nbsp;•&nbsp;   
