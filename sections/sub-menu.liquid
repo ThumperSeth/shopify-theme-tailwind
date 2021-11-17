@@ -6,7 +6,7 @@
       <p>&nbsp;&nbsp;
         {% for product_type in collection.all_types %}
         {% unless product_type contains 'Option' %}
-        {% if page.url contains collection.current_type %} 
+        {% if page.url contains product_type %} 
         <a style="color:red;" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
         {% else %}
         <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
@@ -14,7 +14,6 @@
         {% endif %}
         {% endunless %}          
         {% endfor %}
-        {{ collection.current_type }}
         </p>
 </div>
 </div>
