@@ -70,12 +70,21 @@
               "title": "WE GIVE A CRAP",
               "text": "<p>Installation question? Problem with your order? We can help! We strive to be the best at what we do & our dedication to our customer is unparalleled. (?)<\/p>"
             }
+          },
+          "9a890584-367d-4d3e-aef0-1e60d660900f": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/texas_badge.png",
+              "title": "WE IN TEXAS",
+              "text": "<p>Our manufacturing process is all done under one roof, right here in Marshall, Texas, using the best materials which have been carefully sourced from around the world... (?)<\/p>"
+            }
           }
         },
         "block_order": [
           "d28ace49-f6c7-492c-af4b-f6376dace2d9",
           "92592524-0600-4c08-90fc-1db6011c3901",
-          "e74f9e4e-2e65-4ddc-969f-e54fc4f2b9e7"
+          "e74f9e4e-2e65-4ddc-969f-e54fc4f2b9e7",
+          "9a890584-367d-4d3e-aef0-1e60d660900f"
         ],
         "settings": {
           "title": "Multicolumn",
