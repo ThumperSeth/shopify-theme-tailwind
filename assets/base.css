@@ -940,7 +940,7 @@ summary::-webkit-details-marker {
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
   width: calc(25% - 0.5rem * 3 / 4);
-  max-width: 50%;
+  /*max-width: 50%;*/
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -950,7 +950,7 @@ summary::-webkit-details-marker {
     padding-left: 1rem;
     padding-bottom: 1rem;
     width: calc(25% - 1rem * 3 / 4);
-    max-width: 50%;
+    /*max-width: 50%;*/
   }
 }
 
@@ -968,13 +968,13 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .grid--one-third-max.grid--3-col-tablet .grid__item {
-    max-width: 33.33%;
+    /*max-width: 33.33%;*/
   }
 }
 
 @media screen and (min-width: 990px) {
   .grid--quarter-max.grid--4-col-desktop .grid__item {
-    max-width: 25%;
+    /*max-width: 25%;*/
   }
 }
 
