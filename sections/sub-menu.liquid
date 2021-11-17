@@ -18,6 +18,20 @@
       {% endfor %}
     </span>
 </div>
+   <div class="block w-full make-menu text-left pl-8">
+    <span>&nbsp;&nbsp;
+      {% for product_type in products.collections.all_types %}
+      {% unless product_type contains 'Option' %}
+      {% if product.url contains product_type %} 
+      <a style="color:red;" href="{{ product.collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+      {% else %}
+      <a href="{{ product.collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+      &nbsp;&nbsp;•&nbsp;   
+      {% endif %}
+      {% endunless %}          
+      {% endfor %}
+    </span>
+</div>
 </div>
 </section>
 {% schema %}
