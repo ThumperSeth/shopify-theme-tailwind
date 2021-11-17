@@ -4,7 +4,7 @@
   <div class="block w-1/5 flex justify-center">
     {{ collection.metafields.make.svg_data.value }}
   </div>
-  <div class="block w-full make-menu text-left pl-8 flex justify-center">
+  <div class="block w-full make-menu text-left pl-8 justify-center">
     <span>&nbsp;&nbsp;
       {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
