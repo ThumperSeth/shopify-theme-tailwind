@@ -2335,3 +2335,7 @@ details-disclosure > details {
   }
 }
 
+/**************** sub-menu links ***************/
+  .make-menu {
+    font-family:'Teko';
+  }
