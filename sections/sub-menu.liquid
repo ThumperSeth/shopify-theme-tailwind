@@ -1,22 +1,23 @@
 {% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
-[part: {{ part }}]
 {% case part %}
 	{% when "polaris" %}
 		{% assign brandColor = "#305799" %}
+		{% break %}
 	{% when "yamaha" %}
-		{% assign brandColor = "#305799" %}
+		{% assign brandColor = "#CCCCCB" %}
+		{% break %}
 	{% when "can-am" %}
-		{% assign brandColor = "#305799" %}
+		{% assign brandColor = "#fdc832" %}
+		{% break %}
 	{% when "tracker" %}
-		{% assign brandColor = "#305799" %}
+		{% assign brandColor = "#262526" %}
 	{% when "honda" %}
 		{% assign brandColor = "#305799" %}
 	{% else %}
 		{% assign brandColor = "#FFFFFF" %}
 {% endcase %}
 {% endfor %}
-
 
 <section>
 <div class="h-full flex flex-wrap align-center justify-center text-center sticky p-4" style="background-color:{{ brandColor }};">
