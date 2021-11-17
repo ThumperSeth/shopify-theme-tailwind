@@ -1,24 +1,24 @@
-<div class="page_width">
-  <div class="flex flex-wrap w-full p-8" style="background-color:{{ collection.metafields.make.svg_color.value }};">
-    <div id="collection-SubMenu" class="w-full grid grid-cols-2 flex inline-block">
-      <div class="block w-1/4">{{ collection.metafields.make.svg_data.value }}</div>
-      <div class="block w-full make-menu text-left">
-        <span>&nbsp;&nbsp;
-          {% for product_type in collection.all_types %}
-          {% unless product_type contains 'Option' %}
-          {% if product.url contains product_type %} 
-          <a style="color:red;" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
-          {% else %}
-          <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
-          &nbsp;&nbsp;•&nbsp;   
-          {% endif %}
-          {% endunless %}          
-          {% endfor %}
-        </span>
-      </div>
-    </div>
-  </div>
+<section>
+<div class="flex flex-wrap align-center justify-center text-center sticky" style="background-color:{{ collection.metafields.make.svg_color.value }};">
+<div id="collection-SubMenu" class="w-full h-full flex justify-center">
+  <div class="block w-1/4">{{ collection.metafields.make.svg_data.value }}</div>
+	<div class="block w-full make-menu justify-center align-center text-center">
+      <p>&nbsp;&nbsp;
+        {% for product_type in collection.all_types %}
+        {% unless product_type contains 'Option' %}
+        {% if product.url contains product_type %} 
+        <a style="color:red;" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+        {% else %}
+        <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+         &nbsp;&nbsp;•&nbsp;   
+        {% endif %}
+        {% endunless %}          
+        {% endfor %}
+        page url: {{ collection.handle }}
+        </p>
 </div>
+</div>
+</section>
 {% schema %}
   {
     "name": "Collection Sub Menu",
