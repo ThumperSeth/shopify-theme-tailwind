@@ -2204,13 +2204,11 @@ details[open] > .header__icon--menu .icon-hamburger {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: /*rgba(var(--color-foreground), 0.75)*/#ddd;
-  font-family: 'Teko';
-  font-size:3rem;
+  color: rgba(var(--color-foreground), 0.75);
 }
 
 .header__menu-item:hover {
-  color: /*rgb(var(--color-foreground))*/#ddd;
+  color: rgb(var(--color-foreground));
 }
 
 .header__menu-item span {
@@ -2337,10 +2335,3 @@ details-disclosure > details {
   }
 }
 
-  /********************* make menu ************/
-  
-  .make-menu {
-    font-family: 'Teko';
-    color: #fff;
-    font-size:2rem;
-  }
