@@ -2342,6 +2342,7 @@ details-disclosure > details {
     color: #fff;
     font-size:2rem;
     text-align: center;
+    top:0px;
   }
 .make-menu a:hover {
     color: #000;
