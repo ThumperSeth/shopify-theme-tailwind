@@ -2352,7 +2352,6 @@ details-disclosure > details {
     color: #fff;
     font-size:2rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    white-space: nowrap;
   }
   @media screen and (min-width: 750px) {
  .make-menu a {
