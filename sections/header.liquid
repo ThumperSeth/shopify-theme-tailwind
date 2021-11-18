@@ -148,6 +148,7 @@
                             </div>
                           </details>
                         {%- else -%}
+                         >> {{ link.title }} <<
                           <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                              {% if link.title contains "HOME" %}
                               	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
