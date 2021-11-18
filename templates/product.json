@@ -49,6 +49,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "bbf701ee-ae85-4682-9d79-3e90be8e2221": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'slide-over' %}"
+          }
         }
       },
       "block_order": [
@@ -59,7 +65,8 @@
         "variant_picker",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "bbf701ee-ae85-4682-9d79-3e90be8e2221"
       ],
       "settings": {
         "enable_sticky_info": true,
