@@ -20,6 +20,32 @@
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
+{% assign url_parts = request.path | split: "/" %}
+<!-- DETECT BRAND IN URL -->
+{% for part in url_parts %}
+{% case part %}
+{% when "polaris" %}
+{% assign brandColor = "#305799" %}
+{% break %}
+{% when "yamaha" %}
+{% assign brandColor = "#CCCCCB" %}
+{% break %}
+{% when "can-am" %}
+{% assign brandColor = "#fdc832" %}
+{% break %}
+{% when "tracker" %}
+{% assign brandColor = "#262526" %}
+{% break %}
+{% when "honda" %}
+{% assign brandColor = "#e0262f" %}
+{% break %}
+{% else %}
+{% assign brandColor = "#FFFFFF" %}
+{% endcase %}
+
+
+
+{% endfor %}
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -320,7 +346,7 @@
               {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
               	
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">              
-              <div class="product-form__buttons" style="background-color:green!important;">
+              <div class="product-form__buttons">
                   <button id="AddToCart"
                     type="submit"
                     name="add"
