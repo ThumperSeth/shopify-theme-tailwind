@@ -1968,7 +1968,6 @@ input[type='checkbox'] {
   display: flex;
   grid-area: icons;
   justify-self: end;
-  color:#ddd;
 }
 
 .header__icon:not(.header__icon--summary),
@@ -1979,7 +1978,7 @@ input[type='checkbox'] {
 }
 
 .header__icon {
-  color: #4f4f4f;
+  color: #ddd;
 }
 
 .header__icon span {
