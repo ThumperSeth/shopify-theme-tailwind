@@ -7,7 +7,12 @@ Document
 ========
 */
 
-
+/**
+Hide brand submenu bar on index page
+*/
+.tfSubMenu {
+	display: none;  
+}
 
 /**
 Use a better box model (opinionated).
@@ -501,6 +506,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
+  font-family: 'Teko';
 }
 
 /**
