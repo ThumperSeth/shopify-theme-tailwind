@@ -27,7 +27,7 @@
       {%- if product_card_product.featured_media -%}
         <h3 class="card-information__text h5">
           <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
-            {{ product.title | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
+            {{ product.title | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" }}
           </a>
         </h3>
       {%- endif -%}
@@ -115,7 +115,7 @@
         <div class="card__content">
           <h2 class="card__text h3">
             <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
-              {{ product_card_product.title }}
+              {{ product_card_product.title | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI"  }}
             </a>
           </h2>
         </div>
