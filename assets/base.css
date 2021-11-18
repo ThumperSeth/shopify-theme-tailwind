@@ -2351,6 +2351,7 @@ details-disclosure > details {
     font-family: 'Teko', sans-serif;
     color: #fff;
     font-size:2rem;
+    text-shadow: 2px 2px 2px #000;
   }
   @media screen and (min-width: 750px) {
  .make-menu a {
@@ -2360,7 +2361,6 @@ details-disclosure > details {
 .make-menu a:hover {
     color: #000;
     top: -4px;
-    text-shadow: 2px 2px 2px #000;
   }
 .make-menu a:active {
     color: #000 !important;
