@@ -3,12 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "bbf701ee-ae85-4682-9d79-3e90be8e2221": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% render 'slide-over' %}"
-          }
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -58,7 +52,6 @@
         }
       },
       "block_order": [
-        "bbf701ee-ae85-4682-9d79-3e90be8e2221",
         "vendor",
         "title",
         "subtitle",
