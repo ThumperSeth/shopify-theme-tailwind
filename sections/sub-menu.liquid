@@ -1,5 +1,5 @@
-{% assign url_parts = request.path | split: "/" %}
 <!-- DETECT BRAND IN URL -->
+{% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
 {% case part %}
 	{% when "polaris" %}
@@ -27,7 +27,9 @@
 		{% assign brandColor = "#FFFFFF" %}
 {% endcase %}
 
-{% endfor %}<!--
+{% endfor %}
+
+<!--
     	--tf-polaris: #305799;
     	--tf-can-am: #fdc832;
     	--tf-honda: #e0262f;
