@@ -93,12 +93,12 @@
           "9a890584-367d-4d3e-aef0-1e60d660900f"
         ],
         "settings": {
-          "title": "Multicolumn",
+          "title": "Why Thumper Fab?",
           "image_width": "half",
           "image_ratio": "adapt",
           "column_alignment": "center",
           "background_style": "primary",
-          "button_label": "Button label",
+          "button_label": "",
           "button_link": "",
           "swipe_on_mobile": false
         }
