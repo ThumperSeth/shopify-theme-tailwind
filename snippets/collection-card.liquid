@@ -76,8 +76,33 @@
     display: block;
   }
 }
-
+.vtl-pr-review-stars-snippet__stars .vtl-pr-review-stars-snippet__empty-icons .vtl-pr-review-stars-snippet__full-icons {
+  {% case brand_color %}
+  {% when "#305799" %}
+  
+  {% when "#fdc832" %}
+  
+  {% when "#e0262f" %}
+  
+  {% when "#CCCCCB" %}
+  
+  {% when "#262526" %}
+  
+  {% else %}
+  
+  {% endcase %}
+}
 </style>
+
+<!--
+    	--tf-polaris: #305799;
+    	--tf-can-am: #fdc832;
+    	--tf-honda: #e0262f;
+    	--tf-yamaha: #CCCCCB;
+    	--tf-tracker: #262526;
+-->
+
+
 
 <div class="card-wrapper">
   <div class="card-information">
