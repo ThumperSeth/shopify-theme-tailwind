@@ -2379,6 +2379,6 @@ details-disclosure > details {
   
 .shadow {
   -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-  filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow( 2px 0px 2px rgba(0, 0, 0, 0.5));
   /* Similar syntax to box-shadow */
 }
