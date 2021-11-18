@@ -1,6 +1,6 @@
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  background-color:red;
+  background-color:#333;
 }
 
 .footer:not(.color-background-1) {
