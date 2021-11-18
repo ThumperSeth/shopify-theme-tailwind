@@ -12,7 +12,7 @@
 	- brand_color: #HEX color code for brand color.
 
     Usage:
-    {% render 'collectin-card', show_vendor: section.settings.show_vendor %}
+    {% render 'collection-card', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
 <style>
@@ -51,7 +51,7 @@
   content: '★★★★★';
   background: linear-gradient(
     90deg,
-    {{ brand_color}} var(--percent),
+    {{ brand_color }} var(--percent),
     rgba(var(--color-foreground), 0.15) var(--percent)
   );
   -webkit-background-clip: text;
