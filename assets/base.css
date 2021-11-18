@@ -2342,6 +2342,7 @@ details-disclosure > details {
     text-align: left;
     top:0px;
     line-height:1;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   }
 @media screen and (min-width: 750px) {
  .make-menu  {
