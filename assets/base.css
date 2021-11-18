@@ -2164,7 +2164,6 @@ details[open] > .header__icon--menu .icon-hamburger {
   transform: translateY(0);
   animation: animateMenuOpen var(--duration-default) ease;
   z-index: 1;
-  color: #333;
 }
 
 /* Header menu */
@@ -2268,6 +2267,10 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__submenu .icon-caret {
   right: 2rem;
+}
+  
+.header__submenu a {
+   color: #333; 
 }
 
 details-disclosure > details {
