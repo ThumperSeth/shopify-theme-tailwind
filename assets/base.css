@@ -846,7 +846,7 @@ summary::-webkit-details-marker {
   align-items: flex-end;
   gap: 1rem;
   margin: 4rem 0 3rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .title--primary {
