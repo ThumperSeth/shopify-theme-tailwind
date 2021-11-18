@@ -7,12 +7,7 @@ Document
 ========
 */
 
-/**
-Hide brand submenu bar on index page
-*/
-.tfSubMenu {
-	display: hidden;  
-}
+
 
 /**
 Use a better box model (opinionated).
