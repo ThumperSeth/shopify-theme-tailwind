@@ -2360,6 +2360,7 @@ details-disclosure > details {
 .make-menu a:hover {
     color: #000;
     top: -4px;
+    text-shadow: 2px 2px 2px #000;
   }
 .make-menu a:active {
     color: #000 !important;
