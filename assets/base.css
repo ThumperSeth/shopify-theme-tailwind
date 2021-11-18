@@ -2367,12 +2367,12 @@ details-disclosure > details {
   
   
 .nav_logo {
-   viewBox:0 0 1301.3 230;
-   width:300px;
+   viewBox:0 0 240 210;
+   width:100px;
 }
 @media screen and (min-width:750px) {
  .nav_logo {
-   viewBox:0 0 240 210;
-   width:100px;
+   viewBox:0 0 1301.3 230;
+   width:300px;
  } 
 }
