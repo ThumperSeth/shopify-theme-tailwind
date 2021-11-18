@@ -2377,9 +2377,8 @@ details-disclosure > details {
 } 
 }
   
-svg .shadow { 
-  cursor:crosshair; 
-  -moz-box-shadow: -5px -5px 5px #888;
-  -webkit-box-shadow: -5px -5px 5px #888;
-  box-shadow: -5px -5px 5px #888; 
-}	
+.shadow {
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  /* Similar syntax to box-shadow */
+}
