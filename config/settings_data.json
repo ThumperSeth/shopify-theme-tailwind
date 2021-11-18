@@ -128,7 +128,7 @@
         "settings": {
           "color_scheme": "inverse",
           "newsletter_enable": true,
-          "newsletter_heading": "Subscribe to our emails",
+          "newsletter_heading": "Receive the TF Newsletter",
           "show_social": true,
           "enable_country_selector": false,
           "enable_language_selector": false,
