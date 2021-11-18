@@ -2351,8 +2351,7 @@ details-disclosure > details {
     font-family: 'Teko', sans-serif;
     color: #fff;
     font-size:2rem;
-    text-shadow: 2px 2px 2px #000;
-    opacity: 0.2;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   }
   @media screen and (min-width: 750px) {
  .make-menu a {
