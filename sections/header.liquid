@@ -326,9 +326,7 @@
       </details-modal>
     {%- endif -%}
 
-    {%- if request.page_type == 'index' -%}
-      <h1 class="header__heading">
-    {%- endif -%}
+
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
          
 
@@ -336,9 +334,7 @@
             <span class="h2">{{ shop.name }}</span>
         
         </a>
-    {%- if request.page_type == 'index' -%}
-      </h1>
-    {%- endif -%}
+
 
     {%- if section.settings.menu != blank -%}
       <div class="w-full align-center items-center text-center">
