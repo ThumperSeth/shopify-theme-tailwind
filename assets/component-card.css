@@ -158,17 +158,17 @@
 .card__text {
   margin: 0;
   word-break: break-word;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-style: oblique;
-  font-size: 2rem;
-  text-align: left;
 }
 
 .card-information__text {
   display: block;
   margin: 0;
   padding-right: 1.2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-style: oblique;
+  font-size: 2rem;
+  text-align: left;
 }
 
 .card-information__wrapper {
