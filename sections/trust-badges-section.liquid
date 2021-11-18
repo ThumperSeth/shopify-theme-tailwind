@@ -5,7 +5,7 @@
 <div class="multicolumn background-{{ section.settings.background_style }}" style="background-color:#ccc; padding:5rem;">
   <div class="page-width">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}" style="margin:2rem 0 3rem;">
-      <h2 class="title text-3xl bold">
+      <h2 class="title text-3xl font-bold">
         {{ section.settings.title | escape }}
       </h2>
       {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
