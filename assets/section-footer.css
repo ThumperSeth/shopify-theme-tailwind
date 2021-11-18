@@ -126,11 +126,11 @@
 }
 
 .footer-block--newsletter {
-  display: flex;
+  display: /*flex*/block;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 2rem;
+  margin-top: /*2rem*/0px;
 }
 
 .footer-block--newsletter:only-child {
