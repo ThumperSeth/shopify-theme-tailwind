@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "bbf701ee-ae85-4682-9d79-3e90be8e2221": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'slide-over' %}"
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -49,15 +55,10 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "bbf701ee-ae85-4682-9d79-3e90be8e2221": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% render 'slide-over' %}"
-          }
         }
       },
       "block_order": [
+        "bbf701ee-ae85-4682-9d79-3e90be8e2221",
         "vendor",
         "title",
         "subtitle",
@@ -65,8 +66,7 @@
         "variant_picker",
         "buy_buttons",
         "description",
-        "share",
-        "bbf701ee-ae85-4682-9d79-3e90be8e2221"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
