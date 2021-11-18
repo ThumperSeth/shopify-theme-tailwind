@@ -2364,3 +2364,15 @@ details-disclosure > details {
 .make-menu a:active {
     color: #000 !important;
   }
+  
+  
+.nav_logo {
+   viewBox:0 0 1301.3 230;
+   width:300px;
+}
+@media screen and (min-width:750px) {
+ .nav_logo {
+   viewBox:0 0 240 210;
+   width:100px;
+ } 
+}
