@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("Message from test.ts")})();
+(()=>{"use strict";})();
