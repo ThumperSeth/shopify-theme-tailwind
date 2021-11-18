@@ -36,7 +36,7 @@
         <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">
           {%- for product in collection.products -%}
             <li class="grid__item w-full align-center text-center">
-              {% render 'product-card',
+              {% render 'collection-card',
                 product_card_product: product,
                 media_size: section.settings.image_ratio,
                 show_secondary_image: section.settings.show_secondary_image,
