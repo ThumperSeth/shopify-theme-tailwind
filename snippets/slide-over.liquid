@@ -36,20 +36,7 @@
       <h2 class="h3 pickup-availability-drawer-title" id="PickupAvailabilityHeading">{{ product_variant.product.title | escape }}</h2>
       <button class="pickup-availability-drawer-button" type="button" aria-label="{{ 'accessibility.close' | t }}">{%- render 'icon-close' -%}</button>
     </div>
-
-    {%- unless product_variant.product.has_only_default_variant -%}
-      <p class="pickup-availability-variant">
-        {%- for product_option in product_variant.product.options_with_values -%}
-          {{ product_option.name | escape }}:&nbsp;
-          {%- for value in product_option.values -%}
-            {%- if product_option.selected_value == value -%}
-              <span>{{ value | escape }}</span>
-            {%- endif -%}
-          {%- endfor -%}
-          {%- unless forloop.last -%},&nbsp;{%- endunless forloop.last -%}
-        {%- endfor -%}
-      </p>
-    {%- endunless -%}
+    <p>{{ product.metafields.global.fitment }}</p>
 
     <ul class="pickup-availability-list list-unstyled" role="list" data-store-availability-drawer-content>
       {%- for availability in pick_up_availabilities -%}
