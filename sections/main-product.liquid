@@ -293,12 +293,12 @@
         
         
         
-        {%- comment -%} ADD PERISTANT FIELDS HERE 
+        {%- comment -%} ADD PERISTANT FIELDS HERE {%- endcomment -%}
         
              {% render 'products.custom_fields' %}       
 		     {% render "custom_fields.products.roof_type" %}
         
- END ADD PERISTANT FIELDS HERE {%- endcomment -%}        
+        {%- comment -%} END ADD PERISTANT FIELDS HERE {%- endcomment -%}        
         
             <noscript>
               <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
@@ -381,47 +381,7 @@
     </div>
   </div>
   {%- render 'cart-notification' -%}
-  {%- render 'slide-over' -%}
 
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-
-              {%- assign fitment_info = product.metafields.global.fitment -%}
-
-              <fitment_info class="product__pickup-availabilities no-js-hidden"
-                {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
-                data-base-url="{{ shop.url }}{{ routes.root_url }}"
-                data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-                data-has-only-default-variant="{{ product.has_only_default_variant }}"
-              >
-                <template>
-                  <fitment_info-preview class="fitment_info-preview">
-                    {% render 'icon-unavailable' %}
-                    <div class="fitment_info-info">
-                      <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
-                      <button class="fitment_info-button link link--text underlined-link">{{ 'products.product.pickup_availability.refresh' | t }}</button>
-                    </div>
-                  </div>
-                </template>
-              </fitment_info>
-            </div>
-
-            <script src="{{ 'fitment_info.js' | asset_url }}" defer="defer"></script>                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
       <button id="ModalClose-{{ section.id }}" type="button" class="product-media-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
