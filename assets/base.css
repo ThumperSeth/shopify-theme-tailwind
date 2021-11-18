@@ -2376,3 +2376,10 @@ details-disclosure > details {
    width:380px;
 } 
 }
+  
+svg .shadow { 
+  cursor:crosshair; 
+  -moz-box-shadow: -5px -5px 5px #888;
+  -webkit-box-shadow: -5px -5px 5px #888;
+  box-shadow: -5px -5px 5px #888; 
+}	
