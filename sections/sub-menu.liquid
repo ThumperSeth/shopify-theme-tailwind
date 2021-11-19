@@ -1,6 +1,5 @@
-{% assign url_parts = request.path | split: "/" %}
+{% assign url_parts = page_title  | split: "/" %}
 <!-- DETECT BRAND IN URL -->
-<div class="page-width">[{{ page_title }}]</div>
 {% for part in url_parts %}
 {% case part %}
 	{% when "polaris" %}
