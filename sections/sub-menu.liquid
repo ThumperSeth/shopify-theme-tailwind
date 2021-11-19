@@ -24,10 +24,10 @@
 {% endfor %}
 
 <section>
-<div class="h-full flex flex-nowrap align-center justify-center text-center p-0 shadow-lg" style="background-color:{{ brandColor }};">
+<div class="h-full flex flex-nowrap align-center justify-center text-center p-0 shadow-xl" style="background-color:{{ brandColor }};">
 <div id="collection-SubMenu" class="w-full h-full flex justify-center">
   <div class="block w-1/12 flex justify-center pl-12">
-    {{ collection.metafields.make.svg_data.value }}
+    <a href="{{ collection.url }}">{{ collection.metafields.make.svg_data.value }}</a>
   </div>
   <div class="block w-full make-menu text-left pl-8 justify-center">
     <span>&nbsp;&nbsp;
