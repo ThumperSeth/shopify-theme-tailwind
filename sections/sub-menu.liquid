@@ -24,17 +24,25 @@
 {% endfor %}
 <style> 
 .brandbox {
-	border-right: 4px solid black;
+	border-bottom: 4px solid black;
+	box-shadow: 10px 0px 5px grey;
+}
+.bendybox-45 {
+border-bottom: 4px solid black;
+border-right: 4px solid black;
+width:40px; 
+box-shadow: 10px 10px 5px grey;
 }
 </style>
 <section>
 <div class="h-full flex flex-nowrap align-center justify-center text-center p-0 shadow-lg" style="background-color:{{ brandColor }};">
 <div id="collection-SubMenu" class="w-full h-full flex justify-center">
-  <div class="block w-1/5 flex justify-center pl-12 drop-shadow brandbox pr-12">
+  <div class="block w-1/5 flex justify-center pl-12 drop-shadow brandbox">
     <input type="button" onclick="location.href='{{ collection.current_vendor | within:collection }}';"/>
     {{ collection.metafields.make.svg_data.value }}
     </input>
   </div>
+  <div class="bendybox-45 pr-12">&nbsp;</div>
   <div class="block w-full make-menu text-left pl-8 justify-center">
     <span>&nbsp;&nbsp;
       {% for product_type in collection.all_types %}
