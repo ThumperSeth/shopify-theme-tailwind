@@ -26,7 +26,11 @@ body {
   top:0px;
   left:0;  z-index:2;
 }
-
+@keyframes move {
+  20%, 100% {
+    opacity: 0;
+    transform: translate(200px, 0);
+  }
 .cloud:before, .cloud:after {
 	content: '';
 	position: absolute; 
@@ -48,9 +52,9 @@ body {
 /*Time to animate*/
 .x1 {
     top:100px;
-	-webkit-animation: moveclouds 3s linear infinite ease-in-out;
-	-moz-animation: moveclouds 3s linear infinite ease-in-out;
-	-o-animation: moveclouds 3s linear infinite ease-in-out;
+	-webkit-animation: moveclouds 3s linear infinite ease-in-out move;
+	-moz-animation: moveclouds 3s linear infinite ease-in-out move;
+	-o-animation: moveclouds 3s linear infinite ease-in-out move;
 }
 
 /*variable speed, opacity, and position of clouds for realistic effect*/
@@ -85,16 +89,16 @@ body {
 
 
 @-webkit-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+	0% {margin-left: 2000px;}
+	100% {margin-left: -2000px;}
 }
 @-moz-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+	0% {margin-left: 2000px;}
+	100% {margin-left: -2000px;}
 }
 @-o-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+	0% {margin-left: 2000px;}
+	100% {margin-left: -2000px;}
 }</style>
 
 <!--
