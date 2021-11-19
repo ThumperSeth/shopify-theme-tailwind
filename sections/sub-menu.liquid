@@ -41,7 +41,7 @@ box-shadow: 10px 10px 5px grey;
 <div class="h-full flex flex-nowrap align-center justify-center text-center p-0 shadow-lg" style="background-color:{{ brandColor }};">
 <div id="collection-SubMenu" class="w-full h-full flex justify-center">
   <div class="block w-1/5 flex justify-center pl-12 drop-shadow brandbox">
-    <input type="button" onclick="location.href='{{ collection.current_vendor | within:collection }}';">
+    <input type="button" class="hover: bounce;" onclick="location.href='{{ collection.current_vendor | within:collection }}';">
     {{ collection.metafields.make.svg_data.value }}
     </input>
   </div>
