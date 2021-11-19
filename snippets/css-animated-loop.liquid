@@ -11,9 +11,9 @@ body {
 #clouds{
 	padding: 100px 0;
 	background: #c9dbe9;
-	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 10%);
-	background: -linear-gradient(top, #c9dbe9 0%, #fff 10%);
-	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 10%);
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
 }
 
 /*Time to finalise the cloud shape*/
@@ -29,7 +29,7 @@ body {
 .cloud:before, .cloud:after {
 	content: '';
 	position: absolute; 
-	background: #fff;
+	background: rbga(217,127,127, 0.2);
 	width: 500px; height: 80px;
 	position: absolute; top: -15px; left: 10px;
 	
