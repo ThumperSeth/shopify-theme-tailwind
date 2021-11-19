@@ -78,9 +78,15 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "big-product": {
+      "type": "big-product-viewer",
+      "settings": {
+      }
     }
   },
   "order": [
+    "big-product",
     "main",
     "product-recommendations"
   ]
