@@ -1,46 +1,32 @@
-<!-- DETECT BRAND IN URL -->
 {% assign url_parts = request.path | split: "/" %}
+<!-- DETECT BRAND IN URL -->
 {% for part in url_parts %}
 {% case part %}
 	{% when "polaris" %}
-		{% assign currentBrand  = "polaris" %}
 		{% assign brandColor = "#305799" %}
 		{% break %}
 	{% when "yamaha" %}
-		{% assign currentBrand  = "yamaha" %}
 		{% assign brandColor = "#CCCCCB" %}
 		{% break %}
 	{% when "can-am" %}
-		{% assign currentBrand  = "can-am" %}
 		{% assign brandColor = "#fdc832" %}
 		{% break %}
 	{% when "tracker" %}
-		{% assign currentBrand  = "tracker" %}
 		{% assign brandColor = "#262526" %}
 		{% break %}
 	{% when "honda" %}
-		{% assign currentBrand  = "honda" %}
 		{% assign brandColor = "#e0262f" %}
 		{% break %}
 	{% else %}
-		{% assign currentBrand = "" %}
 		{% assign brandColor = "#FFFFFF" %}
 {% endcase %}
 
 {% endfor %}
 
-<!--
-    	--tf-polaris: #305799;
-    	--tf-can-am: #fdc832;
-    	--tf-honda: #e0262f;
-    	--tf-yamaha: #CCCCCB;
-    	--tf-tracker: #262526;
--->
-
 <section>
-<div class="tfSubMenu h-full flex flex-wrap align-center justify-center text-center sticky p-4 {% if request.page_type == "index" %} hidden{% endif %}" style="background-color:{{ brandColor }};">
-  <div id="collection-SubMenu" class="w-full h-full flex justify-center">
-  <div class="block w-1/5 flex justify-center pl-4">
+<div class="h-full flex flex-nowrap align-center justify-center text-center sticky p-0" style="background-color:{{ brandColor }};box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);">
+<div id="collection-SubMenu" class="w-full h-full flex justify-center">
+  <div class="block w-1/12 flex justify-center pl-12">
     {{ collection.metafields.make.svg_data.value }}
   </div>
   <div class="block w-full make-menu text-left pl-8 justify-center">
@@ -48,7 +34,7 @@
       {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
       {% if request.path contains product_type %} 
-      	<a style="color:black;" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+      	<a style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
       	&nbsp;&nbsp;•&nbsp;
       {% else %}
       	<a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
