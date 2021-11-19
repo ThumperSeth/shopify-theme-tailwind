@@ -1,4 +1,4 @@
-{% assign url_parts = page_title | split: " " %}
+{% assign url_parts = page.handle | split: "-" %}
 <!-- DETECT BRAND IN URL -->
 {% for part in url_parts %}
 {% case part %}
