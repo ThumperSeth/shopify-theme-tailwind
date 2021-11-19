@@ -64,9 +64,9 @@ body {
 	
 	/*Speed will also be proportional to the size and opacity*/
 	/*More the speed. Less the time in 's' = seconds*/
-	-webkit-animation: move 25s linear infinite;
-	-moz-animation: move 25s linear infinite;
-	-o-animation: move 25s linear infinite;
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
 }
 
 .x3 {
@@ -81,13 +81,20 @@ body {
 	-moz-animation: moveclouds 20s linear infinite;
 	-o-animation: moveclouds 20s linear infinite;
 }
-@keyframes move {
-  20%, 100% {
-    transform: translate(200px, 0);
-  }
-}
 
-</style>
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}</style>
 
 <!--
 So we will have an animated background with 5 clouds moving across the screen.
