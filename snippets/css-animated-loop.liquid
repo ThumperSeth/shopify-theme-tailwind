@@ -24,6 +24,7 @@ body {
   position: absolute;
   top:0px;
   left:0;
+  animation-direction:alternate;
 }
 
 .cloud:before, .cloud:after {
@@ -47,9 +48,9 @@ body {
 /*Time to animate*/
 .x1 {
     top:100px;
-	-webkit-animation: moveclouds 3s cubic-bezier(1, -0.5, 0, 1) infinite animation-direction:alternate;
-	-moz-animation: moveclouds 3s cubic-bezier(1, -0.5, 0, 1) infinite animation-direction:alternate;
-	-o-animation: moveclouds 3s cubic-bezier(1, -0.5, 0, 1) infinite animation-direction:alternate;
+	-webkit-animation: moveclouds 3s cubic-bezier(1, -0.5, 0, 1) infinite;
+	-moz-animation: moveclouds 3s cubic-bezier(1, -0.5, 0, 1) infinite;
+	-o-animation: moveclouds 3s cubic-bezier(1, -0.5, 0, 1) infinite;
 }
 
 /*variable speed, opacity, and position of clouds for realistic effect*/
