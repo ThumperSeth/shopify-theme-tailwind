@@ -2349,8 +2349,8 @@ details-disclosure > details {
 .make-menu  {
     text-align: left;
     top:0px;
-    line-height:1;
-    min-height: 50px;
+    line-height:normal;
+    min-height: 35px;
   }
 @media screen and (min-width: 750px) {
  .make-menu  {
