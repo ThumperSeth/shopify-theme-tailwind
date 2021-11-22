@@ -22,7 +22,10 @@
 {% endcase %}
 
 {% endfor %}
-<style> 
+<style>
+  {%- if request.page_type == "index" -%}
+  
+  {%- endif -%}
 /*.brandbox {
 	border-bottom: 4px solid black;
 	box-shadow: 0px 10px 5px grey;
@@ -37,7 +40,7 @@
 }*/
 </style>
 <section>
-<div class="h-full flex flex-nowrap align-center justify-center text-center p-0 shadow-lg" style="background-color:{{ brandColor }};">
+<div id="collection-SubMenu-Section" class="h-full flex flex-nowrap align-center justify-center text-center p-0 shadow-lg" style="background-color:{{ brandColor }};">
 <div id="collection-SubMenu" class="w-full h-full flex justify-center">
   <div class="block w-1/5 flex justify-center pl-12 drop-shadow brandbox">
     <input type="button" class="hover: bounce;" onclick="location.href='{{ collection.current_vendor | within:collection }}';">
