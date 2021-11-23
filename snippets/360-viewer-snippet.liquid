@@ -26,24 +26,10 @@
   /* image sprite has been loaded */
   opacity: 1;
 }
-</style>
-
-
-<div>
-      <figure class="product-viewer">
-         <img src="img/product-loading.jpg" alt="Product Preview">
-         <div class="product-sprite" data-image="img/product.png"></div>
-      </figure> <!-- .product-viewer -->
-
-      <div class="cd-product-viewer-handle">
-         <span class="fill"></span>
-         <span class="handle">Handle</span>
-      </div>
-   </div> <!-- .cd-product-viewer-handle -->
-</div> <!-- .cd-product-viewer-wrapper -->
-
-<script>
-  .cd-product-viewer-handle {
+  
+/*********************************************************************/
+  
+   .cd-product-viewer-handle {
   position: relative;
   z-index: 2;
   width: 60%;
@@ -98,4 +84,67 @@
     transform: translateX(-50%) scale(1);
   }
 }
+</style>
+
+
+<div class="cd-product-viewer-wrapper" data-frame="16" data-friction="0.33">
+   <div>
+      <figure class="product-viewer">
+         <img src="img/product-loading.jpg" alt="Product Preview">
+         <div class="product-sprite" data-image="img/product.png"></div>
+      </figure> <!-- .product-viewer -->
+
+      <div class="cd-product-viewer-handle">
+         <span class="fill"></span>
+         <span class="handle">Handle</span>
+      </div>
+   </div> <!-- .cd-product-viewer-handle -->
+</div> <!-- .cd-product-viewer-wrapper -->
+
+<script>
+ 
+  
+//////////////////////////////////////////////////////// produductViewer object
+  
+  var productViewer = function(element) {
+   this.element = element;
+   this.handleContainer = this.element.find('.cd-product-viewer-handle');
+   this.handleFill = this.handleContainer.children('.fill');
+   //...
+   this.frames = this.element.data('frame');
+   //increase this value to increase the friction while dragging on the image - it has to be bigger than zero
+   this.friction = this.element.data('friction');
+   this.visibleFrame = 0;
+   this.loaded = false;
+   //...
+   this.loadFrames();
+} 
+
+productViewer.prototype.loadFrames = function() {
+   var self = this,
+       imageUrl = this.slideShow.data('image');
+   //you need this to check if the image sprite has been loaded
+   $('<img/>').attr('src', imageUrl).load(function() {
+      self.loaded = true;
+   });
+
+   this.loading('0.5'); //triggers loading animation
+}
+
+var productToursWrapper = $('.cd-product-viewer-wrapper');
+productToursWrapper.each(function(){
+   new productViewer($(this));
+});
+  
+  
+if( self.loaded ){
+   //sprite image has been loaded
+   self.element.addClass('loaded');
+   self.dragImage();
+   self.dragHandle();
+   //..
+} else {
+   //...
+}  
+  
 </script>
