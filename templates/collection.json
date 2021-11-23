@@ -6,7 +6,6 @@
       "blocks": {
         "163718965392906dbc-0": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "medium"
@@ -19,9 +18,8 @@
             "text": "Give customers details about the banner image(s) or content on the template."
           }
         },
-        "163718965392906dbc-2": {
+        "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_label_1": "Button label",
             "button_link_1": "",
@@ -35,7 +33,7 @@
       "block_order": [
         "163718965392906dbc-0",
         "163718965392906dbc-1",
-        "163718965392906dbc-2"
+        "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/can-am-collection-16-9.jpg",
@@ -51,7 +49,6 @@
     },
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": true
