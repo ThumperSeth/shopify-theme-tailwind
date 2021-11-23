@@ -1,0 +1,101 @@
+<style>
+  .cd-product-viewer-wrapper .product-viewer {
+  position: relative;
+  overflow: hidden;
+}
+.cd-product-viewer-wrapper img {
+  /* this is the image visible before the image sprite is loaded */
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.cd-product-viewer-wrapper .product-sprite {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* our image sprite is composed of 16 frames */
+  width: 1400%;
+  background: url(../img/product.png) no-repeat center center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.cd-product-viewer-wrapper.loaded .product-sprite {
+  /* image sprite has been loaded */
+  opacity: 1;
+}
+</style>
+
+
+<div>
+      <figure class="product-viewer">
+         <img src="img/product-loading.jpg" alt="Product Preview">
+         <div class="product-sprite" data-image="img/product.png"></div>
+      </figure> <!-- .product-viewer -->
+
+      <div class="cd-product-viewer-handle">
+         <span class="fill"></span>
+         <span class="handle">Handle</span>
+      </div>
+   </div> <!-- .cd-product-viewer-handle -->
+</div> <!-- .cd-product-viewer-wrapper -->
+
+<script>
+  .cd-product-viewer-handle {
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  max-width: 300px;
+  height: 4px;
+  background: #4d4d4d;
+}
+.cd-product-viewer-handle .fill {
+  /* this is used to create the loading fill effect */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: #b54240;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s;
+}
+.loaded .cd-product-viewer-handle .fill {
+  /* image sprite has been loaded */
+  opacity: 0;
+}
+.cd-product-viewer-handle .handle {
+  position: absolute;
+  z-index: 2;
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  left: 0;
+  top: -20px;
+  background: #b54240 url(../img/cd-arrows.svg) no-repeat center center;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+}
+.loaded .cd-product-viewer-handle .handle {
+  /* image sprite has been loaded */
+  transform: translateX(-50%) scale(1);
+  animation: cd-bounce 0.3s 0.3s;
+  animation-fill-mode: both;
+}
+@keyframes cd-bounce {
+  0% {
+    transform: translateX(-50%) scale(0);
+  }
+  60% {
+    transform: translateX(-50%) scale(1.1);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+</script>
