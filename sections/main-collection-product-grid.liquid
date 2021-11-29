@@ -64,7 +64,6 @@
         <div class="loading-overlay gradient"></div>
         
   {% for product_type in collection.all_types %}
-        (({{ product_type }}))
       {% unless product_type contains 'Option' %}
         {% capture typeFilter %}where: "type", "{{ product_type }}"{% endcapture %}
         {% capture productsCommand %}collections['{{currentBrand}}'].products | where: "type", "{{ product_type }}"{% endcapture %}
