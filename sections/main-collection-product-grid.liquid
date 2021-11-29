@@ -68,30 +68,30 @@
   {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
   
-        
-        <span class="text-7xl w-full font-medium" style="font-family:'Teko'; background-color:#ccc;">{{ product_type }}</span>   
-   		
-        <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
-     
-     {% assign products = collection.products | where: "type", product_type %}     
-       
-    
-	          {% for product in products %}     
-          
-                <li class="grid__item w-full align-center text-center">
-                  {% render 'collection-card',
-                    product_card_product: product,
-                    media_size: section.settings.image_ratio,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    add_image_padding: section.settings.add_image_padding,
-                    show_vendor: section.settings.show_vendor,
-                    show_image_outline: section.settings.show_image_outline,
-                    show_rating: section.settings.show_rating,
-                    brand_color: brandColor
-                  %}
-                </li>
-          	  {%- endfor -%}
-        </ul>
+       <div style="background-color:#ccc;">   
+        <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
+          <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
+
+          {% assign products = collection.products | where: "type", product_type %}     
+
+
+                {% for product in products %}     
+
+                  <li class="grid__item w-full align-center text-center">
+                    {% render 'collection-card',
+                      product_card_product: product,
+                      media_size: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      add_image_padding: section.settings.add_image_padding,
+                      show_vendor: section.settings.show_vendor,
+                      show_image_outline: section.settings.show_image_outline,
+                      show_rating: section.settings.show_rating,
+                      brand_color: brandColor
+                    %}
+                  </li>
+                {%- endfor -%}
+          </ul>
+        </div>
 		<hr style="margin:5rem; border:1px solid #222; width:100%;">
         {%- endunless -%}
         {%- endfor -%}
