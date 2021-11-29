@@ -69,7 +69,7 @@
         {% capture typeFilter %}where: "type", "{{ product_type }}"{% endcapture %}
         {% capture productsCommand %}collection.{{currentBrand}}.products | {{ typeFilter }}{% endcapture %}
         {% capture productsResult %}{{ productsCommand }}{% endcapture %}
-        {% capture productsArray %}{{ productsResult }}{% endcapture %}
+        {% assign productsArray = productsResult %}
         
         {%- if productsArray -%}
         =={{ productsResult }}== **{{ productsArray.size }}**
