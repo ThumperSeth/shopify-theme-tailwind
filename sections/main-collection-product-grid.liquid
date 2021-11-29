@@ -71,14 +71,12 @@
         
         <h1>{{ product_type }}</h1>   
         
- <!--       <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">
-          
+     
           
          {% assign products = collection %}
     
 	          {% for product in collection.types %}     
-          {{ collection.current_type | within:collection }}
-          
+         <!-- 
                 <li class="grid__item w-full align-center text-center">
                   {% render 'collection-card',
                     product_card_product: product,
@@ -90,9 +88,9 @@
                     show_rating: section.settings.show_rating,
                     brand_color: brandColor
                   %}
-                </li>
+                </li>-->
           	  {%- endfor -%}
-        </ul>-->
+        </ul>
 
         {%- endunless -%}
         {%- endfor -%}
