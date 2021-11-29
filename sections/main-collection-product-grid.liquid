@@ -62,10 +62,10 @@
     {%- else -%}
       <div class="collection page-width">
         <div class="loading-overlay gradient"></div>
-        
+        {% assign productsArray = collections[currentBrand].products %}      
   {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
-        {% assign productsArray = collections[currentBrand].products %}
+
         
         {%- if productsArray -%}
        <div style=""> 
