@@ -75,7 +75,7 @@
           
          {% assign products = collection %}
     
-	          {% for product in collection.types %}     
+	          {% for product in collection.types %}     {{ product.title }}
          <!-- 
                 <li class="grid__item w-full align-center text-center">
                   {% render 'collection-card',
