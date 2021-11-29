@@ -66,10 +66,8 @@
   {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
         
-        {% capture typeFilter %}where: "type", "{{ product_type }}"{% endcapture %}
-        {% capture productsCommand %}collection.{{currentBrand}}.products | {{ typeFilter }}{% endcapture %}
-        {% capture productsResult %}{{ productsCommand }}{% endcapture %}
-        {% assign productsArray = productsResult %}
+
+        {% assign productsArray = collections[currentBrand].products %}
         
         {%- if productsArray -%}
         =={{ productsResult }}== **{{ productsArray.size }}**
