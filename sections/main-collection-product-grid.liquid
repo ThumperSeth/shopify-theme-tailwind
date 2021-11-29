@@ -74,8 +74,8 @@
         <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">
           
           
-         {% assign products = collection.products %}
-            {% assign products = products | sort: 'type' %}
+         {% assign products = collection %}
+    
 	          {% for product in products %}     
           
           
