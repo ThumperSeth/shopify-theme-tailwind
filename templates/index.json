@@ -99,6 +99,7 @@
         "video": {
           "type": "video",
           "settings": {
+            "cover_image": "shopify:\/\/shop_images\/TF_What_Is_Thumped_Out-YouTube_Thumbnail.jpg",
             "video_url": "https:\/\/www.youtube.com\/watch?v=y3mAZDUXPo8",
             "description": "Describe the video",
             "image_padding": false
