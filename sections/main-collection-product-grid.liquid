@@ -70,13 +70,13 @@
   
         
         <h1>{{ product_type }}</h1>   
-        
+   <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
      
      {% assign products = collection.products | where: "type", product_type %}     
        
     
-	          {% for product in products %}     {{ product.title }}
-         <!-- 
+	          {% for product in products %}     
+          
                 <li class="grid__item w-full align-center text-center">
                   {% render 'collection-card',
                     product_card_product: product,
@@ -88,7 +88,7 @@
                     show_rating: section.settings.show_rating,
                     brand_color: brandColor
                   %}
-                </li>-->
+                </li>
           	  {%- endfor -%}
         </ul>
 
