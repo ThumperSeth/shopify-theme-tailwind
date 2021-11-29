@@ -70,7 +70,7 @@
         {% capture productsResult %}{{ productsCommand }}{% endcapture %}
         {% assign productsArray = productsResult %}
         
-        {% assign productsZZZ = collections['polaris'].products | where: "type", "cages" %}
+        {% assign productsZZZ = collections['polaris'].products | where: "type", "Cages" %}
         {%- if productsZZZ -%}
         =={{ productsCommand }}== **{{ productsZZZ.size }}**
        <div style=""> 
