@@ -76,9 +76,9 @@
        <div style=""> 
         <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
-                {% for product in products %}     
+                {% for product in productsArray %}     
 
-            		
+            	{% if product.type contains product_type %}
                   <li class="grid__item w-full align-center text-center">
                     ++{{ product_type }}:{{product.type}}++ 
                     {% render 'collection-card',
@@ -92,7 +92,7 @@
                       brand_color: brandColor
                     %}
                   </li>
-
+            	{%- endif -%}
                 {%- endfor -%}
           </ul>
         </div>
