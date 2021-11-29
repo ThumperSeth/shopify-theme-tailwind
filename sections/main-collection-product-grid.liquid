@@ -67,7 +67,7 @@
       {% unless product_type contains 'Option' %}
         
 
-        {% assign productsArray = collections[currentBrand].products | where: type: "cages" %}
+        {% assign productsArray = collections[currentBrand].products %}
         
         {%- if productsArray -%}
         =={{ productsResult }}== **{{ productsArray.size }}**
