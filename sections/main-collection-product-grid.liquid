@@ -69,7 +69,7 @@
         =={{ product_type }}==
       {% unless product_type contains 'Option' %}
         
-        {% assign products = collections[currentBrand].products %}
+        {% assign products = collections[currentBrand].products | where: "type", product_type %}
         {%- if products -%}
         =={{ products.count }}==
        <div style=""> 
