@@ -64,7 +64,11 @@
         <div class="loading-overlay gradient"></div>
 
         <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">
-          {%- for product in collection.products -%}
+         {% assign products = collection.products %}
+          {% if collection.handle == 'all' %}
+            {% assign products = products | sort: 'type' %}
+          {% endif %}
+          {% for product in products %}
 
             <li class="grid__item w-full align-center text-center">
               {% render 'collection-card',
