@@ -71,7 +71,7 @@
         =={{ product_type }}==
       {% unless product_type contains 'Option' %}
         
-        {% assign products = collections[currentBrand].products | where: "type", product_type %}
+        {% capture products %}{{ collections[currentBrand].products | where: "type", product_type }}{% endcapture %}
         {%- if products -%}
         =={{ products.count }}==
        <div style=""> 
