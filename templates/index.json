@@ -46,7 +46,7 @@
           "type": "heading",
           "settings": {
             "heading": "Dramatically change the look of your ride with innovative aftermarket products by Thumper Fab, engineered to be the best.",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "text": {
@@ -58,6 +58,7 @@
         },
         "button": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
