@@ -67,7 +67,7 @@
         
   {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
-      {% if request.path contains product_type %} 
+  
         
         <h2>{{ product_type }}</h2>   
         
@@ -93,7 +93,7 @@
                 </li>
           	  {%- endfor -%}
         </ul>
-        {%- endif -%}
+
         {%- endunless -%}
         {%- endfor -%}
         {%- if paginate.pages > 1 -%}
