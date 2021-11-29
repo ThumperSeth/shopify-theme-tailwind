@@ -65,9 +65,9 @@
         
         
         
+        {% capture typesInBrand %}collections['{{currentBrand}}'].all_types{% endcapture %}
         
-        
-  {% for product_type in collections[currentBrand].all_types %}
+  {% for product_type in typesInBrand %}
         =={{ product_type }}==
       {% unless product_type contains 'Option' %}
         {% capture typeFilter %}where: "type", "{{ product_type }}"{% endcapture %}
