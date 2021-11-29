@@ -67,7 +67,7 @@
       {% unless product_type contains 'Option' %}
         
         {% capture typeFilter %}where: "type", "{{ product_type }}"{% endcapture %}
-        {% capture productsCommand %}collections[{{currentBrand}}].products | {{ typeFilter }}{% endcapture %}
+        {% capture productsCommand %}collection.{{currentBrand}}.products | {{ typeFilter }}{% endcapture %}
         {% capture productsResult %}{{ productsCommand }}{% endcapture %}
         {% capture productsArray %}{{ productsResult }}{% endcapture %}
         
