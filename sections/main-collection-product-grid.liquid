@@ -64,9 +64,8 @@
         <div class="loading-overlay gradient"></div>
 
         <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">
+          {%- for product in collection.products -%}
 
-            {% for product_type in collection.all_types %}
-        {% unless product_type contains 'Option' %}
             <li class="grid__item w-full align-center text-center">
               {% render 'collection-card',
                 product_card_product: product,
@@ -80,10 +79,7 @@
               %}
             </li>
           
-        {% endunless %}          
-        {% endfor %}
-       
-
+          {%- endfor -%}
         </ul>
 
         {%- if paginate.pages > 1 -%}
