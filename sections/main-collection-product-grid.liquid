@@ -92,10 +92,10 @@
                   </li>
                 {%- endfor -%}
           </ul>
-         {%- endif -%}
         </div>
 		<hr style="margin:5rem; border:1px solid #222; width:100%;">
-      {%- endunless -%}
+         {%- endif -%}
+        {%- endunless -%}
    {%- endfor -%}
         {%- if paginate.pages > 1 -%}
           {% render 'pagination', paginate: paginate, anchor: '' %}
