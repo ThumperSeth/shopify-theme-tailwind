@@ -66,12 +66,11 @@
   {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
         {% capture typeFilter %}where: "type", "{{ product_type }}"{% endcapture %}
-        {% capture productsCommand %}collections[{{currentBrand}}].products | {{ typeFilter }}{% endcapture %}
+        {% capture productsCommand %}collections["{{currentBrand}}]".products | {{ typeFilter }}{% endcapture %}
         {% capture productsResult %}{{ productsCommand }}{% endcapture %}
         {% assign productsArray = productsResult %}
         
-        {% assign productsZZZ = collections["polaris"].products %}
-        {%- if productsZZZ -%}
+        {%- if productsArray -%}
         =={{ productsCommand }}== **{{ productsZZZ.size }}**
        <div style=""> 
         <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
