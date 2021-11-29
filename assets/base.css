@@ -2368,7 +2368,7 @@ details-disclosure > details {
   }
   @media screen and (min-width: 750px) {
  .make-menu a {
-    font-size:3rem;
+    font-size:2rem;
   } 
 }
 .make-menu a:hover {
