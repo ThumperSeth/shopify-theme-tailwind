@@ -117,7 +117,7 @@
         "collection": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "polaris",
             "image_padding": false,
             "color_scheme": "background-1"
           }
