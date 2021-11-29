@@ -75,7 +75,7 @@
      {% assign products = collection.products | where: "type", product_type %}     
        
     
-	          {% for product in collection[product_types] %}     {{ product.title }}
+	          {% for product in products %}     {{ product.title }}
          <!-- 
                 <li class="grid__item w-full align-center text-center">
                   {% render 'collection-card',
