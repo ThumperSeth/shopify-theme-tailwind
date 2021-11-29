@@ -2204,6 +2204,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__menu-item {
   padding: 1.2rem;
+  margin-top:15px;
   text-decoration: none;
   color: #ddd;
   font-family:'Teko';
