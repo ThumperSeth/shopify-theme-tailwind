@@ -66,12 +66,14 @@
         
         
   {% for product_type in collection.all_types %}
-      {% unless product_type contains 'Option' %}  
+      {% unless product_type contains 'Option' %}
+        {% assign products = collection[currentBrand].products %}
+        {%- if products -%}
        <div style="">   
         <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
 
-          {% assign products = collection[currentBrand].products %}     
+               
 
 
                 {% for product in products %}     
@@ -90,6 +92,7 @@
                   </li>
                 {%- endfor -%}
           </ul>
+         {%- endif -%}
         </div>
 		<hr style="margin:5rem; border:1px solid #222; width:100%;">
       {%- endunless -%}
