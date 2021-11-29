@@ -61,7 +61,7 @@
       {% unless product_type contains 'Option' %}
       {% if request.path contains product_type %} 
       	<a style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
-      	&nbsp;&nbsp;•&nbsp;
+      	&nbsp;•&nbsp;
       {% else %}
       	<a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
       {% unless forloop.last %}
