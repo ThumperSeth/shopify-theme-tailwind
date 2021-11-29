@@ -65,7 +65,7 @@
         
         
         
-        {% capture typesInBrand %}collections['{{currentBrand}}'].all_types{% endcapture %}
+        {% capture typesInBrand %} collections['{{currentBrand}}'].all_types {% endcapture %}
         
   {% for product_type in typesInBrand %}
         =={{ product_type }}==
