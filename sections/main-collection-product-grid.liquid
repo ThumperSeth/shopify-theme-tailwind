@@ -69,8 +69,9 @@
       {% unless product_type contains 'Option' %}
   
         
-        <h1>{{ product_type }}</h1>   
-   <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
+        <span class="text-large">{{ product_type }}</span>   
+   		
+        <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
      
      {% assign products = collection.products | where: "type", product_type %}     
        
@@ -91,7 +92,7 @@
                 </li>
           	  {%- endfor -%}
         </ul>
-
+		<hr style="size:2px;>
         {%- endunless -%}
         {%- endfor -%}
         {%- if paginate.pages > 1 -%}
