@@ -72,8 +72,8 @@
         <h1>{{ product_type }}</h1>   
         
      
-          
-         {% assign products = collection %}
+     {% assign products = collection.products | where: "type", product_type %}     
+       
     
 	          {% for product in collection[product_types] %}     {{ product.title }}
          <!-- 
