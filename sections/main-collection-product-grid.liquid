@@ -65,10 +65,10 @@
         
         
         
-  {% for product_type in collection[currentBrand].all_types %}
+  {% for product_type in collections[currentBrand].all_types %}
         ++{{ currentBrand }}++
       {% unless product_type contains 'Option' %}
-        {% assign products = collection[currentBrand].products %}
+        {% assign products = collections[currentBrand].products %}
         {%- if products -%}
        <div style="">   
         <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
