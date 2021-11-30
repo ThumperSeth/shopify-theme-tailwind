@@ -54,7 +54,7 @@
 {%- endif -%}
 
 <section class="page-width">
-  <div class="product grid grid-cols-1 {% if product.media.size > 0 %} grid-cols-2 {% else %}product--no-media{% endif %}">
+  <div class="product flex grid-cols-1 {% if product.media.size > 0 %} grid-cols-2 {% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
