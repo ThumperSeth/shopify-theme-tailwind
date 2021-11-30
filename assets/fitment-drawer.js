@@ -1,12 +1,9 @@
 if (!customElements.get('product-fitment')) {
-  customElements.define('product-fitment', class PickupAvailability extends HTMLElement {
+  customElements.define('product-fitment', class ProductFitment extends HTMLElement {
     constructor() {
       super();
 
-      if(!this.hasAttribute('available')) return;
-
       this.errorHtml = this.querySelector('template').content.firstElementChild.cloneNode(true);
-      this.onClickRefreshList = this.onClickRefreshList.bind(this);
 
     }
 
@@ -59,8 +56,8 @@ if (!customElements.get('product-fitment')) {
   });
 }
 
-if (!customElements.get('pickup-availability-drawer')) {
-  customElements.define('pickup-availability-drawer', class PickupAvailabilityDrawer extends HTMLElement {
+if (!customElements.get('product-fitment-drawer')) {
+  customElements.define('product-fitment-drawer', class ProductFitmentDrawer extends HTMLElement {
     constructor() {
       super();
 
@@ -77,7 +74,7 @@ if (!customElements.get('pickup-availability-drawer')) {
 
     handleBodyClick(evt) {
       const target = evt.target;
-      if (target != this && !target.closest('pickup-availability-drawer') && target.id != 'ShowPickupAvailabilityDrawer') {
+      if (target != this && !target.closest('product-fitment-drawer') && target.id != 'ShowProductFitmentDrawer') {
         this.hide();
       }
     }
