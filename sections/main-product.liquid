@@ -308,7 +308,7 @@
 
     <!-- FITMENT MODAL -->      
     {{ 'component-fitment-drawer.css' | asset_url | stylesheet_tag }}
-    <product-fitment class="product__fitment-drawer no-js-hidden">
+    <product-fitment-drawer class="product__fitment-drawer no-js-hidden">
         <template>
             <fitment-drawer-preview class="fitment-drawer-preview">
                 <div class="fitment-drawer-info">
@@ -316,7 +316,7 @@
                 </div>
             </fitment-drawer-preview>
         </template>
-    </product-fitment>
+    </product-fitment-drawer>
     <!-- CART MODAL -->
     {%- render 'cart-notification' -%}
     <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal">
