@@ -75,7 +75,6 @@
                 {% for product in productsArray %}     
 					{% if product.tags contains product_type %}
                       <li class="grid__item w-full align-center text-center">
-                          ++{{ product_type }}:{{product.type}}++ 
                           {% render 'collection-card',
                             product_card_product: product,
                             media_size: section.settings.image_ratio,
