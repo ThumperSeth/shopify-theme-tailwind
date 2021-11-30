@@ -1,5 +1,159 @@
+<div class="sample">
+    <div id="demo-container" class="demo">
+<!-- Import the component -->
+
+
+<!-- Use it like any other HTML element -->
+<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar="" ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="assets/NeilArmstrong.webp" seamless-poster="" shadow-intensity="1" camera-controls="" data-js-focus-visible="" ar-status="not-presenting"></model-viewer>
+                </div>
+    <div class="content">
+      <div class="wrapper">
+        <div class="heading">
+          <div class="lockup zero-interaction"><div class="icon-button icon-modelviewer-black"></div><h1><span class="attribute">&lt;model-viewer&gt;</span></h1></div>
+          <h3 class="slogan" style="font-weight:400;">Easily display interactive 3D models on the web &amp; in AR</h3>
+        </div>
+
+          <div id="section-quick-start">
+            <h3 class="grouping-title grouping-title-new quick-start">Quick Start</h3>
+            <div class="quick-start-example">
+              <example-snippet inert-script="" stamp-to="demo-container" highlight-as="html">
+                <template>
 <!-- Import the component -->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 <!-- Use it like any other HTML element -->
-<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="assets/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls></model-viewer>
+<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar="" ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="assets/NeilArmstrong.webp" seamless-poster="" shadow-intensity="1" camera-controls=""></model-viewer>
+                </template>
+              <pre><code><span class="token comment">&lt;!-- Import the component --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Use it like any other HTML element --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>model-viewer</span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Neil Armstrong<span class="token punctuation">'</span>s Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shared-assets/models/NeilArmstrong.glb<span class="token punctuation">"</span></span> <span class="token attr-name">ar</span> <span class="token attr-name">ar-modes</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>webxr scene-viewer quick-look<span class="token punctuation">"</span></span> <span class="token attr-name">environment-image</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shared-assets/environments/moon_1k.hdr<span class="token punctuation">"</span></span> <span class="token attr-name">poster</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/NeilArmstrong.webp<span class="token punctuation">"</span></span> <span class="token attr-name">seamless-poster</span> <span class="token attr-name">shadow-intensity</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">camera-controls</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>model-viewer</span><span class="token punctuation">&gt;</span></span></code></pre></example-snippet>
+            </div>
+          </div>
+
+          <a href="https://bundlephobia.com/result?p=@google/model-viewer">
+            <img src="https://badgen.net/bundlephobia/minzip/@google/model-viewer" alt="Min Zip">
+          </a>
+          <a href="https://github.com/google/model-viewer/releases">
+            <img src="https://img.shields.io/github/v/release/google/model-viewer" alt="Latest Release">
+          </a>
+          <br>
+          <a href="https://twitter.com/intent/follow?screen_name=modelviewer">
+            <img src="https://img.shields.io/twitter/follow/modelviewer?style=social&amp;logo=twitter" alt="follow on Twitter">
+          </a>
+          <a href="https://github.com/google/model-viewer/discussions">
+            <img src="https://img.shields.io/github/stars/google/model-viewer.svg?style=social&amp;label=Star&amp;maxAge=2592000" alt="Github Discussions">
+          </a>
+
+        <div id="section-editor">
+          <h3 class="grouping-title grouping-title-new border-bottom">Editor</h3>
+          <ol class="new-list-example">
+            <li>
+              <h4>
+                Try out your glTF &amp; GLB models with our <a href="editor">Editor</a>, and download a whole customized starter website.
+              </h4>
+            </li>
+          </ol>
+        </div>
+
+        <div id="section-documentation">
+          <h3 class="grouping-title grouping-title-new border-bottom">Documentation</h3>
+          <ol class="new-list-example">
+            <li>
+              <h4>
+                API <a href="docs/index.html">Documentation</a> &amp; <a href="examples/loading/index.html">Examples</a>
+              </h4>
+            </li>
+          </ol>
+        </div>
+
+        <div id="section-metrics">
+          <h3 class="grouping-title grouping-title-new border-bottom">Metrics</h3>
+          <ol class="new-list-example">
+            <li>
+              <h4>
+                <a href="examples/lighthouse.html">Page Load Performance</a>
+              </h4>
+            </li>
+            <li>
+              <h4>
+                <a href="fidelity">glTF Fidelity Comparison</a>
+              </h4>
+            </li>
+          </ol>
+        </div>
+
+        <div id="section-browser-support">
+          <h3 class="grouping-title grouping-title-new border-bottom">Browser Support</h3>
+
+          <p class="browser-support-desc"><code>&lt;model-viewer&gt;</code> is supported on the last two major versions of all evergreen
+            desktop and mobile browsers, plus the last two versions of Safari (on MacOS and iOS).</p>
+
+          <p class="browser-support-desc">These browser features are
+          only needed if you wish to use webxr in ar-modes:</p>
+          <table class="browser-support">
+            <tbody><tr>
+              <th>Feature</th>
+              <th><img class="logo-chrome" title="Chrome" alt="Chrome"></th>
+              <th><img class="logo-canary" title="Canary" alt="Canary"></th>
+              <th><img class="logo-safari" title="Safari" alt="Safari"></th>
+              <th><img class="logo-firefox" title="Firefox" alt="Firefox"></th>
+              <th><img class="logo-edge" title="Edge" alt="Edge"></th>
+              <th><img class="logo-samsung" title="Samsung Internet" alt="Samsung Internet"></th>
+            </tr>
+
+            <tr>
+              <td>WebXR Device API</td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-na" alt="icon-na"></td>
+              <td><img class="icon-na" alt="icon-na"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+            </tr>
+            <tr>
+              <td>WebXR HitTest API</td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-na" alt="icon-na"></td>
+              <td><img class="icon-na" alt="icon-na"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+            </tr>
+            <tr>
+              <td>WebXR DOM Overlay API</td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-na" alt="icon-na"></td>
+              <td><img class="icon-na" alt="icon-na"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+              <td><img class="icon-check" alt="icon-check"></td>
+            </tr>
+          </tbody></table>
+
+          <div id="browser-support-icon-group">
+            <div class="icon-desc"><img class="size-24 icon-check" alt="icon-check"><div>Natively supported</div></div>
+            <div class="icon-desc"><img class="size-24 icon-warning" alt="icon-warning"><div>Available with polyfill</div></div>
+            <div class="icon-desc"><img class="size-24 icon-flag" alt="icon-flag"><div>Behind a flag, unstable</div></div>
+            <div class="icon-desc"><img class="size-24 icon-na" alt="icon-na"><div>Not available</div></div>
+          </div>
+
+          <div style="clear:both"></div>
+
+          <p class="browser-support-desc"><code>:focus-visible</code> is an as-yet unimplemented web platform feature that enables
+          content authors to style a component on the condition that it received focus in
+          such a way that suggests the focus state should be visibly evident.</p>
+
+          <p class="browser-support-desc">The <code>:focus-visible</code> capability has not been implemented in any stable browsers
+          yet. If <a href="https://github.com/WICG/focus-visible">the polyfill</a> is available on the page, 
+          <code>&lt;model-viewer&gt;</code> will use it and only display focus rings when <code>:focus-visible</code> should apply.</p>
+
+          <p class="browser-support-desc">Check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible">this related MDN</a> 
+          article for more details on <code>:focus-visible</code>.</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
