@@ -94,6 +94,7 @@ img.onload = function () {
 </script>
 <div class="w-full">
   	<div class="imgHolder absolute">
+      {{ product.featured_media | img_url: '1000x1000', crop: 'center', scale: '2' }}
   	</div>
 	<div class="w-full bg-white">
 		test
