@@ -133,6 +133,9 @@
               <div class="product__description rte">
                 {{ product.description }}
               </div>
+        	  <div id="fitmentButton">
+                <a name="fitmentAnchor" onClick="">See Fitment Chart...</a>
+        	  </div>
             {%- endif -%}
           {%- when 'collapsible_tab' -%}
             <div class="product__accordion accordion" {{ block.shopify_attributes }}>
@@ -475,6 +478,12 @@
       </div>
     </modal-dialog>
   {%- endfor -%}
+
+
+
+
+
+
 </section>
 
 {% javascript %}
