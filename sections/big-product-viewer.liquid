@@ -93,10 +93,10 @@ img.onload = function () {
   img.src = "https:{{ product.featured_media | img_url }}";
 </script>
 <div class="w-full">
-  	<div class="imgHolder absolute">
+  	<div class="imgHolder absolute h-500px">
       {{ product.featured_media | img_url: '1000x1000', crop: 'center' | img_tag }}
   	</div>
-	<div class="w-full bg-white">
+	<div class="w-full bg-white h-500px">
 		test
   	</div>
   	<div class="w-full bg-gradient-to-t from-white via-white to-trueGray-400">
