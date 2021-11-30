@@ -2,7 +2,7 @@ if (!customElements.get('product-fitment')) {
   customElements.define('product-fitment', class ProductFitment extends HTMLElement {
     constructor() {
       super();
-
+	  if(!this.hasAttribute('available')) return;
       this.errorHtml = this.querySelector('template').content.firstElementChild.cloneNode(true);
 
     }
