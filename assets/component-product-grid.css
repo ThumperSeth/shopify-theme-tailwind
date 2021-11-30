@@ -19,3 +19,7 @@
     margin-bottom: calc(-1rem - var(--page-width-margin));
   }
 }
+
+.collection-grid-section {
+ margin-top:0; 
+}
