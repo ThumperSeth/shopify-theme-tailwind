@@ -73,21 +73,8 @@
         <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                 {% for product in productsArray %}     
-
             	{% if product.tags contains product_type %}
-                  <li class="grid__item w-full align-center text-center">
-                    ++{{ product_type }}:{{product.type}}++ 
-                    {% render 'collection-card',
-                      product_card_product: product,
-                      media_size: section.settings.image_ratio,
-                      show_secondary_image: section.settings.show_secondary_image,
-                      add_image_padding: section.settings.add_image_padding,
-                      show_vendor: section.settings.show_vendor,
-                      show_image_outline: section.settings.show_image_outline,
-                      show_rating: section.settings.show_rating,
-                      brand_color: brandColor
-                    %}
-                  </li>
+            <li>{{ product.handle }}</li>
             	{%- endif -%}
                 {%- endfor -%}
           </ul>
