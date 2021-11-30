@@ -51,7 +51,7 @@
         </div>
       </div>
     {%- else -%}
-      <div class="collection w-full ml-20 mr-20 align-center justify-items-center">
+      <div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
         {% assign productsArray = collections[currentBrand].products %}      
   {% for product_type in collection.all_types %}
@@ -59,6 +59,7 @@
 
         
         {%- if productsArray -%}
+       	<div class="ml-20 mr-20 w-full">
        <div class="w-3/4"> 
          <a name="{{ product_type }}">&nbsp;<br /></a>
          <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>
@@ -83,6 +84,7 @@
         </div>
         <div>
 		<hr style="margin:5rem; border:1px solid #222; width:100%;">
+        </div>
         </div>
          {%- endif -%}
         {%- endunless -%}
