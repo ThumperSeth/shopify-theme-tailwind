@@ -1,4 +1,4 @@
-0{% assign url_parts = request.path | split: "/" %}
+{% assign url_parts = request.path | split: "/" %}
 <!-- DETECT BRAND IN URL -->
 {% for part in url_parts %}
 {% case part %}
