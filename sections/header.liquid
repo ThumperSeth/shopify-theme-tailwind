@@ -544,7 +544,7 @@
       </a>
     </div>
   </header>
-  {% section 'sub-menu' %}
+  {% render 'sub-menu' %}
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
