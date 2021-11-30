@@ -73,9 +73,7 @@
         <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                 {% for product in productsArray %}     
-            	{% if product.tags contains product_type %}
-            <li>{{ product.handle }}</li>
-            	{%- endif -%}
+				 <li>{{ product.handle }}</li>
                 {%- endfor -%}
           </ul>
         </div>
