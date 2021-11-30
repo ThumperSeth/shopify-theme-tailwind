@@ -2,10 +2,10 @@
   "sections": {
     "16371896537551f4cd": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "163718965392906dbc-0": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "medium"
@@ -20,6 +20,7 @@
         },
         "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Button label",
             "button_link_1": "",
@@ -36,7 +37,7 @@
         "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/can-am-collection-16-9.jpg",
+        "image": "shopify:\/\/shop_images\/general_audio-roof_banner.jpg",
         "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_text_box_position": "center",
