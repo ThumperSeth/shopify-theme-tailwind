@@ -1,5 +1,11 @@
 {
   "sections": {
+    "big-product": {
+      "type": "big-product-viewer",
+      "disabled": true,
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -77,11 +83,6 @@
         "show_image_outline": true,
         "show_vendor": false,
         "show_rating": false
-      }
-    },
-    "big-product": {
-      "type": "big-product-viewer",
-      "settings": {
       }
     }
   },
