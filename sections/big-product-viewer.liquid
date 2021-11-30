@@ -69,7 +69,7 @@ var removeBlanks = function (imgWidth, imgHeight) {
         cropLeft, cropTop, cropWidth, cropHeight,
         0, 0, cropWidth, cropHeight);
     
-    $("body").
+    $(".imgHolder").
         append("<p>same image with white spaces cropped:</p>").
         append($croppedCanvas);
     console.log(cropTop, cropBottom, cropLeft, cropRight);
