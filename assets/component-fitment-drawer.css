@@ -53,7 +53,7 @@ fitment-drawer {
   width: 100%;
 }
 
-fitment-drawer-drawer[open] {
+fitment-drawer[open] {
   transform: translateX(0);
   opacity: 1;
 }
