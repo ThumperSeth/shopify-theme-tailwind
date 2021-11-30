@@ -36,7 +36,7 @@ fitment-drawer {
   margin: 0 0 0.6rem;
 }
 
-fitment-drawer-drawer {
+fitment-drawer {
   background-color: rgb(var(--color-background));
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   height: 100%;
