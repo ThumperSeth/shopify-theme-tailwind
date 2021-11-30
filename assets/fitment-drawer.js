@@ -45,7 +45,7 @@ if (!customElements.get('product-fitment')) {
       }
 
       this.innerHTML = sectionInnerHTML.querySelector('product-fitment-preview').outerHTML;
-
+	  this.setAttribute('available', '');
 
       document.body.appendChild(sectionInnerHTML.querySelector('product-fitment-drawer'));
 
