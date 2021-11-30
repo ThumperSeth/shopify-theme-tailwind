@@ -57,7 +57,7 @@
   {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}        
         {%- if productsArray -%} 
-       	<div class="w-full items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
+       	<div class="w-full grid items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
        <div class="grid w-3/4 pb-20 justify-items-center bg-blue-500"> 
          <a name="{{ product_type }}">&nbsp;<br /></a>
          <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ product_type }}</div>
