@@ -83,16 +83,10 @@
       "type": "big-product-viewer",
       "settings": {
       }
-    },
-    "neil": {
-      "type": "neil",
-      "settings": {
-      }
     }
   },
   "order": [
     "big-product",
-    "neil",
     "main",
     "product-recommendations"
   ]
