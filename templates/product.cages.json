@@ -2,7 +2,6 @@
   "sections": {
     "big-product": {
       "type": "big-product-viewer",
-      "disabled": true,
       "settings": {
       }
     },
