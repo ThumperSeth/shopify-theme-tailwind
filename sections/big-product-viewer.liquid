@@ -81,7 +81,7 @@ img.onload = function () {
     context = canvas.getContext("2d");
     if (context) {
         context.drawImage(this, 0, 0);
-        $("body").append("<p>original image:</p>").append($canvas);
+        $(".imgHolder").append("<p>original image:</p>").append($canvas);
     
         removeBlanks(this.width, this.height);
     } else {
@@ -93,6 +93,8 @@ img.onload = function () {
   img.src = "{{ product.img | img_url }}";
 </script>
 <div class="w-full">
+  	<div class="imgHolder absolute">
+  	</div>
 	<div class="w-full bg-white">
 		test
   	</div>
