@@ -13,7 +13,7 @@
     <h2 class="product-recommendations__heading">{{ section.settings.heading | escape }}</h2>
     <ul class="grid sm:grid-cols-2 {% if recommendations.products_count > 3 %} lg:grid-cols-4 {% else %} md:grid-cols-{{ recommendations.products_count }}{% endif %}" role="list">
       {% for recommendation in recommendations.products %}
-        <li class="grid__item">
+        <li class="w-full">
           {% render 'product-card',
             product_card_product: recommendation,
             media_size: section.settings.image_ratio,
