@@ -17,8 +17,8 @@
 {{ 'component-share.css' | asset_url | stylesheet_tag  | prepend: 'https:' }}
 {{ 'component-product-popup.css' | asset_url | stylesheet_tag  | prepend: 'https:' }}
 
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url  | prepend: 'https:' }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url  | prepend: 'https:' }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {% assign url_parts = request.path | split: "/" %}
 <!-- DETECT BRAND IN URL -->
