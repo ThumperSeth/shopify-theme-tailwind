@@ -1,5 +1,38 @@
+<style>
+  {%- if request.page_type == "index" -%}
+  	.collection-SubMenu-Section {
+     display: none; 
+    }
+  {%- endif -%}
+.brandbox {
+	/*border-bottom: 4px solid black;
+	box-shadow: 0px 10px 5px grey;*/
+   min-width:100px
+}
+/*.bendybox-45 {
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    width:40px; 
+    box-shadow: 10px 10px 5px grey;
+    transform-origin: right top;
+    transform: skewX(-45deg);
+}*/
+  
+.svg-logo { min-width:200px; }
+  
+</style>
+
+
 <!-- DETECT BRAND IN URL -->
-{% assign url_parts = request.path | split: "/" %}
+{%- if request.page_type == "index" -%}
+	{% assign url_parts = request.path | split: "/" %}
+{%- endif -%}
+
+{%- if request.page_type == "product" -%}
+	{% assign url_parts = request.path | split: "-" %}
+{%- endif -%}
+
+
 {% for part in url_parts %}
   {% case part %}
       {% when "polaris" %}
@@ -27,29 +60,7 @@
           {% assign brandColor = "#ccc" %}
   {% endcase %}
 {% endfor %}
-<style>
-  {%- if request.page_type == "index" -%}
-  	.collection-SubMenu-Section {
-     display: none; 
-    }
-  {%- endif -%}
-.brandbox {
-	/*border-bottom: 4px solid black;
-	box-shadow: 0px 10px 5px grey;*/
-   min-width:100px
-}
-/*.bendybox-45 {
-    border-bottom: 4px solid black;
-    border-right: 4px solid black;
-    width:40px; 
-    box-shadow: 10px 10px 5px grey;
-    transform-origin: right top;
-    transform: skewX(-45deg);
-}*/
-  
-.svg-logo { min-width:200px; }
-  
-</style>
+
 <section>
 <div class="collection-SubMenu-Section h-full flex flex-nowrap  p-0 shadow-lg align-middle" style="background-color:{{ brandColor }};">
 <div id="collection-SubMenu" class="w-full h-full flex">
