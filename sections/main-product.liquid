@@ -308,8 +308,8 @@
 
     <!-- FITMENT MODAL -->      
     {{ 'component-fitment-drawer.css' | asset_url | stylesheet_tag }}
-    <product-fitment class="product__product-fitment no-js-hidden">
-        <template>
+    <product-fitment class="product__product-fitment no-js-hidden" available>
+        <template> 
             <product-fitment-preview class="product-fitment-preview">
                 <div class="product-fitment-info">
                     {{ product.metafields.global.fitment }}
