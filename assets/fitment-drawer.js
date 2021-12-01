@@ -7,7 +7,7 @@ if (!customElements.get('product-fitment')) {
 
     }
 
-    fetchAvailability(variantId) {
+    fetchAvailabilityZZZ(variantId) {
       const variantSectionUrl = `${this.dataset.baseUrl}variants/${variantId}/?section_id=pickup-availability`;
 
       fetch(variantSectionUrl)
