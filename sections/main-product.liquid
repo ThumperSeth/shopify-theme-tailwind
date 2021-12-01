@@ -126,7 +126,9 @@
                                 </div>
               					<script>
                                   function toggleFitmentDrawer() {
-                                  	document.getElementById('fitmentDrawer').style.display = "block";
+                                    if (document.getElementById('fitmentDrawer').style.display == "none") {
+                                  		document.getElementById('fitmentDrawer').style.display = "block";
+                                    }
                                   }
               					</script>
         	                    <div id="fitmentButton">
