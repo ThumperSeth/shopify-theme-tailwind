@@ -127,12 +127,13 @@
               					<script>
                                   var fitmentDrawerVisable = false;
                                   function toggleFitmentDrawer() {
-                                    document.getElementById('fitmentDrawer').style.display = "block";
+
                                     if (fitmentDrawerVisable) {
                                       	document.getElementById('fitmentDrawer').style.display = "hidden";
                                       	document.getElementById('fitmentDrawer').style.opacity = "0";
                                       	fitmentDrawerVisable = false;
                                     } else {
+                                        document.getElementById('fitmentDrawer').style.display = "block";
                                       	document.getElementById('fitmentDrawer').style.opacity = "100";
                                       	fitmentDrawerVisable = true;
                                     }
