@@ -10,7 +10,7 @@
 
 <product-recommendations class="product-recommendations page-width" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4">
   {% if recommendations.performed and recommendations.products_count > 0 %}
-    <h2 class="product-recommendations__heading font-size-6xl">{{ section.settings.heading | escape }}</h2>
+    <h2 class="product-recommendations__heading text-6xl">{{ section.settings.heading | escape }}</h2>
     <ul class="grid gap-8 sm:grid-cols-2 {% if recommendations.products_count > 3 %} lg:grid-cols-4 {% else %} md:grid-cols-{{ recommendations.products_count }}{% endif %}" role="list">
       {% for recommendation in recommendations.products %}
         <li class="w-full">
