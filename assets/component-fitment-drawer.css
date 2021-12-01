@@ -1,25 +1,27 @@
 product-fitment {
   display: block;
 }
-
-.fitment-drawer-preview {
+product-fitment[available] {
+  min-height: 8rem;
+}
+.product-fitment-preview {
   align-items: flex-start;
   display: flex;
   gap: 0.2rem;
   padding: 1rem 2rem 0 0;
 }
 
-.fitment-drawer-preview .icon {
+.product-fitment-preview .icon {
   flex-shrink: 0;
   height: 1.8rem;
 }
 
-.fitment-drawer-preview .icon-unavailable {
+.product-fitment-preview .icon-unavailable {
   height: 1.6rem;
   margin-top: 0.1rem;
 }
 
-.fitment-drawer-button {
+.product-fitment-drawer-button {
   background-color: transparent;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.06rem;
@@ -28,15 +30,15 @@ product-fitment {
   text-decoration: underline;
 }
 
-.fitment-drawer-button:hover {
+.product-fitment-drawer-button:hover {
   color: rgb(var(--color-foreground));
 }
 
-.fitment-drawer-info * {
+.product-fitment-drawer-info * {
   margin: 0 0 0.6rem;
 }
 
-fitment-drawer {
+product-fitment-drawer {
   background-color: rgb(var(--color-background));
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   height: 100%;
