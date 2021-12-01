@@ -2,28 +2,28 @@
 <div class="w-full grid flex justify-items-center">
 
 	<div class="w-full bg-white z-1 p-20" >
-      <span class="text-6xl p-20 pt-0 mt-0" style="font-family: teko;">{{ product.title }}</span>
+      <span class="text-6xl p-20 pt-40 mt-20" style="font-family: teko;">{{ product.title }}</span>
   	</div>
   	<div class="z-1 flow-root bg-gradient-to-t from-white via-gray-100 to-gray-600" style="width: 1717px; height: 1081px;" >
       
       <model-viewer bounds="tight" src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/Ranger_1000_FWB-front.glb" 
                     ar ar-modes="webxr scene-viewer quick-look" 
                     camera-controls environment-image="neutral" 
-                    poster="#https://modelviewer.dev/poster.webp" 
+                    poster="https://modelviewer.dev/poster.webp" 
                     shadow-intensity="1" 
                     auto-rotate
-                    style="width: 1717px; height: 1081px;>
+                    >
 
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-    </div>
-</model-viewer>
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+          <div id="ar-prompt">
+              <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+          </div>
+      </model-viewer>
 		&nbsp;
   	</div>
     	<div class="imgHolder absolute z-2 -mt-0">
