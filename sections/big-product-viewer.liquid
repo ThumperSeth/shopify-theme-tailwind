@@ -9,9 +9,11 @@
   	</div>
     	<div class="imgHolder absolute z-2 -mt-40">
       <!--<img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807">-->
-          <model-viewer bounds="tight" src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/Ranger_1000_FWB-front.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+       <!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-</model-viewer>
+<!-- Use it like any other HTML element -->
+<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="assets/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls></model-viewer>
   	</div>
 </div>
 
