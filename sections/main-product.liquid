@@ -125,11 +125,14 @@
                                     {{ product.description }}
                                 </div>
               					<script>
+                                  var fitmentDrawerVisable = false;
                                   function toggleFitmentDrawer() {
-                                    if (document.getElementById('fitmentDrawer').style.display == "hidden") {
+                                    if (fitmentDrawerVisable) {
                                       	document.getElementById('fitmentDrawer').style.opacity = "100";
+                                      	fitmentDrawerVisable = true;
                                     } else {
                                       	document.getElementById('fitmentDrawer').style.opacity = "0";
+                                      	fitmentDrawerVisable = false;
                                     }
                                   }
               					</script>
