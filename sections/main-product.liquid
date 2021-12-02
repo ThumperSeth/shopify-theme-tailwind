@@ -121,8 +121,8 @@
                             </div>
                         {%- when 'description' -%}
                             {%- if product.description != blank -%}
-                                <div class="product__description-modal rte">
-                                   [p[[ {{ product.description }}
+                                <div class="product__description rte">
+                                    {{ product.description }}
                                 </div>
               					<script>
                                   fitmentDrawerVisable = false;
