@@ -54,6 +54,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "4701d8ba-c8af-4682-8567-9fb7070f42d9": {
+          "type": "popup",
+          "settings": {
+            "text": "Fitment Popup",
+            "page": "order-form"
+          }
         }
       },
       "block_order": [
@@ -64,7 +71,8 @@
         "variant_picker",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "4701d8ba-c8af-4682-8567-9fb7070f42d9"
       ],
       "settings": {
         "enable_sticky_info": true,
