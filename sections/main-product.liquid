@@ -55,7 +55,7 @@
                     {%- if product.selected_or_first_available_variant.featured_media != null -%}
                         {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                         <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-                            {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
+                           {% comment %} {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %} {% endcomment %}
                         </li>
                     {%- endif -%}
                     {%- for media in product.media -%}
