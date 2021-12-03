@@ -4,7 +4,7 @@
 	
       <span class="text-6xl text-left p-20 pt-0 mt-20" style="font-family: teko;">{{ product.title }}</span>
   	{% if product.featured_media.media_type == "model" %}
-      {{ product.featured_media | model_viewer_tag }}
+        {{ product.featured_media | model_viewer_tag: background-color: "#455A64" }}
     {% endif %}
 
       
