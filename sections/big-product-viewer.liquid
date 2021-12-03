@@ -2,11 +2,8 @@
 <div class="w-full grid flex ">
 
 	
-      <span class="text-6xl text-left p-20 pt-0 mt-20" style="font-family: teko;">{{ product.title }}</span>
-  	{% if product.featured_media.media_type == "model" %}
-      {{ product.featured_media | model_viewer_tag }}
-    {% endif %}
-
+      <span class="text-6xl text-left p-0 pt-0 mt-20" style="font-family: teko;">{{ product.title }}</span>
+  
       <model-viewer auto-rotate disable-zoom src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/Ranger_1000_FWB-front.glb" poster="../../assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
