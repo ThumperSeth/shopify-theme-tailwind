@@ -3,8 +3,13 @@
 
 	
       <span class="text-6xl text-left p-0 pt-0 mt-20" style="font-family: teko;">{{ product.title }}</span>
+  	{% if product.featured_media.media_type == "model" %}
+      {{ product.featured_media | model_viewer_tag }}
+    {% endif %}
+
+      
   
-      <model-viewer auto-rotate disable-zoom src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/Ranger_1000_FWB-front.glb" poster="../../assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+ <model-viewer src="../../assets/ShopifyModels/Chair.glb" poster="../../assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -20,9 +25,7 @@
 
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'Bumper')" style="background-image: url('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/Ranger_1000_FWB-front.glb');">
-        
-      </button><button class="slide" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.png');">
+      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.png');">
 
       </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.png');">
 
