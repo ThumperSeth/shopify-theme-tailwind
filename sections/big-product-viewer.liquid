@@ -2,7 +2,7 @@
 <div class="w-full grid flex ">
 
 	
-      <span class="text-6xl text-left p-0 pt-0 mt-20" style="font-family: teko;">{{ product.title }}</span>
+      <span class="text-6xl text-left p-20 pt-20 mt-20" style="font-family: teko;">{{ product.title }}</span>
   	{% if product.featured_media.media_type == "model" %}
       {{ product.featured_media | model_viewer_tag }}
     {% endif %}
