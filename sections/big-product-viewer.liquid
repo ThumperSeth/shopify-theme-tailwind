@@ -1,7 +1,9 @@
 
 
   <div class="w-full grid flex border-width-2px">    
-  
+  <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
+                                {{ product.title | escape }}
+                            </h1> 
  <model-viewer style="width:100%; height:600px;" src="https://modelviewer.dev/assets/ShopifyModels/Chair.glb" poster="https://modelviewer.dev/assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
