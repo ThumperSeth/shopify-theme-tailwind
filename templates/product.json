@@ -59,7 +59,7 @@
           "type": "popup",
           "settings": {
             "text": "Fitment Popup",
-            "page": "order-form"
+            "page": "fitment"
           }
         }
       },
