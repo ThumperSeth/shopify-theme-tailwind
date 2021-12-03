@@ -9,14 +9,14 @@
 
       
   
- <model-viewer src="../../assets/ShopifyModels/Chair.glb" poster="../../assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+ <model-viewer src="https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/Chair.glb" poster="https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
     View in your space
   </button>
 
   <div id="ar-prompt">
-    <img src="../../assets/hand.png">
+    <img src="https://modelviewer.dev/examples/augmentedreality/assets/hand.png">
   </div>
 
   <button id="ar-failure">
@@ -25,15 +25,15 @@
 
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.png');">
+      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/Chair.png');">
 
-      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.png');">
+      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/Mixer.png');">
 
-      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../../assets/ShopifyModels/GeoPlanter.png');">
+      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/GeoPlanter.png');">
       
-      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.png');">
+      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/ToyTrain.png');">
       
-      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.png');">    
+      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/Canoe.png');">    
     </button></div>
   </div>
 </model-viewer>
@@ -42,7 +42,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "../../assets/ShopifyModels/" + name;
+    const base = "https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/" + name;
     modelViewer.src = base + '.glb';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
@@ -69,7 +69,7 @@
   }
 
   #ar-button {
-    background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
+    background-image: url(https://modelviewer.dev/examples/augmentedreality/assets/ic_view_in_ar_new_googblue_48dp.png);
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 12px 50%;
