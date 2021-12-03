@@ -2,7 +2,7 @@
 
   <div class="w-full grid flex border-width-2px">    
   
- <model-viewer src="https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/Chair.glb" poster="https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+ <model-viewer src="https://modelviewer.dev/assets/ShopifyModels/Chair.glb" poster="https://modelviewer.dev/assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -35,7 +35,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "https://modelviewer.dev/examples/augmentedreality/assets/ShopifyModels/" + name;
+    const base = "https://modelviewer.dev/assets/ShopifyModels/" + name;
     modelViewer.src = base + '.glb';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
@@ -62,7 +62,7 @@
   }
 
   #ar-button {
-    background-image: url(https://modelviewer.dev/examples/augmentedreality/assets/ic_view_in_ar_new_googblue_48dp.png);
+    background-image: url(https://modelviewer.dev/assets/ic_view_in_ar_new_googblue_48dp.png);
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 12px 50%;
