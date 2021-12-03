@@ -3,7 +3,9 @@
 
 	
       <span class="text-6xl text-align-left p-20 pt-0 mt-20" style="font-family: teko;">{{ product.title }}</span>
-  	
+  	{% if product.featured_media.media_type == "model" %}
+  {{ product.featured_media | model_viewer_tag }}
+{% endif %}
   
       
       <model-viewer bounds="tight" src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/Ranger_1000_FWB-front.glb" 
