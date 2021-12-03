@@ -11,6 +11,7 @@
      <model-viewer bounds="tight" src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/Ranger_1000_FWB-front.glb" 
                     ar ar-modes="webxr scene-viewer quick-look" 
                     camera-controls disable-zoom 
+                   camera-controls camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(3m - env(window-scroll-y) * 1.5m)" 
                     camera-controls environment-image="neutral" 
                     poster="https://modelviewer.dev/poster.webp" 
                     shadow-intensity="1" 
