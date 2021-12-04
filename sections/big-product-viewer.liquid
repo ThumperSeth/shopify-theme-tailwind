@@ -1,55 +1,61 @@
 
 
-  <div class="w-full grid flex border-width-0px justify-center">    
-    <h1 class="product__title text-5xl p-10" {{ block.shopify_attributes }}>
-      {{ product.title | escape }}
-    </h1> 
- <model-viewer style="width:1280px; height:600px;" src="https://modelviewer.dev/assets/ShopifyModels/Chair.glb" poster="https://modelviewer.dev/assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+<div class="w-full grid flex border-width-0px justify-center">    
   
-  <button slot="ar-button" id="ar-button">
-    View in your space
-  </button>
+  <h1 class="product__title text-5xl p-10" {{ block.shopify_attributes }}>
+    {{ product.title | escape }}
+  </h1> 
+  
+  <model-viewer style="width:1280px; height:600px;" src="https://modelviewer.dev/assets/ShopifyModels/Chair.glb" poster="https://modelviewer.dev/assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
 
-  <div id="ar-prompt">
-    <img src="https://modelviewer.dev/assets/hand.png">
-  </div>
+      <button slot="ar-button" id="ar-button">
+        View in your space
+      </button>
 
-  <button id="ar-failure">
-    AR is not tracking!
-  </button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/assets/hand.png">
+      </div>
 
-  <div class="slider" class="w-full" style="width:100%;">
-    <div class="slides text-align-center w-full" style="text-align:center;flex-direction:column;">
-      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Chair.png');">
+      <button id="ar-failure">
+        AR is not tracking!
+      </button>
 
-      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Mixer.png');">
+      <div class="slider" class="w-full" style="width:100%;">
 
-      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/GeoPlanter.png');">
-      
-      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/ToyTrain.png');">
-      
-      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Canoe.png');">    
-    </button></div>
-  </div>
-</model-viewer>
+        <div class="slides text-align-center w-full" style="text-align:center;flex-direction:column;">
+
+            <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Chair.png');"></button>
+            <button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Mixer.png');"></button>
+            <button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/GeoPlanter.png');"></button>
+            <button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/ToyTrain.png');"></button>
+            <button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Canoe.png');"></button>
+          
+        </div>
+
+      </div>
+
+  </model-viewer>
+  
 </div>
-<script type="module">
-  const modelViewer = document.querySelector("model-viewer");
 
-  window.switchSrc = (element, name) => {
-    const base = "https://modelviewer.dev/assets/ShopifyModels/" + name;
-    modelViewer.src = base + '.glb';
-    modelViewer.poster = base + '.png';
-    const slides = document.querySelectorAll(".slide");
-    slides.forEach((element) => {element.classList.remove("selected");});
-    element.classList.add("selected");
-  };
+<div class="w-full grid flex ">
+	
+      <!--<span class="text-6xl text-left p-20 pt-20 mt-20" style="font-family: teko;">{{ product.title }}</span>-->
+  	{% if product.featured_media.media_type == "model" %}
+      {{ product.featured_media | model_viewer_tag }}
+    {% endif %}
+ 
+    	<div class="imgHolder absolute z-2 -mt-0">
+      <!--<img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807">-->
+       <!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
-    // Keep slider interactions from affecting the XR scene.
-    ev.preventDefault();
-  });
-</script>
+<!-- Use it like any other HTML element -->
+
+
+  	</div>
+</div>
+
 
 <style>
   /* This keeps child nodes hidden while the element loads */
@@ -178,32 +184,25 @@
   }
 
 </style>
-  
+
+<script type="module">
+  const modelViewer = document.querySelector("model-viewer");
+
+  window.switchSrc = (element, name) => {
+    const base = "https://modelviewer.dev/assets/ShopifyModels/" + name;
+    modelViewer.src = base + '.glb';
+    modelViewer.poster = base + '.png';
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach((element) => {element.classList.remove("selected");});
+    element.classList.add("selected");
+  };
+
+  document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
+    // Keep slider interactions from affecting the XR scene.
+    ev.preventDefault();
+  });
+</script>
 	
-<div class="w-full grid flex ">
-
-	
-      <!--<span class="text-6xl text-left p-20 pt-20 mt-20" style="font-family: teko;">{{ product.title }}</span>-->
-  	{% if product.featured_media.media_type == "model" %}
-      {{ product.featured_media | model_viewer_tag }}
-    {% endif %}
- 
-    	<div class="imgHolder absolute z-2 -mt-0">
-      <!--<img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807">-->
-       <!-- Import the component -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-<!-- Use it like any other HTML element -->
-
-
-  	</div>
-</div>
-
-
-
-
-
-
 {% schema %}
   {
     "name": "Big Product Viewer",
