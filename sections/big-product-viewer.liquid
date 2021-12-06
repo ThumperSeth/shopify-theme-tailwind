@@ -17,32 +17,23 @@
           AR is not tracking!
         </button>
         <div class="slider" class="w-full ht-20">
-          <div class="slides text-align-center w-1/4" style="text-align:center;flex-direction:column;">
-              <button class="slide selected" onclick="switchSrc(this, 'Bumper')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Chair.png');"></button>
-              <button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Mixer.png');"></button>
-              <button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/GeoPlanter.png');"></button>
-              <button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/ToyTrain.png');"></button>
-              <button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Canoe.png');"></button>
+          <div class="slides text-align-center" style="text-align:center;flex-direction:column;">
+              <button class="slide selected" onclick="switchSrc(this, 'Bumper')" style="background-image: url('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807');"></button>
           </div>
         </div>
       </model-viewer>
 	</div>
 </div>
-<div class="w-full grid flex">
-    <!--<span class="text-6xl text-left p-20 pt-20 mt-20" style="font-family: teko;">{{ product.title }}</span>-->
-  	{% if product.featured_media.media_type == "model" %}
-      {{ product.featured_media | model_viewer_tag }}
-    {% endif %}
- 
-    	<div class="imgHolder absolute z-2 -mt-0">
-      <!--<img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807">-->
-       <!-- Import the component -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-<!-- Use it like any other HTML element -->
-
-
-  	</div>
+<div class="w-full flex">
+  {% if product.featured_media.media_type == "model" %}
+  	{{ product.featured_media | model_viewer_tag }}
+  {% endif %}
+  <div class="imgHolder absolute z-2 -mt-0">
+    <!--<img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807">-->
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- Use it like any other HTML element -->
+  </div>
 </div>
 
 
