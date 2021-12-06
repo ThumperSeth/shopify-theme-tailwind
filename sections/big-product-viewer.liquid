@@ -1,11 +1,9 @@
 
 
 <div class="w-full grid flex border-width-0px justify-center">    
-  
-  <h1 class="product__title text-5xl p-10" {{ block.shopify_attributes }}>
-    {{ product.title | escape }}
-  </h1> 
-  
+  <div>
+  	<h1 class="product__title text-6xl p-10" {{ block.shopify_attributes }}>{{ product.title | escape }}</h1> 
+  </div>
   <model-viewer style="width:1280px; height:600px;" src="https://model3d.shopifycdn.com/models/o/f4d66bae17b469a3/Ranger_1000_FWB-front.glb" poster="https://modelviewer.dev/assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
 
       <button slot="ar-button" id="ar-button">
