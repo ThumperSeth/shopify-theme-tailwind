@@ -27,8 +27,16 @@
             "text_style": "uppercase"
           }
         },
-        "price": {
-          "type": "price",
+        "9d63a218-7988-4f26-b1ee-88cafd0046fa": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text_style": "body"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
@@ -38,15 +46,15 @@
             "picker_type": "button"
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "share": {
@@ -68,10 +76,11 @@
         "subtitle",
         "title",
         "vendor",
-        "price",
-        "variant_picker",
-        "buy_buttons",
+        "9d63a218-7988-4f26-b1ee-88cafd0046fa",
         "description",
+        "variant_picker",
+        "price",
+        "buy_buttons",
         "share",
         "4701d8ba-c8af-4682-8567-9fb7070f42d9"
       ],

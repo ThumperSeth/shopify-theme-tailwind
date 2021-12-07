@@ -44,11 +44,6 @@
             "show_dynamic_checkout": false
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "share": {
           "type": "share",
           "disabled": true,
@@ -62,6 +57,13 @@
             "text": "Fitment Popup",
             "page": "fitment"
           }
+        },
+        "40c04dd2-ac13-4a6e-8f80-5355076a9021": {
+          "type": "text",
+          "settings": {
+            "text": "Text block{{ product.metafields[\"mm-google-shopping\"].custom_label_0.value }}",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -71,9 +73,9 @@
         "price",
         "variant_picker",
         "buy_buttons",
-        "description",
         "share",
-        "4701d8ba-c8af-4682-8567-9fb7070f42d9"
+        "4701d8ba-c8af-4682-8567-9fb7070f42d9",
+        "40c04dd2-ac13-4a6e-8f80-5355076a9021"
       ],
       "settings": {
         "enable_sticky_info": true,
