@@ -121,7 +121,7 @@
                                 {%- endform -%}
                             </div>
                         {%- when 'description' -%}
-                            {%- if product.description != blank -%}
+                            {%- if product.metafields.global.shortDescription == blank -%}
                                 <div class="product__description rte">
                                     {{ product.description }}
                                 </div>
