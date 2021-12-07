@@ -49,7 +49,8 @@
 <section class="w-full">
     <div class="grid flex justify-items-center sm:grid-cols-1 w-full z-0">
         <div class="grid__item product__media-wrapper w-1/2">
-            <slider-component class="slider-mobile-gutter">
+            
+          <!--<slider-component class="slider-mobile-gutter">
                 <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
   <!--              <ul class="w-full product__media-list flex grid grid-cols-4 slider slider--mobile" role="list">
                     {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -67,7 +68,7 @@
                   			</li>
                         {%- endunless -%}
                     {%- endfor -%}
-                </ul>-->
+                </ul>
                 <div class="slider-buttons slider-buttons--overlay no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
                     <div class="slider-counter caption">
                         <span class="slider-counter--current">1</span>
@@ -78,7 +79,7 @@
                     <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
                      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
                 </div>
-            </slider-component>
+            </slider-component>-->
             {%- if first_3d_model -%}
                 <button
                 class="button button--full-width product__xr-button"
