@@ -1,7 +1,7 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-
+<section>
 <div class="multicolumn p-4 pb-0rem" style="background-color:#;">
   <div class="page-width p-40rem">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}" style="margin:2rem 0 3rem;">
@@ -89,7 +89,7 @@
     </div>
   </div>
 </div>
-
+</section>
 {% schema %}
 {
   "name": "Trust Badge Columns",
