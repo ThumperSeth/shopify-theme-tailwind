@@ -2402,24 +2402,4 @@ details-disclosure > details {
   /* Similar syntax to box-shadow */
 }
   
- body {
  
- border: 1px solid black;
- padding: 0px;
- background: url(“https://cdn.shopify.com/s/files/1/0581/0398/8373/files/Untitled_design.png?v=1634841212");
- background-attachment: fixed;
-body:before {
- content: “”;
- display: block;
- position: fixed;
- left: 0;
- top: 0;
- width: 100%;
- height: 100%;
- z-index: -10;
- background: url(https://cdn.shopify.com/s/files/1/0581/0398/8373/files/Untitled_design.png?v=1634841212) no-repeat center center;
- -webkit-background-size: auto;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
-}
