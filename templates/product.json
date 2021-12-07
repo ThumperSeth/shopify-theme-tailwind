@@ -18,7 +18,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.global.product_make.value }}",
+            "text": "{{ product.metafields.global.product_make.value }} \/ {{ product.metafields.global.product_model.value }}",
             "text_style": "uppercase"
           }
         },
