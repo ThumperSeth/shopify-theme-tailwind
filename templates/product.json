@@ -67,7 +67,7 @@
         "eae11499-b3f2-4888-a325-89bdd673a90a": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{{ product.metafields.global.shortDescription }}"
+            "custom_liquid": "product.metafields.global.shortDescription }}"
           }
         }
       },
