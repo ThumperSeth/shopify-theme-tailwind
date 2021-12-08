@@ -87,12 +87,19 @@
         "show_vendor": true,
         "show_rating": true
       }
+    },
+    "1638998803de2f92a2": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'carousel' %}"
+      }
     }
   },
   "order": [
     "16371896537551f4cd",
     "banner",
     "make-collection-grid",
-    "1638991131cedcfdc1"
+    "1638991131cedcfdc1",
+    "1638998803de2f92a2"
   ]
 }
