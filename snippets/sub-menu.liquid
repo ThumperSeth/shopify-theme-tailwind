@@ -45,38 +45,36 @@
     transform: skewX(-45deg);
 }*/
   
-.svg-logo { 
-  min-width:200px;
-  max-width:330px;
-}
+.svg-logo { min-width:200px; }
   
 </style>
-<div class="collection-SubMenu-Section w-full h-full pl-5 pr-5 p-0 shadow-lg align-middle" style="background-color:{{ brandColor }};">
-<div id="collection-SubMenu" class="grid lg:auto-cols-max w-full mr-5 ml-5 flex-inline">
-  <div class="block w-1/6 md:w-1/4 flex text-left md:pl-4 sm:pl-2 lg:pl-12 pt-2 pb-2 drop-shadow brandbox svg-logo h-full grid w-full">
-   <!-- <input type="button" class="hover: bounce;" onclick="location.href='{{ collection.current_vendor | within:collection }}';">-->
-    <a href="{{ collection_current.url }}">{{ collection.metafields.make.svg_data.value }}</a>
-   <!-- </input>-->
+<div class="collection-SubMenu-Section h-full flex flex-nowrap  p-0 shadow-lg align-middle" style="background-color:{{ brandColor }};">
+<div id="collection-SubMenu" class="w-full h-full flex">
+  <div class="block w-1/6 flex text-left md:pl-4 sm:pl-2 lg:pl-12 pt-2 pb-2 drop-shadow brandbox svg-logo h-full">
+    <input type="button" class="hover: bounce;" onclick="location.href='{{ collection.current_vendor | within:collection }}';">
+    {{ collection.metafields.make.svg_data.value }}
+    </input>
   </div>
-  <!--<div class="bendybox-45 ml-12" style="margin-top: -8px">&nbsp;</div>-->
+  <div class="bendybox-45 ml-12" style="margin-top: -8px">&nbsp;</div>
   <div class="align-middle h-full">
-    <div class="block h-full w-full make-menu text-center md:pl-4 md:pr-4 sm:pl-4 sm:pr:4 lg:pl-4 align-middle mt-0">
-      <span>&nbsp;&nbsp;
-        {% for product_type in collection.all_types %}
-        {% unless product_type contains 'Option' %}
-        {% if request.path contains product_type %} 
-          <a style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
-          &nbsp;&nbsp;•
-        {% else %}
-          <a href="#{{ product_type }}">{{ product_type }}</a>
-        {% unless forloop.last %}
-        &nbsp;<span style="margin-top:15px !important;font-weight:900;">.</span>&nbsp;   
-        {% endunless %}
-        {% endif %}
-        {% endunless %}          
-        {% endfor %}
-      </span>
-	</div>
-  </div>
+    <div class="block h-full w-full make-menu text-left md:pl-2 sm:pl-1 lg:pl-4 align-middle mt-6">
+    <span>&nbsp;&nbsp;
+      {% for product_type in collection.all_types %}
+      {% unless product_type contains 'Option' %}
+      {% if request.path contains product_type %} 
+      	<a style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+      	&nbsp;&nbsp;•
+      {% else %}
+      	<a href="#{{ product_type }}">{{ product_type }}</a>
+      {% unless forloop.last %}
+      &nbsp;<span style="margin-top:15px !important;font-weight:900;">.</span>&nbsp;   
+      {% endunless %}
+      {% endif %}
+      {% endunless %}          
+      {% endfor %}
+    </span>
+</div>
+    </div>
+</div>
 </div>
 
