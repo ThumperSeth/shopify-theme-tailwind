@@ -95,7 +95,7 @@
 
 @media screen and (min-width: 750px) {
   .multicolumn:not(.background-secondary) {
-    margin: calc(5rem + var(--page-width-margin)) 0;
+    margin: /*calc(5rem + var(--page-width-margin))*/ 0;
   }
 }
 
