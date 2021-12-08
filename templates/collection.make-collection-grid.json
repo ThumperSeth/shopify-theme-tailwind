@@ -56,8 +56,8 @@
         "show_collection_image": true
       }
     },
-    "brand-collection-grid": {
-      "type": "brand-collection-grid",
+    "make-collection-grid": {
+      "type": "make-collection-grid",
       "settings": {
         "products_per_page": 24,
         "image_ratio": "square",
@@ -75,6 +75,6 @@
   "order": [
     "16371896537551f4cd",
     "banner",
-    "brand-collection-grid"
+    "make-collection-grid"
   ]
 }
