@@ -89,8 +89,8 @@
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
           <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
             <span>
-              {% render 'icon-hamburger' %}
-              {% render 'icon-close' %}
+            {% comment %}{% render 'icon-arrow' %}
+                              {% render 'icon-caret' %}{% endcomment %}
             </span>
           </summary>
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
@@ -104,8 +104,8 @@
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                             <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                              {{ link.title | escape }}
-                            {% comment %}{% render 'icon-arrow' %}
-                              {% render 'icon-caret' %}{% endcomment %}
+                              {% render 'icon-arrow' %}
+                              {% render 'icon-caret' %}
                             </summary>
                             <div id="link-{{ link.title | escape }}" class="menu-drawer__submenu motion-reduce" tabindex="-1">
                               <div class="menu-drawer__inner-submenu">
