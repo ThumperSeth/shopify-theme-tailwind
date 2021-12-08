@@ -55,7 +55,7 @@
         <div class="loading-overlay gradient"></div>
         {% assign productsArray = collections[currentBrand].products %}      
   {% for product_type in collection.all_types %}
-      {% unless product_type contains 'Option' %}        
+      {% unless product_type contains '33Option' %}        
         {%- if productsArray -%} 
        	<div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
        <div class="w-3/4 justify-items-center pb-20"> 
