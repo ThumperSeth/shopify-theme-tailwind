@@ -49,32 +49,31 @@
   
 </style>
 <div class="collection-SubMenu-Section w-full h-full  p-0 shadow-lg align-middle" style="background-color:{{ brandColor }};">
-<div id="collection-SubMenu" class="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-full">
+<!--<div id="collection-SubMenu" class="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-full">-->
   <div class="block w-1/6 flex text-left md:pl-4 sm:pl-2 lg:pl-12 pt-2 pb-2 drop-shadow brandbox svg-logo h-full">
     <input type="button" class="hover: bounce;" onclick="location.href='{{ collection.current_vendor | within:collection }}';">
     {{ collection.metafields.make.svg_data.value }}
     </input>
   </div>
-  <div class="bendybox-45 ml-12" style="margin-top: -8px">&nbsp;</div>
+  <!--<div class="bendybox-45 ml-12" style="margin-top: -8px">&nbsp;</div>-->
   <div class="align-middle h-full">
     <div class="block h-full w-full make-menu text-left md:pl-2 sm:pl-1 lg:pl-4 align-middle mt-6">
-    <span>&nbsp;&nbsp;
-      {% for product_type in collection.all_types %}
-      {% unless product_type contains 'Option' %}
-      {% if request.path contains product_type %} 
-      	<a style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
-      	&nbsp;&nbsp;•
-      {% else %}
-      	<a href="#{{ product_type }}">{{ product_type }}</a>
-      {% unless forloop.last %}
-      &nbsp;<span style="margin-top:15px !important;font-weight:900;">.</span>&nbsp;   
-      {% endunless %}
-      {% endif %}
-      {% endunless %}          
-      {% endfor %}
-    </span>
-</div>
-    </div>
-</div>
+      <span>&nbsp;&nbsp;
+        {% for product_type in collection.all_types %}
+        {% unless product_type contains 'Option' %}
+        {% if request.path contains product_type %} 
+          <a style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
+          &nbsp;&nbsp;•
+        {% else %}
+          <a href="#{{ product_type }}">{{ product_type }}</a>
+        {% unless forloop.last %}
+        &nbsp;<span style="margin-top:15px !important;font-weight:900;">.</span>&nbsp;   
+        {% endunless %}
+        {% endif %}
+        {% endunless %}          
+        {% endfor %}
+      </span>
+	</div>
+  <!--</div>-->
 </div>
 
