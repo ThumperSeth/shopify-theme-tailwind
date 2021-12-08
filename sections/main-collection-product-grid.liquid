@@ -29,9 +29,8 @@
 		{% assign brandColor = "#e0262f" %}
 		{% break %}
 	{% else %}
-		{% assign currentBrand = "all" %}
-		{% assign brandColor = "#ccc" %}
-
+		{% assign currentBrand = "" %}
+		{% assign brandColor = "#FFFFFF" %}
 {% endcase %}
 {% endfor %}
 
@@ -39,9 +38,19 @@
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
+{%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+  {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
+  <div class="page-width" id="main-collection-filters" data-id="{{ section.id }}">
+    {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, collapse_on_larger_devices: section.settings.collapse_on_larger_devices %}
+  </div>
+{%- endif -%}
+
 <div id="ProductGridContainer">
+  {%- paginate collection.products by section.settings.products_per_page -%}
     {%- if collection.products.size == 0 -%}
-      <div class="collection collection--empty page-width mt-0" id="product-grid" data-id="{{ section.id }}">
+      <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
         <div class="loading-overlay gradient"></div>
         <div class="title-wrapper center">
           <h2 class="title title--primary">
@@ -51,42 +60,51 @@
         </div>
       </div>
     {%- else -%}
-      <div class="collection w-full align-center justify-items-center">
+      <div class="collection page-width">
         <div class="loading-overlay gradient"></div>
-        {% assign productsArray = collections[currentBrand].products %}      
+        
   {% for product_type in collection.all_types %}
-      {% unless product_type contains 'Option' %}        
-        {%- if productsArray -%} 
-       	<div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
-       <div class="w-3/4 justify-items-center pb-20"> 
-         <a name="{{ product_type }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
-         <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ product_type }}</div>
+      {% unless product_type contains 'Option' %}
+        {% capture typeFilter %}where: "type", "{{ product_type }}"{% endcapture %}
+        {% capture productsCommand %}collections["{{currentBrand}}"].products | {{ typeFilter }}{% endcapture %}
+        {% capture productsResult %}{{ productsCommand }}{% endcapture %}
+        {% assign productsArray = productsCommand %}
+        
+        {%- if productsArray -%}
+        =={{ productsResult }}== **{{ productsArray.size }}**
+       <div style=""> 
+        <span class="text-7xl font-medium" style="font-family:'Teko'">{{ product_type }}</span>   
           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                 {% for product in productsArray %}     
-					{% if product.tags contains product_type %}
-                      <li class="grid__item w-full align-center text-center">
-                          {% render 'collection-card',
-                            product_card_product: product,
-                            media_size: section.settings.image_ratio,
-                            show_secondary_image: section.settings.show_secondary_image,
-                            <!--add_image_padding: section.settings.add_image_padding,-->
-                            show_vendor: section.settings.show_vendor,
-                            show_image_outline: section.settings.show_image_outline,
-                            show_rating: section.settings.show_rating,
-                            brand_color: brandColor
-                          %}
-                      </li>
-              		{%- endif -%}           
+
+            	{% if product.type == product_type %}
+                  <li class="grid__item w-full align-center text-center">
+                    ++{{ product_type }}:{{product.type}}++ 
+                    {% render 'collection-card',
+                      product_card_product: product,
+                      media_size: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      add_image_padding: section.settings.add_image_padding,
+                      show_vendor: section.settings.show_vendor,
+                      show_image_outline: section.settings.show_image_outline,
+                      show_rating: section.settings.show_rating,
+                      brand_color: brandColor
+                    %}
+                  </li>
+            	{%- endif -%}
                 {%- endfor -%}
           </ul>
         </div>
-        </div>
+		<hr style="margin:5rem; border:1px solid #222; width:100%;">
          {%- endif -%}
         {%- endunless -%}
    {%- endfor -%}
-
+        {%- if paginate.pages > 1 -%}
+          {% render 'pagination', paginate: paginate, anchor: '' %}
+        {%- endif -%}
+      </div>
     {%- endif -%}
-  </div>
+  {%- endpaginate -%}
 </div>
 <style>
 .vtl-pr-review-stars-snippet__stars .vtl-pr-review-stars-snippet__empty-icons .vtl-pr-review-stars-snippet__full-icons::after {
