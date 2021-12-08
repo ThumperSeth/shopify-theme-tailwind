@@ -26,8 +26,8 @@
           endfor
         -%}
         {%- for block in section.blocks -%}
-          <div class="multicolumn-list__item block {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}">
-            <div class="multicolumn-card  rounded-xl pb-20" style="background-color:#ccc;">
+          <div class="pb-20 multicolumn-list__item block {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}">
+            <div class="multicolumn-card  rounded-xl" style="background-color:#ccc;">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
