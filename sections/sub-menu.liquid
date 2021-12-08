@@ -64,7 +64,7 @@
 <section>
 <div class="collection-SubMenu-Section h-full flex flex-nowrap  p-0 shadow-lg align-middle" style="background-color:{{ brandColor }};">
 <div id="collection-SubMenu" class="w-full h-full">
-  <div class="grid grid-cols-1 md:grid-cols-6 text-left md:pl-4 sm:pl-2 lg:pl-12 pt-2 pb-2 drop-shadow brandbox svg-logo h-full">
+  <div class="block w-1/6 flex text-left md:pl-4 sm:pl-2 lg:pl-12 pt-2 pb-2 drop-shadow brandbox svg-logo h-full">
     <button class="hover: bounce;" onclick="location.href='{{ collection.current_vendor | within:collection }}';">
     {% capture collectionSVG %}collection.{{ currentBrand }}.metafields.make.svg_data.value{% endcapture %} 
     {{ collectionSVG }}
@@ -72,7 +72,7 @@
   </div>
   <div class="bendybox-45 ml-12" style="margin-top: -8px">&nbsp;</div>
   <div class="align-middle h-full">
-    <div class="block h-full w-full make-menu text-left md:pl-2 sm:pl-1 lg:pl-4 align-middle mt-6">
+    <div class="block h-full w-full make-menu grid grid-cols-2 md:grid-cols-1 sm:grid-cols1 text-left md:pl-2 sm:pl-1 lg:pl-4 align-middle mt-6">
     <span>&nbsp;&nbsp;
       {% for product_type in collection.all_types %}
       {% unless product_type contains 'Option' %}
