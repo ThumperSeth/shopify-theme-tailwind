@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "16371896537551f4cd": {
+      "type": "image-banner",
+      "blocks": {
+        "163718965392906dbc-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "163718965392906dbc-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "163718965392906dbc-0",
+        "163718965392906dbc-1",
+        "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/general_audio-roof_banner.jpg",
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_text_box_position": "center",
+        "show_text_box": true,
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true
+      }
+    },
+    "make-collection-grid": {
+      "type": "make-collection-grid",
+      "settings": {
+        "products_per_page": 24,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": true
+      }
+    }
+  },
+  "order": [
+    "16371896537551f4cd",
+    "banner",
+    "make-collection-grid"
+  ]
+}
