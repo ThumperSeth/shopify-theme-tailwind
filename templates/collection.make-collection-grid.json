@@ -58,7 +58,6 @@
     },
     "make-collection-grid": {
       "type": "make-collection-grid",
-      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "image_ratio": "square",
@@ -74,6 +73,7 @@
     },
     "1638991131cedcfdc1": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "collection_name",
         "collection": "polaris",
