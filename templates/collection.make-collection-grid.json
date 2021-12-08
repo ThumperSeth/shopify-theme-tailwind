@@ -57,18 +57,8 @@
       }
     },
     "product-grid": {
-      "type": "main-collection-product-grid",
+      "type": "brand-collection-grid",
       "settings": {
-        "products_per_page": 24,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "add_image_padding": false,
-        "show_image_outline": false,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_filtering": true,
-        "enable_sorting": true,
-        "collapse_on_larger_devices": true
       }
     }
   },
