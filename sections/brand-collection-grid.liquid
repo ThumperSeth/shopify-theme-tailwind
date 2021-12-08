@@ -64,7 +64,7 @@
           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                 {% for product in productsArray %}     
 					{% if product.tags contains product_type %}
-                      <li class="grid grid-cols-4 w-full align-center text-center">
+                      <li class=" w-full align-center text-center">
                           {% render 'collection-card',
                             product_card_product: product,
                             media_size: section.settings.image_ratio,
