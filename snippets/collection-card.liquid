@@ -122,7 +122,7 @@
     <div class="card-information__wrapper w-full">
       
       {%- if show_vendor -%}
-        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+        <span class="visually-hidden">{{ product_card_product.metafields.global.make | t }}/{{ product_card_product.metafields.global.model | t }}</span>
         <div class="caption-with-letter-spacing light text-left font-bold text-2xl" style="color:{{ brandColor }}; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);">{{ currentBrand }}</div>
       {%- endif -%}
 
