@@ -2200,7 +2200,7 @@ details[open] > .header__icon--menu .icon-hamburger {
     display: -webkit-inline-box;
     flex-wrap:nowrap
   }
-
+}
 
 .header__menu {
   padding: 0 1rem;
@@ -2221,7 +2221,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   color: #fff;
   text-shadow: 0px 0px 5px #ffffff;
 }
-}
+
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
