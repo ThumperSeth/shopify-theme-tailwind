@@ -56,15 +56,25 @@
         "show_collection_image": true
       }
     },
-    "product-grid": {
+    "brand-collection-grid": {
       "type": "brand-collection-grid",
       "settings": {
+        "products_per_page": 24,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": true
       }
     }
   },
   "order": [
     "16371896537551f4cd",
     "banner",
-    "product-grid"
+    "brand-collection-grid"
   ]
 }
