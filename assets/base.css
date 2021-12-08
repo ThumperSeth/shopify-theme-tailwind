@@ -2415,9 +2415,9 @@ details-disclosure > details {
   overflow: hidden;
 }
 .grid-view-item__image-wrapper img {
-  -moz-transition: all 1.5s;
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
+  -moz-transition: all 3s;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 .grid-view-item__image-wrapper:hover img {
   -moz-transform: scale(1.3);
