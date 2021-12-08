@@ -56,8 +56,9 @@
         "show_collection_image": true
       }
     },
-    "product-grid": {
-      "type": "main-collection-product-grid",
+    "make-collection-grid": {
+      "type": "make-collection-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "image_ratio": "square",
@@ -70,11 +71,28 @@
         "enable_sorting": true,
         "collapse_on_larger_devices": true
       }
+    },
+    "1638991131cedcfdc1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "collection_name",
+        "collection": "polaris",
+        "products_to_show": 8,
+        "show_view_all": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": true,
+        "show_rating": true
+      }
     }
   },
   "order": [
     "16371896537551f4cd",
     "banner",
-    "product-grid"
+    "make-collection-grid",
+    "1638991131cedcfdc1"
   ]
 }
