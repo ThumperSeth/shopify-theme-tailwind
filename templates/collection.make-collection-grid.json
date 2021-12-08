@@ -91,7 +91,7 @@
     "1638998803de2f92a2": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% render 'carousel' %}"
+        "custom_liquid": "{% render'carousel' %}"
       }
     }
   },
