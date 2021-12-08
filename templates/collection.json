@@ -76,7 +76,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "collection_name",
-        "collection": "polaris",
+        "collection": "",
         "products_to_show": 8,
         "show_view_all": true,
         "swipe_on_mobile": true,
