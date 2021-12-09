@@ -11,7 +11,7 @@
 <div class="collection page-width">
 	<div class="loading-overlay gradient"></div>
   	<ul id="product-grid" data-id="{{ section.id }}" 
-        class="grid grid--2-col negative-margin product-grid
+        class="grid grid-cols-2 negative-margin grid
     	{% if collection.products_count < 4 %}
         	md:grid-cols-{{ collection.products_count }}
         {% else %}
