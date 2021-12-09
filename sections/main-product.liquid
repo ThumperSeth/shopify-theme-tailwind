@@ -38,7 +38,6 @@
           {% assign brandColor = "#ccc" %}
   {% endcase %}
 {% endfor %}
-{% render 'make-menu-snippet' %}
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -668,11 +667,6 @@
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
         }
       ]
-    },
-    {
-      "type": "sub-menu",
-      "name": "sub-menu",
-      "limit": 1
     },
     {
       "type": "title",
