@@ -137,6 +137,7 @@
   max-width: 37rem;
   min-width: fit-content;
   border: none;
+  min-height:44px;
 }
 
 variant-radios,
