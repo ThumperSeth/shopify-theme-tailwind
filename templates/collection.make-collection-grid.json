@@ -57,7 +57,7 @@
       }
     },
     "product-grid": {
-      "type": "main-collection-product-grid",
+      "type": "make-collection-grid",
       "settings": {
         "products_per_page": 24,
         "image_ratio": "square",
