@@ -111,7 +111,7 @@
 /* Product form */
 
 .product-form {
-  display: block;
+  display: inline-block;
 }
 
 .product-form__error-message-wrapper:not([hidden]) {
