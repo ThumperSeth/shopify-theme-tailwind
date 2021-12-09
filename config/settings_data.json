@@ -94,7 +94,7 @@
         ],
         "settings": {
           "title": "Why Thumper Fab?",
-          "image_width": "third",
+          "image_width": "half",
           "image_ratio": "adapt",
           "column_alignment": "center",
           "background_style": "secondary",
