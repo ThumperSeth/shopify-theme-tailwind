@@ -38,7 +38,7 @@
           {% assign brandColor = "#ccc" %}
   {% endcase %}
 {% endfor %}
-
+{% render 'sub-menu' %}
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
