@@ -47,7 +47,7 @@
 
 <section class="w-full">
     <div class="grid flex justify-items-center sm:grid-cols-1 w-full z-0">
-        <div class="grid__item product__media-wrapper w-3/4">
+        <div class="grid__item product__media-wrapper w-4/5">
             
           <slider-component class="slider-mobile-gutter">
                 <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
@@ -94,7 +94,7 @@
                 </button>
             {%- endif -%}
         </div>
-        <div class="product__info-wrapper flex grid-cols-1 w-4/5">
+        <div class="product__info-wrapper flex grid-cols-1">
             <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
                 {%- assign product_form_id = 'product-form-' | append: section.id -%}
                 {%- for block in section.blocks -%}
