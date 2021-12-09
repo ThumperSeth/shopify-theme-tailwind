@@ -40,18 +40,7 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div id="ProductGridContainer">
-    {%- if collection.products.size == 0 -%}
-      <div class="collection collection--empty page-width mt-0" id="product-grid" data-id="{{ section.id }}">
-        <div class="loading-overlay gradient"></div>
-        <div class="title-wrapper center">
-          <h2 class="title title--primary">
-            {{ 'sections.collection_template.empty' | t }}<br>
-            {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
-          </h2>
-        </div>
-      </div>
-    {%- else -%}
-      <div class="collection w-full align-center justify-items-center">
+	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
         {% assign productsArray = collections[currentBrand].products %}      
         {% for product_type in collection.all_types %}
@@ -84,7 +73,6 @@
               {%- endif -%}
            {%- endunless -%}
        {%- endfor -%}
-    {%- endif -%}
   </div>
 </div>
 
