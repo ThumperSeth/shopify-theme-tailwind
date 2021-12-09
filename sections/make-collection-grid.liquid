@@ -42,7 +42,7 @@
 <div id="ProductGridContainer">
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
-        {% assign productsArray = collections[currentBrand].products %}      
+        {% assign productsArray = collections[collection_name].products %}      
         {% for product_type in collection.all_types %}
             {% unless product_type contains 'Option' %}        
               {%- if productsArray -%} 
