@@ -74,7 +74,7 @@
 	<div class="make-menu col-2">
       <p>&nbsp;&nbsp;
         {% for product_type in collection.all_types %}
-        {% unless product_type contains 'Option' %}
+        {% unless product.title contains 'Option' %}
         <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
          &nbsp;&nbsp;•&nbsp;   
         {% endunless %}          
