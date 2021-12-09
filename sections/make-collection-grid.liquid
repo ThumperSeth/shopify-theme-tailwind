@@ -39,9 +39,9 @@
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div id="ProductGridContainer">
+<div id="">
 	<div class="collection w-full align-center justify-items-center">
-        
+        <div class="loading-overlay gradient"></div>
         {% assign productsArray = collections[currentBrand].products %}      
         {% for product_type in collection.all_types %}
             {% unless product_type contains 'Option' %}        
