@@ -56,7 +56,7 @@
         "show_collection_image": true
       }
     },
-    "product-grid": {
+    "make-collection-grid": {
       "type": "make-collection-grid",
       "settings": {
         "products_per_page": 24,
@@ -75,6 +75,6 @@
   "order": [
     "16371896537551f4cd",
     "banner",
-    "product-grid"
+    "make-collection-grid"
   ]
 }
