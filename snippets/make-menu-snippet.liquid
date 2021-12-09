@@ -40,7 +40,7 @@
   background: rgb(153,153,153);
   background: linear-gradient(180deg, rgba(153,153,153,1) 0%, rgba(204,204,204,1) 100%);
   flex-basis: 400px; /* sets initial width to 70% */ 
-  height:146px;
+  height:46px;
 }
   
 .col-2 {
@@ -74,7 +74,7 @@
 	<div class="make-menu col-2">
       <p>&nbsp;&nbsp;
         {% for product_type in collection.all_types %}
-        {% unless product.title contains 'Option' %}
+        {% unless product_type contains 'Option' %}
         <a href="{{ collection.current_vendor | within:collection }}/{{ product_type }}">{{ product_type }}</a>
          &nbsp;&nbsp;•&nbsp;   
         {% endunless %}          
