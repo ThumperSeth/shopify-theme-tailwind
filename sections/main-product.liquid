@@ -108,7 +108,7 @@
               			{%- when 'custom_liquid' -%}
             				{{ block.settings.custom_liquid }}
                         {%- when 'title' -%}
-                            <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
+                            <h1 class="product__title text-6xl" {{ block.shopify_attributes }}>
                             	{%- if product.metafields.global.display_name.value != nil -%}
                               		{{ product.metafields.global.display_name.value }}
                     			{%- else -%}
