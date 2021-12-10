@@ -58,6 +58,8 @@
                             {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
                         </li>
                     {%- endif -%}
+              	</ul>
+                <ul class="w-full product__media-list flex-wrap slider slider--mobile" role="list">
                     {%- for media in product.media -%}
                         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                             <li class="w-1/12" data-media-id="{{ section.id }}-{{ media.id }}">
