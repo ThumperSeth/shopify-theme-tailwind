@@ -1978,11 +1978,6 @@
       "presets": {
         "name": "Video"
       }
-    },
-    "paralax-image": {
-      "name": "Paralax Image",
-      "settings": {
-      }
     }
   }
 }
