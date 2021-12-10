@@ -1,5 +1,10 @@
 {
   "settings_schema": {
+    "paralax-image": {
+      "name": "Paralax Image",
+      "settings": {
+      }
+    },
     "colors": {
       "name": "Colors",
       "settings": {
