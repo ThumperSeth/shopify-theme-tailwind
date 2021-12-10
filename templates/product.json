@@ -77,6 +77,12 @@
             "text": "Fitment",
             "page": "fitment"
           }
+        },
+        "a74f0141-4204-40eb-a984-70843049cee4": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{{ product.metafields.global.featured }}"
+          }
         }
       },
       "block_order": [
@@ -90,7 +96,8 @@
         "variant_picker",
         "buy_buttons",
         "share",
-        "4701d8ba-c8af-4682-8567-9fb7070f42d9"
+        "4701d8ba-c8af-4682-8567-9fb7070f42d9",
+        "a74f0141-4204-40eb-a984-70843049cee4"
       ],
       "settings": {
         "enable_sticky_info": false,
