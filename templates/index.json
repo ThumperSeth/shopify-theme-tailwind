@@ -39,6 +39,46 @@
         "show_text_below": true
       }
     },
+    "shop-by-ride": {
+      "type": "shop-by-ride",
+      "settings": {
+      }
+    },
+    "paralax-image": {
+      "type": "paralax-image",
+      "settings": {
+      }
+    },
+    "shop-by-type": {
+      "type": "shop-by-type",
+      "settings": {
+      }
+    },
+    "top-sellers": {
+      "type": "top-sellers",
+      "settings": {
+      }
+    },
+    "new-at-thumper": {
+      "type": "new-at-thumper",
+      "settings": {
+      }
+    },
+    "index-affirm-section": {
+      "type": "index-affirm-section",
+      "settings": {
+      }
+    },
+    "what-customers-say": {
+      "type": "what-customers-say",
+      "settings": {
+      }
+    },
+    "thumper-news": {
+      "type": "thumper-news",
+      "settings": {
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -224,44 +264,49 @@
         "mobile_layout": "column"
       }
     },
-    "shop-by-ride": {
-      "type": "shop-by-ride",
+    "163916959478ca75fb": {
+      "type": "image-banner",
+      "blocks": {
+        "163916959403669a4e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "163916959403669a4e-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "163916959403669a4e-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "163916959403669a4e-0",
+        "163916959403669a4e-1",
+        "163916959403669a4e-2"
+      ],
       "settings": {
-      }
-    },
-    "top-sellers": {
-      "type": "top-sellers",
-      "settings": {
-      }
-    },
-    "shop-by-type": {
-      "type": "shop-by-type",
-      "settings": {
-      }
-    },
-    "new-at-thumper": {
-      "type": "new-at-thumper",
-      "settings": {
-      }
-    },
-    "index-affirm-section": {
-      "type": "index-affirm-section",
-      "settings": {
-      }
-    },
-    "what-customers-say": {
-      "type": "what-customers-say",
-      "settings": {
-      }
-    },
-    "thumper-news": {
-      "type": "thumper-news",
-      "settings": {
-      }
-    },
-    "paralax-image": {
-      "type": "paralax-image",
-      "settings": {
+        "image": "shopify:\/\/shop_images\/RZR_audio_roofs_c817d5f7-474c-4253-b6ee-8713d1732458.jpg",
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_text_box_position": "center",
+        "show_text_box": true,
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     }
   },
@@ -280,6 +325,7 @@
     "collage",
     "video",
     "multi_column",
-    "1638998410b7f068a2"
+    "1638998410b7f068a2",
+    "163916959478ca75fb"
   ]
 }
