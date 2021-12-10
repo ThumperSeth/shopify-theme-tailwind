@@ -23,6 +23,12 @@
             "text_style": "uppercase"
           }
         },
+        "a74f0141-4204-40eb-a984-70843049cee4": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{{ product.metafields.global.features }}!!!"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -77,17 +83,12 @@
             "text": "Fitment",
             "page": "fitment"
           }
-        },
-        "a74f0141-4204-40eb-a984-70843049cee4": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{{ product.metafields.global.featured }}!!!"
-          }
         }
       },
       "block_order": [
         "subtitle",
         "vendor",
+        "a74f0141-4204-40eb-a984-70843049cee4",
         "title",
         "description",
         "price",
@@ -96,8 +97,7 @@
         "variant_picker",
         "buy_buttons",
         "share",
-        "4701d8ba-c8af-4682-8567-9fb7070f42d9",
-        "a74f0141-4204-40eb-a984-70843049cee4"
+        "4701d8ba-c8af-4682-8567-9fb7070f42d9"
       ],
       "settings": {
         "enable_sticky_info": false,
