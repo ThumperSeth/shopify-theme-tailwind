@@ -20,6 +20,7 @@
 
 .multicolumn.background-secondary .title-wrapper-with-link {
   margin-top: 0;
+  border: 2px 0 solid #cfcfcf;
 }
 
 @media screen and (max-width: 749px) {
