@@ -1980,6 +1980,7 @@
       }
     },
     "paralax-image": {
+      "name": "Paralax Image",
       "settings": {
       }
     }
