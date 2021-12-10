@@ -42,7 +42,7 @@
           "logo_position": "middle-left",
           "menu": "main-menu",
           "show_line_separator": false,
-          "enable_sticky_header": true
+          "enable_sticky_header": false
         }
       },
       "sub-menu": {
