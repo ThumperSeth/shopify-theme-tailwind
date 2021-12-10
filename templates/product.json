@@ -81,7 +81,7 @@
         "a74f0141-4204-40eb-a984-70843049cee4": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{{ product.metafields.global.featured }}"
+            "custom_liquid": "{{ product.metafields.global.shortDescription }}!!!"
           }
         }
       },
