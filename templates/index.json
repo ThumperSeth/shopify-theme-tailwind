@@ -258,11 +258,17 @@
       "type": "thumper-news",
       "settings": {
       }
+    },
+    "paralax-image": {
+      "type": "paralax-image",
+      "settings": {
+      }
     }
   },
   "order": [
     "image_banner",
     "shop-by-ride",
+    "paralax-image",
     "shop-by-type",
     "top-sellers",
     "new-at-thumper",
