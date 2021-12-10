@@ -46,7 +46,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="w-full">
+<section class="w-5/6">
     <div class="flex justify-center sm:w-full z-0">
         <div class="grid__item product__media-wrapper w-1/2 justify-center">
             <slider-component class="slider-mobile-gutter">
@@ -59,7 +59,7 @@
                         </li>
                     {%- endif -%}
               	</ul>
-                <ul class="w-full product__media-list flex-wrap slider slider--mobile" role="list">
+                <ul class="w-full product__media-list flex slider slider--mobile" role="list">
                     {%- for media in product.media -%}
                         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                             <li class="w-1/12" data-media-id="{{ section.id }}-{{ media.id }}">
