@@ -3,6 +3,8 @@
     "paralax-image": {
       "name": "Paralax Image",
       "settings": {
+        "paralax-image": {
+        }
       }
     },
     "colors": {
