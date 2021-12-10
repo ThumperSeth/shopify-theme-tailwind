@@ -1,12 +1,5 @@
 {
   "settings_schema": {
-    "paralax-image": {
-      "name": "Paralax Image",
-      "settings": {
-        "paralax-image": {
-        }
-      }
-    },
     "colors": {
       "name": "Colors",
       "settings": {
@@ -225,6 +218,13 @@
     }
   },
   "sections": {
+    "paralax-image": {
+      "name": "Paralax Image",
+      "settings": {
+        "paralax-image": {
+        }
+      }
+    },
     "announcement-bar": {
       "name": "Announcement bar",
       "blocks": {
