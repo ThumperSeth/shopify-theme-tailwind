@@ -221,8 +221,6 @@
     "paralax-image": {
       "name": "Paralax Image",
       "settings": {
-        "paralax-image": {
-        }
       }
     },
     "announcement-bar": {
