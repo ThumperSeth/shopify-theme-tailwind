@@ -223,10 +223,16 @@
         "desktop_layout": "left",
         "mobile_layout": "column"
       }
+    },
+    "shop-by-ride": {
+      "type": "shop-by-ride",
+      "settings": {
+      }
     }
   },
   "order": [
     "image_banner",
+    "shop-by-ride",
     "rich_text",
     "featured_products",
     "collage",
