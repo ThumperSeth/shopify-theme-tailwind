@@ -228,11 +228,47 @@
       "type": "shop-by-ride",
       "settings": {
       }
+    },
+    "top-sellers": {
+      "type": "top-sellers",
+      "settings": {
+      }
+    },
+    "shop-by-type": {
+      "type": "shop-by-type",
+      "settings": {
+      }
+    },
+    "new-at-thumper": {
+      "type": "new-at-thumper",
+      "settings": {
+      }
+    },
+    "index-affirm-section": {
+      "type": "index-affirm-section",
+      "settings": {
+      }
+    },
+    "what-customers-say": {
+      "type": "what-customers-say",
+      "settings": {
+      }
+    },
+    "thumper-news": {
+      "type": "thumper-news",
+      "settings": {
+      }
     }
   },
   "order": [
     "image_banner",
     "shop-by-ride",
+    "shop-by-type",
+    "top-sellers",
+    "new-at-thumper",
+    "index-affirm-section",
+    "what-customers-say",
+    "thumper-news",
     "rich_text",
     "featured_products",
     "collage",
