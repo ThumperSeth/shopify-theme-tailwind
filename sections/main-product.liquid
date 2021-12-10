@@ -46,7 +46,8 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="w-5/6 justify-center flex">
+<section class="w-full justify-center flex">
+	<div class="w-5/6">
     <div class="justify-center sm:w-1/2">
         <div class="grid__item product__media-wrapper w-3/4 justify-center">
             <slider-component class="slider-mobile-gutter">
@@ -547,6 +548,7 @@
             </div>
         </modal-dialog>
     {%- endfor -%}
+  </div>s
 </section>
 
 {% javascript %}
