@@ -38,6 +38,7 @@
           {% assign brandColor = "#ccc" %}
   {% endcase %}
 {% endfor %}
+
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -47,21 +48,20 @@
 
 <section class="w-full">
     <div class="grid flex justify-items-center sm:grid-cols-1 w-full z-0">
-        <div class="grid__item product__media-wrapper w-4/5">
-            
-          <slider-component class="slider-mobile-gutter">
+        <div class="grid__item product__media-wrapper w-3/4">
+            <slider-component class="slider-mobile-gutter">
                 <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
-                <ul class="w-full product__media-list flex grid grid-cols-4 slider slider--mobile" role="list">
+                <ul class="w-full product__media-list flex grid grid-cols-1 slider slider--mobile" role="list">
                     {%- if product.selected_or_first_available_variant.featured_media != null -%}
                         {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                        <li class="product__media-item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-                            {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %} 
+                        <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+                            {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
                         </li>
                     {%- endif -%}
                     {%- for media in product.media -%}
                         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                             <li class="w-full grid flex justify-items-center slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-                            	<div class="w-full">    
+                            	<div class="w-1/12">    
                               		{% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id %}
                               	</div>
                   			</li>
@@ -105,15 +105,9 @@
                             <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
                                 {{- block.settings.text -}}
                             </p>
-              			{%- when 'custom_liquid' -%}
-            				{{ block.settings.custom_liquid }}
                         {%- when 'title' -%}
-                            <h1 class="product__title text-6xl" {{ block.shopify_attributes }}>
-                            	{%- if product.metafields.global.display_name.value != nil -%}
-                              		{{ product.metafields.global.display_name.value }}
-                    			{%- else -%}
-                                	{{ product.title | escape }}
-                            	{%- endif -%}
+                            <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
+                                {{ product.title | escape }}
                             </h1>
                         {%- when 'price' -%}
                             <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
@@ -126,33 +120,22 @@
                                 {%- endform -%}
                             </div>
                         {%- when 'description' -%}
-                            {%- if product.metafields.global.shortDescription == blank -%}
-                                <div class="product__description rte w-4/5">
+                            {%- if product.description != blank -%}
+                                <div class="product__description rte">
                                     {{ product.description }}
                                 </div>
               					<script>
-                                  fitmentDrawerVisable = false;
                                   function toggleFitmentDrawer() {
-									console.log(document.getElementById('fitmentDrawer').style.display);
-                                    console.log(fitmentDrawerVisable);
-                                    if (fitmentDrawerVisable == true) {
-                                      	document.getElementById('fitmentDrawer').style.display = "none";
-                                      	document.getElementById('fitmentDrawer').style.opacity = "0";
-                                      	fitmentDrawerVisable = false;
-                                    	console.log(fitmentDrawerVisable);
-                                    } else {
-                                        document.getElementById('fitmentDrawer').style.display = "block";
+                                    if (document.getElementById('fitmentDrawer').style.display != "block") {
                                       	document.getElementById('fitmentDrawer').style.opacity = "100";
-                                      	fitmentDrawerVisable = true;
-                                    	console.log(fitmentDrawerVisable);
+                                  		document.getElementById('fitmentDrawer').style.display = "block";
                                     }
                                   }
               					</script>
         	                    <div id="fitmentButton">
-                                    <button type="button" class="button" enabled id="toggleFitmentButton" onclick="toggleFitmentDrawer()">
+                                    <button id="ShowProductFitmentDrawer" class="product-fitment-button link link--text underlined-link" aria-haspopup="dialog" onClick="toggleFitmentDrawer();">
                                     	See Fitment Chart...
                                   	</button>
-                                    	
         	                    </div>
                             {%- endif -%}
                         {%- when 'collapsible_tab' -%}
@@ -228,7 +211,7 @@
                         {%- when 'variant_picker' -%}
                             {%- unless product.has_only_default_variant -%}
                                 {%- if block.settings.picker_type == 'button' -%}
-                                    <variant-radios class="no-js-hidden block" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                                    <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                                         {%- for option in product.options_with_values -%}
                                             <fieldset class="js product-form__input">
                                                 <legend class="form__label">{{ option.name }}</legend>
@@ -312,7 +295,7 @@
     <!-- PICKUP AVAILABLILITY MODAL -->
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
     {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
-    <pickup-availability class="product__pickup-availabilities no-js-hidden ml-20" 
+    <pickup-availability class="product__pickup-availabilities no-js-hidden"
         {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
         data-base-url="{{ shop.url }}{{ routes.root_url }}"
         data-variant-id="{{ product.selected_or_first_available_variant.id }}"
@@ -329,8 +312,147 @@
         </template>
     </pickup-availability>
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
-  
-  
+
+    <!-- FITMENT MODAL -->      
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div id="fitmentDrawer" class="relative fitmentDrawer no-js-hidden fixed inset-0 overflow-hidden z-100" aria-hidden="true" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 overflow-hidden">
+        <!--
+          Background overlay, show/hide based on slide-over state.
+
+          Entering: "ease-in-out duration-500"
+            From: "opacity-0"
+            To: "opacity-100"
+          Leaving: "ease-in-out duration-500"
+            From: "opacity-100"
+            To: "opacity-0"
+        -->
+        <div class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <div class="fixed inset-y-0 right-0 pl-10 max-w-full flex">
+          <!--
+            Slide-over panel, show/hide based on slide-over state.
+
+            Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+              From: "translate-x-full"
+              To: "translate-x-0"
+            Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+              From: "translate-x-0"
+              To: "translate-x-full"
+          -->
+          <div class="w-screen max-w-md">
+            <div class="h-full flex flex-col bg-white shadow-xl overflow-y-scroll">
+              <div class="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
+                <div class="flex items-start justify-between">
+                  <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">
+                    Shopping cart
+                  </h2>
+                  <div class="ml-3 h-7 flex items-center">
+                    <button type="button" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                      <span class="sr-only">Close panel</span>
+                      <!-- Heroicon name: outline/x -->
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mt-8">
+                  <div class="flow-root">
+                    <ul role="list" class="-my-6 divide-y divide-gray-200">
+                      <li class="py-6 flex">
+                        <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
+                          <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="w-full h-full object-center object-cover">
+                        </div>
+
+                        <div class="ml-4 flex-1 flex flex-col">
+                          <div>
+                            <div class="flex justify-between text-base font-medium text-gray-900">
+                              <h3>
+                                <a href="#">
+                                  Throwback Hip Bag
+                                </a>
+                              </h3>
+                              <p class="ml-4">
+                                $90.00
+                              </p>
+                            </div>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Salmon
+                            </p>
+                          </div>
+                          <div class="flex-1 flex items-end justify-between text-sm">
+                            <p class="text-gray-500">
+                              Qty 1
+                            </p>
+
+                            <div class="flex">
+                              <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="py-6 flex">
+                        <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
+                          <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg" alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch." class="w-full h-full object-center object-cover">
+                        </div>
+
+                        <div class="ml-4 flex-1 flex flex-col">
+                          <div>
+                            <div class="flex justify-between text-base font-medium text-gray-900">
+                              <h3>
+                                <a href="#">
+                                  Medium Stuff Satchel
+                                </a>
+                              </h3>
+                              <p class="ml-4">
+                                $32.00
+                              </p>
+                            </div>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Blue
+                            </p>
+                          </div>
+                          <div class="flex-1 flex items-end justify-between text-sm">
+                            <p class="text-gray-500">
+                              Qty 1
+                            </p>
+
+                            <div class="flex">
+                              <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- More products... -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
+                <div class="flex justify-between text-base font-medium text-gray-900">
+                  <p>Subtotal</p>
+                  <p>$262.00</p>
+                </div>
+                <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                <div class="mt-6">
+                  <a href="#" class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Checkout</a>
+                </div>
+                <div class="mt-6 flex justify-center text-sm text-center text-gray-500">
+                  <p>
+                    or <button type="button" class="text-indigo-600 font-medium hover:text-indigo-500">Continue Shopping<span aria-hidden="true"> &rarr;</span></button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- CART MODAL -->
     {%- render 'cart-notification' -%}
     <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal">
