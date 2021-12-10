@@ -51,7 +51,7 @@
         <div class="grid__item product__media-wrapper w-1/2 justify-center">
             <slider-component class="slider-mobile-gutter">
                 <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
-                <ul class="w-full product__media-list flex grid grid-cols-1 slider slider--mobile" role="list">
+                <ul class="w-full product__media-list flex slider slider--mobile" role="list">
                     {%- if product.selected_or_first_available_variant.featured_media != null -%}
                         {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                         <li class="w-1/2" data-media-id="{{ section.id }}-{{ media.id }}">
