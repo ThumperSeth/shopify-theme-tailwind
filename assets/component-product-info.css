@@ -19,9 +19,9 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  font-size:3rem;
+  font-size:2.2rem;
   font-size: 2.7vw;
-  font-weight:700;
+  font-weight:NORMAL;
 }
 @media screen and (max-width:716px) {
   .product__title {
