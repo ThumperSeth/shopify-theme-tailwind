@@ -122,6 +122,7 @@
     <div class="card-information__wrapper w-full">
       
       {%- if show_vendor -%}
+      		!!!product_card_product.metafields.global.make.value!!!
         	{%- if product_card_product.metafields.global.make.value contains ',' -%}
       			<span class="visually-hidden">{{ currentBrand }}/{{ product_card_product.metafields.global.model.value }}</span>
       		{%- else -%}
