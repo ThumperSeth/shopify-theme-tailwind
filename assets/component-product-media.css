@@ -130,7 +130,7 @@
   opacity: 0;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 80%;
   visibility: hidden;
   z-index: -1;
 }
@@ -197,7 +197,7 @@
 }
 
 .product-media-modal__model {
-  width: 100%;
+  width: 80%;
 }
 
 .product-media-modal__toggle {
@@ -224,7 +224,7 @@
 @media screen and (min-width: 750px) {
   .product-media-modal__content > * {
     max-width: 96%;
-    width: 100%;
+    width: 80%;
   }
 
   .product-media-modal__content > * + * {
@@ -239,7 +239,7 @@
 
 @media screen and (min-width: 990px) {
   .product-media-modal__content > * {
-    max-width: 98%;
+    max-width: 80%;
   }
 
   .product-media-modal__content > * + * {
