@@ -5,7 +5,7 @@
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="page-width" style="text-align: -webkit-center;">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %} justify-center text-6xl">
-      <h2 class="title index-section-title w-full text-6xl bg-gradient-to-r from-indigo-500 via-gray-500 to-pink-500 text-center pt-5">
+      <h2 class="title index-section-title w-full text-6xl bg-gradient-to-r from-r via-gray-500 to-pink-500 text-center pt-5">
         {{ section.settings.title | escape }}
       </h2>
       {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
