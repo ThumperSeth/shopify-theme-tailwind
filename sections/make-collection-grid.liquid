@@ -45,7 +45,7 @@
         {% assign productsArray = collections[currentBrand].products %}
       	{% assign typeArray = "accents, accessories, audio, bumpers, cages, doors, lighting, roofs, winches" | split: ',' %}
         {% for stuff in typeArray %}
-              {%- if productsArray -%} 
+
       		  <div>!!!{{ productsArray.count }}!!!{{ stuff }}!!!</div>
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
                   <div class="w-3/4 justify-items-center pb-20"> 
@@ -67,12 +67,13 @@
                                               brand_color: brandColor
                                           %}
                                       </li>
+                            		{% else %}
+                            		<li>{{ product.title }}-{{ tempCat }}->{{ stuff }}</li>
                                   {%- endif -%}           
                               {%- endfor -%}
                           </ul>
                   </div>
               </div>
-              {%- endif -%}
        {%- endfor -%}
   </div>
 </div>
