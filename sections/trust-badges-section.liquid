@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 <section>
-<div class="multicolumn p-4 pb-0rem" style="background-color:#aaa;">
+<div class="trustbadges p-4 pb-0rem" style="background-color:#aaa;">
   <div class="page-width p-40rem">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}" style="margin:2rem 0 3rem;">
       <h2 class="title text-6xl">
@@ -26,13 +26,13 @@
           endfor
         -%}
         {%- for block in section.blocks -%}
-          <div class="multicolumn-list__item block {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}">
-            <div class="multicolumn-card  rounded-xl shadow-lg" style="background-color:#ccc;">
+          <div class="trustbadges-list__item block {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}">
+            <div class="trustbadges-card  rounded-xl shadow-lg" style="background-color:#ccc;">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                <div class="trustbadges-card__image-wrapper trustbadges-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} trustbadges-card-spacing{% endif %}">
                   <div class="media media--transparent media--{{ section.settings.image_ratio }}"
                     {% if section.settings.image_ratio == 'adapt' %}
                       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
@@ -54,7 +54,7 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info">
+              <div class="trustbadges-card__info">
                 {%- if block.settings.title != blank -%}
                   <h3 class="text-5xl">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
@@ -100,7 +100,7 @@
       "id": "title",
       "label": "title",
       "type": "text",
-      "default": "Multicolumn"
+      "default": "trustbadges"
     },
     {
       "id": "image_width",
@@ -110,15 +110,15 @@
       "options": [
         {
           "value": "third",
-          "label": "t:sections.multicolumn.settings.image_width.options__1.label"
+          "label": "t:sections.trustbadges.settings.image_width.options__1.label"
         },
         {
           "value": "half",
-          "label": "t:sections.multicolumn.settings.image_width.options__2.label"
+          "label": "t:sections.trustbadges.settings.image_width.options__2.label"
         },
         {
           "value": "full",
-          "label": "t:sections.multicolumn.settings.image_width.options__3.label"
+          "label": "t:sections.trustbadges.settings.image_width.options__3.label"
         }
       ]
     },
@@ -130,96 +130,96 @@
       "options": [
         {
           "value": "adapt",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__1.label"
+          "label": "t:sections.trustbadges.settings.image_ratio.options__1.label"
         },
         {
           "value": "portrait",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__2.label"
+          "label": "t:sections.trustbadges.settings.image_ratio.options__2.label"
         },
         {
           "value": "square",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__3.label"
+          "label": "t:sections.trustbadges.settings.image_ratio.options__3.label"
         },
         {
           "value": "circle",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__4.label"
+          "label": "t:sections.trustbadges.settings.image_ratio.options__4.label"
         }
       ]
     },
     {
       "id": "column_alignment",
-      "label": "t:sections.multicolumn.settings.column_alignment.label",
+      "label": "t:sections.trustbadges.settings.column_alignment.label",
       "type": "select",
       "default": "left",
       "options": [
         {
           "value": "left",
-          "label": "t:sections.multicolumn.settings.column_alignment.options__1.label"
+          "label": "t:sections.trustbadges.settings.column_alignment.options__1.label"
         },
         {
           "value": "center",
-          "label": "t:sections.multicolumn.settings.column_alignment.options__2.label"
+          "label": "t:sections.trustbadges.settings.column_alignment.options__2.label"
         }
       ]
     },
     {
       "id": "background_style",
-      "label": "t:sections.multicolumn.settings.background_style.label",
+      "label": "t:sections.trustbadges.settings.background_style.label",
       "type": "select",
       "default": "primary",
       "options": [
         {
           "value": "none",
-          "label": "t:sections.multicolumn.settings.background_style.options__1.label"
+          "label": "t:sections.trustbadges.settings.background_style.options__1.label"
         },
         {
           "value": "primary",
-          "label": "t:sections.multicolumn.settings.background_style.options__2.label"
+          "label": "t:sections.trustbadges.settings.background_style.options__2.label"
         },
         {
           "value": "secondary",
-          "label": "t:sections.multicolumn.settings.background_style.options__3.label"
+          "label": "t:sections.trustbadges.settings.background_style.options__3.label"
         }
       ]
     },
     {
       "id": "button_label",
-      "label": "t:sections.multicolumn.settings.button_label.label",
+      "label": "t:sections.trustbadges.settings.button_label.label",
       "type": "text",
       "default": "Button label"
     },
     {
       "id": "button_link",
-      "label": "t:sections.multicolumn.settings.button_link.label",
+      "label": "t:sections.trustbadges.settings.button_link.label",
       "type": "url"
     },
     {
       "type": "checkbox",
       "id": "swipe_on_mobile",
-      "label": "t:sections.multicolumn.settings.swipe_on_mobile.label",
+      "label": "t:sections.trustbadges.settings.swipe_on_mobile.label",
       "default": false
     }
   ],
   "blocks": [
     {
       "type": "column",
-      "name": "t:sections.multicolumn.blocks.column.name",
+      "name": "t:sections.trustbadges.blocks.column.name",
       "settings": [
         {
           "id": "image",
           "type": "image_picker",
-          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+          "label": "t:sections.trustbadges.blocks.column.settings.image.label"
         },
         {
           "id": "title",
           "type": "text",
-          "label": "t:sections.multicolumn.blocks.column.settings.title.label",
+          "label": "t:sections.trustbadges.blocks.column.settings.title.label",
           "default": "Column"
         },
         {
           "id": "text",
           "type": "richtext",
-          "label": "t:sections.multicolumn.blocks.column.settings.text.label",
+          "label": "t:sections.trustbadges.blocks.column.settings.text.label",
           "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
         }
       ]
