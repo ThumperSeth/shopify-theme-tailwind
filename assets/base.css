@@ -1206,7 +1206,7 @@ deferred-media {
     text-decoration: none;
     border: 3px solid #222;
     border-radius: 3px;
-    background-color: var(--color-button-background);
+    background-color: #ca0000;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
