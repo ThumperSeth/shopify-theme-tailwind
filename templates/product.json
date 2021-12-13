@@ -66,7 +66,7 @@
         "6c84d856-db22-48f1-a0fc-c970e5ae7612": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Fitment",
+            "heading": "Fitment Guide",
             "content": "<p>﻿{{ product.metafields.global.fitment.value }}<\/p>",
             "page": "",
             "icon": "check_mark"
