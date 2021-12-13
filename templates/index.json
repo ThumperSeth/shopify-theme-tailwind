@@ -86,51 +86,6 @@
       "settings": {
       }
     },
-    "163916959478ca75fb": {
-      "type": "image-banner",
-      "blocks": {
-        "163916959403669a4e-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "medium"
-          }
-        },
-        "163916959403669a4e-1": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
-          }
-        },
-        "163916959403669a4e-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "163916959403669a4e-0",
-        "163916959403669a4e-1",
-        "163916959403669a4e-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/RZR_audio_roofs_c817d5f7-474c-4253-b6ee-8713d1732458.jpg",
-        "image_height": "medium",
-        "adapt_height_first_image": true,
-        "desktop_text_box_position": "flex-start",
-        "show_text_box": true,
-        "image_overlay_opacity": 0,
-        "color_scheme": "background-1",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "shop-by-type": {
       "type": "shop-by-type",
       "settings": {
@@ -158,6 +113,7 @@
     },
     "16393832630341c28d": {
       "type": "quotes",
+      "disabled": true,
       "blocks": {
         "16393832636fe7e0b4-0": {
           "type": "quote",
@@ -211,137 +167,6 @@
         "show_vendor": false,
         "show_rating": false
       }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "video": {
-          "type": "video",
-          "settings": {
-            "cover_image": "shopify:\/\/shop_images\/TF_What_Is_Thumped_Out-YouTube_Thumbnail.jpg",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=y3mAZDUXPo8",
-            "description": "Describe the video",
-            "image_padding": false
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "polaris-ranger-1000-front-bumper",
-            "second_image": true,
-            "image_padding": false,
-            "secondary_background": true
-          }
-        },
-        "collection": {
-          "type": "collection",
-          "settings": {
-            "collection": "polaris",
-            "image_padding": false,
-            "color_scheme": "background-1"
-          }
-        }
-      },
-      "block_order": [
-        "video",
-        "product",
-        "collection"
-      ],
-      "settings": {
-        "heading": "What is 'THUMPED OUT'?",
-        "desktop_layout": "left",
-        "mobile_layout": "collage"
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "Video",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false
-      }
-    },
-    "multi_column": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "swipe_on_mobile": false
-      }
-    },
-    "1638998410b7f068a2": {
-      "type": "collage",
-      "blocks": {
-        "1638998410fc0e391d-0": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "description": "Describe the video",
-            "image_padding": false
-          }
-        },
-        "1638998410fc0e391d-1": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false,
-            "image_padding": false,
-            "secondary_background": false
-          }
-        },
-        "1638998410fc0e391d-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "image_padding": false,
-            "color_scheme": "background-1"
-          }
-        }
-      },
-      "block_order": [
-        "1638998410fc0e391d-0",
-        "1638998410fc0e391d-1",
-        "1638998410fc0e391d-2"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "desktop_layout": "left",
-        "mobile_layout": "column"
-      }
     }
   },
   "order": [
@@ -349,7 +174,6 @@
     "rich_text",
     "shop-by-ride",
     "paralax-image",
-    "163916959478ca75fb",
     "shop-by-type",
     "top-sellers",
     "new-at-thumper",
@@ -357,10 +181,6 @@
     "what-customers-say",
     "16393832630341c28d",
     "thumper-news",
-    "featured_products",
-    "collage",
-    "video",
-    "multi_column",
-    "1638998410b7f068a2"
+    "featured_products"
   ]
 }
