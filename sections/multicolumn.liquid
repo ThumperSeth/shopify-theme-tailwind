@@ -3,7 +3,7 @@
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="multicolumn">
-  <div class="page-width pt-5" style="text-align: -webkit-center;">
+  <div class="page-width pt-0" style="text-align: -webkit-center;">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %} justify-center text-6xl">
       <h2 class="title index-section-title w-full text-6xl bg-gradient-to-r from-transparent via-gray-500 to-transparent text-center pb-2 pt-5">
         {{ section.settings.title | escape }}
@@ -28,6 +28,9 @@
         -%}
         {%- for block in section.blocks -%}
           <li class="multicolumn-list__item grid grid-cols-1 {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
+            <a{% if block.settings.collection != blank and block.settings.collection.all_products_count > 0 %} href="{{ block.settings.collection.url }}"{% endif %}
+            class="card animate-arrow link{% if block.settings.collection.image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
+          >
             <div class="multicolumn-card">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
@@ -65,6 +68,7 @@
                 {%- endif -%}
               </div>
             </div>
+            </a>
           </li>
         {%- endfor -%}
       </ul>
