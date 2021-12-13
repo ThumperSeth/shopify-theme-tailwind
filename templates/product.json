@@ -23,12 +23,6 @@
             "text_style": "uppercase"
           }
         },
-        "a74f0141-4204-40eb-a984-70843049cee4": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{{ product.metafields.global.features }}!!!"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -36,26 +30,12 @@
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {
           }
         },
         "price": {
           "type": "price",
           "settings": {
-          }
-        },
-        "eae11499-b3f2-4888-a325-89bdd673a90a": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{{ product.metafields.global.shortDescription }}"
-          }
-        },
-        "06861cd2-e3da-40f1-9249-679d7f2fc368": {
-          "type": "custom_liquid",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": "<div>::{{ product.metafields.global.productMake }}::<\/div>"
           }
         },
         "variant_picker": {
@@ -74,13 +54,12 @@
           "type": "share",
           "disabled": true,
           "settings": {
-            "share_label": "Share"
           }
         },
         "4701d8ba-c8af-4682-8567-9fb7070f42d9": {
           "type": "popup",
           "settings": {
-            "text": "Fitment",
+            "link_label": "Pop-up link text",
             "page": "fitment"
           }
         }
@@ -88,12 +67,9 @@
       "block_order": [
         "subtitle",
         "vendor",
-        "a74f0141-4204-40eb-a984-70843049cee4",
         "title",
         "description",
         "price",
-        "eae11499-b3f2-4888-a325-89bdd673a90a",
-        "06861cd2-e3da-40f1-9249-679d7f2fc368",
         "variant_picker",
         "buy_buttons",
         "share",
@@ -101,7 +77,6 @@
       ],
       "settings": {
         "enable_sticky_info": false,
-        "hide_variants": true,
         "enable_video_looping": false
       }
     },
