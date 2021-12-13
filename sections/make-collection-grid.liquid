@@ -84,7 +84,7 @@
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
         {% assign productsArray = collections[currentBrand].products %}
-      	{% assign typeArray = "accent, accessory, audio, bumper, cage, doors, lighting, roof, winch" %}
+      	{% assign typeArray = "accent, accessory, audio, bumper, cage, doors, lighting, roof, winch" | split: ',' %}
         {% for stuff in typeArray %}
               {%- if productsArray -%} 
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
