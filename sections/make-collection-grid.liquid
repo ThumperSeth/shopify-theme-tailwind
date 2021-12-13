@@ -42,7 +42,7 @@
 <div id="ProductGridContainer">
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
-        {% assign productsArray = collections.all.products %}
+        {% assign productsArray = all_products %}
       	<!--<div>!!!! {{ productsArray.count }} !!!!</div>-->
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
         {% for stuff in typeArray %}
