@@ -58,6 +58,7 @@
         },
         "4701d8ba-c8af-4682-8567-9fb7070f42d9": {
           "type": "popup",
+          "disabled": true,
           "settings": {
             "link_label": "Fitment",
             "page": "fitment"
