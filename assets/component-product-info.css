@@ -51,6 +51,8 @@ a.product__text {
   margin: 2rem 0 3rem;
   font-size: medium;
   font-family: 'montserratlight','Arial','Helvetica',sans-serif;
+  color: #222;
+  text-align: justify;
 }
 
 .product__description-wide {
