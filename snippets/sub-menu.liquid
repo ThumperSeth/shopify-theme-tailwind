@@ -27,6 +27,9 @@
   	{%- case request.page_type -%}
     {%- when "collection" -%}
     	display: block;
+    	{%- break -%}
+    {%- when "product" -%}
+    
   	{%- else -%}	
     	display: none; 
   	{%- endcase -%}
