@@ -1203,7 +1203,7 @@ deferred-media {
     align-items: center;
     box-sizing: border-box;
     font-family: proxima-nova,Arial,sans-serif;
-    padding: 1.5rem 23rem 1.5rem;
+    padding: 0rem 23rem 0rem;
     text-decoration: none;
     border: 3px solid #222;
     border-radius: 3px;
