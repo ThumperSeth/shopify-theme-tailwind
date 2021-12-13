@@ -33,7 +33,7 @@
   }
 }
 
-.multicolumn-card__image-wrapper--third-width {
+/*.multicolumn-card__image-wrapper--third-width {
   width: 33%;
 }
 
@@ -46,7 +46,7 @@
 .multicolumn-list__item:only-child {
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 .multicolumn .button {
   margin-top: 1.5rem;
