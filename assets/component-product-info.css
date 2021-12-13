@@ -50,6 +50,7 @@ a.product__text {
 .product__description {
   margin: 2rem 0 3rem;
   font-size: medium;
+  font-family: 'montserratlight','Arial','Helvetica',sans-serif;
 }
 
 .product__description-wide {
