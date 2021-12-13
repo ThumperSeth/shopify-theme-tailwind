@@ -228,7 +228,7 @@
   }
 
   .product-media-modal__content > * + * {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 
   .product-media-modal__toggle {
@@ -239,7 +239,7 @@
 
 @media screen and (min-width: 990px) {
   .product-media-modal__content > * {
-    max-width: 75%;
+    max-width: 98%;
   }
 
   .product-media-modal__content > * + * {
