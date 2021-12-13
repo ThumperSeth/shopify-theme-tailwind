@@ -1212,7 +1212,7 @@ deferred-media {
     text-transform: uppercase;
     text-shadow: 2px 2px 2px #222;
     box-shadow: 0 0 0 0 0 var(--color-button-border);
-    color: var(--color-button-text);
+    color: white;
     min-width: 12rem;
     min-height: 4.5rem;
     transition: box-shadow var(--duration-short) ease;
