@@ -642,6 +642,12 @@ video {
   }
 }
 
+variants: {
+ extend: {
+   visibility: ["group-hover"],
+ },
+},  
+  
 .sr-only {
   position: absolute;
   width: 1px;
