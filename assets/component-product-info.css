@@ -49,7 +49,7 @@ a.product__text {
 
 .product__description {
   margin: 2rem 0 3rem;
-  font-size: small;
+  font-size: medium;
 }
 
 .product__description-wide {
