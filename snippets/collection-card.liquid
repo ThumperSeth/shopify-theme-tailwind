@@ -123,7 +123,7 @@
       
       {%- if show_vendor -%}
       		!!!{{ product_card_product.metafields.global.make.value }}!!!
-        	{%- if product_card_product.metafields.global.make.value contains ',' -%}
+        	{%- if product_card_product.metafields.global.make.value contains "," -%}
       			<span class="visually-hidden">{{ currentBrand }}/{{ product_card_product.metafields.global.model.value }}</span>
       		{%- else -%}
       			<span class="visually-hidden">{{ product_card_product.metafields.global.make.value }}/{{ product_card_product.metafields.global.model.value }}</span>
