@@ -90,10 +90,10 @@
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
                   <div class="w-3/4 justify-items-center pb-20"> 
                       <a name="{{ product_type }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
-                      <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ stuff | upcase }}S</div>
+                      <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ stuff | upcase }}</div>
                           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               {% for product in productsArray %}     
-                                  {% if product.metafields.global.category contains product_type %}
+                                  {% if product.metafields.global.category contains stuff %}
                                       <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
                                               product_card_product: product,
