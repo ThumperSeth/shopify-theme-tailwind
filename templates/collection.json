@@ -51,9 +51,54 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": true
+      }
+    },
+    "163941199019137521": {
+      "type": "multicolumn",
+      "blocks": {
+        "16394119902da621e4-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/general.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "16394119902da621e4-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ranger.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "16394119902da621e4-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rzr.png",
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16394119902da621e4-0",
+        "16394119902da621e4-1",
+        "16394119902da621e4-2"
+      ],
+      "settings": {
+        "title": "Shop by Model",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "left",
+        "background_style": "secondary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
       }
     },
     "make-collection-grid": {
@@ -91,6 +136,7 @@
   "order": [
     "16371896537551f4cd",
     "banner",
+    "163941199019137521",
     "make-collection-grid",
     "1638991131cedcfdc1"
   ]
