@@ -42,8 +42,8 @@
 <div id="ProductGridContainer">
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
-        {% assign productsArray = all_products %}
-      	<!--<div>!!!! {{ productsArray.count }} !!!!</div> -->
+        {% assign productsArray = collections.all.products %}
+      	<!--<div>!!!! {{ productsArray.count }} !!!!</div>-->
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
         {% for stuff in typeArray %}
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
@@ -51,8 +51,8 @@
                       <a name="{{ stuff }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
                       <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ stuff | upcase }}</div>
                           <ul id="product-grid" data-id="{{stuff}}-{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
-                              {% for item in productsArray %} 
-                                  {% assign tempCat = item.metafields.global.category | downcase %}
+                              {% for product in productsArray %} 
+                                  {% assign tempCat = product.metafields.global.category | downcase %}
                             		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
                                   {% if tempCat == stuff %}
                                       <li class="grid__item w-full align-center text-center">
