@@ -498,7 +498,7 @@
 
   customElements.define('product-modal', ProductModal);
 {% endjavascript %}
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" crossorigin></script>
 
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
