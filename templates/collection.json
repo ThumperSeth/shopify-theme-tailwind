@@ -65,7 +65,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/general.png",
             "title": "",
-            "text": ""
+            "text": "",
+            "image_label": "Image label",
+            "image_link": "shopify:\/\/collections\/general"
           }
         },
         "16394119902da621e4-1": {
@@ -73,7 +75,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/ranger.png",
             "title": "",
-            "text": ""
+            "text": "",
+            "image_label": "Image label",
+            "image_link": "shopify:\/\/collections\/polaris-ranger"
           }
         },
         "16394119902da621e4-2": {
@@ -81,7 +85,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/rzr.png",
             "title": "",
-            "text": ""
+            "text": "",
+            "image_label": "Image label",
+            "image_link": "shopify:\/\/collections\/rzr"
           }
         }
       },
