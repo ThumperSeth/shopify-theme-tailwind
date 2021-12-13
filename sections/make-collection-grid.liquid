@@ -43,7 +43,7 @@
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
         {% assign productsArray = collections[currentBrand].products %}
-      	{% assign typeArray = "Accents, accessories, audio, Bumpers, Cages, Doors, Lighting, Roofs, Winches" | split: ',' %}
+      	{% assign typeArray = "accents, accessories, audio, bumpers, cages, doors, lighting, roofs, winches" | split: ',' %}
         {% for stuff in typeArray %}
               {%- if productsArray -%} 
       		  <div>!!!{{ productsArray.count }}!!!{{ stuff }}!!!</div>
@@ -53,8 +53,8 @@
                       <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ stuff | upcase }}</div>
                           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               {% for product in productsArray %} 
-                            
-                                  {% if product.metafields.global.category == stuff %}
+                                  {% assign tempCat = product.metafields.global.category | downcase %}
+                                  {% if tempcat  == stuff %}
                                       <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
                                               product_card_product: product,
