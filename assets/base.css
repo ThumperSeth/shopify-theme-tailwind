@@ -1846,7 +1846,7 @@ input[type='checkbox'] {
 }
 
 .shopify-section-header-hidden {
-  /*transform: translateY(-100%);*/
+  transform: translateY(-50%);
 }
 
 #shopify-section-header.animate {
