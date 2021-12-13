@@ -2195,7 +2195,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 
   .header--top-center .header__inline-menu > .list-menu--inline {
     justify-content: center;
-    display: -webkit-inline-box;
+    display: contents;
     flex-wrap:nowrap
   }
 
