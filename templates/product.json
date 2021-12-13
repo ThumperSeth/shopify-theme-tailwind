@@ -72,6 +72,15 @@
             "page": "",
             "icon": "check_mark"
           }
+        },
+        "15406f5d-d335-473e-8b1c-4c7650e71e30": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Installation Guide",
+            "content": "",
+            "page": "",
+            "icon": "check_mark"
+          }
         }
       },
       "block_order": [
@@ -84,7 +93,8 @@
         "buy_buttons",
         "share",
         "4701d8ba-c8af-4682-8567-9fb7070f42d9",
-        "6c84d856-db22-48f1-a0fc-c970e5ae7612"
+        "6c84d856-db22-48f1-a0fc-c970e5ae7612",
+        "15406f5d-d335-473e-8b1c-4c7650e71e30"
       ],
       "settings": {
         "enable_sticky_info": false,
