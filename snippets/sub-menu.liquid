@@ -38,14 +38,10 @@
 <style>
   .collection-SubMenu-Section {
   	{%- case request.page_type -%}
-    {%- when "collection" -%}
-    	display: block;
-    	{%- break -%}
-    {%- when "product" -%}
-    	display: block;
-    	{%- break -%}
+    {%- when "index" -%}
+    	display: none;
   	{%- else -%}	
-    	display: none; 
+    	display: block; 
   	{%- endcase -%}
   }
 .brandbox {
