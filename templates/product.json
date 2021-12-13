@@ -70,7 +70,7 @@
             "heading": "Fitment Guide",
             "content": "<p>﻿{{ product.metafields.global.fitment.value }}<\/p>",
             "page": "",
-            "icon": "check_mark"
+            "icon": "ruler"
           }
         },
         "15406f5d-d335-473e-8b1c-4c7650e71e30": {
@@ -79,7 +79,7 @@
             "heading": "Installation Guide",
             "content": "",
             "page": "",
-            "icon": "check_mark"
+            "icon": "box"
           }
         }
       },
