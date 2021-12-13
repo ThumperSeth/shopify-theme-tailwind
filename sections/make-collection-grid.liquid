@@ -43,7 +43,7 @@
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
         {% assign productsArray = collections[currentBrand].products %}
-      	{% assign typeArray = "accents, accessories, audio, bumpers, cages, doors, lighting, roofs, winches" | split: ',' %}
+      	{% assign typeArray = "Accents, accessories, audio, bumpers, cages, doors, lighting, roofs, winches" | split: ',' %}
         {% for stuff in typeArray %}
               {%- if productsArray -%} 
       		  <div>!!!{{ productsArray.count }}!!!{{ stuff }}!!!</div>
