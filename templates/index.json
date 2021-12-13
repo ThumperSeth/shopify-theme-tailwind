@@ -83,6 +83,7 @@
     },
     "paralax-image": {
       "type": "paralax-image",
+      "disabled": true,
       "settings": {
       }
     },
