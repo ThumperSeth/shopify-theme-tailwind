@@ -62,6 +62,15 @@
             "link_label": "Fitment",
             "page": "fitment"
           }
+        },
+        "6c84d856-db22-48f1-a0fc-c970e5ae7612": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fitment",
+            "content": "<p>﻿{{ product.metafields.global.fitment.value }}<\/p>",
+            "page": "",
+            "icon": "check_mark"
+          }
         }
       },
       "block_order": [
@@ -73,7 +82,8 @@
         "variant_picker",
         "buy_buttons",
         "share",
-        "4701d8ba-c8af-4682-8567-9fb7070f42d9"
+        "4701d8ba-c8af-4682-8567-9fb7070f42d9",
+        "6c84d856-db22-48f1-a0fc-c970e5ae7612"
       ],
       "settings": {
         "enable_sticky_info": false,
