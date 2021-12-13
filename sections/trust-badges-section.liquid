@@ -54,12 +54,12 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="trustbadges-card__inf group">
+              <div class="trustbadges-card__info group">
                 {%- if block.settings.title != blank -%}
                   <h3 class="text-5xl">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
-                {%- if block.settings.text != blank -%}m:
-                  <div class="rte text-xl text-justify p-1 hidden group-hover:visible">{{ block.settings.text }}</div>
+                {%- if block.settings.text != blank -%}
+                  <div class="rte text-xl text-justify p-1 invisible group-hover:visible">{{ block.settings.text }}</div>
                 {%- endif -%}
               </div>
             </div>
