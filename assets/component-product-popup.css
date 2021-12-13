@@ -20,7 +20,7 @@
 }
 
 .product-popup-modal__content {
-  background-color: var(--color-base-background-1);
+  background-color: white;
   overflow: auto;
   height: 80%;
   margin: 0 auto;
