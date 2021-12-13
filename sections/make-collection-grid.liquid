@@ -45,8 +45,6 @@
         {% assign productsArray = collections[currentBrand].products %}
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
         {% for stuff in typeArray %}
-
-      		  <div>!!!{{ productsArray.count }}!!!{{ stuff }}!!!</div>
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
                   <div class="w-3/4 justify-items-center pb-20"> 
                       <a name="{{ stuff }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
@@ -54,7 +52,6 @@
                           <ul id="product-grid" data-id="{{stuff}}-{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               {% for product in productsArray %} 
                                   {% assign tempCat = product.metafields.global.category | downcase %}
-                            		<div>!!!{{ stuff }}::{{ tempCat }}</div>
                                   {% if tempCat == stuff %}
                                       <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
@@ -67,8 +64,6 @@
                                               brand_color: brandColor
                                           %}
                                       </li>
-                            		{% else %}
-                            		<li>{{ product.title }}-{{ tempCat }}->{{ stuff }}</li>
                                   {%- endif -%}           
                               {%- endfor -%}
                           </ul>
