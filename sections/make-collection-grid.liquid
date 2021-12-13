@@ -55,7 +55,7 @@
                               {% for product in productsArray %} 
                                   {% assign tempCat = product.metafields.global.category | downcase %}
                             <div>!!{{ tempCat }}::{{ stuff }}</div>
-                                  {% if tempcat  == stuff %}
+                                  {% if tempcat == stuff %}
                                       <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
                                               product_card_product: product,
