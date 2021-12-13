@@ -51,8 +51,8 @@
                       <a name="{{ stuff }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
                       <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ stuff | upcase }}</div>
                           <ul id="product-grid" data-id="{{stuff}}-{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
-                              {% for product in productsArray %} 
-                                  {% assign tempCat = product.metafields.global.category | downcase %}
+                              {% for item in productsArray %} 
+                                  {% assign tempCat = item.metafields.global.category | downcase %}
                             		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
                                   {% if tempCat == stuff %}
                                       <li class="grid__item w-full align-center text-center">
