@@ -64,6 +64,8 @@
                                               brand_color: brandColor
                                           %}
                                       </li>
+                            		{% else %}
+                            			<li>+{{ product.title }}-{{ tempCat }}-{{stuff}}+</li>
                                   {%- endif -%}           
                               {%- endfor -%}
                           </ul>
