@@ -41,6 +41,9 @@
                     {% if section.settings.image_ratio == 'adapt' %}
                       style="padding-bottom: 0"
                     {% endif %}>
+                    {%- if section.settings.image_label != blank -%}
+                      <a href="{{ block.settings.image_link }}">
+                    {%- endif -%}
                     <img
                       srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
                         {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
@@ -55,7 +58,10 @@
                       height="{{ block.settings.image.height }}"
                       width="{{ block.settings.image.width }}"
                       loading="lazy"
-                    >
+                    > 
+                    {%- if section.settings.image_label != blank -%}
+                      </a>
+                    {%- endif -%}
                   </div>
                 </div>
               {%- endif -%}
@@ -127,6 +133,17 @@
       ],
       "default": "full",
       "label": "t:sections.multicolumn.settings.image_width.label"
+    },
+     {
+      "type": "text",
+      "id": "image_label",
+      "default": "Image label",
+      "label": "t:sections.multicolumn.settings.image_label.label"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "t:sections.multicolumn.settings.image_link.label"
     },
     {
       "type": "select",
