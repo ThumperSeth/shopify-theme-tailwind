@@ -53,7 +53,7 @@
                           <ul id="product-grid" data-id="{{stuff}}-{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               {% for product in productsArray %} 
                                   {% assign tempCat = product.metafields.global.category | downcase %}
-                            <!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
+                            		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
                                   {% if tempCat == stuff %}
                                       <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
