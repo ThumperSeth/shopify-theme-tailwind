@@ -73,7 +73,7 @@
 }
 
 .multicolumn.background-secondary .multicolumn-card {
-  background: rgb(var(--color-background));
+  background: /*rgb(var(--color-background))*/none;
 }
 
 .multicolumn.background-secondary {
