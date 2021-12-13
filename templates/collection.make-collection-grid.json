@@ -69,9 +69,15 @@
         "enable_sorting": false,
         "collapse_on_larger_devices": true
       }
+    },
+    "shop-by-model": {
+      "type": "shop-by-model",
+      "settings": {
+      }
     }
   },
   "order": [
+    "shop-by-model",
     "16371896537551f4cd",
     "banner",
     "make-collection-grid"
