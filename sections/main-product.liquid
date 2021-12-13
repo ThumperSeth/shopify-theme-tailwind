@@ -126,19 +126,12 @@
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
               <div>
-   <style>
-      .product__info-container--sticky {
-      position: static !important;
-      }
-   </style>
-   <label class="form__label" for="pinfel-select">Pinfel pack</label>
-   <div class="select" id="pinfel-select">
-      <select required class="select__select required" id="pinfel">
-         <option class="fruta" value="Fruta">{{ 'products.product.fruit' | t }}</option>
-         <option class="jogos" value="Jogos">{{ 'products.product.games' | t }}</option>
-         <option class="rock" value="Rock">Rock</option>
-         <option class="espaco" value="Espaço">{{ 'products.product.space' | t }}</option>
-      </select>
+           <style>
+              .product__info-container--sticky {
+              position: static !important;
+              }
+           </style>
+  
       {% render 'icon-caret' %}
    </div>
 </div>
