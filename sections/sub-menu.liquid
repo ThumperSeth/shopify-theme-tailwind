@@ -24,7 +24,7 @@
 }
   
 </style>
-
+{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
 
 <!-- DETECT BRAND IN URL -->
 {%- if request.page_type == "index" -%}
