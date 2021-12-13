@@ -1177,7 +1177,7 @@ deferred-media {
 .button,
 .shopify-challenge__button,
 .customer button {
- /* cursor: pointer;
+  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1195,7 +1195,8 @@ deferred-media {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-}*/
+}
+.button-form {
   cursor: pointer;
     display: inline-flex;
     justify-content: center;
