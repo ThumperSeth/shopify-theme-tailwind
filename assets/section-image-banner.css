@@ -43,11 +43,11 @@
   }
 
   .banner--medium:not(.banner--adapt) {
-    min-height: 30rem;
+    min-height: 56rem;
   }
 
   .banner--large:not(.banner--adapt) {
-    min-height:  /*72*/50rem;
+    min-height:  /*72*/40rem;
   }
 }
 
