@@ -56,6 +56,7 @@
                                   {% assign tempCat = product.metafields.global.category | downcase %}
                             <div>!!{{ tempCat }}::{{ stuff }}</div>
                                   {% if tempcat == stuff %}
+                            				HERE
                                       <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
                                               product_card_product: product,
