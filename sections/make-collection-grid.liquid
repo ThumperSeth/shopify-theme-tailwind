@@ -4,14 +4,30 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
 
-<!-- DETECT BRAND IN URL -->
+<!-- DETECT MAKE & MODEL IN URL -->
 {% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
 {% case part %}
+<!-- POLARIS -->
 	{% when "polaris" %}
 		{% assign currentBrand  = "polaris" %}
 		{% assign brandColor = "#305799" %}
 		{% break %}
+<!-- POLARIS MAKES -->
+        {% when "ranger" %}
+            {% assign currentBrand  = "polaris" %}
+            {% assign brandColor = "#305799" %}
+            {% break %}
+        {% when "rzr" %}
+            {% assign currentBrand  = "polaris" %}
+            {% assign brandColor = "#305799" %}
+            {% break %}
+        {% when "general" %}
+            {% assign currentBrand  = "polaris" %}
+            {% assign brandColor = "#305799" %}
+            {% break %}
+
+
 	{% when "yamaha" %}
 		{% assign currentBrand  = "yamaha" %}
 		{% assign brandColor = "#CCCCCB" %}
@@ -28,10 +44,35 @@
 		{% assign currentBrand  = "honda" %}
 		{% assign brandColor = "#e0262f" %}
 		{% break %}
+	{% when "" %}
+		{% assign currentBrand  = "honda" %}
+		{% assign brandColor = "#e0262f" %}
+		{% break %}
+	{% when "honda" %}
+		{% assign currentBrand  = "honda" %}
+		{% assign brandColor = "#e0262f" %}
+		{% break %}
+	{% when "honda" %}
+		{% assign currentBrand  = "honda" %}
+		{% assign brandColor = "#e0262f" %}
+		{% break %}
+	{% when "honda" %}
+		{% assign currentBrand  = "honda" %}
+		{% assign brandColor = "#e0262f" %}
+		{% break %}
+	{% when "honda" %}
+		{% assign currentBrand  = "honda" %}
+		{% assign brandColor = "#e0262f" %}
+		{% break %}
+	{% when "honda" %}
+		{% assign currentBrand  = "honda" %}
+		{% assign brandColor = "#e0262f" %}
+		{% break %}
+
+
 	{% else %}
 		{% assign currentBrand = "all" %}
 		{% assign brandColor = "#ccc" %}
-
 {% endcase %}
 {% endfor %}
 
@@ -42,17 +83,17 @@
 <div id="ProductGridContainer">
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
-        {% assign productsArray = collections[currentBrand].products %}      
-        {% for product_type in collection.all_types %}
-            {% unless product_type contains 'Option' %}        
+        {% assign productsArray = collections[currentBrand].products %}
+      	{% assign typeArray = "accent, accessory, audio, bumper, cage, doors, lighting, roof, winch" %}
+        {% for product_type in typeArray %}
               {%- if productsArray -%} 
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
                   <div class="w-3/4 justify-items-center pb-20"> 
                       <a name="{{ product_type }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
-                      <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ product_type }}</div>
+                      <div class="text-7xl font-medium pt-20" style="font-family:'Teko'">{{ product_type | upcase }}</div>
                           <ul id="product-grid" data-id="{{ section.id }}" class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               {% for product in productsArray %}     
-                                  {% if product.tags contains product_type %}
+                                  {% if product.metafields.global.category contains product_type %}
                                       <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
                                               product_card_product: product,
@@ -70,7 +111,6 @@
                   </div>
               </div>
               {%- endif -%}
-           {%- endunless -%}
        {%- endfor -%}
   </div>
 </div>
