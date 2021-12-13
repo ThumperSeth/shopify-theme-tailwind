@@ -1,5 +1,5 @@
 .banner {
-  display: flex;
+  display: contain;
   position: relative;
   flex-direction: column;
 }
