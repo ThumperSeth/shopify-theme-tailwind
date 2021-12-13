@@ -373,7 +373,13 @@
       </div>
     </div>
   </div>
-  
+   {%- if product.description != blank -%}
+        
+              <div class="product__description rte">
+       
+                {{ product.description }}
+              </div>
+  {% endif %}
   {%- render 'cart-notification' -%}
  
 
