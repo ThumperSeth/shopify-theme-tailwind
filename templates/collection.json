@@ -139,49 +139,6 @@
         "show_vendor": true,
         "show_rating": true
       }
-    },
-    "163943538937a8d873": {
-      "type": "shop-by-model",
-      "disabled": true,
-      "blocks": {
-        "163943538987d285ee-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/general.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "163943538987d285ee-1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "163943538987d285ee-2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "163943538987d285ee-0",
-        "163943538987d285ee-1",
-        "163943538987d285ee-2"
-      ],
-      "settings": {
-        "title": "Shop by Model",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "swipe_on_mobile": false
-      }
     }
   },
   "order": [
@@ -189,7 +146,6 @@
     "banner",
     "163941199019137521",
     "make-collection-grid",
-    "1638991131cedcfdc1",
-    "163943538937a8d873"
+    "1638991131cedcfdc1"
   ]
 }
