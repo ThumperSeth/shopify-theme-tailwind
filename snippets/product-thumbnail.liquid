@@ -40,7 +40,7 @@
       <span class="visually-hidden">{{ 'products.product.video_exit_message' | t: title: product.title | escape }}</span>
     </a>
   {%- else -%}
-    <div class="zoom-image relative">
+    <div class="image-zoom relative">
       <img
         class="w-full"
         srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
