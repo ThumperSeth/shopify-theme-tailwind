@@ -181,6 +181,12 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "16395202894c0d4e5a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
     }
   },
   "order": [
@@ -189,6 +195,7 @@
     "163941199019137521",
     "make-collection-grid",
     "1638991131cedcfdc1",
-    "163943538937a8d873"
+    "163943538937a8d873",
+    "16395202894c0d4e5a"
   ]
 }

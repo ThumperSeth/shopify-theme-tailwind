@@ -63,8 +63,8 @@
         "16394119902da621e4-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/general.png",
-            "title": "General",
+            "image": "shopify:\/\/shop_images\/defender.png",
+            "title": "Defender",
             "text": "",
             "image_label": "Image label",
             "image_link": ""
@@ -73,28 +73,17 @@
         "16394119902da621e4-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ranger.png",
+            "image": "shopify:\/\/shop_images\/maverick.png",
             "title": "Ranger",
             "text": "",
             "image_label": "Image label",
             "image_link": "shopify:\/\/collections\/polaris-ranger"
           }
-        },
-        "16394119902da621e4-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/rzr.png",
-            "title": "RZR",
-            "text": "",
-            "image_label": "Image label",
-            "image_link": "shopify:\/\/collections\/rzr"
-          }
         }
       },
       "block_order": [
         "16394119902da621e4-0",
-        "16394119902da621e4-1",
-        "16394119902da621e4-2"
+        "16394119902da621e4-1"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/polaris_hero_desert_1c6706d1-6664-4ed8-acf2-0e649da102a1.jpg",
