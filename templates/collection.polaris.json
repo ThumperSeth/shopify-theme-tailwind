@@ -64,7 +64,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/general.png",
-            "title": "",
+            "title": "General",
             "text": "",
             "image_label": "Image label",
             "image_link": ""
@@ -74,7 +74,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/ranger.png",
-            "title": "",
+            "title": "Ranger",
             "text": "",
             "image_label": "Image label",
             "image_link": "shopify:\/\/collections\/polaris-ranger"
@@ -84,7 +84,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/rzr.png",
-            "title": "",
+            "title": "RZR",
             "text": "",
             "image_label": "Image label",
             "image_link": "shopify:\/\/collections\/rzr"
