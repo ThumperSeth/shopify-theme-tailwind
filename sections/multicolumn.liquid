@@ -3,6 +3,7 @@
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="multicolumn">
+  <div class="bottom-image block" style="z-index:5; background-image:url({{ section.settings.image_2 | img_url: '1500x' }});"></div>
 	<div class="top-image block" style="z-index:1; background-image:url({{ section.settings.image | img_url: '1500x' }});">
   		<div class="page-width pt-0" style="text-align: -webkit-center;">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %} justify-center text-6xl">
@@ -102,7 +103,7 @@
     </div>
   </div>
 	</div>
-    <div class="bottom-image block" style="z-index:5; background-image:url({{ section.settings.image_2 | img_url: '1500x' }});"></div>
+    
 </div>
 {% schema %}
 {
