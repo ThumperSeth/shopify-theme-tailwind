@@ -1,17 +1,17 @@
 <style>
-    .forefront-element {
+    .fore-img {
     -webkit-transform: translateZ(999px) scale(.7);
     transform: translateZ(999px) scale(.7);
     z-index: 1;
   }
 
-  .base-element {
+  .base-img {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
   }
 
-  .background-element {
+  .back-img {
     -webkit-transform: translateZ(-999px) scale(2);
     transform: translateZ(-999px) scale(2);
     z-index: 3;
@@ -22,7 +22,9 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="multicolumn block" style="background-attachment:fixed; background-image:url({{ section.settings.image | img_url: '1500x' }});">
+<div class="back-img multicolumn"><img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/polaris_hero_desert-fore.jpg?v=1639481259"/></div>
+<div class="fore-img multicolumn"><img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/polaris_hero_desert-fore.jpg?v=1639481259"/></div>
+<div class="multicolumn block base-img" style="background-attachment:fixed; background-image:url({{ section.settings.image | img_url: '1500x' }});">
   
   <div class="page-width pt-0" style="text-align: -webkit-center;">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %} justify-center text-6xl">
