@@ -1600,6 +1600,9 @@
     "multicolumn": {
       "name": "Multicolumn",
       "settings": {
+        "image": {
+          "label": "First image"
+        },
         "title": {
           "label": "Heading"
         },
