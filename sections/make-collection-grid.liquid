@@ -36,7 +36,9 @@
 {% endfor %}
 
 <style>
-
+  :root {
+    --brand-color: {{ brandColor }};
+  }
 </style>
 
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
