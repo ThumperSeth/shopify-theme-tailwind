@@ -1,0 +1,201 @@
+{
+  "sections": {
+    "16371896537551f4cd": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "163718965392906dbc-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "163718965392906dbc-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "163718965392906dbc-0",
+        "163718965392906dbc-1",
+        "14ed66d0-9ee9-40eb-bdfe-50ec0ddddbef"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/general_audio-roof_banner.jpg",
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_text_box_position": "center",
+        "show_text_box": true,
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true
+      }
+    },
+    "163941199019137521": {
+      "type": "multicolumn",
+      "blocks": {
+        "16394119902da621e4-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/general.png",
+            "title": "General",
+            "text": "",
+            "image_label": "Image label",
+            "image_link": ""
+          }
+        },
+        "16394119902da621e4-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ranger.png",
+            "title": "Ranger",
+            "text": "",
+            "image_label": "Image label",
+            "image_link": "shopify:\/\/collections\/polaris-ranger"
+          }
+        },
+        "16394119902da621e4-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rzr.png",
+            "title": "RZR",
+            "text": "",
+            "image_label": "Image label",
+            "image_link": "shopify:\/\/collections\/rzr"
+          }
+        }
+      },
+      "block_order": [
+        "16394119902da621e4-0",
+        "16394119902da621e4-1",
+        "16394119902da621e4-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/polaris_hero_desert_1c6706d1-6664-4ed8-acf2-0e649da102a1.jpg",
+        "title": "Polaris",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "make-collection-grid": {
+      "type": "make-collection-grid",
+      "settings": {
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false
+      }
+    },
+    "1638991131cedcfdc1": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "collection_name",
+        "collection": "",
+        "products_to_show": 8,
+        "show_view_all": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": true,
+        "show_rating": true
+      }
+    },
+    "163943538937a8d873": {
+      "type": "shop-by-model",
+      "disabled": true,
+      "blocks": {
+        "163943538987d285ee-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/general.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "163943538987d285ee-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "163943538987d285ee-2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "163943538987d285ee-0",
+        "163943538987d285ee-1",
+        "163943538987d285ee-2"
+      ],
+      "settings": {
+        "title": "Shop by Model",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "16395202894c0d4e5a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    }
+  },
+  "order": [
+    "16371896537551f4cd",
+    "banner",
+    "163941199019137521",
+    "make-collection-grid",
+    "1638991131cedcfdc1",
+    "163943538937a8d873",
+    "16395202894c0d4e5a"
+  ]
+}
