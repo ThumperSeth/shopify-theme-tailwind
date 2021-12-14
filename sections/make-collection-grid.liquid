@@ -56,7 +56,6 @@
       	{% paginate collections.all.products by 500 %}
         	{% assign productsArray = collections.all.products %}
       	{% endpaginate %}
-      <!--<div>!!! {{ collection.all_products_count }} // {{ productsArray.count }} !!! </div>-->
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
         {% for stuff in typeArray %}
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(220,220,220,1) 80%, {{ brandRGBA }} 100%);">
@@ -67,11 +66,9 @@
                               {% for product in productsArray %} 
                               	{% assign tempCat = product.metafields.global.category | downcase %}
                             	{% assign productMake = product.metafields.global.make | downcase %} 
-                            	<!--<div>//{{ tempCat }}+{{ stuff }}+{{ productMake }}\\</div>-->
                                   {% if tempCat == stuff %}
                                   	{% if productMake == currentBrand or productMake contains currentBrand %}
                                       <li class="grid__item w-full align-center text-center">
-                                        <!--<div>++{{ product.metafields.global.make }}++{{ currentBrand }}</div>-->
                                           {% render 'collection-card',
                                               product_card_product: product,
                                               media_size: section.settings.image_ratio,
