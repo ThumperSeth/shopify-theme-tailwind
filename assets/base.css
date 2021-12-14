@@ -2422,7 +2422,9 @@ details-disclosure > details {
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
   }
   
-  
+  .submenu-link:actuve {
+    color:red; 
+  }
 .nav_logo {
    width:100%;
 }
