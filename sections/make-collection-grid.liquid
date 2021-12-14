@@ -55,7 +55,7 @@
       <!--<div>!!! {{ collection.all_products_count }} // {{ productsArray.count }} !!! </div>-->
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
         {% for stuff in typeArray %}
-              <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(var(--brand-color),1) 92%, rgba(145,145,145,1) 100%);">
+              <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, {{ brandRGBA }} 92%, rgba(145,145,145,1) 100%);">
                   <div class="w-3/4 justify-items-center pb-20"> 
                       <a name="{{ stuff }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
                       <div class="text-7xl text-left font-medium pt-5" style="margin-top:-35px;font-family:'Teko'">{{ stuff | upcase }}</div>
