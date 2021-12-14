@@ -431,7 +431,7 @@ body {
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: currentColor;
+  border-color: var(--brand-color);
   /* 2 */
 }
 
