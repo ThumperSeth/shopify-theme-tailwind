@@ -51,7 +51,7 @@
 }
 </style>
 <div class="card-wrapper p-5 hover:shadow-lg">
-  <div class="card-information pl-2 relative px-4 -mt-16  ">
+  <div class="card-information pl-2 relative px-4 -mt-16 z-2">
     <div class="card-information__wrapper w-full ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
       
       {%- if show_vendor -%}
@@ -106,7 +106,7 @@
     </div>
   </div>
 
-  <div class="card card--product{% if product_card_product.featured_media == nil %} card--text-only card--soft{% endif %}{% if product_card_product.featured_media != nil and show_image_outline %} card--outline{% endif %}" tabindex="-1">
+  <div class="z-4 card card--product{% if product_card_product.featured_media == nil %} card--text-only card--soft{% endif %}{% if product_card_product.featured_media != nil and show_image_outline %} card--outline{% endif %}" tabindex="-1">
     <div class="card__inner">
       {%- if product_card_product.featured_media -%}
         {%- liquid
