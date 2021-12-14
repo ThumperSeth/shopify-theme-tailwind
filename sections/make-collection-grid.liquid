@@ -54,8 +54,9 @@
                               {% for product in productsArray %} 
                               	{% assign tempCat = product.metafields.global.category | downcase %}
                             	{% assign productMake = product.metafields.global.make | downcase %} 
-                            <div>//{{ tempCat }}+{{ stuff }}+{{ productMake }}\\</div>
-                                  {% if tempCat == stuff and productMake == currentBrand or productMake contains currentBrand%}
+                            	<!--<div>//{{ tempCat }}+{{ stuff }}+{{ productMake }}\\</div>-->
+                                  {% if tempCat == stuff %}
+                                  	{% if productMake == currentBrand or productMake contains currentBrand %}
                                       <li class="grid__item w-full align-center text-center">
                                         <div>++{{ product.metafields.global.make }}++{{ currentBrand }}</div>
                                           {% render 'collection-card',
@@ -68,6 +69,7 @@
                                               brand_color: brandColor
                                           %}
                                       </li>
+                            		{%- endif -%}
                                   {%- endif -%}           
                               {%- endfor -%}
                           </ul>
