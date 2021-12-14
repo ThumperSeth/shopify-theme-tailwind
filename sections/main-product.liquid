@@ -14,152 +14,61 @@
 
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
-  {% comment %}
-    Get first variant, or deep linked one
-  {% endcomment %}
-  {%- assign current_variant = product.selected_or_first_available_variant -%}
-  {%- assign product_image_zoom_size = '1024x1024' -%}
-  {%- assign product_image_scale = '2' -%}
-  {%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
-  {%- assign compare_at_price = current_variant.compare_at_price -%}
-  {%- assign price = current_variant.price -%}
 
-  {% case section.settings.media_size %}
-    {% when 'small' %}
-      {%- assign product_media_width = 'medium-up--one-third' -%}
-      {%- assign product_description_width = 'medium-up--two-thirds' -%}
-      {%- assign height = 345 -%}
-    {% when 'medium' %}
-      {%- assign product_media_width = 'medium-up--one-half' -%}
-      {%- assign product_description_width = 'medium-up--one-half' -%}
-      {%- assign height = 625 -%}
-    {% when 'large' %}
-      {%- assign product_media_width = 'medium-up--two-thirds' -%}
-      {%- assign product_description_width = 'medium-up--one-third' -%}
-      {%- assign height = 625 -%}
-    {% when 'full' %}
-      {%- assign product_media_width = '' -%}
-      {%- assign product_description_width = '' -%}
-      {%- assign height = 1090 -%}
-      {%- assign enable_image_zoom = false -%}
-  {% endcase %}
+{%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
+{%- if first_3d_model -%}
+  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
+  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
+  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
 
-  <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %} rte">
-    <div class="sticky grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %} rte" data product-signle-media-group>
-    <!--<div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %} rte" data-product-single-media-group>-->
-           <div id="big_Image" style="position: relative;" class="product-big-media lazyload"  style="max-width: 100%">
-
-    <!--<div class="sticky grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %} rte" data-product-single-media-group>-->
-     {% if image.alt contains 'youtube' %}
-    <iframe width="600px" height="600px" src="{{image.alt}}?autoplay=1&amp;showinfo=0&amp;controls=0&amp;modestbranding=1&amp;rel=0" frameborder="0" allowfullscreen="true"></iframe>
-{% else %}
-      
-      {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-
-      {%- for media in product.media -%}
-        {% include 'media', media: media, featured_media: featured_media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %} 
-      {%- endfor -%}
-      
-	<!--<img src="" name="big_image" class="big_image" id="FeaturedMedia-{{ section.id }}" class="product-featured-media seths-fake-image-today" style="max-width: {{ height }}px;">-->
-       <div id="layer1WrapperWrapper" class="tfLayer1 product-single__media-wrapper" style="position: absolute; top: 0px; left: 0px;pointer-events: none;">  
-    	<div id="layer1Wrapper" style="padding-top:77.294921875%;" class="tfLayer1 product-single__media product-single__media--has-thumbnails" style="pointer-events: none;position: absolute; top: 0px; left: 0px;">
-        	<img id="layer1Image" class="tfLayer1Img tfLayerz feature-row__image product-featured-media lazyload lazypreload" src=""  style="z-index: 3;pointer-events: none; position: absolute; top: 0px; left: 0px;">
-    	</div>
-       </div>       
-       <div id="layer2WrapperWrapper" class="tfLayer2 product-single__media-wrapper" style="position: absolute; top: 0px; left: 0px;pointer-events: none;">  
-    	<div id="layer2Wrapper" style="padding-top:77.294921875%;" class="tfLayer2 product-single__media product-single__media--has-thumbnails" style="position: absolute; top: 0px; left: 0px;">
-        	<img id="layer2Image" class="tfLayer2Img tfLayerz feature-row__image product-featured-media lazyload lazypreload" src=""  style="z-index: 2; position: absolute; top: 0px; left: 0px;">
-    	</div>
-       </div>
-       <div id="layer3WrapperWrapper" class="tfLayer3 product-single__media-wrapper" style="position: absolute; top: 0px; left: 0px;pointer-events: none;">  
-    	<div id="layer3Wrapper" style="padding-top:77.294921875%;" class="tfLayer3 product-single__media product-single__media--has-thumbnails" style="position: absolute; top: 0px; left: 0px;">
-        	<img id="layer3Image" class="tfLayer3Img tfLayerz feature-row__image product-featured-media lazyload lazypreload" src=""  style="z-index: 4; position: absolute; top: 0px; left: 0px;">
-    	</div>
-       </div> 
-             
-             
-             
-      
-      </div>
-
-      	
-      <noscript>
-        {% capture product_image_size %}{{ height }}x{% endcapture %}
-        <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" name="featured_image" alt="{{ featured_media.alt }}"  id="FeaturedMedia-{{ section.id }}" class="product-featured-media lazyload" style="max-width: {{ height }}px;">
-      </noscript>
-      
-
-      
-      {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
-
-    {% comment %}  {%- if first_3d_model -%}
-        <button aria-label="{{ 'products.product.view_in_space_label' | t }}" class="product-single__view-in-space" data-shopify-xr data-shopify-model3d-id="{{ first_3d_model.id }}" data-shopify-title="{{ product.title | escape }}" data-shopify-xr-hidden>          
-          {% include 'icon-3d-badge-full-color' %}<span class='product-single__view-in-space-text'>{{ 'products.product.view_in_space' | t }}</span>
-        </button>
-      {%- endif -%}{% endcomment %}
-
-
-      {% if product.media.size > 1 %}
-        {% if product.media.size > 4 %}
-          {%- assign enable_thumbnail_slides = true -%}
-        {% endif %}
-        <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true and product.media.size > 4  %} thumbnails-slider--active{% endif %} rte">
-          {% if enable_thumbnail_slides == true and product.media.size > 4 %}
-            <button type="button" class="btn btn--link thumbnails-slider__btn thumbnails-slider__prev thumbnails-slider__prev--{{ section.id }}">
-              {% include 'icon-chevron-left' %}
-              <span class="icon__fallback-text">{{ 'sections.slideshow.previous_slide' | t }}</span>
-            </button>
-          {% endif %}
-          <ul class="product-single__thumbnails product-single__thumbnails-{{ section.id }}">
-           {% for media in product.media %}
-			{% unless media.alt contains 'variant' %}
-              <li class="product-single__thumbnails-item product-single__thumbnails-item--{{ section.settings.media_size }} js no-clear">
-                <a href="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}" class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}" data-thumbnail-id="{{ section.id }}-{{ media.id }}" {% if enable_image_zoom %}data-zoom="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-                    {%- capture thumbnailAlt -%}
-                      {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-                        {{ 'sections.featured_product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
-                      {%- elsif media.media_type == 'model' -%}
-                        {{ 'sections.featured_product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
-                      {%- else -%}
-                        {{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
-                      {%- endif -%}
-                    {%- endcapture -%}
-
-                    <img class="product-single__thumbnail-image lazyload" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}" alt="{{ thumbnailAlt }}" onclick="jQuery('.tfLayerz').hide();">
-                    {%- if media.media_type == 'video' or media.media_type =='external_video' -%}
-                      <div class="product-single__thumbnail-badge">
-                        {% include 'icon-video-badge-full-color' %}
-                      </div>
-                    {%- endif -%}
-                   {% comment %} {%- if media.media_type == 'model' -%}
-                     <div class="product-single__thumbnail-badge">
-                        {% include 'icon-3d-badge-full-color' %} 
-                      </div>
-                    {%- endif -%}{% endcomment %} 
-                </a>
+<section class="page-width">
+  <div class="product grid sm:grid-cols-1 md:grid-cols-2">
+    <div class="grid__item product__media-wrapper w-full">
+      <slider-component class="slider-mobile-gutter w-full">
+        <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+          {{ "accessibility.skip_to_product_info" | t }}
+        </a>
+        <ul class="product__media-list list-unstyled slider slider--mobile flex flex-wrap" role="list">
+          {%- if product.selected_or_first_available_variant.featured_media != null -%}
+            {%- assign media = product.selected_or_first_available_variant.featured_media -%}
+            <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+              {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
+            </li>
+          {%- endif -%}
+          {%- for media in product.media -%}
+            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+              <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+                {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id %}
               </li>
-            {% endunless %}
-            {% endfor %}
-          </ul>
-          {% if enable_thumbnail_slides == true and product.media.size > 4 %}
-            <button type="button" class="btn btn--link thumbnails-slider__btn thumbnails-slider__next thumbnails-slider__next--{{ section.id }}">
-              {% include 'icon-chevron-right' %}
-              <span class="icon__fallback-text">{{ 'sections.slideshow.next_slide' | t }}</span>
-            </button>
-          {% endif %}
-  <img class="dpo_img">
+            {%- endunless -%}
+          {%- endfor -%}
+        </ul>
+        <div class="slider-buttons slider-buttons--overlay no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
+            <span class="slider-counter--total">{{ product.media.size }}</span>
+          </div>
+          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
-      {% endif %}
- 	{% comment %}
-      <script>
-            window.ShopifyXR.launchXR({
-              model3dId: 1,
-              title: "{{ product.title | escape }}",
-            });
-           </script>
-   {% endcomment %}
-      {% endif %}
-      
+      </slider-component>
+      {%- if first_3d_model -%}
+        <button
+          class="button button--full-width product__xr-button"
+          type="button"
+          aria-label="{{ 'products.product.xr_button_label' | t }}"
+          data-shopify-xr
+          data-shopify-model3d-id="{{ first_3d_model.id }}"
+          data-shopify-title="{{ product.title | escape }}"
+          data-shopify-xr-hidden
+        >
+          {% render 'icon-3d-model' %}
+          {{ 'products.product.xr_button' | t }}
+        </button>
+      {%- endif -%}
     </div>
     <div class="product__info-wrapper grid__item w-full">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
