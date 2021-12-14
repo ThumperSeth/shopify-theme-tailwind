@@ -106,9 +106,9 @@
 
 {%- if media.media_type != 'image' -%}
   {%- if media.media_type == 'model' -%}
-    <product-model class="deferred-media media media--transparent no-js-hidden" data-media-id="{{ media.id }}">
+    <product-model class="deferred-media media media--transparent" data-media-id="{{ media.id }}">
   {%- else -%}
-    <deferred-media class="deferred-media media no-js-hidden" data-media-id="{{ media.id }}">
+    <deferred-media class="deferred-media media " data-media-id="{{ media.id }}">
   {%- endif -%}
   <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
     <span class="deferred-media__poster-button motion-reduce">
@@ -128,6 +128,7 @@
         {% if media.preview_image.width >= 1500 %}{{ media.preview_image | img_url: '1500x' }} 1500w,{% endif %}
         {{ media.preview_image | img_url: 'master' }} {{ media.preview_image.width }}w"
       src="{{ media | img_url: '1500x' }}"
+      data-zoom="{{ media | img_url: '1500x' }}"
       sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: 0.64 | round }}px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
       loading="lazy"
       width="576"
