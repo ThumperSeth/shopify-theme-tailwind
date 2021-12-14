@@ -2414,11 +2414,11 @@ details-disclosure > details {
   } 
 }
 .make-menu a:hover {
-    color: #ca0000;
+    color: #000;
     top: -4px;
   }
 .make-menu a:active {
-    color: #000 !important;
+    color: #ca0000 !important;
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
   }
   
