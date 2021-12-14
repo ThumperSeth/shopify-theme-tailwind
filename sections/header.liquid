@@ -391,9 +391,9 @@
                     </summary>
                    <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce w-full align-center" role="list" tabindex="-1">
                       {%- for childlink in link.links -%}
-                        <li style="display:max-content;">
+                        <li>
                           {%- if childlink.links == blank -%}
-                            <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                            <a  style="display:max-content;" href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                               {{ childlink.title | escape }}
                             </a>
                           {%- else -%}
