@@ -53,10 +53,10 @@
                           <ul id="product-grid"class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               {% for product in productsArray %} 
                                   {% assign tempCat = product.metafields.global.category | downcase %}
-                            		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
+                            		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>--><span style="font-style:oblique; font-weight:500;">{{ collection.current_vendor }}</span>
                                   {% if tempCat == stuff %}
                                       <li class="grid__item w-full align-center text-center">
-                                        <span style="font-style:oblique; font-weight:500;">{{ collection.current_vendor }}</span>  {% render 'collection-card',
+                                          {% render 'collection-card',
                                               product_card_product: product,
                                               media_size: section.settings.image_ratio,
                                               show_secondary_image: section.settings.show_secondary_image,
