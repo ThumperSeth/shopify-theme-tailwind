@@ -106,8 +106,7 @@
               </div>
             {%- endif -%}
           {%- when 'collapsible_tab' -%}
-            {%- render 'accordion' -%}
-            <!--<div class="product__accordion accordion" {{ block.shopify_attributes }}>
+            <div class="product__accordion accordion" {{ block.shopify_attributes }}>
               <details>
                 <summary>
                   <div class="summary__title">
@@ -123,7 +122,7 @@
                   {{ block.settings.page.content }}
                 </div>
               </details>
-            </div>-->
+            </div>
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
               <div>
