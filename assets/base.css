@@ -2404,13 +2404,13 @@ details-disclosure > details {
 .make-menu a {
     font-family: 'Teko', sans-serif;
     color: #fff;
-    font-size:2.2rem;
+    font-size:2.0rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     vertical-align: -webkit-baseline-middle;
   }
   @media screen and (min-width: 750px) {
  .make-menu a {
-    font-size:2.2rem;
+    font-size:2.0rem;
   } 
 }
 .make-menu a:hover {
