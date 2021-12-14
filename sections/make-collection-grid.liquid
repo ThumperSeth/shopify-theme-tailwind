@@ -55,7 +55,7 @@
                                   {% assign tempCat = product.metafields.global.category | downcase %}
                             		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
                                   {% if tempCat == stuff %}
-                                      <li class="grid__item w-full align-center text-center gap-20">
+                                      <li class="grid__item w-full align-center text-center">
                                           {% render 'collection-card',
                                               product_card_product: product,
                                               media_size: section.settings.image_ratio,
