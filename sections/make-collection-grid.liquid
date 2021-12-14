@@ -54,7 +54,7 @@
                               {% for product in productsArray %} 
                               	{% assign tempCat = product.metafields.global.category | downcase %}
                             	{% assign productMake = product.metafields.global.make | downcase %} 
-                            		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
+                            <div>//{{ tempCat }}+{{ stuff }}\\</div>
                                   {% if tempCat == stuff and productMake == currentBrand %}
                                       <li class="grid__item w-full align-center text-center">
                                         <div>++{{ product.metafields.global.make }}++{{ currentBrand }}</div>
