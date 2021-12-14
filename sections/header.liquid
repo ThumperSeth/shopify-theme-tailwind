@@ -383,7 +383,7 @@
 								</svg>
                               {%- else -%}
                               <a href="{{ link.url }}"class="header__menu-item" style="display:contents;">
-                                {{ link.title | escape }}
+                                {{ link.title | remove:"+" | escape }}
                               </a>
                               {%- endif -%}
                       </span>
