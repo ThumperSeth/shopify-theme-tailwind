@@ -2222,8 +2222,8 @@ details[open] > .header__icon--menu .icon-hamburger {
 
   .header--top-center .header__inline-menu > .list-menu--inline {
     justify-content: center;
-    display: contents;
-    flex-wrap:nowrap
+    display: -webkit-inline-box;
+    flex-wrap: nowrap;
   }
 
   .header--middle-left .header__inline-menu {
