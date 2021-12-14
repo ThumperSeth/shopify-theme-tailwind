@@ -126,16 +126,16 @@
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
               <div>
-           <style>
-              .product__info-container--sticky {
-              position: static !important;
-              }
-           </style>
-  
-      {% render 'icon-caret' %}
-   </div>
-</div>
-</div>
+                 <style>
+                    .product__info-container--sticky {
+                    position: static !important;
+                    }
+                 </style>
+
+                    {% render 'icon-caret' %}
+                 </div>
+              </div>
+              </div>
               <label class="form__label" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
               </label>
