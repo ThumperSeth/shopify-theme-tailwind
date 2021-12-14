@@ -51,8 +51,8 @@
                         {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | img_url: '1420x' }} 1420w,{%- endif -%}
                         {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
                       src="{{ block.settings.image | img_url: '550x' }}"
-                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
-                        (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}610px{% else %}450px{% endif %},
+                        (min-width: 750px) {% if section.blocks.size == 1 %}610px{% else %}450px{% endif %},
                         calc(100vw - 30px)"
                       alt="{{ block.settings.image.alt }}"
                       height="{{ block.settings.image.height }}"
