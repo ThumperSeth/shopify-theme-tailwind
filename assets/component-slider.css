@@ -14,7 +14,7 @@ slider-component {
   flex-shrink: 0;
 }
 
-@media screen and (max-width: 749px) {
+
   .slider.slider--mobile {
     position: relative;
     flex-wrap: inherit;
@@ -30,9 +30,9 @@ slider-component {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-}
 
-@media screen and (max-width: 989px) {
+
+
   .slider.slider--tablet {
     position: relative;
     flex-wrap: inherit;
@@ -48,7 +48,7 @@ slider-component {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-}
+
 
 /* Scrollbar */
 
@@ -92,18 +92,6 @@ slider-component {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media screen and (min-width: 990px) {
-  .slider-buttons {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .slider--mobile + .slider-buttons {
-    display: none;
-  }
 }
 
 .slider-button {
