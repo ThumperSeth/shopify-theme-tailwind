@@ -129,11 +129,11 @@
       			<span class="visually-hidden">{{ product_card_product.metafields.global.make.value }}/{{ product_card_product.metafields.global.model.value }}</span>
       		{%- endif -%}
         
-        <div class="caption-with-letter-spacing light text-left text-xl" style="color:{{ brandColor }}; text-shadow: 0 0 0 rgba(0, 0, 0, 0.9);">{{ currentBrand }}{%- unless product_card_product.metafields.global.product_model == "universal" -%}/{{ product_card_product.metafields.global.product_model }}{%- endunless -%}</div>
+        <div class="caption-with-letter-spacing light text-left text-md" style="color:{{ brandColor }}; text-shadow: 0 0 0 rgba(0, 0, 0, 0.9);">{{ currentBrand }}{%- unless product_card_product.metafields.global.product_model == "universal" -%}/{{ product_card_product.metafields.global.product_model }}{%- endunless -%}</div>
       {%- endif -%}
 
       {%- if product_card_product.featured_media -%}
-        <h3 class="card-information__text text-sm">
+        <h3 class="card-information__text h5">
           <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
             {%- if product_card_product.metafields.global.display_name.value != nil -%}
           		  {{ product_card_product.metafields.global.display_name.value }}
