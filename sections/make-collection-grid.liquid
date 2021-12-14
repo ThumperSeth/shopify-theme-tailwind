@@ -10,23 +10,23 @@
 {% case part %}
 <!-- POLARIS -->
 	{% when "polaris" %}
-		{% assign currentBrand  = "polaris" %}
+		{% assign currentBrand  = "Polaris" %}
 		{% assign brandColor = "#305799" %}
 		{% break %}
 	{% when "yamaha" %}
-		{% assign currentBrand  = "yamaha" %}
+		{% assign currentBrand  = "Yamaha" %}
 		{% assign brandColor = "#CCCCCB" %}
 		{% break %}
 	{% when "can-am" %}
-		{% assign currentBrand  = "can-am" %}
+		{% assign currentBrand  = "Can-Am" %}
 		{% assign brandColor = "#fdc832" %}
 		{% break %}
 	{% when "tracker" %}
-		{% assign currentBrand  = "tracker" %}
+		{% assign currentBrand  = "Tracker" %}
 		{% assign brandColor = "#262526" %}
 		{% break %}
 	{% when "honda" %}
-		{% assign currentBrand  = "honda" %}
+		{% assign currentBrand  = "Honda" %}
 		{% assign brandColor = "#e0262f" %}
 		{% break %}
 	{% else %}
@@ -52,9 +52,10 @@
                       <div class="text-7xl text-left font-medium pt-5" style="margin-top:-35px;font-family:'Teko'">{{ stuff | upcase }}</div>
                           <ul id="product-grid"class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               {% for product in productsArray %} 
-                                  {% assign tempCat = product.metafields.global.category | downcase %}
+                              	{% assign tempCat = product.metafields.global.category | downcase %}
+                            	{% assign productMake = product.metafields.global.make | downcase %} 
                             		<!--<div>//{{ tempCat }}+{{ stuff }}\\</div>-->
-                                  {% if tempCat == stuff %}
+                                  {% if tempCat == stuff and productMake == currentBrand %}
                                       <li class="grid__item w-full align-center text-center">
                                         <div>++{{ product.metafields.global.make }}++{{ currentBrand }}</div>
                                           {% render 'collection-card',
