@@ -1603,6 +1603,9 @@
         "image": {
           "label": "First image"
         },
+        "image_2": {
+          "label": "Second image"
+        },
         "title": {
           "label": "Heading"
         },
