@@ -45,7 +45,7 @@
         {% assign productsArray = collections.all.products %}
       	<!--<div>!!!! {{ productsArray.count }} !!!!</div>-->
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
-        {% for stuff in typeArray %}
+        {% for stuff in collection %}
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
                   <div class="w-3/4 justify-items-center pb-20"> 
                       <a name="{{ stuff }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
