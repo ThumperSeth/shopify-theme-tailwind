@@ -45,7 +45,7 @@
       	{% paginate collections.all.products by 500 %}
         	{% assign productsArray = collections.all.products %}
       	{% endpaginate %}
-      <!--<div>!!! {{ collection.all_products_count }} // {{ productsArray.count }} !!! </div>__>
+      <!--<div>!!! {{ collection.all_products_count }} // {{ productsArray.count }} !!! </div>-->
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
         {% for stuff in typeArray %}
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 92%, rgba(145,145,145,1) 100%);">
