@@ -112,11 +112,18 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "163950964883ae0f1a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<button type=\"button\" onClick=\"quick-add();\">QUICKLY!<\/button>"
+      }
     }
   },
   "order": [
     "big-product",
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "163950964883ae0f1a"
   ]
 }
