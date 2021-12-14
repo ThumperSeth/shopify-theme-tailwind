@@ -58,7 +58,7 @@
                                   {% if tempCat == stuff %}
                                   	{% if productMake == currentBrand or productMake contains currentBrand %}
                                       <li class="grid__item w-full align-center text-center">
-                                        <div>++{{ product.metafields.global.make }}++{{ currentBrand }}</div>
+                                        <!--<div>++{{ product.metafields.global.make }}++{{ currentBrand }}</div>-->
                                           {% render 'collection-card',
                                               product_card_product: product,
                                               media_size: section.settings.image_ratio,
