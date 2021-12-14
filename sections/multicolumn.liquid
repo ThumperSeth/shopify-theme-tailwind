@@ -27,7 +27,7 @@
           endfor
         -%}
         {%- for block in section.blocks -%}
-          <li class="multicolumn-list__item grid grid-cols-1 max-w-screen-md {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
+          <li class="multicolumn-list__item grid grid-cols-1 max-w-max {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
             <a href="{{ block.settings.collection.url }}"
             class="card animate-arrow link{% if block.settings.collection.image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
           >
