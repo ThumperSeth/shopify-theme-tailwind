@@ -61,7 +61,7 @@
 .svg_logo { 
   min-width:200px;  
   width:50%;
-  display: flex;
+
   justify-content:center;
   
 }
@@ -78,7 +78,7 @@
 <div id="collection-SubMenu" class="w-full h-full lg:flex">
   <div class="block sm:w-1/2 lg:w-1/6 lg:flex lg:text-left sm:text-center md:pl-4 sm:pl-2 lg:pl-12 pt-2 pb-2 drop-shadow brandbox svg-logo">
     <input type="button" class="hover: bounce;" onclick="location.href='{{ currentBrand | within:collection }}';">
-    <div class="svg-wrapper sm:w-full lg:1/6">{{ collection.metafields.make.svg_data.value }}</div>
+    <div class="svg-wrapper flex sm:w-full lg:1/6">{{ collection.metafields.make.svg_data.value }}</div>
     </input>
   </div>
   <!--<div class="bendybox-45 ml-12" style="margin-top: -8px">&nbsp;</div>-->
