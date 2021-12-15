@@ -1678,10 +1678,10 @@
               "label": "Heading"
             },
             "text": {
-              "label": "Text"
+              "image_label": "Text"
             },
             "url": {
-              "label": "Link"
+              "image_link": "Link"
             }
           }
         }
