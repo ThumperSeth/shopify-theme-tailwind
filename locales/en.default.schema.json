@@ -1681,10 +1681,10 @@
               "label": "Fuck it"
             },
             "image_link": {
-              "label": "http:\/\/"
+              "label": "Link"
             },
             "model_name": {
-              "label": "Vehicky"
+              "label": "Model Name"
             }
           }
         }
