@@ -40,9 +40,9 @@
                     {% if section.settings.image_ratio == 'adapt' %}
                       style="padding-bottom: 0"
                     {% endif %}>
-                    {%- if section.settings.image_link != blank -%}
+                   
                       <a href="{{ block.settings.image_link }}/{{ block.settings.model_name }}">
-                    {%- endif -%}
+               
                     <img
                       srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
                         {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
@@ -58,9 +58,9 @@
                       width="100%	"
                       loading="lazy"
                     > 
-                    {%- if section.settings.image_link != blank -%}
+ 
                       </a>
-                    {%- endif -%}
+          
                   </div>
                 </div>
               {%- endif -%}
