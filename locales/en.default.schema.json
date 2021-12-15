@@ -1678,10 +1678,13 @@
               "label": "Heading"
             },
             "text": {
-              "model_name": "Vehicky"
+              "label": "Fuck it"
             },
-            "url": {
-              "image_link": "http:\/\/"
+            "image_link": {
+              "label": "http:\/\/"
+            },
+            "model_name": {
+              "label": "Vehicky"
             }
           }
         }
