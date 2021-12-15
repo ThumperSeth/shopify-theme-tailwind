@@ -1678,10 +1678,10 @@
               "label": "Heading"
             },
             "text": {
-              "image_label": "Text"
+              "image_label": "Vehicle"
             },
             "url": {
-              "image_link": "Link"
+              "image_link": "http:\/\/"
             }
           }
         }
