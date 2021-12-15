@@ -66,8 +66,8 @@
             "image": "shopify:\/\/shop_images\/general.png",
             "title": "General",
             "text": "",
-            "image_label": "Image label",
-            "image_link": ""
+            "image_link": "shopify:\/\/collections\/polaris",
+            "model_name": "general"
           }
         },
         "16394119902da621e4-1": {
@@ -76,8 +76,8 @@
             "image": "shopify:\/\/shop_images\/ranger.png",
             "title": "Ranger",
             "text": "",
-            "image_label": "Image label",
-            "image_link": "shopify:\/\/collections\/polaris-ranger"
+            "image_link": "shopify:\/\/collections\/polaris-ranger",
+            "model_name": "Vehicle"
           }
         },
         "16394119902da621e4-2": {
@@ -86,8 +86,8 @@
             "image": "shopify:\/\/shop_images\/rzr.png",
             "title": "RZR",
             "text": "",
-            "image_label": "Image label",
-            "image_link": "shopify:\/\/collections\/rzr"
+            "image_link": "shopify:\/\/collections\/rzr",
+            "model_name": "Vehicle"
           }
         }
       },
