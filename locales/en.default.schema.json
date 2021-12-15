@@ -1678,7 +1678,7 @@
               "label": "Heading"
             },
             "text": {
-              "image_label": "Vehicle"
+              "model_name": "Vehicky"
             },
             "url": {
               "image_link": "http:\/\/"
