@@ -1678,6 +1678,9 @@
               "label": "Heading"
             },
             "text": {
+              "label": "Text"
+            },
+            "url": {
               "label": "Link"
             }
           }
