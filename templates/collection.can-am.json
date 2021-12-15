@@ -66,7 +66,8 @@
             "image": "shopify:\/\/shop_images\/defender_dd253ef3-663e-49a2-9c16-eba8bfa48044.png",
             "title": "Defender",
             "text": "",
-            "image_link": "shopify:\/\/collections\/all"
+            "image_link": "shopify:\/\/collections\/can-am",
+            "model_name": "defender"
           }
         },
         "16394119902da621e4-1": {
@@ -75,7 +76,8 @@
             "image": "shopify:\/\/shop_images\/maverick_x3_6de6c12c-2571-4b5b-9092-246a802c1623.png",
             "title": "Maverick X3",
             "text": "",
-            "image_link": "shopify:\/\/collections\/polaris-ranger"
+            "image_link": "shopify:\/\/collections\/polaris-ranger",
+            "model_name": "Vehicle"
           }
         }
       },
