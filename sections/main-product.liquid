@@ -47,7 +47,6 @@
 {%- endif -%}
 
 <section class="w-full justify-center">
-    <div class="justify-center flex w-1/2">
         <div class="grid__item product__media-wrapper w-3/4 justify-center">
             <slider-component class="slider-mobile-gutter">
                 <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
@@ -291,7 +290,6 @@
                 {%- endfor -%}
             </div>
         </div>
-    </div> 
     <!-- PICKUP AVAILABLILITY MODAL -->
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
     {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
