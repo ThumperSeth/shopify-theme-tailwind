@@ -28,7 +28,7 @@
         -%}
         {%- for block in section.blocks -%}
           <li class="multicolumn-list__item grid grid-cols-1 {% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
-            <a href="{{ block.settings.collection.url }}"
+            <a href="{{ block.settings.image_link }}/{{ block.settings.model_name }}"
             class="card animate-arrow link{% if block.settings.collection.image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
           >
             <div class="multicolumn-card">
@@ -248,13 +248,13 @@
         {
         "type": "url",
         "id": "image_link",
-        "label": "Image Link"
+        "label": "t:sections.multicolumn.blocks.column.settings.url.label"
         },
         {
         "type": "text",
 		"id": "model_name",
         "default": "Vehicle",
-		"label": "Model Name"
+		"label": "t:sections.multicolumn.blocks.column.settings.model_name.label"
 		}
       ]
     }
