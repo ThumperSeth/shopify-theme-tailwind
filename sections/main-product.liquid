@@ -289,8 +289,7 @@
                     {%- endcase -%}
                 {%- endfor -%}
             </div>
-        </div>
-    <!-- PICKUP AVAILABLILITY MODAL -->
+<!-- PICKUP AVAILABLILITY MODAL -->
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
     {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
     <pickup-availability class="product__pickup-availabilities w-1/2"
@@ -310,6 +309,8 @@
         </template>
     </pickup-availability>
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+  </div>
+    
 
     <!-- FITMENT MODAL -->      
     <!-- This example requires Tailwind CSS v2.0+ -->
