@@ -105,6 +105,9 @@
                                 {{- block.settings.text -}}
                             </p>
                         {%- when 'title' -%}
+              				<span class="product-make-and-model text-">
+                            	
+              				</span>
                             <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
                                 {{ product.title | escape }}
                             </h1>
@@ -220,6 +223,7 @@
                                         <script type="application/json">
                                             {{ product.variants | json }}
                                         </script>
+                                      <div class="dpo-container" style="display: block;"></div>
                                     </variant-selects>
                                 {%- endif -%}
                             {%- endunless -%}   
