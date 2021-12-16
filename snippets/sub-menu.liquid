@@ -4,7 +4,7 @@
 {%- endif -%}
 
 {%- if request.page_type == "product" -%}
-	{% assign url_parts = product.metafields.global.product_make %}
+	{% assign url_parts = product.metafields.global.product_make | downcase %}
 {%- endif -%}
 
 
@@ -21,6 +21,11 @@
 		{% assign brandSVG = collections.yamaha.metafields.make.svg_data %}
         {% break %}
       {% when "can" %}
+        {% assign currentBrand  = "can-am" %}
+        {% assign brandColor = "#fdc832" %}
+		{% assign brandSVG = collections.can-am.metafields.make.svg_data %}
+		{% break %}
+	{% when "can-am" %}
         {% assign currentBrand  = "can-am" %}
         {% assign brandColor = "#fdc832" %}
 		{% assign brandSVG = collections.can-am.metafields.make.svg_data %}
