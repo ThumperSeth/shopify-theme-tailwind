@@ -16,24 +16,28 @@
 		{% assign brandSVG = collections.polaris.metafields.make.svg_data %}
         {% break %}
       {% when "yamaha" %}
-          {% assign currentBrand  = "yamaha" %}
-          {% assign brandColor = "#CCCCCB" %}
-          {% break %}
+        {% assign currentBrand  = "yamaha" %}
+        {% assign brandColor = "#CCCCCB" %}
+		{% assign brandSVG = collections.yamaha.metafields.make.svg_data %}
+        {% break %}
       {% when "can-am" %}
-          {% assign currentBrand  = "can-am" %}
-          {% assign brandColor = "#fdc832" %}
-          {% break %}
+        {% assign currentBrand  = "can-am" %}
+        {% assign brandColor = "#fdc832" %}
+		{% assign brandSVG = collections.yamaha.metafields.make.svg_data %}
+		{% break %}
       {% when "tracker" %}
-          {% assign currentBrand  = "tracker" %}
-          {% assign brandColor = "#262526" %}
-          {% break %}
+        {% assign currentBrand  = "tracker" %}
+        {% assign brandColor = "#262526" %}
+		{% assign brandSVG = collections.yamaha.metafields.make.svg_data %}
+        {% break %}
       {% when "honda" %}
-          {% assign currentBrand  = "honda" %}
-          {% assign brandColor = "#e0262f" %}
-          {% break %}
+        {% assign currentBrand  = "honda" %}
+        {% assign brandColor = "#e0262f" %}
+		{% assign brandSVG = collections.yamaha.metafields.make.svg_data %}
+        {% break %}
       {% else %}
-          {% assign currentBrand = "all" %}
-          {% assign brandColor = "#ccc" %}
+        {% assign currentBrand = "all" %}
+        {% assign brandColor = "#ccc" %}
   {% endcase %}
 {% endfor %}
 <style>
