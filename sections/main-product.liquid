@@ -223,7 +223,7 @@
                                         <script type="application/json">
                                             {{ product.variants | json }}
                                         </script>
-                                      
+                                      <div class="dpo-container" style="display: block;"></div>
                                     </variant-selects>
                                 {%- endif -%}
                             {%- endunless -%}   
@@ -249,7 +249,7 @@
                                     </div>
                                 </div>
                             </noscript>
-              				<div class="dpo-container" style="display: block;"></div>
+              				
                     {%- when 'price' -%}
                             <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
                                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
