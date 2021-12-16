@@ -4,7 +4,7 @@
 {%- endif -%}
 
 {%- if request.page_type == "product" -%}
-	{% assign url_parts =  product.handle | split: "-" %}
+	{% assign url_parts = product.metafields.global.product_make %}
 {%- endif -%}
 
 
