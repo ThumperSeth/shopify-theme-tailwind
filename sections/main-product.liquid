@@ -108,16 +108,6 @@
                             <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
                                 {{ product.title | escape }}
                             </h1>
-                        {%- when 'price' -%}
-                            <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
-                                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-                            </div>
-                            <div {{ block.shopify_attributes }}>
-                                {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
-                                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                                    {{ form | payment_terms }}
-                                {%- endform -%}
-                            </div>
                         {%- when 'description' -%}
                             {%- if product.description != blank -%}
                                 <div class="product__description rte">
@@ -268,7 +258,17 @@
                                     </div>
                                 </div>
                             </noscript>
-                        {%- when 'buy_buttons' -%}
+                    {%- when 'price' -%}
+                            <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                            </div>
+                            <div {{ block.shopify_attributes }}>
+                                {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
+                                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                    {{ form | payment_terms }}
+                                {%- endform -%}
+                            </div>    
+              		{%- when 'buy_buttons' -%}
                             <div {{ block.shopify_attributes }}>
                                 <product-form>
                                     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
