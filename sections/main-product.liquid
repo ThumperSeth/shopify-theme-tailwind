@@ -208,7 +208,7 @@
                             </share-button>
                             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
                         {%- when 'variant_picker' -%}
-              				<div >
+              				<div class="variant-wrapper">
                             {%- unless product.has_only_default_variant -%}
                                 {%- if block.settings.picker_type == 'button' -%}
                                     <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
@@ -246,8 +246,7 @@
                                     </variant-selects>
                                 {%- endif -%}
                             {%- endunless -%}   
-                           </div>
-              <div class="variant-selects"></div>
+              </div>
                             <noscript>
                                 <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
                                     <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
