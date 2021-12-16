@@ -11,10 +11,10 @@
 {% for part in url_parts %}
   {% case part %}
       {% when "polaris" %}
-          {% assign currentBrand  = "polaris" %}
-          {% assign brandColor = "#305799" %}
-			{% assign brandSVG = collections.polaris.metafields.global.
-          {% break %}
+		{% assign currentBrand  = "polaris" %}
+		{% assign brandColor = "#305799" %}
+		{% assign brandSVG = collections.polaris.metafields.make.svg_data }}
+        {% break %}
       {% when "yamaha" %}
           {% assign currentBrand  = "yamaha" %}
           {% assign brandColor = "#CCCCCB" %}
@@ -82,7 +82,7 @@
 <div id="collection-SubMenu" class="w-full h-full lg:flex lg:items-center">
   <div class="block sm:w-1/2 lg:w-1/6 lg:flex lg:text-left sm:text-center md:pl-4 sm:pl-2 lg:pl-12 pt-2 pb-2 drop-shadow brandbox svg-logo">
     <input type="button" class="hover: bounce;" onclick="location.href='{{ currentBrand | within:collection }}';">
-    <div class="svg-wrapper flex sm:w-full md:w-full lg:1/6 justify-center">{{ collection.metafields.make.svg_data }}</div>
+    <div class="svg-wrapper flex sm:w-full md:w-full lg:1/6 justify-center">{{ brandSVG }}</div>
     </input>
   </div>
   <!--<div class="bendybox-45 ml-12" style="margin-top: -8px">&nbsp;</div>-->
