@@ -28,11 +28,6 @@
           "settings": {
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -50,22 +45,29 @@
             "show_dynamic_checkout": false
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "share": {
           "type": "share",
           "disabled": true,
           "settings": {
+            "share_label": "Share"
           }
         },
         "4701d8ba-c8af-4682-8567-9fb7070f42d9": {
           "type": "popup",
           "disabled": true,
           "settings": {
-            "link_label": "Fitment",
+            "text": "Pop-up link text",
             "page": "fitment"
           }
         },
         "6c84d856-db22-48f1-a0fc-c970e5ae7612": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Fitment Guide",
             "content": "<p>﻿{{ product.metafields.global.fitment.value }}<\/p>",
@@ -87,10 +89,10 @@
         "subtitle",
         "vendor",
         "title",
-        "description",
         "price",
         "variant_picker",
         "buy_buttons",
+        "description",
         "share",
         "4701d8ba-c8af-4682-8567-9fb7070f42d9",
         "6c84d856-db22-48f1-a0fc-c970e5ae7612",
@@ -98,6 +100,7 @@
       ],
       "settings": {
         "enable_sticky_info": false,
+        "hide_variants": false,
         "enable_video_looping": false
       }
     },
