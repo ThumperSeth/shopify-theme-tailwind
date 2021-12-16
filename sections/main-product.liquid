@@ -113,19 +113,6 @@
                                 <div class="product__description rte">
                                     {{ product.description }}
                                 </div>
-              					<script>
-                                  function toggleFitmentDrawer() {
-                                    if (document.getElementById('fitmentDrawer').style.display != "block") {
-                                      	document.getElementById('fitmentDrawer').style.opacity = "100";
-                                  		document.getElementById('fitmentDrawer').style.display = "block";
-                                    }
-                                  }
-              					</script>
-        	                    <div id="fitmentButton">
-                                    <button id="ShowProductFitmentDrawer" class="product-fitment-button link link--text underlined-link" aria-haspopup="dialog" onClick="toggleFitmentDrawer();">
-                                    	See Fitment Chart...
-                                  	</button>
-        	                    </div>
                             {%- endif -%}
                         {%- when 'collapsible_tab' -%}
                             <div class="product__accordion accordion" {{ block.shopify_attributes }}>
