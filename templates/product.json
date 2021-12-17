@@ -85,6 +85,16 @@
       "type": "product-docs",
       "settings": {
       }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "product-related-products": {
+      "type": "product-related-products",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -96,6 +106,8 @@
     "product-videos",
     "product-specs",
     "product-docs",
+    "product-reviews",
+    "product-related-products",
     "product-recommendations"
   ]
 }
