@@ -53,7 +53,7 @@
             <ul class="w-full product__media-list flex-wrap slider" role="list">
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                        <li class="w-full" data-media-id="{{ section.id }}-{{ media.id }}">
+                        <li class="w-3/4" data-media-id="{{ section.id }}-{{ media.id }}">
                             {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
                         </li>
                 {%- endif -%}
