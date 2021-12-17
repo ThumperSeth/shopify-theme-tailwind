@@ -50,7 +50,7 @@
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div id="ProductGridContainer">
+<section id="ProductGridContainer">
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
       	{% paginate collections.all.products by 500 %}
@@ -87,7 +87,7 @@
               </div>
        {%- endfor -%}
   </div>
-</div>
+</section>
 
 {% schema %}
 {
