@@ -44,12 +44,6 @@
           "settings": {
             "show_dynamic_checkout": false
           }
-        },
-        "0be7cba4-cb37-4aa8-a443-1588022c24ba": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{{ product.metafields.global.tinyDescription }}"
-          }
         }
       },
       "block_order": [
@@ -58,8 +52,7 @@
         "title",
         "price",
         "variant_picker",
-        "buy_buttons",
-        "0be7cba4-cb37-4aa8-a443-1588022c24ba"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": false,
