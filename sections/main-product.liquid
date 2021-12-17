@@ -94,7 +94,7 @@
             {%- endif -%}
         </div>
         <div class="w-full flex justify-center mx-auto">
-            <div id="ProductInfo-{{ section.id }}" class=" product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
+            <div id="ProductInfo-{{ section.id }}" class="w-full">
                 {%- assign product_form_id = 'product-form-' | append: section.id -%}
                 {%- for block in section.blocks -%}
                     {%- case block.type -%}
