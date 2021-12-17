@@ -45,49 +45,10 @@
             "show_dynamic_checkout": false
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "share": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "4701d8ba-c8af-4682-8567-9fb7070f42d9": {
-          "type": "popup",
-          "disabled": true,
-          "settings": {
-            "text": "Pop-up link text",
-            "page": "fitment"
-          }
-        },
-        "6c84d856-db22-48f1-a0fc-c970e5ae7612": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Fitment Guide",
-            "content": "<p>﻿{{ product.metafields.global.fitment.value }}<\/p>",
-            "page": "",
-            "icon": "ruler"
-          }
-        },
-        "15406f5d-d335-473e-8b1c-4c7650e71e30": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Installation Guide",
-            "content": "",
-            "page": "",
-            "icon": "box"
-          }
-        },
         "0be7cba4-cb37-4aa8-a443-1588022c24ba": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{{ product.metafields.global.shortDescription }}"
+            "custom_liquid": "{{ product.metafields.global.tinyDescription }}"
           }
         }
       },
@@ -98,11 +59,6 @@
         "price",
         "variant_picker",
         "buy_buttons",
-        "description",
-        "share",
-        "4701d8ba-c8af-4682-8567-9fb7070f42d9",
-        "6c84d856-db22-48f1-a0fc-c970e5ae7612",
-        "15406f5d-d335-473e-8b1c-4c7650e71e30",
         "0be7cba4-cb37-4aa8-a443-1588022c24ba"
       ],
       "settings": {
@@ -134,17 +90,11 @@
       "settings": {
         "custom_liquid": "{{ template }}"
       }
-    },
-    "lifestyle-images": {
-      "type": "lifestyle-images",
-      "settings": {
-      }
     }
   },
   "order": [
     "big-product",
     "main",
-    "lifestyle-images",
     "product-recommendations",
     "163950964883ae0f1a",
     "1639520534912a55fb"
