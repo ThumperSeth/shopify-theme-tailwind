@@ -70,6 +70,11 @@
       "type": "product-fitment",
       "settings": {
       }
+    },
+    "product-videos": {
+      "type": "product-video",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -78,6 +83,7 @@
     "lifestyle-images",
     "product-features",
     "product-fitment",
+    "product-videos",
     "product-recommendations"
   ]
 }
