@@ -134,11 +134,17 @@
       "settings": {
         "custom_liquid": "{{ template }}"
       }
+    },
+    "lifestyle-images": {
+      "type": "lifestyle-images",
+      "settings": {
+      }
     }
   },
   "order": [
     "big-product",
     "main",
+    "lifestyle-images",
     "product-recommendations",
     "163950964883ae0f1a",
     "1639520534912a55fb"
