@@ -111,6 +111,17 @@
     "new-at-thumper": {
       "type": "new-at-thumper",
       "settings": {
+        "title": "New at Thumper",
+        "collection": "",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
       }
     },
     "index-affirm-section": {
