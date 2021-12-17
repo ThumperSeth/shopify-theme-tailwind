@@ -1,12 +1,34 @@
+<section class="lifestyle-images-section w-full flex justify-center">
+<div class="w-full grid grid-cols-1">
+  <div class="w-full" style="">
+    <model-viewer style="height: 50vmin;" class="w-full" src="https://model3d.shopifycdn.com/models/o/f4d66bae17b469a3/Ranger_1000_FWB-front.glb" poster="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807" 
+                  shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" 
+                  camera-controls alt=""
+                  environment-image="" skybox-image="">
+        <button slot="ar-button" id="ar-button">
+          View in your space
+        </button>
+        <div id="ar-prompt">
+          <img src="https://modelviewer.dev/assets/hand.png">
+        </div>
+        <button id="ar-failure">
+          AR is not tracking!
+        </button>
+        <div class="slider grid" class="w-full ht-20">
+          <div class="slides text-align-center shadow-xl" style="text-align:center;flex-direction:column;">
+            	<div class="slide focus:pl-50">
+                	<button class="slide selected focus:pl-50" onclick="switchSrc(this, 'Bumper')" style="background-image: url('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TRANS-General_FWB-Front_raw_no_lights_2048x_8c9dee50-2155-4de4-bccd-91135706d025_1000x1000_crop_center.png?v=1638296807');"></button>
+            	</div>
+            </div>
+        </div>
+      </model-viewer>
+	</div>
+</div>
+</section>
+	
 {% schema %}
   {
-    "name": "Section name",
+    "name": "Lifestyle Images",
     "settings": []
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
