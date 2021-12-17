@@ -93,7 +93,7 @@
                 </button>
             {%- endif -%}
         </div>
-        <div class="product__info-wrapper sm:w-full md:w-full lg:w-1/2 justify-center">
+        <div class="product__info-wrapper w-full mx-auto flex justify-center">
             <div id="ProductInfo-{{ section.id }}" class=" product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
                 {%- assign product_form_id = 'product-form-' | append: section.id -%}
                 {%- for block in section.blocks -%}
