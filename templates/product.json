@@ -55,11 +55,23 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "product-features": {
+      "type": "product-features",
+      "settings": {
+      }
+    },
+    "lifestyle-images": {
+      "type": "lifestyle-images",
+      "settings": {
+      }
     }
   },
   "order": [
     "big-product",
     "main",
+    "lifestyle-images",
+    "product-features",
     "product-recommendations"
   ]
 }
