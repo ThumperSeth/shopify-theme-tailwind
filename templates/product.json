@@ -65,6 +65,11 @@
       "type": "lifestyle-images",
       "settings": {
       }
+    },
+    "product-fitment": {
+      "type": "product-fitment",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -72,6 +77,7 @@
     "main",
     "lifestyle-images",
     "product-features",
+    "product-fitment",
     "product-recommendations"
   ]
 }
