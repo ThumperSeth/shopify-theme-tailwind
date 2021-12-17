@@ -1,6 +1,9 @@
 <section id="index-page-affirm-section" class="index-page-affirm-section">
-    <div>
-        {%- section 'image-banner' -%}
+	<div class="shop-by-ride-brand-container w-full flex-wrap justify-center">
+    	<div class="index-section-title w-full text-6xl bg-gray-400 text-center pt-5" style="font-family: Teko;">AFFIRM</div>
+    	<div class="index-section-content w-full bg-gray-200 justify-center text-center">
+			content
+      	</div>
 	</div>
 </section>
 {% schema %}
@@ -8,17 +11,144 @@
     "name": "Index Page Affirm Section",
   "class": "spaced-section spaced-section--full-width",
   "tag": "section",
-  "settings": [ ],
+  "settings": [
+	{
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.multicolumn.settings.image.label"
+    },
+	{
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.multicolumn.settings.image_2.label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Make Multicolumn",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "image_width",
+      "options": [
+        {
+          "value": "third",
+          "label": "t:sections.multicolumn.settings.image_width.options__1.label"
+        },
+        {
+          "value": "half",
+          "label": "t:sections.multicolumn.settings.image_width.options__2.label"
+        },
+        {
+          "value": "full",
+          "label": "t:sections.multicolumn.settings.image_width.options__3.label"
+        }
+      ],
+      "default": "full",
+      "label": "t:sections.multicolumn.settings.image_width.label"
+    },
+    
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.multicolumn.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.multicolumn.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.multicolumn.settings.image_ratio.options__3.label"
+        },
+        {
+          "value": "circle",
+          "label": "t:sections.multicolumn.settings.image_ratio.options__4.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.affirm.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "column_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.affirm.settings.column_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.affirm.settings.column_alignment.options__2.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.affirm.settings.column_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "background_style",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.affirm.settings.background_style.options__1.label"
+        },
+        {
+          "value": "primary",
+          "label": "t:sections.affirm.settings.background_style.options__2.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.affirm.settings.background_style.options__3.label"
+        }
+      ],
+      "default": "primary",
+      "label": "t:sections.affirm.settings.background_style.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "t:sections.affirm.settings.swipe_on_mobile.label"
+    }
+  ],
   "blocks": [
     {
-      "type": "image_picker",
-      "name": "t:sections.affirm.blocks.image_picker.name",
-      "settings": []
+      "type": "column",
+      "name": "t:sections.affirm.blocks.column.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.affirm.blocks.column.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Column",
+          "label": "t:sections.affirm.blocks.column.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "Rich Text"
+        },
+        {
+        "type": "url",
+        "id": "image_link",
+        "label": "t:sections.affirm.blocks.column.settings.image_link.label"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.image-picker.presets.name",
+      "name": "t:sections.multicolumn.presets.name",
       "blocks": []
     }
   ]
