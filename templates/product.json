@@ -9,20 +9,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "subtitle": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.global.product_make.value }} \/ {{ product.metafields.global.product_model.value }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -47,8 +33,6 @@
         }
       },
       "block_order": [
-        "subtitle",
-        "vendor",
         "title",
         "price",
         "variant_picker",
