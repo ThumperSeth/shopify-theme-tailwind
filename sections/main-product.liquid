@@ -50,7 +50,7 @@
     <div class="w-2/3 flex justify-center mx-auto">
         <slider-component class="slider-mobile-gutter w-full mx-auto flex-wrap">
             <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
-            <ul class="w-full flex-wrap slider justify-center" role="list">
+            <ul class="w-full flex-wrap slider justify-center mx-auto flex" role="list">
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                         <li class="w-3/4" data-media-id="{{ section.id }}-{{ media.id }}">
