@@ -75,6 +75,11 @@
       "type": "product-video",
       "settings": {
       }
+    },
+    "product-specs": {
+      "type": "product-specs",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -84,6 +89,7 @@
     "product-features",
     "product-fitment",
     "product-videos",
+    "product-specs",
     "product-recommendations"
   ]
 }
