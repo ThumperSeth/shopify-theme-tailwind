@@ -80,6 +80,11 @@
       "type": "product-specs",
       "settings": {
       }
+    },
+    "product-docs": {
+      "type": "product-docs",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -90,6 +95,7 @@
     "product-fitment",
     "product-videos",
     "product-specs",
+    "product-docs",
     "product-recommendations"
   ]
 }
