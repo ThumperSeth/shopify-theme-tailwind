@@ -17,65 +17,11 @@
         font-size: 52px;
         color: transparent;
     }
-  @mixin dots($count) {
-  $text-shadow: ();
-  @for $i from 0 through $count {
-    $text-shadow: $text-shadow,
-                 (-.5+(random()) * 3) + em
-                 (-.5+(random()) * 3) + em
-                 7px
-                 hsla(random() * 360, 100%, 50%,.9);
-  }
-  text-shadow: $text-shadow;
-}
-
-.product-docs-title::before, .product-docs-title::after,
-.product-docs-content::before, .product-docs-content::after {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 3em;
-  height: 3em;
-  content: '.';
-  mix-blend-mode: screen;
-  animation: 44s -27s move infinite ease-in-out alternate;
-}
-
-
-.product-docs-content::before {
-  @include dots(40);
-  animation-duration: 44s;
-  animation-delay: -27s;
-}
-
-.product-docs-content::after {
-  @include dots(40);
-  animation-duration: 43s;
-  animation-delay: -32s;
-}
-
-.product-docs-title::before {
-  @include dots(40);
-  animation-duration: 42s;
-  animation-delay: -23s;
-}
-
-.product-docs-title::after {
-  @include dots(40);
-  animation-duration: 41s;
-  animation-delay: -19s;
-}
-
-
-@keyframes move {
-  from {
-    transform: rotate(0deg) scale(12) translateX(-20px);
-  }
-  to {
-    transform: rotate(360deg) scale(18) translateX(20px);
-  }
-}
-
+  	.ball {
+  		position: absolute;
+  		border-radius: 100%;
+  		opacity: 0.7;
+	}
 </style>
 <section class="product-docs-section w-full flex flex-wrap mx-auto justify-center">
   	<div class="product-docs-title w-full text-3xl font-bold p-10">
