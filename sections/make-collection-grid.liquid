@@ -8,6 +8,39 @@
 {% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
 {% case part %}
+ {% when "
+{% endcase %}
+{% case part %}
+<!-- POLARIS -->
+	{% when "polaris" %}
+		{% assign currentBrand  = "polaris" %}
+		{% assign brandColor = "#305799" %}
+		{% assign brandRGBA = "rgba(48, 87, 153, 1)" %}
+		{% break %}
+	{% when "yamaha" %}
+		{% assign currentBrand  = "yamaha" %}
+		{% assign brandColor = "#CCCCCB" %}
+		{% assign brandRGBA = "rgba(204, 204, 203, 1)" %}
+		{% break %}
+	{% when "can-am" %}
+		{% assign currentBrand  = "can-am" %}
+		{% assign brandColor = "#fdc832" %}
+		{% assign brandRGBA = "rgba(253, 200, 50, 1)" %}
+		{% break %}
+	{% when "tracker" %}
+		{% assign currentBrand  = "tracker" %}
+		{% assign brandColor = "#262526" %}
+		{% assign brandRGBA = "rgba(38, 37, 38, 1)" %}
+		{% break %}
+	{% when "honda" %}
+		{% assign currentBrand  = "honda" %}
+		{% assign brandColor = "#e0262f" %}
+		{% assign brandRGBA = "rgba(224, 38, 47, 1)" %}
+		{% break %}
+	{% else %}
+		{% assign currentBrand = "all" %}
+		{% assign brandColor = "#ccc" %}
+{% endcase %}
 <!-- POLARIS -->
 	{% when "polaris" %}
 		{% assign currentBrand  = "polaris" %}
