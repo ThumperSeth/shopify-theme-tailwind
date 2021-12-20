@@ -45,7 +45,11 @@
 
 {% endfor %}
 {% for indModel in modelArray %}
-	<div>{{ indModel }}</div>
+	{% if request.path contains indModel %}
+		<div>{{ indModel }}</div>
+	{% else %}
+		<div>No Model Detected</div>
+	{% endif %}
 {% endfor %}
 <style>
   :root {
