@@ -17,11 +17,11 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2 class="banner__heading {% if block.settings.heading_size == 'medium' %}h1{% else %}h0{% endif %}" {{ block.shopify_attributes }}>
+            <h2 class="banner-heading" {{ block.shopify_attributes }}>
               <span>{{ block.settings.heading | escape }}</span>
             </h2>
           {%- when 'text' -%}
-            <div class="banner__text absolute" {{ block.shopify_attributes }}>
+            <div class="absolute" {{ block.shopify_attributes }}>
               <span>{{ block.settings.text | escape }}</span>
             </div>
           {%- when 'buttons' -%}
