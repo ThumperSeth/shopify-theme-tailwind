@@ -391,6 +391,10 @@ html {
  * a class directly on the `html` element.
  */
 
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
 
 /**
  * 1. Prevent padding and border from affecting element width.
