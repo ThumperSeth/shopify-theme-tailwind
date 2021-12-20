@@ -5,7 +5,7 @@
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
 
 <!-- DETECT MAKE & MODEL IN URL -->
-{% assign url_parts = request.path | split: "/" %}
+{% assign url_parts = request.path | split: "/" | downcase %}
 {% for part in url_parts %}
 {% case part %}
 	{% when "polaris" %}
@@ -42,7 +42,6 @@
 		{% assign currentBrand = "all" %}
 		{% assign brandColor = "#ccc" %}
 {% endcase %}
-{% assign downPart = part | downcase %}
 
 {% endfor %}
 {% for indModel in modelArray %}
