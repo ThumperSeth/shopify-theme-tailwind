@@ -149,6 +149,35 @@
         "swipe_on_mobile": false
       }
     },
+    "164001984912953b5d": {
+      "type": "multicolumn",
+      "blocks": {
+        "1640019849f849b2eb-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/honda-talon-1000r.png",
+            "title": "",
+            "text": "",
+            "image_link": "",
+            "model_name": ""
+          }
+        }
+      },
+      "block_order": [
+        "1640019849f849b2eb-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/offroad_bg-1.jpg",
+        "title": "Honda",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "make-collection-grid": {
       "type": "make-collection-grid",
       "settings": {
@@ -186,6 +215,7 @@
     "banner",
     "16400180209b172696",
     "163941199019137521",
+    "164001984912953b5d",
     "make-collection-grid",
     "1638991131cedcfdc1"
   ]
