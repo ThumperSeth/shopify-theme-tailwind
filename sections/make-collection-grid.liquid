@@ -39,7 +39,7 @@
 {% endcase %}
 
 {% endfor %}
-{% capture availableModels %}collections.{{ currentBrand }}.metafields.global.models | split ','{% endcapture %}
+{% capture availableModels %}collections.{{ currentBrand }}.metafields.global.models{% endcapture %}
 {% assign modelArray = availableModels %}
 {% for indModel in modelArray %}
 	<div>{{ indModel }}</div>
