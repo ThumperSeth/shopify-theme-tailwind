@@ -44,26 +44,15 @@
         "enable_video_looping": false
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
+    "lifestyle-images": {
+      "type": "lifestyle-images",
       "settings": {
-        "heading": "You may also like",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
       }
     },
     "product-features": {
       "type": "product-features",
       "settings": {
-      }
-    },
-    "lifestyle-images": {
-      "type": "lifestyle-images",
-      "settings": {
+        "custom_liquid": "<p>this shit is some shit<\/p>"
       }
     },
     "product-fitment": {
@@ -94,6 +83,18 @@
     "product-related-products": {
       "type": "product-related-products",
       "settings": {
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
       }
     }
   },
