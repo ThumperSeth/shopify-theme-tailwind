@@ -41,7 +41,7 @@
 {% endfor %}
 {% capture availableModels %}collections.{{ currentBrand }}.metafields.global.models{% endcapture %}
 {% capture availableArray %}{{ availableModels }}{% endcapture %}
-<div>{{ availableArrays }}</div>
+<div>{{ availableArray }}</div>
 {% for indModel in availableArray %}
 	<div>{{ indModel }}</div>
 {% endfor %}
