@@ -52,7 +52,7 @@
     "product-features": {
       "type": "product-features",
       "settings": {
-        "custom_liquid": "<p>this shit is some shit<\/p>"
+        "custom_liquid": "{{ product.metafields.global.features }}"
       }
     },
     "product-fitment": {
