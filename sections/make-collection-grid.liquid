@@ -42,9 +42,10 @@
 		{% assign currentBrand = "all" %}
 		{% assign brandColor = "#ccc" %}
 {% endcase %}
+{% assign downPart = part | downcase %}
 {% for indModel in modelArray %}
 
-	{% if part contains indModel %}
+	{% if downPart contains indModel %}
 		<div>{{ indModel }}</div>
 	{% else %}
 		<div>No Model Detected</div>
