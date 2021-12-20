@@ -45,7 +45,7 @@
 {% assign downPart = part | downcase %}
 {% for indModel in modelArray %}
 
-	{% if downPart contains indModel %}
+	{% if downPart == indModel %}
 		<div>{{ indModel }}</div>
 	{% else %}
 		<div>No Model Detected</div>
