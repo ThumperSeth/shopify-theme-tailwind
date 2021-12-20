@@ -1,11 +1,11 @@
 <style>
-  .product-videos-title {
+  .product-video-title {
 		background-color: #ccc;
     	font-family: Rajdhani;
         -webkit-text-size-adjust: 100%;
       	-webkit-font-smoothing: antialiased;
     }
-	.product-videos-content {
+	.product-video-content {
 		background-color: #eee;
       	font-family: Roboto;
       	font-weight: normal;
@@ -15,18 +15,35 @@
       	-webkit-font-smoothing: antialiased;
     }
 </style>
-<section class="product-videos-section w-full flex flex-wrap mx-auto justify-center">
-  	<div class="product-videos-title w-full text-3xl font-bold p-10">
+
+
+<section class="product-video-section w-full flex flex-wrap mx-auto justify-center">
+  	<div class="product-video-title w-full text-3xl font-bold p-10">
 		PRODUCT VIDEOS
-  	</div>
-	<div class="product-videos-content w-full p-10">
-		These are the product videos.
+	</div>
+	<div class="product-video-content w-full p-10">
+		{{ section.settings.custom_liquid }}
 	</div>
 </section>
 	
+
 {% schema %}
-  {
-    "name": "Product Videos",
-    "settings": []
-  }
+{
+  "name": "t:sections.product-video.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.product-video.settings.custom_liquid.label",
+      "info": "t:sections.product-video.settings.custom_liquid.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.product-video.presets.name"
+    }
+  ]
+}
 {% endschema %}
