@@ -226,6 +226,7 @@
 @media screen and (max-width: 749px) {
   .banner--mobile-bottom::after {
     display: none;
+    margin-top:-110px;
   }
 }
 
