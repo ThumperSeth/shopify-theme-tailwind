@@ -168,6 +168,7 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  max-height:1017px;
 }
 
 @media screen and (max-width: 749px) {
