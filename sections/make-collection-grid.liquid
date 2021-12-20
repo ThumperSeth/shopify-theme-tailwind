@@ -7,7 +7,8 @@
 <!-- DETECT MAKE & MODEL IN URL -->
 {% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
-{% case part %}
+{% assign downPart = part | downcase %}
+{% case downPart %}
 	{% when "polaris" %}
 		{% assign currentBrand  = "polaris" %}
 		{% assign brandColor = "#305799" %}
