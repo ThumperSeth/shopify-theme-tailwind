@@ -45,14 +45,7 @@
 {% endcase %}
 
 {% endfor %}
-{% for indModel in modelArray %}
 
-	{% if downPart == indModel %}
-		<div>{{ indModel }}</div>
-	{% else %}
-		<div>No Model Detected</div>
-	{% endif %}
-{% endfor %}
 <style>
   :root {
     --brand-color: {{ brandColor }};
