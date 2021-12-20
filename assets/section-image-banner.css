@@ -47,7 +47,7 @@
   }
 
   .banner--large:not(.banner--adapt) {
-    min-height:  /*72*/60rem;
+    /*min-height:  /*72*//*60rem;*/
   }
 }
 
