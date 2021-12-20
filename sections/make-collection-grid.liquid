@@ -39,9 +39,9 @@
 {% endcase %}
 
 {% endfor %}
-{% capture availableModels %}collections.{{ currentBrand }}.metafields.global.models{% endcapture %}
-{% assign availableArray = availableModels %}
-<div>::{{ availableArray }}::</div>
+{% case currentBrand %}
+
+{% endcase %}
 {% for indModel in availableArray %}
 	<div>{{ indModel }}</div>
 {% endfor %}
