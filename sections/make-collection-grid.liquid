@@ -39,10 +39,9 @@
 {% endcase %}
 
 {% endfor %}
-{% capture availableModels %}collection.{{ currentBrand }}.metafields.global.models{% endcapture %}
-{% capture modelArray %}{{ availableModels }}{% endcapture %}
+{% capture availableModels %}collection['{{ currentBrand }}'].metafields.global.models{% endcapture %}
 
-{% for indModel in modelArray %}
+{% for indModel in availableArray %}
 	<div>{{ indModel }}</div>
 {% endfor %}
 <style>
