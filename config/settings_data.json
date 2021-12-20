@@ -25,10 +25,19 @@
               "color_scheme": "background-1",
               "link": ""
             }
+          },
+          "6f9f37dd-fa68-40cb-a047-d2edf3493fd1": {
+            "type": "announcement",
+            "settings": {
+              "text": "Can-Am Announcement",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
-          "announcement-bar-0"
+          "announcement-bar-0",
+          "6f9f37dd-fa68-40cb-a047-d2edf3493fd1"
         ],
         "settings": {
         }
