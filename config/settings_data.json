@@ -20,6 +20,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Glad youre here! Let's get your UTV Thumpin!",
               "color_scheme": "background-1",
