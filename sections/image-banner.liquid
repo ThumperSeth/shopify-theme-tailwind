@@ -6,12 +6,15 @@
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
 {%- endstyle -%}
-
+<style>
+  #Banner-{{ section.id }} {
+    background-image: url({{ section.settings.image | img_url: '1500x' }});
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
 <div id="Banner-{{ section.id }}" class="banner relative">
-    <div class="w-full">
-		<img src="{{ section.settings.image | img_url: '1500x' }}" />
-    </div>
-    <div class="banner__content">
+   <div class="banner__content">
     <div class="banner__box color-{{ section.settings.color_scheme }}">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
