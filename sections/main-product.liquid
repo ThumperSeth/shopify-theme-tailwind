@@ -44,7 +44,12 @@
 {% endfor %}
 <style>
 	.product-make-and-model {
+      	color: #aaa;
     	font-family: "Rajdhani";
+      	font-weight: 700;
+        letter-spacing: -0.8px;
+        font-size: 1.5rem;
+        
         
     }
 </style>
@@ -115,10 +120,10 @@
                             </p>
                         {%- when 'title' -%}
               				<span class="product-make-and-model text-3xl" style="">
-                            	{{ product.metafields.global.product_make | escape }} / {{ product.metafields.global.model | escape }}
+                            	{{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
               				</span>
                             <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
-                                {{ product.title | escape }}
+                                {{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | upcase | escape }}
                             </h1>
                         {%- when 'description' -%}
                             {%- if product.description != blank -%}
@@ -399,7 +404,7 @@
                     <button id="ModalClose-{{ block.id }}" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
                     <div class="product-popup-modal__content-info">
                         <h1 class="h2">{{ block.settings.page.title }}</h1>
-                        {{ block.settings.custom-liquid.content }}
+                        {{ block.settings.page.content }}
                     </div>
                 </div>
             </modal-dialog>
@@ -721,12 +726,6 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.main-product.blocks.popup.settings.page.label"
-        },
-{
-		  "type": "liquid",
-          "id": "custom_liquid",
-          "label": "t:sections.main-product.blocks.popup.settings.custom_liquid.label"
-   
         }
       ]
     },
