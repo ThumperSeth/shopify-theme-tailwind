@@ -39,7 +39,8 @@
 {% endcase %}
 
 {% endfor %}
-
+{% capture availableModels %}collections.{{ currentBrand }}.metafields.global.models | split ','{% endcapture %}
+{% assign modelArray = availableModels %}
 
 <style>
   :root {
