@@ -70,14 +70,18 @@
 
 .multicolumn:not(.background-none) .multicolumn-card {
   background: rgba(var(--color-foreground), 0.04);
-  height:30rem;
-  width:30rem;
+  height:auto;
+  width:auto;
+  min-height:100px;
+  min-width:100px;
 }
 @media screen and (min-width:750px) {
  .multicolumn:not(.background-none) .multicolumn-card {
   background: rgba(var(--color-foreground), 0.04);
-  height:25rem;
-  width:25rem;
+  height:auto;
+  width:auto;
+  min-height:100px;
+  min-width:100px;
 } 
 }
 
