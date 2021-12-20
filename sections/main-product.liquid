@@ -120,7 +120,7 @@
                             </p>
                         {%- when 'title' -%}
               				<span class="product-make-and-model text-3xl" style="">
-                            	{{ product.metafields.global.product_make | escape }} / {{ product.metafields.global.model | escape }}
+                            	{{ product.metafields.global.product_make | escape }} / {{ product.metafields.global.product_model | escape }}
               				</span>
                             <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
                                 {{ product.title | escape }}
