@@ -18,25 +18,25 @@
 		{% assign currentBrand  = "yamaha" %}
 		{% assign brandColor = "#CCCCCB" %}
 		{% assign brandRGBA = "rgba(204, 204, 203, 1)" %}
-		{% assign modelArray = collections.yamaha.metafields.global.models %}
+		{% assign modelArray = collections.yamaha.metafields.global.models | split: ',' %}
 		{% break %}
 	{% when "can-am" %}
 		{% assign currentBrand  = "can-am" %}
 		{% assign brandColor = "#fdc832" %}
 		{% assign brandRGBA = "rgba(253, 200, 50, 1)" %}
-		{% assign modelArray = collections.can-am.metafields.global.models %}
+		{% assign modelArray = collections.can-am.metafields.global.models | split: ',' %}
 		{% break %}
 	{% when "tracker" %}
 		{% assign currentBrand  = "tracker" %}
 		{% assign brandColor = "#262526" %}
 		{% assign brandRGBA = "rgba(38, 37, 38, 1)" %}
-		{% assign modelArray = collections.tracker.metafields.global.models %}
+		{% assign modelArray = collections.tracker.metafields.global.models | split: ',' %}
 		{% break %}
 	{% when "honda" %}
 		{% assign currentBrand  = "honda" %}
 		{% assign brandColor = "#e0262f" %}
 		{% assign brandRGBA = "rgba(224, 38, 47, 1)" %}
-		{% assign modelArray = collections.honda.metafields.global.models %}
+		{% assign modelArray = collections.honda.metafields.global.models | split: ',' %}
 		{% break %}
 	{% else %}
 		{% assign currentBrand = "all" %}
