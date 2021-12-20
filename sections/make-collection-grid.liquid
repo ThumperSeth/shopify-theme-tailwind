@@ -43,6 +43,8 @@
 		{% assign brandColor = "#ccc" %}
 {% endcase %}
 {% assign downPart = part | downcase %}
+
+{% endfor %}
 {% for indModel in modelArray %}
 
 	{% if downPart == indModel %}
@@ -51,8 +53,6 @@
 		<div>No Model Detected</div>
 	{% endif %}
 {% endfor %}
-{% endfor %}
-
 <style>
   :root {
     --brand-color: {{ brandColor }};
