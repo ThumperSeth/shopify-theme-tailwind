@@ -64,7 +64,7 @@
     "product-videos": {
       "type": "product-video",
       "settings": {
-        "custom_liquid": ""
+        "custom_liquid": "{{ product.metafields.global.video }}"
       }
     },
     "product-specs": {
