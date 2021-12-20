@@ -95,6 +95,18 @@
                                                     %}
                                                 </li>
                             				{%- endif -%}
+                            			{% else %}
+                            				<li class="grid__item w-full align-center text-center">
+                                                    {% render 'collection-card',
+                                                        product_card_product: product,
+                                                        media_size: section.settings.image_ratio,
+                                                        show_secondary_image: section.settings.show_secondary_image,
+                                                        show_vendor: section.settings.show_vendor,
+                                                        show_image_outline: section.settings.show_image_outline,
+                                                        show_rating: false,
+                                                        brand_color: brandColor
+                                                    %}
+                                                </li>
                             			{%- endif -%}
                             		{%- endif -%}
                                   {%- endif -%}           
