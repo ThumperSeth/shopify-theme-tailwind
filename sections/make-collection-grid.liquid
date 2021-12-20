@@ -45,7 +45,14 @@
 {% endcase %}
 
 {% endfor %}
-
+{% assign downURL = request.path | downcase | split: '/' %}
+{% for part in downURL %}
+{% for indModel in modelArray %}
+	{% if indModel == part %}
+		{% assign currentModel = indModel %}
+	{% endif %}
+{% endfor %}
+{% endfor %}
 <style>
   :root {
     --brand-color: {{ brandColor }};
