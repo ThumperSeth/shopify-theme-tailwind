@@ -11,9 +11,8 @@
     
   }
 </style>
-<div id="Banner-{{ section.id }}" class="banner">
-  <div class="banner-content flex justify-center h-full">&nbsp;</div>
-  <div>
+<div id="Banner-{{ section.id }}" class="banner">&nbsp;</div>
+  <div class="banner-content flex justify-center h-full">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -35,7 +34,6 @@
      	</div>
         {%- endcase -%}
       {%- endfor -%}
-  </div>
 </div>
 
 {% schema %}
