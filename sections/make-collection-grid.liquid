@@ -36,7 +36,7 @@
 		{% assign currentBrand  = "honda" %}
 		{% assign brandColor = "#e0262f" %}
 		{% assign brandRGBA = "rgba(224, 38, 47, 1)" %}
-		{% assign modelArray = collections.honda.metafields.global.models | split: ',' %}
+		{% assign modelArray = collections.honda.metafields.global.models | split: ',' | downcase %}
 		{% break %}
 	{% else %}
 		{% assign currentBrand = "all" %}
@@ -45,6 +45,7 @@
 
 {% endfor %}
 {% for indModel in modelArray %}
+
 	{% if request.path contains indModel %}
 		<div>{{ indModel }}</div>
 	{% else %}
