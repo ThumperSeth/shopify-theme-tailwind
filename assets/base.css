@@ -649,13 +649,7 @@ details > * {
     transition: none !important;
   }
 }
-/*
-:root {
-  --duration-short: 100ms;
-  --duration-default: 200ms;
-  --duration-long: 500ms;
-}
-*/
+
 .underlined-link,
 .customer a {
   color: rgba(var(--color-link), var(--alpha-link));
