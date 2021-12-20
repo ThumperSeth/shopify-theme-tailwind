@@ -58,11 +58,13 @@
     "product-fitment": {
       "type": "product-fitment",
       "settings": {
+        "custom_liquid": "{{ product.metafields.global.fitment }}"
       }
     },
     "product-videos": {
       "type": "product-video",
       "settings": {
+        "custom_liquid": ""
       }
     },
     "product-specs": {
