@@ -5,7 +5,7 @@
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
 
 <!-- DETECT MAKE & MODEL IN URL -->
-{% assign url_parts = request.path | split: "/" | downcase %}
+{% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
 {% case part %}
 	{% when "polaris" %}
