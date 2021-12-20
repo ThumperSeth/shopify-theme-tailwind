@@ -57,6 +57,46 @@
         "show_collection_image": true
       }
     },
+    "16400180209b172696": {
+      "type": "multicolumn",
+      "blocks": {
+        "1640018020ec53535b-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/defender_dd253ef3-663e-49a2-9c16-eba8bfa48044.png",
+            "title": "",
+            "text": "",
+            "image_link": "",
+            "model_name": ""
+          }
+        },
+        "1640018020ec53535b-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/maverick_x3_6de6c12c-2571-4b5b-9092-246a802c1623.png",
+            "title": "",
+            "text": "",
+            "image_link": "",
+            "model_name": ""
+          }
+        }
+      },
+      "block_order": [
+        "1640018020ec53535b-0",
+        "1640018020ec53535b-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dirt_track-1.jpg",
+        "title": "Can-Am",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "163941199019137521": {
       "type": "multicolumn",
       "blocks": {
@@ -66,8 +106,8 @@
             "image": "shopify:\/\/shop_images\/general.png",
             "title": "",
             "text": "",
-            "image_label": "Image label",
-            "image_link": ""
+            "image_link": "",
+            "model_name": ""
           }
         },
         "16394119902da621e4-1": {
@@ -76,8 +116,8 @@
             "image": "shopify:\/\/shop_images\/ranger.png",
             "title": "",
             "text": "",
-            "image_label": "Image label",
-            "image_link": "shopify:\/\/collections\/polaris-ranger"
+            "image_link": "shopify:\/\/collections\/polaris-ranger",
+            "model_name": ""
           }
         },
         "16394119902da621e4-2": {
@@ -86,8 +126,8 @@
             "image": "shopify:\/\/shop_images\/rzr.png",
             "title": "",
             "text": "",
-            "image_label": "Image label",
-            "image_link": "shopify:\/\/collections\/rzr"
+            "image_link": "shopify:\/\/collections\/rzr",
+            "model_name": ""
           }
         }
       },
@@ -144,6 +184,7 @@
   "order": [
     "16371896537551f4cd",
     "banner",
+    "16400180209b172696",
     "163941199019137521",
     "make-collection-grid",
     "1638991131cedcfdc1"
