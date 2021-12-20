@@ -42,16 +42,16 @@
 		{% assign currentBrand = "all" %}
 		{% assign brandColor = "#ccc" %}
 {% endcase %}
-
-{% endfor %}
 {% for indModel in modelArray %}
 
-	{% if request.path contains indModel %}
+	{% if part contains indModel %}
 		<div>{{ indModel }}</div>
 	{% else %}
 		<div>No Model Detected</div>
 	{% endif %}
 {% endfor %}
+{% endfor %}
+
 <style>
   :root {
     --brand-color: {{ brandColor }};
