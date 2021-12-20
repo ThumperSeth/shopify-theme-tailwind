@@ -12,7 +12,7 @@
 		{% assign currentBrand  = "polaris" %}
 		{% assign brandColor = "#305799" %}
 		{% assign brandRGBA = "rgba(48, 87, 153, 1)" %}
-		{% assign brandArray = collections.polaris.metafields.models %}
+		{% assign modelArray = collections.polaris.metafields.models %}
 		{% break %}
 	{% when "yamaha" %}
 		{% assign currentBrand  = "yamaha" %}
@@ -42,7 +42,7 @@
 {% endfor %}
 
 
-{% for indModel in brandArray %}
+{% for indModel in modelArray %}
 	<div>{{ indModel }}</div>
 {% endfor %}
 <style>
