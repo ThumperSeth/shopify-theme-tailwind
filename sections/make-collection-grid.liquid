@@ -8,7 +8,6 @@
 {% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
 {% case part %}
-<!-- POLARIS -->
 	{% when "polaris" %}
 		{% assign currentBrand  = "polaris" %}
 		{% assign brandColor = "#305799" %}
@@ -51,6 +50,7 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
 <section id="ProductGridContainer">
+  <div>{{ collection.metafields.global.models }}</div>
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
       	{% paginate collections.all.products by 500 %}
