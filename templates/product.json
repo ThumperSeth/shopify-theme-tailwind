@@ -30,13 +30,21 @@
           "settings": {
             "show_dynamic_checkout": false
           }
+        },
+        "abed5d3c-83fe-4eec-899c-ae7f4d73a2d9": {
+          "type": "popup",
+          "settings": {
+            "text": "Pop-up link text",
+            "page": "cart-page"
+          }
         }
       },
       "block_order": [
         "title",
         "price",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "abed5d3c-83fe-4eec-899c-ae7f4d73a2d9"
       ],
       "settings": {
         "enable_sticky_info": false,
