@@ -60,7 +60,6 @@
     "product-features": {
       "type": "product-features",
       "settings": {
-        "custom_liquid": "{{ product.metafields.global.features }}"
       }
     },
     "product-fitment": {
@@ -106,6 +105,12 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "show_vendor": true
+      }
     }
   },
   "order": [
@@ -119,6 +124,7 @@
     "product-docs",
     "product-reviews",
     "product-related-products",
-    "product-recommendations"
+    "product-recommendations",
+    "cart-items"
   ]
 }
