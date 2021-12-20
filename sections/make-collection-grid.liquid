@@ -12,7 +12,7 @@
 		{% assign currentBrand  = "polaris" %}
 		{% assign brandColor = "#305799" %}
 		{% assign brandRGBA = "rgba(48, 87, 153, 1)" %}
-		{% assign modelArray = collections.polaris.metafields.global.models %}
+		{% assign modelArray = collections.polaris.metafields.global.models | split: ',' %}
 		{% break %}
 	{% when "yamaha" %}
 		{% assign currentBrand  = "yamaha" %}
