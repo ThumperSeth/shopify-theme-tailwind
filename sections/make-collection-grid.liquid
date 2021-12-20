@@ -12,31 +12,31 @@
 		{% assign currentBrand  = "polaris" %}
 		{% assign brandColor = "#305799" %}
 		{% assign brandRGBA = "rgba(48, 87, 153, 1)" %}
-		{% assign modelArray = collections.polaris.metafields.models %}
+		{% assign modelArray = collections.polaris.metafields.global.models %}
 		{% break %}
 	{% when "yamaha" %}
 		{% assign currentBrand  = "yamaha" %}
 		{% assign brandColor = "#CCCCCB" %}
 		{% assign brandRGBA = "rgba(204, 204, 203, 1)" %}
-		{% assign modelArray = collections.yamaha.metafields.models %}
+		{% assign modelArray = collections.yamaha.metafields.global.models %}
 		{% break %}
 	{% when "can-am" %}
 		{% assign currentBrand  = "can-am" %}
 		{% assign brandColor = "#fdc832" %}
 		{% assign brandRGBA = "rgba(253, 200, 50, 1)" %}
-		{% assign modelArray = collections.can-am.metafields.models %}
+		{% assign modelArray = collections.can-am.metafields.global.models %}
 		{% break %}
 	{% when "tracker" %}
 		{% assign currentBrand  = "tracker" %}
 		{% assign brandColor = "#262526" %}
 		{% assign brandRGBA = "rgba(38, 37, 38, 1)" %}
-		{% assign modelArray = collections.tracker.metafields.models %}
+		{% assign modelArray = collections.tracker.metafields.global.models %}
 		{% break %}
 	{% when "honda" %}
 		{% assign currentBrand  = "honda" %}
 		{% assign brandColor = "#e0262f" %}
 		{% assign brandRGBA = "rgba(224, 38, 47, 1)" %}
-		{% assign modelArray = collections.honda.metafields.models %}
+		{% assign modelArray = collections.honda.metafields.global.models %}
 		{% break %}
 	{% else %}
 		{% assign currentBrand = "all" %}
@@ -44,7 +44,7 @@
 {% endcase %}
 
 {% endfor %}
-<div>{{ modelArray.count }}</div>
+<div>{{ modelArray }}</div>
 
 {% for indModel in modelArray %}
 	<div>{{ indModel }}</div>
