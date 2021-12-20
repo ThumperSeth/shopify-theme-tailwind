@@ -2472,4 +2472,5 @@ details-disclosure > details {
     border-radius: 0 0 5px 5px;
     /*box-shadow: 10px 10px 5px #ccc;*/
     border: 0px dashed #555;
+    margin: 0 2rem;
   }
