@@ -28,6 +28,19 @@
     </div>
   </div>
 </cart-notification>
+  <script>
+    getSectionsToRender() {
+    return [
+        {
+            id: 'cart-notification-product',
+            selector: `#cart-notification-product-${this.productId}`,
+        },
+        {
+            id: 'cart-notification-button'
+        },
+        {
+            id: 'cart-icon-bubble'
+  </script>
 {% style %}
   .cart-notification {
      display: none;
