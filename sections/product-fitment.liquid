@@ -15,18 +15,35 @@
       	-webkit-font-smoothing: antialiased;
     }
 </style>
+
+
 <section class="product-fitment-section w-full flex flex-wrap mx-auto justify-center">
   	<div class="product-fitment-title w-full text-3xl font-bold p-10">
 		PRODUCT FITMENT
 	</div>
 	<div class="product-fitment-content w-full p-10">
-		Put a Fitment Table Here Please
+		{{ section.settings.custom_liquid }}
 	</div>
 </section>
 	
+
 {% schema %}
-  {
-    "name": "Product Fitment",
-    "settings": []
-  }
+{
+  "name": "t:sections.product-fitment.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.product-fitment.settings.custom_liquid.label",
+      "info": "t:sections.product-fitment.settings.custom_liquid.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.product-fitment.presets.name"
+    }
+  ]
+}
 {% endschema %}
