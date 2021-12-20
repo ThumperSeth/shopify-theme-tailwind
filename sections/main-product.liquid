@@ -8,7 +8,11 @@
 
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
-
+<style>
+	.dpo-container {
+     display: none !important; 
+    }
+</style>
 <!-- DETECT BRAND IN URL -->
 {% assign url_parts = request.path | split: "/" %}
 {% for part in url_parts %}
