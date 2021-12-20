@@ -64,7 +64,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/defender_dd253ef3-663e-49a2-9c16-eba8bfa48044.png",
-            "title": "Defender",
+            "title": "",
             "text": "",
             "image_link": "shopify:\/\/collections\/can-am",
             "model_name": "defender"
@@ -74,7 +74,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/maverick_x3_6de6c12c-2571-4b5b-9092-246a802c1623.png",
-            "title": "Maverick X3",
+            "title": "",
             "text": "",
             "image_link": "shopify:\/\/collections\/can-am",
             "model_name": "maverick-x3"
