@@ -41,7 +41,9 @@
 {% endfor %}
 {% capture availableModels %}collections.{{ currentBrand }}.metafields.global.models | split ','{% endcapture %}
 {% assign modelArray = availableModels %}
-
+{% for indModel in modelArray %}
+	<div>{{ indModel }}</div>
+{% endfor %}
 <style>
   :root {
     --brand-color: {{ brandColor }};
