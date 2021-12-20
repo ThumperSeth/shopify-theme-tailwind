@@ -80,8 +80,8 @@
   background: rgba(var(--color-foreground), 0.04);
   height:auto;
   width:auto;
-  min-height:150px;
-  min-width:150px;
+  min-height:500px;
+  min-width:500px;
 } 
 }
 
