@@ -56,7 +56,7 @@
 				<div class="collection-card-make-and-model text-left" style="color:#aaa; text-shadow: 0 0 0 rgba(0, 0, 0, 0.9);">{{ product_card_product.vendor | upcase }}</div>      	
       		{%- else -%}
       <span class="visually-hidden">{{ product_card_product.metafields.global.make.value | upcase }}<span style="color:{{ brandColor }}">/</span>{{ product_card_product.metafields.global.model.value | upcase }}</span>
-      			<div class="collection-card-make-and-model text-left" style="color:#aaa; text-shadow: 0 0 0 rgba(0, 0, 0, 0.9);"><span style="font-size:5px; color:{{ brandColor }}">▲</span>{{ product_card_product.metafields.global.make | upcase }}<span style="color:#000">▲</span>{{ product_card_product.metafields.global.product_model | upcase }}</div>      	
+      			<div class="collection-card-make-and-model text-left" style="color:#aaa; text-shadow: 0 0 0 rgba(0, 0, 0, 0.9);"><span style="font-size:10px; color:{{ brandColor }}">▲</span>{{ product_card_product.metafields.global.make | upcase }}<span style="font-size:10px; color:#000">▲</span>{{ product_card_product.metafields.global.product_model | upcase }}</div>      	
       		{%- endif -%}
         
         
