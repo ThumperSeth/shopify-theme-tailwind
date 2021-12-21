@@ -94,10 +94,10 @@ function swapImages(sent_img_src) {
             			<div class="product-image-{{ forloop.index }}"><img class="product-thumbs" src="{{ pic | img_url }}"  onClick="swapImages('{{ pic | img_url }}');"/></div>
             			{% assign productPhotoCount = productPhotoCount | plus: 1 %}
             		{% endif %}
-            			</div>
             	{% endif %}
           	{% endfor %}
-          </div>
+            	</div>
+            </div>
             {%- if first_3d_model -%}
                 <button
                 class="button button--full-width product__xr-button"
