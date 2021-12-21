@@ -129,13 +129,13 @@
                 {% assign related_product_handle = field | last %}
                 {% assign full_url = site_url | append: related_product_handle %}
                 {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
-                <a href="{{ all_products[related_product_handle].url }}">
+                <a href="{{ all_products[related_product-handle].url }}">
                     <div class="related-prod">
-                        <div class="related-prod-image" style="background-image:url('{{ all_products[related_product_handle].featured_image | img_url: '300x' }}')"> </div>
+                        <div class="related-prod-image" style="background-image:url('{{ all_products[related_product-handle].featured_image | img_url: '300x' }}')"> </div>
                         <div class="prod-container">
                             <div style="display:block;">
-                                <div class="related-prod-name">{{ all_products[related_product_handle].title }}</div>
-                                <div class="related-prod-price">{{ all_products[related_product_handle].price | money }}</div>
+                                <div class="related-prod-name">{{ all_products[related_product-handle].title }}</div>
+                                <div class="related-prod-price">{{ all_products[related_product-handle].price | money }}</div>
                                 <div class="related-prod-desc">{{ products.metafields.global.features }}</div>
                             </div>
                         </div>
