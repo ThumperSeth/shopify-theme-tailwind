@@ -805,17 +805,15 @@ a.product__text {
   
   /************* added for product slider ***********/
   .slider {
-width: 80%;
-margin-left:auto;
-margin-right:auto;
+
 }
 
 .slick-slide {
-margin: 0px 20px;
+
 }
 
 .slick-slide img {
-width: 100%;
+
 }
 
 .slick-prev:before,
