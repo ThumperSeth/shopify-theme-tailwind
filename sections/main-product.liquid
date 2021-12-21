@@ -87,7 +87,7 @@ function swapImages(sent_img_src) {
             {% for pic in productPhotos %}
             	{% if pic.alt contains "main" %}
             		{% if productPhotoCount == 0 %}
-						<div class="product-image-{{ forloop.index }}-main w-1/2"><img id="bigIMG" class="product-main w-full cursor-zoom-in" src="{{ pic | img_url: '1024x1024' }}" /></div>
+						<div class="product-image-{{ forloop.index }}-main w-1/2"><img id="bigIMG" class="product-main zoomImg w-full cursor-zoom-in" src="{{ pic | img_url: '1024x1024' }}" /></div>
             			{% assign productPhotoCount = productPhotoCount | plus: 1 %}
             			<div class="thumb-container flex">
                         	<div class="product-image-{{ forloop.index }}"><img class="product-thumbs cursor-pointer" src="{{ pic | img_url: '1024x1024' }}"  onClick="swapImages('{{ pic | img_url: '1024x1024' }}');"/></div>
