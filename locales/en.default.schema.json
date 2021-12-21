@@ -1061,7 +1061,7 @@
         "name": "Image banner"
       }
     },
-    "product_carousel": {
+    "product-carousel": {
       "name": "Product Carousel",
       "settings": {
         "image": {
