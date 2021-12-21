@@ -76,8 +76,7 @@
 {%- endif -%}
 <script>
 function swapImages(sent_img_src) {
-	var bigPicture = document.getElementById('bigIMG');
-	console.log(bigPicture.src);
+	document.getElementById('bigIMG').attr("src",sent_img_src);	
 }
 </script>
 <section class="w-full justify-center flex-wrap mx-auto">
