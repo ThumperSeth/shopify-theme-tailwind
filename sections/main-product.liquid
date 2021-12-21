@@ -63,7 +63,20 @@
       	font-weight: 700;
         font-size: 1.5rem;
   }
+  
+  .slider.slider--desktop {
+    position: relative;
+    flex-wrap: inherit;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-left: 1rem;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+  }
 </style>
+
+
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -76,12 +89,10 @@
         <slider-component class="slider-mobile-gutter w-full mx-auto flex-wrap">
             <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
             <ul class="w-full flex-wrap slider justify-center mx-auto flex slider--desktop slider--tablet" role="list">
-                {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                         <li class="w-3/4" data-media-id="{{ section.id }}-{{ media.id }}">
                             {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
                         </li>
-                {%- endif -%}
             </ul>
             <ul class="w-full inline mx-auto justify-center product__media-list flex slider" role="list">
                 {%- for media in product.media -%}
