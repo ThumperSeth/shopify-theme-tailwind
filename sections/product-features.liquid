@@ -1,4 +1,7 @@
 <style>
+  .product-features-container {
+     background-color:#222; 
+  }
   .product-features-title {
 		background-color: #ccc;
     	font-family: Rajdhani;
@@ -6,7 +9,7 @@
       	-webkit-font-smoothing: antialiased;
     }
 	.product-features-content {
-		background-color: #222;
+		background-color: #;
       	font-family: 'Teko', Roboto;
       	font-weight: normal;
       	line-height: 1.6;
@@ -25,7 +28,7 @@
   	<div class="product-features-title w-full text-3xl font-bold p-10">
 		PRODUCT FEATURES
 	</div>
-    <div class="flex flex-wrap">
+    <div class="product-features-container flex flex-wrap">
         <div class="lg:w-1/2 sm:w-full my-auto"><img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/ranger_1000_FWB_trans-1.png?v=1640121581"/></div>
         <div class="product-features-content min-w-0 p-10 lg:w-1/2 sm:w-full lg:text-4xl md:text-6xl">
           {{ product.metafields.global.features }}
