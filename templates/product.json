@@ -49,6 +49,11 @@
       "settings": {
       }
     },
+    "carousel": {
+      "type": "carousel",
+      "settings": {
+      }
+    },
     "product-features": {
       "type": "product-features",
       "settings": {
@@ -57,7 +62,6 @@
     "product-fitment": {
       "type": "product-fitment",
       "settings": {
-        "custom_liquid": "{{ product.metafields.global.fitment }}"
       }
     },
     "product-videos": {
@@ -109,6 +113,7 @@
     "big-product",
     "main",
     "lifestyle-images",
+    "carousel",
     "product-features",
     "product-fitment",
     "product-videos",
