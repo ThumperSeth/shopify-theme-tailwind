@@ -80,7 +80,9 @@
         <div class="product-images-wrapper flex w-full justify-center mx-auto" style="height: 350px;">
           <div id="media-viewer" class="absolute flex w-5/6">
            {% for pic in productPhotos %}
+            	{% if pic.alt contains "main" %}
 				<div class="product-image-{{ forloop.index }}"><img class="" src="{{ pic | img_url }}" /></div>
+            	{% endif %}
           	{% endfor %}
           </div>
             {%- if first_3d_model -%}
