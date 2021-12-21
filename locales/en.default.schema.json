@@ -1061,8 +1061,8 @@
         "name": "Image banner"
       }
     },
-    "carousel": {
-      "name": "Carousel",
+    "product_carousel": {
+      "name": "Product Carousel",
       "settings": {
         "image": {
           "label": "First image"
@@ -1084,7 +1084,7 @@
         }
       },
       "presets": {
-        "name": "Image banner"
+        "name": "Product Carousel"
       }
     },
     "image-with-text": {
