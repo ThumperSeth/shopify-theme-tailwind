@@ -44,7 +44,7 @@
 {% endfor %}
 <style>
 	.product-make-and-model {
-      	color: #aaa;
+      	color: #000;
     	font-family: "Rajdhani";
       	font-weight: 700;
         letter-spacing: -0.8px;
@@ -130,7 +130,7 @@
                                 {{- block.settings.text -}}
                             </p>
                         {%- when 'title' -%}
-              				<span class="product-make-and-model text-3xl" style="color:#555;">
+              				<span class="product-make-and-model text-3xl" style="">
                               	{% unless product.metafields.global.product_make contains "," %}
                             		{{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                              	{% endunless %}
