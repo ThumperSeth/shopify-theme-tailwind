@@ -186,7 +186,7 @@
                             <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.link_label | default: block.settings.page.title }}</button>
                             </modal-opener>
-                            <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">{{ block.settings.link_label }}</a>
+                            <a href="{{ 'mini-cart' }}" class="product-popup-modal__button link no-js">{{ block.settings.link_label }}</a>
                         {%- when 'share' -%}
                             <share-button class="share-button" {{ block.shopify_attributes }}>
                                 <button class="share-button__button button button--tertiary hidden">
