@@ -37988,6 +37988,18 @@ variants: {
   .sm\:h-96 {
     height: 24rem;
   }
+  
+  .sm\:h-192 {
+    height: 48rem;
+  }
+  
+  .sm\:h-384 {
+    height: 96rem;
+  }
+  
+  .sm\:h-768 {
+    height: 192rem;
+  }
 
   .sm\:h-auto {
     height: auto;
