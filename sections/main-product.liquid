@@ -89,6 +89,7 @@ function swapImages(sent_img_src) {
             		{% if productPhotoCount == 0 %}
 						<div class="product-image-{{ forloop.index }} w-1/2"><img id="bigIMG" class="product-main w-full" src="{{ pic | img_url }}" /></div>
             			{% assign productPhotoCount = productPhotoCount | plus: 1 %}
+            			<div class="thumb-container w-full block">
             		{% else %}
             			<div class="product-image-{{ forloop.index }}"><img class="product-thumbs" src="{{ pic | img_url }}"  onClick="swapImages('{{ pic | img_url }}');"/></div>
             			{% assign productPhotoCount = productPhotoCount | plus: 1 %}
