@@ -20,8 +20,7 @@
     }
 
   .fitment {
-        font-size: 12px !important; 
-        column-count: 3; 
+        font-size: 12px !important;
         background-color: /*rgba(0, 0, 0, 0.7) #444;*/
           background: rgb(255,255,255);
         /*background: linear-gradient(180deg, rgba(153,153,153,1) 0%, rgba(238,236,236,1) 5%);*/
@@ -52,7 +51,7 @@
                 </div>
                 {% render 'icon-caret' %}
               </summary>
-              <div class="accordion__content rte">
+              <div class="accordion__content rte grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
                 {{ product.metafields.global.fitment }}
               </div>
             </details>
