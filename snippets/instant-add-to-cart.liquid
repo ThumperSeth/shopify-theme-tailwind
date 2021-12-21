@@ -3,6 +3,7 @@
 
     Accepts:
     - product_to_add: {Object} Product Liquid object (REQUIRED)
+	- button_text: {String} Button Text
     - quantity_to_add: {String} Quantity of the product you are trying to add to the cart (optional)
 	- button_class: {String} CSS Classes you would like added to the button (optional)
 
@@ -10,3 +11,4 @@
     {% render 'instant-add-to-cart', product_to_add: product.selected_or_first_available_variant.id, quantity_to_add: 1, button_class: 'button-css-class' %}
 {% endcomment %}
 
+<button id="instant-add-{{ product_to_add }}" name="instant-add-{{ product_to_add }}">BUY NOW</button>
