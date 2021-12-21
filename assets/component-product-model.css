@@ -12,6 +12,7 @@
 
 .product__xr-button[data-shopify-xr-hidden] {
   visibility: hidden;
+  display: none;
 }
 
 @media screen and (max-width: 749px) {
