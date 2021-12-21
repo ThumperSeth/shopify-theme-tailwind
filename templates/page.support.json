@@ -19,12 +19,18 @@
       "type": "support-faq",
       "settings": {
       }
+    },
+    "support-manuals": {
+      "type": "support-manuals",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "support-contact-cards",
     "support-trouble-tickets",
-    "support-faq"
+    "support-faq",
+    "support-manuals"
   ]
 }
