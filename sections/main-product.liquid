@@ -86,7 +86,12 @@ function swapImages(sent_img_src) {
            	{% assign productPhotoCount = 0 %}
             {% for pic in productPhotos %}
             	{% if pic.alt contains "main" %}
-				<div class="product-image-{{ forloop.index }}"><img class="" src="{{ pic | img_url }}" /></div>
+            		{% if productPhotoCount == 0 %}
+						<div class="product-image-{{ forloop.index }}"><img class="product-main" src="{{ pic | img_url }}" /></div>
+            		{% else %}
+            			<div class="product-image-{{ forloop.index }}"><img class="product-thumb" src="{{ pic | img_url }}" /></div>
+            			{% increment productPhotoCount %}
+            		{% endif %}
             	{% endif %}
           	{% endfor %}
           </div>
