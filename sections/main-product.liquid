@@ -81,13 +81,13 @@ function swapImages(sent_img_src) {
 </script>
 <section class="w-full justify-center flex-wrap mx-auto">
     <div class="w-full flex-wrap justify-center mx-auto">
-        <div class="product-images-wrapper flex w-full justify-center mx-auto" style="height: 350px;">
+        <div class="product-images-wrapper flex w-full justify-center mx-auto">
           <div id="media-viewer" class="flex flex-wrap w-5/6">
            	{% assign productPhotoCount = 0 %}
             {% for pic in productPhotos %}
             	{% if pic.alt contains "main" %}
             		{% if productPhotoCount == 0 %}
-						<div class="product-image-{{ forloop.index }} w-full"><img id="bigIMG" class="product-main w-full" src="{{ pic | img_url }}" /></div>
+						<div class="product-image-{{ forloop.index }} w-full"><img class="product-main w-full" src="{{ pic | img_url }}" /></div>
             			{% assign productPhotoCount = productPhotoCount | plus: 1 %}
             		{% else %}
             			<div class="product-image-{{ forloop.index }}"><img class="product-thumbs" src="{{ pic | img_url }}"  onClick="swapImages('{{ pic | img_url }}');"/></div>
