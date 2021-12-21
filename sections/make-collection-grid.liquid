@@ -57,6 +57,24 @@
   :root {
     --brand-color: {{ brandColor }};
   }
+ .rating {
+  display: none;
+  margin: 0;
+}
+  .collection-card-title {
+    color: #aaa;
+    	font-family: "Rajdhani";
+      	font-weight: 700;
+        letter-spacing: -0.8px;
+        font-size: 1.5rem;
+  }
+  .collection-card-price {
+      	color: #000000;
+    	font-family: "Rajdhani" !important;
+      	font-weight: 700;
+        letter-spacing: -1.8px;
+        font-size: 1.5rem;
+    }
 </style>
 
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
