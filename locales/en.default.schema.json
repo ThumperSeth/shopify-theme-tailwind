@@ -1061,6 +1061,32 @@
         "name": "Image banner"
       }
     },
+    "carousel": {
+      "name": "Carousel",
+      "settings": {
+        "image": {
+          "label": "First image"
+        },
+        "image_2": {
+          "label": "Second image"
+        },
+        "image_3": {
+          "label": "Third image"
+        },
+        "image_4": {
+          "label": "Fourth image"
+        },
+        "image_5": {
+          "label": "Fifth image"
+        },
+        "image_6": {
+          "label": "Sixth image"
+        }
+      },
+      "presets": {
+        "name": "Image banner"
+      }
+    },
     "image-with-text": {
       "name": "Image with text",
       "settings": {
