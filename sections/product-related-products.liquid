@@ -129,7 +129,7 @@
                     <div class="related-products">
                         <div class="related-products-image" style="background-image:url('{{ all_products[related_product_handle].featured_image | img_url: '300x' }}')"> </div>
                         <div class="products-container">
-                            <div style="display:block;">{{ all_products[related_product_handle].metafields.global.display_name.value }}!!!
+                            <div style="display:block;">
                               {%- if all_products[related_product_handle].metafields.global.display_name.value != nil -%}
                                 <div class="related-products-name">{{ all_products[related_product_handle].metafields.global.display_name.value }}</div>
                               {%- else -%}
