@@ -52,6 +52,12 @@
     "carousel": {
       "type": "carousel",
       "settings": {
+        "image": "shopify:\/\/shop_images\/accessories_category_card.jpg",
+        "image_2": "shopify:\/\/shop_images\/lighting_category_card.jpg",
+        "image_3": "shopify:\/\/shop_images\/cages_category_card.jpg",
+        "image_4": "shopify:\/\/shop_images\/roofs_category_card.jpg",
+        "image_5": "shopify:\/\/shop_images\/winches_category_card.jpg",
+        "image_6": "shopify:\/\/shop_images\/audio_category_card.jpg"
       }
     },
     "product-features": {
