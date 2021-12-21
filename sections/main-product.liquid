@@ -130,7 +130,7 @@
                                 {{- block.settings.text -}}
                             </p>
                         {%- when 'title' -%}
-              				<span class="product-make-and-model text-3xl" style="">
+              				<span class="product-make-and-model text-3xl" style="color:#555;">
                               	{% unless product.metafields.global.product_make contains "," %}
                             		{{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                              	{% endunless %}
