@@ -50,7 +50,7 @@
       }
     },
     "carousel": {
-      "type": "carousel",
+      "type": "product-carousel",
       "settings": {
         "image": "shopify:\/\/shop_images\/accessories_category_card.jpg",
         "image_2": "shopify:\/\/shop_images\/lighting_category_card.jpg",
