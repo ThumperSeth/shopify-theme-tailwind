@@ -1,9 +1,3 @@
-<style>
-  #Banner-{{ section.id }} {
-    min-height: 240px;
-    
-  }
-</style>
 <div id="Banner-{{ section.id }}" class="banner lg:h-768 md:h-96 sm:h-80" style="">&nbsp;</div>
   <div class="banner-content flex justify-center h-full">
     <img class="w-full" src="{{ section.settings.image | img_url: '1500x' }}" />

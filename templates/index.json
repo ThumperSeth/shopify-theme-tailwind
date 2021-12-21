@@ -111,12 +111,6 @@
     "index-affirm-section": {
       "type": "index-affirm-section",
       "settings": {
-        "title": "Make Multicolumn",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "swipe_on_mobile": false
       }
     },
     "what-customers-say": {
@@ -126,6 +120,7 @@
     },
     "thumper-news": {
       "type": "thumper-news",
+      "disabled": true,
       "settings": {
       }
     }
