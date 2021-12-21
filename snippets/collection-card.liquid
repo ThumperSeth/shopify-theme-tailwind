@@ -86,7 +86,7 @@
     </div>
   </div>
 
-  <div class="hover:shadow-none shadow-2xl card card--product{% if product_card_product.featured_media == nil %} card--text-only card--soft{% endif %}{% if product_card_product.featured_media != nil and show_image_outline %} card--outline{% endif %}" tabindex="-1">
+  <div class="hover:shadow-none hover:bg-slate-700 shadow-2xl card card--product{% if product_card_product.featured_media == nil %} card--text-only card--soft{% endif %}{% if product_card_product.featured_media != nil and show_image_outline %} card--outline{% endif %}" tabindex="-1">
     <div class="card__inner">
       {%- if product_card_product.featured_media -%}
         {%- liquid
