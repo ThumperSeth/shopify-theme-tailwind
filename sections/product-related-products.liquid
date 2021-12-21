@@ -126,7 +126,7 @@
             <div class="related-prods-wrapper">
                 {% for field in related_products %}
                 {% assign site_url = shop.url | append: "/products/" %}
-                {% assign related_product_handle = field | last %}
+                {% assign related_product-handle = field | last %}
                 {% assign full_url = site_url | append: related_product-handle %}
                 {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
                 <a href="{{ all_products[related_product-handle].url }}">
