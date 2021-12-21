@@ -25,7 +25,8 @@
 		PRODUCT CAROUSEL
 	</div>
   	<div class="pb-10">
-      <div class="flex inline-flex product-carousel-content w-5/6 p-10 shadow-xl rounded-lg border-2 pl-10">
+      <div class="flex flex-inlie product-carousel-content w-5/6 p-10 shadow-xl rounded-lg border-2 pl-10">
+        {% render 'carousel-snippet' %}
         <img src="{{ section.settings.image | img_url: '1500x' }}"/>
         <img src="{{ section.settings.image_2 | img_url: '1500x' }}"/>
         <img src="{{ section.settings.image_3 | img_url: '1500x' }}"/>
