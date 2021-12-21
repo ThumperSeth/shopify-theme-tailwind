@@ -125,7 +125,7 @@
                 {% assign full_url = site_url | append: related_product_handle %}
                 {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
                 <a href="{{ all_products[related_product_handle].url }}">
-                    <div class="related-products grid sm:grid-cols-1 lg:grid-cols-3 contents">
+                    <div class="related-products-contents">
                         <div class="related-products-image hover:shadow-2xl:shadow-white" style="background-image:url('{{ all_products[related_product_handle].featured_image | img_url: '300x' }}')"> </div>
                         <div class="related-products-container sm:grid-cols-1 lg:grid-cols-3">
                             <div style="display:block;">
