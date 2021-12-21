@@ -120,7 +120,7 @@
             <h2 style="font-size:2.5rem; text-align:center;">Add On's that go with <span style="font-style:oblique; font-weight:700;">{{ product.title }}</span>...</h2>
             {% assign related_products = product.metafields.related-products %}
             {% if related_products.size > 0 %}
-            <div class="related-productss-wrapper">
+            <div class="related-products-wrapper">
                 {% for field in related_product %}
                 {% assign site_url = shop.url | append: "/products/" %}
                 {% assign related_product_handle = field | last %}
