@@ -65,7 +65,7 @@
   }
 </style>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- assign productPhotos = product.media | where: "media_type", "image" -%}
@@ -400,7 +400,11 @@
         {%- endfor -%}
     </div>
 </section>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.product-images-wrapper').slick();
+    });
+  </script>
 {% javascript %}
   class ProductModal extends ModalDialog {
     constructor() {
