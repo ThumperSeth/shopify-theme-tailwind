@@ -1,52 +1,156 @@
 <style>
-  .related-products-title {
-		background-color: #ccc;
-    	font-family: Rajdhani;
-        -webkit-text-size-adjust: 100%;
-      	-webkit-font-smoothing: antialiased;
-    }
-	.related-products-content {
-      	font-family: Roboto;
-      	font-weight: normal;
-      	line-height: 1.6;
-      	font-size: 100%;
-    	-webkit-text-size-adjust: 100%;
-      	-webkit-font-smoothing: antialiased;
-      	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-		background-size: 400% 400%;
-		animation: gradient 15s ease infinite;
-		height: 20vh;
+.related-products-title {
+    background-color: #ccc;
+    font-family: Rajdhani;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.related-products-content {
+    font-family: Roboto;
+    font-weight: normal;
+    line-height: 1.6;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 20vh;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
+.related-prods-wrapper {
+    margin: 10px 0;
+    padding: 20px;
+    display: inline-block;
+    max-width: 100%;
+    background: linear-gradient(180deg, #fff, #999, #ccc, #ccc, #ccc, #999, #fff);
+    text-align: left;
+    /*box-shadow: 7px 7px 10px #555;*/
+}
+
+.related-prods-dummy {
+    padding: 10 px;
+    clear: both;
+}
+
+.related-prod {
+    float: left; // do not remove    
+    width: 33.33%; // do not remove
+    display: table-cell;
+}
+
+.prod-container {
+    display: inline;
+}
+
+.related-prod-image {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 750px) {
+    .related-prod-image {
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+        background-size: cover;
+        background-position: center;
     }
+}
+
+.related-prod-name {
+    color: black;
+    width: 150px;
+    margin: 0 10px 0 10px;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+    .related-prod-name {
+        color: black;
+        width: 200px;
+        margin: 0 10px 0 10px;
+        line-height: 1.2;
+    }
+}
+
+.related-prod-price {
+    color: #ca0000;
+    margin: 0 10px 0 10px;
+}
+
+@media only screenand (min-device-width: 320px)and (max-device-width: 568px)and (-webkit-min-device-pixel-ratio: 2)and (orientation: portrait) {
+    .related-prod {
+        float: left; // do not remove    
+        width: 50%; // do not remove    
+    }
+
+    .related-prod-image {
+        height: 80px;
+        width: 130px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+</style>
+
+
 </style>
 <section class="related-products-section w-full flex flex-wrap mx-auto justify-center">
-  	<div class="related-products-title w-full text-3xl font-bold p-10">
-		RELATED PRODUCTS
-	</div>
-	<div class="related-products-content w-full p-10">
-		Check out how cool these related products are<br />
-      Check out how cool these related products are<br />
-      Check out how cool these related products are<br />
-      
-	</div>
+    <div class="related-products-title w-full text-3xl font-bold p-10">
+        RELATED PRODUCTS
+    </div>
+    <div class="related-products-content w-full p-10">
+        <div style="text-align:center; margin-top:2%;">
+            <h2 style="font-size:2.5rem; text-align:center;">Add On's that go with <span style="font-style:oblique; font-weight:700;">{{ product.title }}</span>...</h2>
+            {% assign related_products = product.metafields.related-products %}
+            {%if related_products.size > 0 %}
+            <div class="related-prods-wrapper">
+                {% for field in related_products %}
+                {% assign site_url = shop.url | append: "/products/" %}
+                {% assign related_product_handle = field | last %}
+                {% assign full_url = site_url | append: related_product_handle %}
+                {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+                <a href="{{ all_products[related_product_handle].url }}">
+                    <div class="related-prod">
+                        <div class="related-prod-image" style="background-image:url('{{ all_products[related_product_handle].featured_image | img_url: '300x' }}')"> </div>
+                        <div class="prod-container">
+                            <div style="display:block;">
+                                <div class="related-prod-name">{{ all_products[related_product_handle].title }}</div>
+                                <div class="related-prod-price">{{ all_products[related_product_handle].price | money }}</div>
+                                <div class="related-prod-desc">{{ products.metafields.global.features }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {%endif%}
+        </div>
+    </div>
 </section>
-	
+
 {% schema %}
-  {
-    "name": "Related Products",
-    "settings": []
-  }
+{
+"name": "Related Products",
+"settings": []
+}
 {% endschema %}
