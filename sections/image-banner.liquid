@@ -1,5 +1,5 @@
 <div id="Banner-{{ section.id }}" class="banner" style="">&nbsp;</div>
-  <div class="banner-content flex justify-center h-full">
+  <div class="banner-content flex flex-wrap justify-center h-full">
     <img class="w-full" src="{{ section.settings.image | img_url: '1500x' }}" />
       {%- for block in section.blocks -%}
         {%- case block.type -%}
