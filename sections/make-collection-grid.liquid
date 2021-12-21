@@ -101,7 +101,7 @@
                                   	{% if productMake == currentBrand or productMake contains currentBrand %}
                             			{% if currentModel %}
                             				{% if currentModel == product.metafields.global.product_model %}
-                                                <li class="grid__item w-full align-center text-center">
+                                                <li class="grid__item w-full align-center text-left">
                                                     {% render 'collection-card',
                                                         product_card_product: product,
                                                         media_size: section.settings.image_ratio,
@@ -114,7 +114,7 @@
                                                 </li>
                             				{%- endif -%}
                             			{% else %}
-                            				<li class="grid__item w-full align-center text-center">
+                            				<li class="grid__item w-full align-center text-left">
                                                     {% render 'collection-card',
                                                         product_card_product: product,
                                                         media_size: section.settings.image_ratio,
