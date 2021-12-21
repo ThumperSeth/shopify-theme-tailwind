@@ -109,7 +109,6 @@
     },
     "cart-items": {
       "type": "main-cart-items",
-      "disabled": true,
       "settings": {
         "show_vendor": true
       }
