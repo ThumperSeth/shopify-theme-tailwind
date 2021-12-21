@@ -75,7 +75,9 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />
 {%- endif -%}
 <script>
-  
+function swapImages(sent_img_src) {
+	document.getElementById['bigImg'].src = sent_img_src;
+}
 </script>
 <section class="w-full justify-center flex-wrap mx-auto">
     <div class="w-full flex-wrap justify-center mx-auto">
