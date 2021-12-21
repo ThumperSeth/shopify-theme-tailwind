@@ -358,6 +358,18 @@
   </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).on('ready', function() {
+
+$(".lazy").slick({
+lazyLoad: 'ondemand', // ondemand progressive anticipated
+infinite: true
+});
+});
+</script>
+
 {% javascript %}
   class LocalizationForm extends HTMLElement {
     constructor() {
