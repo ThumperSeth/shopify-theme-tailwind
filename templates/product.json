@@ -49,7 +49,7 @@
       "settings": {
       }
     },
-    "carousel": {
+    "product-carousel": {
       "type": "product-carousel",
       "settings": {
         "image": "shopify:\/\/shop_images\/accessories_category_card.jpg",
@@ -118,7 +118,7 @@
     "big-product",
     "main",
     "lifestyle-images",
-    "carousel",
+    "product-carousel",
     "product-features",
     "product-fitment",
     "product-videos",
