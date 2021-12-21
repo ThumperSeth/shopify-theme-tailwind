@@ -35,7 +35,19 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'index.bundle.js' | asset_url }}" defer="defer"></script>
     <script>
-      function addSingleItemToCart(id, quantity) {
+      function addSingleItemToCart(sent_id, quantity) {
+        let formData = {
+          'items': [
+              {
+                  'id': sent_id,
+                  'quantity': 1,
+                  'properties': {
+                  'suck my': 'cheetah flavored balls',
+                  'also my': 'disdain for nay sayers',
+                  'who figured it out': 'seth did. oh........ oh........ oh.'
+              }
+          }]
+   		};        
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
