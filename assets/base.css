@@ -2387,12 +2387,20 @@ details-disclosure > details {
     line-height:normal;
     min-height: 35px;
   }
+  .make-menu a:active {
+    color: #000 !important;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  }
 @media screen and (min-width: 750px) {
  .make-menu  {
     text-align: left;
     top:0px;
 
   } 
+  .make-menu a:active {
+    color: #000 !important;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  }
 }
 .make-menu a {
     font-family: 'Teko', sans-serif;
@@ -2406,7 +2414,7 @@ details-disclosure > details {
     font-size:2.0rem;
   } 
     .make-menu a:active {
-    color: #000;
+    color: #000 !important;
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
   }
   
@@ -2416,7 +2424,7 @@ details-disclosure > details {
     top: -4px;
   }
 .make-menu a:active {
-    color: #000;
+    color: #000 !important;
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
   }
   
