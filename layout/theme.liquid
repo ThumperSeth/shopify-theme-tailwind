@@ -35,7 +35,7 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'index.bundle.js' | asset_url }}" defer="defer"></script>
     <script>
-      function addCageToCart() {
+      function addSingleItemToCart(id, quantity) {
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {

@@ -131,7 +131,7 @@
                         <div class="products-container">
                             <div style="display:block;">
                               {%- if product.metafields.global.display_name.value != nil -%}
-                                <div class="related-products-name">{{ product.metafields.global.display_name.value }}</div>
+                                <div class="related-products-name">{{ all_products[related_product_handle].metafields.global.display_name.value }}</div>
                               {%- else -%}
                                 <div class="related-products-name">{{ all_products[related_product_handle].title }}</div>
                               {%endif%}
