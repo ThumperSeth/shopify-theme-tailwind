@@ -35,7 +35,6 @@
 .related-products-wrapper {
     margin: 10px 0;
     padding: 20px;
-    display: inline-flex;
     max-width: 100%;
     /*background: linear-gradient(180deg, #fff, #999, #ccc, #ccc, #ccc, #999, #fff);*/
     text-align: left;
@@ -48,11 +47,12 @@
 }
 
 .related-products {
-    display: inline-block;
+    display: inline-flex;
+    flex-wrap:wrap
 }
 
 .related-products-container {
-    display: inline;
+    
 }
 
 .related-products-image {
@@ -80,6 +80,7 @@
     line-height: 1.2;
     font-size: 1.5rem;
     font-weight:400;
+  text-align:left;
 }
 
 @media screen and (min-width: 750px) {
@@ -88,6 +89,7 @@
         width: max-content;
         margin: 0 10px 0 10px;
         line-height: 1.2;
+      text-align:center;
     }
 }
 
