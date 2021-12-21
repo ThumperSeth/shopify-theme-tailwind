@@ -1,6 +1,6 @@
 <style>
 .related-products-title {
-    background-color: #ccc;
+    font-size: 2rem;
     font-family: Rajdhani;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -130,7 +130,7 @@
                         <div class="related-products-image" style="background-image:url('{{ all_products[related_product_handle].featured_image | img_url: '300x' }}')"> </div>
                         <div class="products-container">
                             <div style="display:block;">
-                                <div class="text-lg">{{ all_products[related_product_handle].title }}</div>
+                                <div class="related-products-name">{{ all_products[related_product_handle].title }}</div>
                                 <div class="related-products-price">{{ all_products[related_product_handle].price | money }}</div>
                                 <div class="related-products-desc">{{ products.metafields.global.features }}</div>
                             </div>
