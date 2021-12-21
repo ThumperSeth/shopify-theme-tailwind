@@ -78,10 +78,11 @@
 <section class="w-full justify-center flex-wrap mx-auto">
     <div class="w-full flex-wrap justify-center mx-auto">
         <div class="product-images-wrapper flex w-full">
+          <div id="media-viewer" class="absolute">
            <!--{% for pic in productPhotos %}
 				<div class="product-image-{{ forloop.index }}"><img class="" src="{{ pic | img_url }}" /></div>
           	{% endfor %}-->
-         
+          </div>
             {%- if first_3d_model -%}
                 <button
                 class="button button--full-width product__xr-button"
