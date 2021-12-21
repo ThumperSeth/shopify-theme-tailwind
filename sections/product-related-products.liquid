@@ -121,10 +121,10 @@
     <div class="related-products-content w-full p-10">
         <div style="text-align:center; margin-top:2%;">
             <h2 style="font-size:2.5rem; text-align:center;">Add On's that go with <span style="font-style:oblique; font-weight:700;">{{ product.title }}</span>...</h2>
-            {% assign related_products = product.metafields.related-products %}
+            {% assign related_products = product.metafields.related_product %}
             {%if related_products.size > 0 %}
             <div class="related-prods-wrapper">
-                {% for field in related_products %}
+                {% for field in related_product %}
                 {% assign site_url = shop.url | append: "/products/" %}
                 {% assign related_product-handle = field | last %}
                 {% assign full_url = site_url | append: related_product-handle %}
@@ -134,8 +134,8 @@
                         <div class="related-prod-image" style="background-image:url('{{ all_products[related_product-handle].featured_image | img_url: '300x' }}')"> </div>
                         <div class="prod-container">
                             <div style="display:block;">
-                                <div class="related-prod-name">{{ all_products[related_product-handle].title }}</div>
-                                <div class="related-prod-price">{{ all_products[related_product-handle].price | money }}</div>
+                                <div class="related-prod-name">{{ all_product[related_product-handle].title }}</div>
+                                <div class="related-prod-price">{{ all_product[related_product-handle].price | money }}</div>
                                 <div class="related-prod-desc">{{ products.metafields.global.features }}</div>
                             </div>
                         </div>
