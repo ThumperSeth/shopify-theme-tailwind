@@ -1,8 +1,5 @@
 <!-- Required font awesome -->
-<link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
 <style>
   .carousel-open:checked + .carousel-item {
     position: static;
@@ -48,6 +45,21 @@
     ~ .control-3
     ~ .carousel-indicators
     li:nth-child(3)
+    .carousel-bullet
+  #carousel-4:checked
+    ~ .control-4
+    ~ .carousel-indicators
+    li:nth-child(4)
+    .carousel-bullet,
+  #carousel-5:checked
+    ~ .control-5
+    ~ .carousel-indicators
+    li:nth-child(5)
+    .carousel-bullet,
+  #carousel-6:checked
+    ~ .control-6
+    ~ .carousel-indicators
+    li:nth-child(6)
     .carousel-bullet {
     color: #2b6cb0;
     /*Set to match the Tailwind colour you want the active one to be */
@@ -56,9 +68,7 @@
 
 <div class="carousel relative rounded relative overflow-hidden shadow-xl">
   <div class="carousel-inner relative overflow-hidden w-full">
-    {%- for block in section.blocks -%}
-        {%- case block.type -%}
-    
+    {%- for block in section.blocks -%}    
             <!--Slide 1-->
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked"/>
             <div class="carousel-item absolute opacity-0 bg-center" style="height: 500px; background-image:url('{{ section.settings.image | img_url: '1500x' }}');">
@@ -136,8 +146,7 @@
               <i class="fas fa-angle-right mt-3">
               </i>
             </label>
-
-        {%- endcase -%}
+    
     {%- endfor -%}
 
     <!-- Add additional indicators for each slide-->
