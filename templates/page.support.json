@@ -4,9 +4,27 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "support-contact-cards": {
+      "type": "support-contact-cards",
+      "settings": {
+      }
+    },
+    "support-trouble-tickets": {
+      "type": "support-trouble-tickets",
+      "settings": {
+      }
+    },
+    "support-faq": {
+      "type": "support-faq",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "support-contact-cards",
+    "support-trouble-tickets",
+    "support-faq"
   ]
 }
