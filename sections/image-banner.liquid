@@ -12,7 +12,7 @@
               <span>{{ block.settings.text | escape }}</span>
             </div>
           {%- when 'buttons' -%}
-			<div class="banner-content block">
+			<div class="banner-content inline-block">
               {%- if block.settings.button_label_1 != blank -%}
                 <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="">{{ block.settings.button_label_1 | escape }}</a>
               {%- endif -%}
