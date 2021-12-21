@@ -2475,3 +2475,7 @@ details-disclosure > details {
       border-radius: 5px;
       font-size: 25px !important;
   }
+  
+  .make-menu a:active {
+    color: black;
+}
