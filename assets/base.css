@@ -831,7 +831,7 @@ summary::-webkit-details-marker {
 }
 
 .title .link {
-  font-size: inherit;
+  font-size: initial;
 }
 
 .title-wrapper {
