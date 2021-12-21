@@ -73,7 +73,7 @@
 
 <section class="w-full justify-center flex-wrap mx-auto">
     <div class="w-full flex justify-center mx-auto">
-        <slider-component class="slider-mobile-gutter w-full mx-auto flex-wrap">
+        <!--<slider-component class="slider-mobile-gutter w-full mx-auto flex-wrap">-->
             <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">{{ "accessibility.skip_to_product_info" | t }}</a>
             <ul class="w-full flex-wrap slider justify-center mx-auto flex" role="list">
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -102,7 +102,24 @@
                 </div>
                 <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
             </div>
-        </slider-component>
+      
+      <!--added for slider-->
+            <section class="lazy slider" data-sizes="50vw">
+                {%- for media in product.media -%}
+                <div>
+
+                {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+                {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
+                </li>
+                {%- endunless -%}
+
+                </div>
+                {%- endfor -%}
+            </section>
+      
+      
+       <!-- </slider-component>-->
             {%- if first_3d_model -%}
                 <button
                 class="button button--full-width product__xr-button"
