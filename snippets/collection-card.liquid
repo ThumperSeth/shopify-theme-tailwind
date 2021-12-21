@@ -44,26 +44,7 @@
 		{% assign brandColor = "#FFFFFF" %}
 {% endcase %}
 {% endfor %}
-<style>
- .rating {
-  display: none;
-  margin: 0;
-}
-  .collection-card-title {
-    color: #aaa;
-    	font-family: "Rajdhani";
-      	font-weight: 700;
-        letter-spacing: -0.8px;
-        font-size: 1.5rem;
-  }
-  .collection-card-price {
-      	color: #000000;
-    	font-family: "Rajdhani" !important;
-      	font-weight: 700;
-        letter-spacing: -1.8px;
-        font-size: 1.5rem;
-    }
-</style>
+
 <div class="card-wrapper p-5 hover:shadow-lg">
   <div class="card-information pl-2">
     <div class="card-information__wrapper w-full">
@@ -116,7 +97,7 @@
         </p>
       {%- endif -%}
       <div class="price-wrapper">
-      	{% render 'price', product: product_card_product, price_class: '' %}
+      	{% render 'price', product: product_card_product, price_class: 'collection-card-price' %}
       </div>
     </div>
   </div>
