@@ -68,6 +68,7 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
+{%- assign productPhotos = product.media | where: "media_type", "image" -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
   <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'" />
@@ -77,7 +78,9 @@
 <section class="w-full justify-center flex-wrap mx-auto">
     <div class="w-full flex justify-center mx-auto">
         <div class="product-images-wrapper">
-            
+            {% for pic in productPhotos %}
+				<div class="product-image-{{ forloop.index }}"><img class="" src="{{ pic | img_url }}" /></div>
+          	{% endfor %}
             {%- if first_3d_model -%}
                 <button
                 class="button button--full-width product__xr-button"
