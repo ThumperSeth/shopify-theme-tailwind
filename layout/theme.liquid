@@ -34,6 +34,23 @@
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'index.bundle.js' | asset_url }}" defer="defer"></script>
+    <script>
+      function addCageToCart() {
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            return response.json();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+      }   
+    </script>
     <!-- CONTENT FOR HEADER -->
     {{ content_for_header }}
 	<!-- END CONTENT FOR HEADER -->
