@@ -90,9 +90,9 @@ function swapImages(sent_img_src) {
 						<div class="product-image-{{ forloop.index }}-main w-1/2"><img id="bigIMG" class="product-main w-full cursor-zoom-in" src="{{ pic | img_url }}" /></div>
             			{% assign productPhotoCount = productPhotoCount | plus: 1 %}
             			<div class="thumb-container flex">
-                        	<div class="product-image-{{ forloop.index }}"><img class="product-thumbs cursor-pointer" src="{{ pic | img_url }}"  onClick="swapImages('{{ pic | img_url }}');"/></div>
+                        	<div class="product-image-{{ forloop.index }}"><img class="product-thumbs cursor-pointer" src="{{ pic | img_url: '2048x2048' }}"  onClick="swapImages('{{ pic | img_url }}');"/></div>
             		{% else %}
-            			<div class="product-image-{{ forloop.index }}"><img class="product-thumbs cursor-pointer" src="{{ pic | img_url }}"  onClick="swapImages('{{ pic | img_url }}');"/></div>
+            			<div class="product-image-{{ forloop.index }}"><img class="product-thumbs cursor-pointer" src="{{ pic | img_url: '2048x2048' }}"  onClick="swapImages('{{ pic | img_url }}');"/></div>
             			{% assign productPhotoCount = productPhotoCount | plus: 1 %}
             		{% endif %}
             	{% endif %}
