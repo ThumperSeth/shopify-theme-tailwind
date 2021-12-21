@@ -1,25 +1,94 @@
+<!-- Required font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
 <style>
   .product-carousel-title {
-		background-color: #ccc;
+		/*background-color: #ccc;
     	font-family: Rajdhani;
         -webkit-text-size-adjust: 100%;
-      	-webkit-font-smoothing: antialiased;
+      	-webkit-font-smoothing: antialiased;*/
     }
 	.product-carousel-content {
-		background-color: #eee;
+		/*background-color: #eee;
       	font-family: Roboto;
       	font-weight: normal;
       	line-height: 1.6;
       	font-size: initial;
     	-webkit-text-size-adjust: 100%;
       	-webkit-font-smoothing: antialiased;
-        margin:5rem auto 0rem;
+        margin:5rem auto 0rem;*/
     }
     .product-carousel-content ul {
-       list-style-type: disc;
+      /* list-style-type: disc;*/
        
     }
+  .product_carousel-open:checked + .product_carousel-item {
+    position: static;
+    opacity: 100;
+    border:2px solid #ca0000;
+  }
+
+  .product_carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+
+  #product_carousel-1:checked ~ .control-1,
+  #product_carousel-2:checked ~ .control-2,
+  #product_carousel-3:checked ~ .control-3,
+  #product_carousel-4:checked ~ .control-4,
+  #product_carousel-5:checked ~ .control-5,
+  #product_carousel-6:checked ~ .control-6{
+    display: block;
+     border:2px solid #ca0000;
+  }
+
+  .product_carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #product_carousel-1:checked
+    ~ .control-1
+    ~ .product_carousel-indicators
+    li:nth-child(1)
+    .product_carousel-bullet,
+  #product_carousel-2:checked
+    ~ .control-2
+    ~ .product_carousel-indicators
+    li:nth-child(2)
+    .product_carousel-bullet,
+  #product_carousel-3:checked
+    ~ .control-3
+    ~ .product_carousel-indicators
+    li:nth-child(3)
+    .product_carousel-bullet
+  #product_carousel-4:checked
+    ~ .control-4
+    ~ .product_carousel-indicators
+    li:nth-child(4)
+    .product_carousel-bullet,
+  #product_carousel-5:checked
+    ~ .control-5
+    ~ .product_carousel-indicators
+    li:nth-child(5)
+    .product_carousel-bullet,
+  #product_carousel-6:checked
+    ~ .control-6
+    ~ .product_carousel-indicators
+    li:nth-child(6)
+    .product_carousel-bullet {
+    color: #2b6cb0;
+    /*Set to match the Tailwind colour you want the active one to be */
+  }
 </style>
+
 <div class="product-carousel-section w-full flex flex-wrap mx-auto justify-center">
   	<div class="product-carousel-title w-full text-3xl font-bold p-10">
 		PRODUCT CAROUSEL
