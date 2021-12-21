@@ -35,6 +35,9 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'index.bundle.js' | asset_url }}" defer="defer"></script>
     <script>
+      /*********************************************************
+      [[ product.selected_or_first_available_variant.id ]]
+      ********************************************************/
       function addSingleItemToCart(sent_id, sent_quantity) {
         let formData = {
           'items': [
