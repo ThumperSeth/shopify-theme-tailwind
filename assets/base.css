@@ -2477,5 +2477,5 @@ details-disclosure > details {
   }
   
   .make-menu a:active {
-    color: black;
+    color: black !important;
 }
