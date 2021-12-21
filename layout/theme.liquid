@@ -35,12 +35,12 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'index.bundle.js' | asset_url }}" defer="defer"></script>
     <script>
-      function addSingleItemToCart(sent_id, quantity) {
+      function addSingleItemToCart(sent_id, sent_quantity) {
         let formData = {
           'items': [
               {
                   'id': sent_id,
-                  'quantity': 1
+                  'quantity': sent_quantity
           }]
    		};        
         fetch('/cart/add.js', {
