@@ -11,4 +11,4 @@
     {% render 'instant-add-to-cart', product_to_add: product.selected_or_first_available_variant.id, quantity_to_add: 1, button_class: 'button-css-class' %}
 {% endcomment %}
 
-<button id="instant-add-{{ product_to_add }}" name="instant-add-{{ product_to_add }}">{{ button_text }}</button>
+<button id="instant-add-{{ product_to_add }}" name="instant-add-{{ product_to_add }}" class="{{ button_class }}">{{ button_text }}</button>
