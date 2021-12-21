@@ -210,6 +210,11 @@
         "show_vendor": true,
         "show_rating": true
       }
+    },
+    "shop-by-type-row": {
+      "type": "shop-by-type-row",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -219,6 +224,7 @@
     "163941199019137521",
     "164001984912953b5d",
     "make-collection-grid",
+    "shop-by-type-row",
     "1638991131cedcfdc1"
   ]
 }
