@@ -29,15 +29,29 @@
 </section>
 {% assign nav_range = section.settings.navigation_amount %}
 {% style %}
-  
-  .related-carousel-section .flickity-page-dots .dot {
+  @media only screen and ( min-width: 1201px ) {
+    {% if nav_range == 2 %}
+      .featured-cards .carousel-cell {
+          width: calc(49% - 10px);
+      }
+  	{% elsif nav_range == 3 %}
+      .featured-cards .carousel-cell {
+      	width: calc(32% - 10px);
+      }
+  	{% elsif nav_range == 4 %}
+      .featured-cards .carousel-cell {
+      	width: calc(24% - 10px);
+      }
+  	{% endif %}
+  }
+  .flickity-page-dots .dot {
   	background: {{ section.settings.navigation_color }};
   }
-  .related-carousel-section .flickity-button-icon {
-	display: none;
+  .flickity-button-icon {
   	color: {{ section.settings.navigation_color }};
   }
 {% endstyle %}
+
 <script>
 var elem = document.querySelector('.related-cards .carousel');
 var flkty = new Flickity( elem, {
