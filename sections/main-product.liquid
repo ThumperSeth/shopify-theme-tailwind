@@ -118,7 +118,7 @@ function swapImages(sent_img_src) {
                   {%- when '@app' -%}
                   	{% render block %}
                   {%- when 'text' -%}
-                      <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+                      <p class="product__text {% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
                         {{- block.settings.text -}}
                       </p>
                   {%- when 'title' -%}
