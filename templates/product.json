@@ -87,42 +87,63 @@
     },
     "product-related-products": {
       "type": "product-related-products",
-      "settings": {
-      }
-    },
-    "product-carousel": {
-      "type": "product-carousel",
       "blocks": {
-        "81b148f3-73f5-4ffd-bb5d-d64e98867d4c": {
+        "5c0ce31a-c8b4-4294-887f-2f39dc1a02a5": {
           "type": "card",
           "settings": {
-            "product_item": "fairlead-wide-spool-winch-plate"
+            "product_item": "1-000-watt-can-am-x3-max-rear-subwoofer-solution-gen-3"
           }
         },
-        "9a5a4ae5-0759-4b62-a743-8d9377ef5d92": {
+        "d12f8299-dfee-44b5-a020-b1618d2d7300": {
           "type": "card",
           "settings": {
-            "product_item": "polaris-general-front-winch-bumper"
+            "product_item": "can-am-defender-winch-ready-rear-bumper-elite-edition-light-covers"
           }
         },
-        "04393c1d-437c-4ca3-aa5d-2f9491b26b41": {
+        "a4fae8d2-0797-46b6-a80f-e50e892c3f5a": {
           "type": "card",
           "settings": {
-            "product_item": "rzr14rc-stg5"
+            "product_item": "300-lb-cargo-bed-rear-winch-hunting-winch-game-winch-polaris-hunting-winch"
           }
         },
-        "24182b55-bd10-432b-a696-e371c008ada5": {
+        "9d9338a8-150e-468a-9a71-eb071b6459bd": {
           "type": "card",
           "settings": {
-            "product_item": "can-am-defender-limited-rear-window-a-c-seal"
+            "product_item": "can-am-defender-max-audio-roof-level-4"
           }
         }
       },
       "block_order": [
-        "81b148f3-73f5-4ffd-bb5d-d64e98867d4c",
-        "9a5a4ae5-0759-4b62-a743-8d9377ef5d92",
-        "04393c1d-437c-4ca3-aa5d-2f9491b26b41",
-        "24182b55-bd10-432b-a696-e371c008ada5"
+        "5c0ce31a-c8b4-4294-887f-2f39dc1a02a5",
+        "d12f8299-dfee-44b5-a020-b1618d2d7300",
+        "a4fae8d2-0797-46b6-a80f-e50e892c3f5a",
+        "9d9338a8-150e-468a-9a71-eb071b6459bd"
+      ],
+      "settings": {
+        "navigation_amount": 4,
+        "navigation_color": ""
+      }
+    },
+    "product-carousel": {
+      "type": "product-carousel",
+      "disabled": true,
+      "blocks": {
+        "4b928f49-6135-4698-b225-033ed4d9b519": {
+          "type": "card",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "5a6a1468-031c-495f-9c8d-b2d56d0e92f4": {
+          "type": "card",
+          "settings": {
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "4b928f49-6135-4698-b225-033ed4d9b519",
+        "5a6a1468-031c-495f-9c8d-b2d56d0e92f4"
       ],
       "settings": {
         "navigation_amount": 3,
