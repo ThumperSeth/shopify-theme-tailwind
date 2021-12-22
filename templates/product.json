@@ -65,26 +65,6 @@
       "settings": {
       }
     },
-    "product-videos": {
-      "type": "product-video",
-      "settings": {
-      }
-    },
-    "product-specs": {
-      "type": "product-specs",
-      "settings": {
-      }
-    },
-    "product-docs": {
-      "type": "product-docs",
-      "settings": {
-      }
-    },
-    "product-reviews": {
-      "type": "product-reviews",
-      "settings": {
-      }
-    },
     "product-related-products": {
       "type": "product-related-products",
       "blocks": {
@@ -122,6 +102,26 @@
       "settings": {
         "navigation_amount": 4,
         "navigation_color": ""
+      }
+    },
+    "product-videos": {
+      "type": "product-video",
+      "settings": {
+      }
+    },
+    "product-specs": {
+      "type": "product-specs",
+      "settings": {
+      }
+    },
+    "product-docs": {
+      "type": "product-docs",
+      "settings": {
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
       }
     },
     "product-carousel": {
@@ -209,11 +209,11 @@
     "product-features",
     "product-info-carousel",
     "product-fitment",
+    "product-related-products",
     "product-videos",
     "product-specs",
     "product-docs",
     "product-reviews",
-    "product-related-products",
     "product-carousel",
     "product-recommendations",
     "cage-options",
