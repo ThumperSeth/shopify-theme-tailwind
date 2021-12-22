@@ -90,7 +90,7 @@ function swapImages(sent_img_src) {
         {% for pic in productPictures %}
         	{% if pic.alt contains "main" %}
               <div id="thumby-{{ forloop.index }}" class="mx-auto">
-                <img src="{{ pic.src | img_url: "50x50" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x10x24" }}');" />
+                <img src="{{ pic.src | img_url: "50x50" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
               </div>
        		{% endif %}
         {% endfor %}
