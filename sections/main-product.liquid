@@ -265,7 +265,7 @@ function swapImages(sent_img_src) {
                         </div>
                       </noscript>
                   {%- when 'price' -%}
-                      <div class="product-price" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                      <div class="product-price text-4xl" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
                       <div {{ block.shopify_attributes }}>
