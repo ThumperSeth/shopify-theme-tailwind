@@ -99,7 +99,7 @@
       	{% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
         {% for stuff in typeArray %}
               <div class="w-full grid justify-items-center" style="background: rgb(255,255,255 0.5); background: linear-gradient(0deg, rgba(220,220,220,0.5) 90%, {{ brandRGBA }} 100%);">
-                  <div class="w-full justify-items-center pb-20"> 
+                  <div class="w-11/12 justify-items-center pb-20"> 
                       <a name="{{ stuff }}" style="scroll-behavior: smooth;">&nbsp;<br /></a>
                       <div class="text-7xl text-left text-white font-medium" style="font-family:'Teko'; text-shadow: 2px 2px #000000;">{{ stuff | upcase }}</div>
                           <ul id="product-grid"class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
