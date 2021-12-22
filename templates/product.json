@@ -90,6 +90,45 @@
       "settings": {
       }
     },
+    "product-carousel": {
+      "type": "product-carousel",
+      "blocks": {
+        "81b148f3-73f5-4ffd-bb5d-d64e98867d4c": {
+          "type": "card",
+          "settings": {
+            "product_item": "fairlead-wide-spool-winch-plate"
+          }
+        },
+        "9a5a4ae5-0759-4b62-a743-8d9377ef5d92": {
+          "type": "card",
+          "settings": {
+            "product_item": "polaris-general-front-winch-bumper"
+          }
+        },
+        "04393c1d-437c-4ca3-aa5d-2f9491b26b41": {
+          "type": "card",
+          "settings": {
+            "product_item": "rzr14rc-stg5"
+          }
+        },
+        "24182b55-bd10-432b-a696-e371c008ada5": {
+          "type": "card",
+          "settings": {
+            "product_item": "can-am-defender-limited-rear-window-a-c-seal"
+          }
+        }
+      },
+      "block_order": [
+        "81b148f3-73f5-4ffd-bb5d-d64e98867d4c",
+        "9a5a4ae5-0759-4b62-a743-8d9377ef5d92",
+        "04393c1d-437c-4ca3-aa5d-2f9491b26b41",
+        "24182b55-bd10-432b-a696-e371c008ada5"
+      ],
+      "settings": {
+        "navigation_amount": 3,
+        "navigation_color": ""
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -125,9 +164,20 @@
         "show_vendor": true
       }
     },
-    "product-carousel": {
-      "type": "product-carousel",
+    "164016466786c0923c": {
+      "type": "apps",
+      "blocks": {
+        "b0ef11f7-24dc-4836-bea4-e59192f0df5f": {
+          "type": "shopify:\/\/apps\/vitals-40-marketing-apps\/blocks\/ub-product-bundles\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "b0ef11f7-24dc-4836-bea4-e59192f0df5f"
+      ],
       "settings": {
+        "include_margins": true
       }
     }
   },
@@ -148,6 +198,7 @@
     "cage-options",
     "seths-sandbox",
     "jacobs-sandbox",
-    "cart-items"
+    "cart-items",
+    "164016466786c0923c"
   ]
 }
