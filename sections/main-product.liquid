@@ -64,7 +64,7 @@
         font-size: 1.5rem;
   }
   
-  #bigIMG--point-zoom {
+  .bigIMG--point-zoom {
     transform-origin: 65% 75%;
     transition: transform 1s, filter .5s ease-out;
   }    
@@ -97,7 +97,7 @@ function swapImages(sent_img_src) {
   <!-- IMAGE VIEWER -->
 	<div class="featured-image-section flex flex-wrap justify-center">
       <div class="w-1/2 overflow-hidden">
-      	<img id="bigIMG" class="bigIMG hover:scale-150" src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />
+      	<img id="bigIMG" class="bigIMG--point-zoom hover:scale-150" src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />
       </div>
       <div id="thumbys" class="w-2/3 p-8 inline-flex">
         {% for pic in productPictures %}
