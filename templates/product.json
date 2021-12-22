@@ -109,11 +109,13 @@
     },
     "seths-sandbox": {
       "type": "seths-sandbox",
+      "disabled": true,
       "settings": {
       }
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
+      "disabled": true,
       "settings": {
         "navigation_amount": 3,
         "navigation_color": ""
