@@ -104,7 +104,6 @@
     },
     "cage-options": {
       "type": "cage-options",
-      "disabled": true,
       "settings": {
       }
     },
