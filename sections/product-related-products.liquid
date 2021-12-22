@@ -19,9 +19,9 @@
                     {%- endif -%}
                         <h4>{{ all_products[related_product_handle].price | money }}</h4>
                     <div class="product-btn">Shop Now</div>
-                    {% liquid render 'instant-add-to-cart', product_to_add: all_products[related_product_handle].selected_or_first_available_variant.id, quantity_to_add: 1, button_text: 'Add To Cart' %}
                   </a>
-                </div>
+				  {% liquid render 'instant-add-to-cart', product_to_add: all_products[related_product_handle].selected_or_first_available_variant.id, quantity_to_add: 1, button_text: 'Add To Cart' %}
+    			</div>
       {% endfor %}
     {% endif %}
 	</div>
