@@ -1,0 +1,6 @@
+ <div class="block w-1/6 flex text-left pt-2 pb-2 drop-shadow brandbox svg-logo h-full">
+    <button class="hover: bounce;" onclick="location.href='{{ currentBrand | within:collection }}';">
+    {% capture collectionSVG %}collection.{{ currentBrand }}.metafields.make.svg_data.value{% endcapture %} 
+    {{ collectionSVG }}
+    </button>
+ </div>
