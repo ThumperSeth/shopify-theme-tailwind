@@ -2470,3 +2470,7 @@ details-disclosure > details {
   .make-menu a:active {
     color: black !important;
 }
+  
+  .product-section-title {
+     font-size:20px; 
+  }
