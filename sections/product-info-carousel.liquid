@@ -1,9 +1,9 @@
 <style>
-.carousel-open:checked + .carousel-slide {
+.carousel-open:checked + .carousel-item {
   position: static;
   opacity: 100;
 }
-.carousel-slide {
+.carousel-item {
   -webkit-transition: opacity 0.6s ease-out;
   transition: opacity 0.6s ease-out;
 }
@@ -55,7 +55,7 @@
 
       <!--Slide 2-->
       <input class="carousel-open" type="radio" id="carousel-2" name="twcarousel" aria-hidden="true" hidden="">
-      <div class="carousel-item absolute opacity-0" style="height:75vh;">
+      <div class="carousel-slide absolute opacity-0" style="height:75vh;">
         <div class="block h-full w-full bg-yellow-500 text-white text-5xl text-center">Slide 2</div>
       </div>
       <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
@@ -63,7 +63,7 @@
 
       <!--Slide 3-->
       <input class="carousel-open" type="radio" id="carousel-3" name="twcarousel" aria-hidden="true" hidden="">
-      <div class="carousel-item absolute opacity-0" style="height:75vh;">
+      <div class="carousel-slide absolute opacity-0" style="height:75vh;">
         <div class="block h-full w-full bg-yellow-500 text-white text-5xl text-center">Slide 3</div>
       </div>
       <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
