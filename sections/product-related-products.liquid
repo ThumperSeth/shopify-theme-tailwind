@@ -19,7 +19,7 @@
                     {%- endif -%}
                         <h4>{{ all_products[related_product_handle].price | money }}</h4>
                     <div class="product-btn">Shop Now</div>
-                    <div class="product-btn">Add To Cart</div>
+                    {% render 'instant-add-to-cart', product_to_add: product.selected_or_first_available_variant.id, quantity_to_add: 1, button_class: 'button-css-class' %}
                   </a>
                 </div>
       {% endfor %}
