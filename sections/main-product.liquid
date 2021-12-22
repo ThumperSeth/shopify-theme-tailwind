@@ -82,11 +82,11 @@ function swapImages(sent_img_src) {
 <section class="w-7/8 justify-center flex-wrap mx-auto">
   <div class="product-wrapper">
   <!-- IMAGE VIEWER -->
-	<div class="featured-image-section bg-blue-400 w-full">
+	<div class="featured-image-section bg-blue-400 sm:w-full md:w-1/2 lg:w-1/2">
       &nbsp;
     </div>
 		<!-- PRODUCT INFORMATION -->
-        <div class="product-information-section sm:w-full lg:w-1/2 flex flex-wrap justify-center mx-auto">
+        <div class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 flex flex-wrap justify-center mx-auto">
             <div id="ProductInfo-{{ section.id }}" class="w-full">
                 {%- assign product_form_id = 'product-form-' | append: section.id -%}
                 {%- for block in section.blocks -%}
