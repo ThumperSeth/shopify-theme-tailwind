@@ -1,4 +1,4 @@
-<section class="w-full related-carousel-section">
+<section class="w-7/8 related-carousel-section">
 <div class="related-cards">
   <div class="carousel">
       {% assign related_products = product.metafields.related-products %}
@@ -9,7 +9,7 @@
                 {% assign related_product_handle = field | last %}
                 {% assign full_url = site_url | append: related_product_handle %}
                 {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
-                <div class="related-carousel-cell">
+                <div class="carousel-cell">
                   <a href="{{ all_products[related_product_handle].url }}">
                     <img data-flickity-lazyload="{{ all_products[related_product_handle].featured_image | img_url: '240x240'  }}"  border="0" />
                     {%- if all_products[related_product_handle].metafields.global.display_name.value != nil -%}
