@@ -86,8 +86,8 @@ function swapImages(sent_img_src) {
       <div class="w-1/2 ">
       	<img id="bigIMG" src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />
       </div>
-      <div class="w-1/2 ">
-        <div id="thumbys" class="w-2/3 flex justify-center mx-auto">
+      <div class="w-1/2 flex justify-center mx-auto">
+        <div id="thumbys" class="w-2/3 ">
           {% for pic in productPictures %}
               {% if pic.alt contains "main" %}
                 <div id="thumby-{{ forloop.index }}" class="mx-auto">
