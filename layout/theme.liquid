@@ -32,7 +32,8 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+	{{ 'flickity.css' | asset_url | stylesheet_tag }}
+	{{ 'flickity.js' | asset_url | script_tag }}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'index.bundle.js' | asset_url }}" defer="defer"></script>
     <script>
