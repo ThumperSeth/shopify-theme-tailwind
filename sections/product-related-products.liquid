@@ -75,7 +75,7 @@
   }
 {% endstyle %}
 <script>
-var elem = document.querySelector('.related-cards .carousel');
+var elem = document.querySelector('.related-cards .related-carousel');
 var flkty = new Flickity( elem, {
   contain: true,
   imagesLoaded: true,
@@ -85,7 +85,7 @@ var flkty = new Flickity( elem, {
 });
 {% if request.design_mode %}
   document.addEventListener("shopify:section:load", function(event) {
-  var elem = document.querySelector('.related-cards .carousel');
+  var elem = document.querySelector('.related-cards .related-carousel');
    var flkty = new Flickity( elem, {
       contain: true,
       imagesLoaded: true,
