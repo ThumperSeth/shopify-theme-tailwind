@@ -104,7 +104,11 @@
                     
                       <div class="text-7xl text-left text-white font-medium" style="font-family:'Teko'; text-shadow: 2px 2px #000000;">{{ stuff | upcase }}</div>
                           <ul id="product-grid"class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
-                             {%- render 'brand-svg' -%} {% for product in productsArray %} 
+                             {%- render 'brand-svg' -%} 
+                            <div class="collection-description">
+                              <p>This is how I really feel about this particular cluster of potentially lethal amalgamations.</p>
+                            </div>
+                            {% for product in productsArray %} 
                               	{% assign tempCat = product.metafields.global.category | downcase %}
                             	{% assign productMake = product.metafields.global.make | downcase %} 
                                   {% if tempCat == stuff %}
