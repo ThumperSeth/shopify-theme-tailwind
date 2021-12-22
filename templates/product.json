@@ -54,6 +54,12 @@
       "settings": {
       }
     },
+    "product-info-carousel": {
+      "type": "product-info-carousel",
+      "disabled": true,
+      "settings": {
+      }
+    },
     "product-fitment": {
       "type": "product-fitment",
       "settings": {
@@ -96,19 +102,8 @@
         "show_rating": false
       }
     },
-    "cart-items": {
-      "type": "main-cart-items",
-      "settings": {
-        "show_vendor": true
-      }
-    },
     "cage-options": {
       "type": "cage-options",
-      "settings": {
-      }
-    },
-    "product-info-carousel": {
-      "type": "product-info-carousel",
       "settings": {
       }
     },
@@ -120,6 +115,14 @@
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
       "settings": {
+        "navigation_amount": 3,
+        "navigation_color": ""
+      }
+    },
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "show_vendor": true
       }
     }
   },
