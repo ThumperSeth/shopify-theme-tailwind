@@ -96,12 +96,6 @@
         "show_rating": false
       }
     },
-    "cart-items": {
-      "type": "main-cart-items",
-      "settings": {
-        "show_vendor": true
-      }
-    },
     "cage-options": {
       "type": "cage-options",
       "settings": {
@@ -115,6 +109,13 @@
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
       "settings": {
+      }
+    },
+    "cart-items": {
+      "type": "main-cart-items",
+      "disabled": true,
+      "settings": {
+        "show_vendor": true
       }
     }
   },
