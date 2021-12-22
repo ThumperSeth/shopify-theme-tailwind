@@ -103,11 +103,13 @@
     },
     "seths-sandbox": {
       "type": "seths-sandbox",
+      "disabled": true,
       "settings": {
       }
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
+      "disabled": true,
       "settings": {
       }
     },
