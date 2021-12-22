@@ -113,12 +113,12 @@
                       	</div>
                         <div class="related-products-container w-full justify-center text-center">
                               {%- if all_products[related_product_handle].metafields.global.display_name.value != nil -%}
-                                <div class="related-products-name w-full">{{ all_products[related_product_handle].metafields.global.display_name.value }}</div>
+                                <span class="related-products-name w-full">{{ all_products[related_product_handle].metafields.global.display_name.value }}</span>
                               {%- else -%}
-                                <div class="related-products-name w-full">{{ all_products[related_product_handle].title }}</div>
+                                <span class="related-products-name w-full">{{ all_products[related_product_handle].title }}</span>
                               {%endif%}
-                                <div class="related-products-price w-full">{{ all_products[related_product_handle].price | money }}</div>
-                                <div class="related-products-desc w-full">{{ products.metafields.global.features }}</div>
+                                <span class="related-products-price w-full">{{ all_products[related_product_handle].price | money }}</span>
+                                <span class="related-products-desc w-full">{{ products.metafields.global.features }}</span>
                         </div>
                     </div>
                 </a>
