@@ -128,11 +128,25 @@
           "settings": {
             "product_item": "rzr14-stg3"
           }
+        },
+        "81131c93-b159-457f-b958-9a0a5104dc10": {
+          "type": "card",
+          "settings": {
+            "product_item": "can-am-defender-max-roof-level-1"
+          }
+        },
+        "43444e57-6560-4d4b-82a6-c9a7e55e705d": {
+          "type": "card",
+          "settings": {
+            "product_item": "can-am-maverick-x3-max-roll-cage"
+          }
         }
       },
       "block_order": [
         "2147a4fb-58ae-4187-8e74-174bd0135b7d",
-        "61a47cda-04d2-447e-91b7-b2e8b927c774"
+        "61a47cda-04d2-447e-91b7-b2e8b927c774",
+        "81131c93-b159-457f-b958-9a0a5104dc10",
+        "43444e57-6560-4d4b-82a6-c9a7e55e705d"
       ],
       "settings": {
         "navigation_amount": 3,
