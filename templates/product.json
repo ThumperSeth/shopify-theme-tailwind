@@ -102,6 +102,11 @@
         "show_vendor": true
       }
     },
+    "cage-options": {
+      "type": "cage-options",
+      "settings": {
+      }
+    },
     "seths-sandbox": {
       "type": "seths-sandbox",
       "settings": {
@@ -125,6 +130,7 @@
     "product-reviews",
     "product-related-products",
     "product-recommendations",
+    "cage-options",
     "seths-sandbox",
     "jacobs-sandbox",
     "cart-items"
