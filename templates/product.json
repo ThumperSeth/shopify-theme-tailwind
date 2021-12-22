@@ -124,32 +124,6 @@
       "settings": {
       }
     },
-    "product-carousel": {
-      "type": "product-carousel",
-      "disabled": true,
-      "blocks": {
-        "4b928f49-6135-4698-b225-033ed4d9b519": {
-          "type": "card",
-          "settings": {
-            "product_item": ""
-          }
-        },
-        "5a6a1468-031c-495f-9c8d-b2d56d0e92f4": {
-          "type": "card",
-          "settings": {
-            "product_item": ""
-          }
-        }
-      },
-      "block_order": [
-        "4b928f49-6135-4698-b225-033ed4d9b519",
-        "5a6a1468-031c-495f-9c8d-b2d56d0e92f4"
-      ],
-      "settings": {
-        "navigation_amount": 3,
-        "navigation_color": ""
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -164,6 +138,7 @@
     },
     "cage-options": {
       "type": "cage-options",
+      "disabled": true,
       "settings": {
       }
     },
@@ -214,7 +189,6 @@
     "product-specs",
     "product-docs",
     "product-reviews",
-    "product-carousel",
     "product-recommendations",
     "cage-options",
     "seths-sandbox",
