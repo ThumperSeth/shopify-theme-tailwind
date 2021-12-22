@@ -114,7 +114,11 @@
                                   <p class="text-2xl mt-5" style="font-family:'Roboto';">
                                     This is how I really feel about this particular cluster of potentially lethal amalgamations.
                                   </p>
-                                  {% render 'facets' %}
+                                  <ul>
+                                    <li>General</li>
+                                    <li>Ranger</li>
+                                    <li>RZR</li>
+                                  </ul>
                               </div>
                             {% for product in productsArray %} 
                               	{% assign tempCat = product.metafields.global.category | downcase %}
