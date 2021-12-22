@@ -103,13 +103,12 @@
                       <a name="{{ stuff }}" style="scroll-behavior: smooth;">&nbsp</a>
                     
                       <div class="text-7xl text-left text-white font-medium" style="font-family:'Teko'; text-shadow: 2px 2px #000000;">
-                              {%- render 'brand-svg' -%}
-                            {{ stuff | upcase }}
+                        {{ stuff | upcase }}
                       </div>
                           <ul id="product-grid"class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
                               
                             <div class="collection-description">
-                              {%- render 'brand-svg' -%}
+                              {%- render 'brand-svg' -%}{{ stuff | upcase }}
                               <p class="text-2xl" style="font-family:'Roboto';">This is how I really feel about this particular cluster of potentially lethal amalgamations.</p>
                             </div>
                             {% for product in productsArray %} 
