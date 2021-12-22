@@ -5,6 +5,38 @@
       {{ field | metafield_tag }}
         {% assign product = all_products[related-products] %}
         <div class="carousel-cell">
+          <div class="related-products-content w-full p-10">
+            <div style="text-align:center; margin-top:2%;">
+                <h2 style="font-size:2.5rem; text-align:center;">Companion products that go with your <span style="font-style:oblique; font-weight:700;">{{ product.title }}</span>...</h2>
+                {% assign related_products = product.metafields.related-products %}
+                {% if related_products.size > 0 %}
+
+                    {% for field in related_products %}
+                    {% assign site_url = shop.url | append: "/products/" %}
+                    {% assign related_product_handle = field | last %}
+                    {% assign full_url = site_url | append: related_product_handle %}
+                    {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+                    <a href="{{ all_products[related_product_handle].url }}">
+                        <div class="related-products-contents mx-auto justify-center w-full">
+                            <div class="related-products-image w-full mx-auto hover:shadow-2xl:shadow-white flex justify-center">
+                              <img src="{{ all_products[related_product_handle].featured_image | img_url: '300x' }}" />
+                            </div>
+                            <div class="related-products-container w-full flex lg:flex-no-wrap md:flex-no-wrap sm:flex-wrap justify-center text-center">
+                                  {%- if all_products[related_product_handle].metafields.global.display_name.value != nil -%}
+                                    <span class="related-products-name w-full">{{ all_products[related_product_handle].metafields.global.display_name.value }}</span>
+                                  {%- else -%}
+                                    <span class="related-products-name w-full">{{ all_products[related_product_handle].title }}</span>
+                                  {%endif%}
+                                    <span class="related-products-price w-full">{{ all_products[related_product_handle].price | money }}</span>
+									<div class="product-btn">Shop Now</div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+
+                {%endif%}
+            </div>
+      	  </div>
           <a href="{{ product.url }}">
             <img data-flickity-lazyload="{{ product.featured_image | img_url: 'master' }}"  border="0" />
             <h4>{{ product.title }}</h4>
