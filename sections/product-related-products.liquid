@@ -3,12 +3,13 @@
   <div class="carousel">
       {% for block in section.blocks %}
         {% assign product = all_products[block.settings.product_item] %}
-        <div class="carousel-cell">
+        <div class="related-carousel-cell">
           <a href="{{ product.url }}">
             <img data-flickity-lazyload="{{ product.featured_image | img_url: 'master' }}"  border="0" />
             <h4>{{ product.title }}</h4>
             <h4>{{ product.price | money }}</h4>
-            <div class="product-btn">Shop Now</div>
+            <div class="related-product-btn">Shop Now</div>
+            <div class="related-product-btn">Buy Now</div>
           </a>
         </div>
       {% endfor %}
