@@ -46,9 +46,8 @@
 	.product-make-and-model {
       	color: #aaa;
     	font-family: "Rajdhani";
-      	font-weight: 700;
+      	font-weight: 600;
         letter-spacing: -0.8px;
-        font-size: 1.5rem;
     }
   .product-price {
       	color: #000000;
@@ -64,12 +63,12 @@
         font-size: 1.5rem;
   }
   
-  .bigIMG--point-zoom img {
+  .bigIMG-hover-zoom--point-zoom img {
     transform-origin: 65% 75%;
     transition: transform 1s, filter .5s ease-out;
   }    
 
-  .bigIMG--point-zoom:hover img {
+  .bigIMG-hover-zoom--point-zoom:hover img {
   	transform:scale(5);
     -ms-transform:scale(5); /* IE 9 */
     -moz-transform:scale(5); /* Firefox */
@@ -93,13 +92,13 @@ function swapImages(sent_img_src) {
 }
 </script>
 <section class="w-full">
-  <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center">
+  <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6">
   <!-- IMAGE VIEWER -->
-	<div class="featured-image-section flex flex-wrap justify-center">
-      <div class="bigIMG-hover-zoom bigIMG-hover-zoom--point-zoom w-1/2 overflow-hidden">
+	<div class="featured-image-section sm:w-full md:w-1/2 lg:w-1/2 justify-center lg:ml-20 md:ml-10 sm:ml-5 max-h-screen">
+      <div class="bigIMG-hover-zoom bigIMG-hover-zoom--point-zoom w-full overflow-hidden">
       	<img id="bigIMG" class="bigIMG hover:scale-150" src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />
       </div>
-      <div id="thumbys" class="w-2/3 p-8 inline-flex">
+      <div id="thumbys" class="w-full p-8 inline-flex">
         {% for pic in productPictures %}
         	{% if pic.alt contains "main" %}
               <div id="thumby-{{ forloop.index }}" class="mx-auto block">
@@ -110,7 +109,7 @@ function swapImages(sent_img_src) {
       </div>
     </div>
   <!-- PRODUCT INFORMATION -->
-    <div class="product-information-section w-full sm:w-full md:w-full lg:w-5/6 flex flex-wrap justify-center">
+    <div class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10">
     	<div id="ProductInfo-{{ section.id }}">
         	{%- assign product_form_id = 'product-form-' | append: section.id -%}
         	{%- for block in section.blocks -%}
@@ -118,15 +117,15 @@ function swapImages(sent_img_src) {
                   {%- when '@app' -%}
                   	{% render block %}
                   {%- when 'text' -%}
-                      <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+                      <p class="product__text">
                         {{- block.settings.text -}}
                       </p>
                   {%- when 'title' -%}
                       <span class="product-make-and-model text-3xl" style="">
                         {{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                       </span>
-                      <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
-                        {{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | upcase | escape }}
+                      <h1 class="product__title text-6xl" {{ block.shopify_attributes }}>
+                        {{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
                       </h1>
                   {%- when 'description' -%}
                       {%- if product.description != blank -%}
