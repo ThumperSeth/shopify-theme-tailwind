@@ -10,6 +10,7 @@
 a.product__text {
   display: block;
   text-decoration: none;
+  text-transform: Capitalize;
   color: var(--color-foreground-75);
 }
 
