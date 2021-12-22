@@ -24,32 +24,80 @@
   .product-docs-content a:hover {
       text-decoration:underline;      
     }
+  	.ball {
+  		position: absolute;
+  		border-radius: 100%;
+  		opacity: 0.7;
+	}
 </style>
+<script>
+  // Some random colors
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 
+const numBalls = 50;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  let draweringboard = document.getElementById['product-docs'];
+  draweringboard.innerHTML += ball;
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+
+</script>
 <section class="product-docs-section w-full">
-  	<div class="product-section-title product-docs-title w-full text-3xl font-bold p-10">
-		PRODUCT INSTALLATION
+  	<div class="product-docs-title w-full text-3xl font-bold p-10">
+		PRODUCT DOCS
 	</div>
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-      <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-        
-        <div class="flex flex-col sm:flex-row justify-between items-center bg-gray-100 rounded-lg gap-4 p-4 md:p-8">
-        <img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/PDF_icon_large_868fc778-38bc-4657-9cee-6b48a48b8f34_50x50.png?v=1593114919%20style="/>
-          <div>
-            <h2 class="text-gray-700 text-xl md:text-2xl font-bold">{{ product.title | upcase }} PRODUCT MANUAL</h2>
-            <p class="text-gray-600">version 1.0</p>
-          </div>
-			<div class="w-full flex justify-center md:justify-end lg:justify-end">
-          <a href="{{ product.metafields.global.manual | file_url }}" class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-40 md:px-40 lg:px-40 py-3">Download Now</a>
-          </div>
+    <div class="w-full inline-flex">
+        <div id="product-docs" class="product-docs-content w-auto p-10 block">
+          <a href="{{ product.metafields.global.manual | file_url }}">
+            <img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/PDF_icon_large_868fc778-38bc-4657-9cee-6b48a48b8f34.png?v=1593114919%20style="/>
+            Download Product Manual
+          </a>
         </div>
-      </div>
-    </div>
+        <div class="w-auto">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c_s-fkNzvac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+        </div>
+        <div class="w-auto text-3xl font-bold p-20" style="background-color:#eee; m-auto">
+          We're not saying you're gonna need help with this, but here it is, just in case.
+        </div>
+   </div>
 </section>
 	
 {% schema %}
   {
-    "name": "Product Installation",
+    "name": "Product Docs",
     "settings": []
   }
 {% endschema %}
