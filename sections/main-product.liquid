@@ -86,8 +86,7 @@ function swapImages(sent_img_src) {
       &nbsp;<br>&nbsp;<br>
     </div>
   <!-- PRODUCT INFORMATION -->
-    <div class="product-information-section w-full flex flex-wrap justify-center mx-auto">
-    	<div id="ProductInfo-{{ section.id }}">
+    <div class="ProductInfo-{{ section.id }} product-information-section w-full flex flex-wrap justify-center mx-auto">
         	{%- assign product_form_id = 'product-form-' | append: section.id -%}
         	{%- for block in section.blocks -%}
             	{%- case block.type -%}
@@ -291,10 +290,8 @@ function swapImages(sent_img_src) {
                             </div>
                         </pickup-availability-preview>
                     </template>
-                </pickup-availability>     
-          </div><!-- end product info {{ section.id }} -->
-
-    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+                </pickup-availability>
+    		<script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
 	</div>    
         <!-- CART MODAL -->
         {%- render 'cart-notification' -%}
