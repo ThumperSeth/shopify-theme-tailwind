@@ -85,7 +85,7 @@
                         <div class="related-products-image w-full mx-auto hover:shadow-2xl:shadow-white flex justify-center">
                       		<img src="{{ all_products[related_product_handle].featured_image | img_url: '300x' }}" />
                       	</div>
-                        <div class="related-products-container w-full flex flex-wrap justify-center text-center">
+                        <div class="related-products-container w-full flex lg:flex-no-wrap md:flex-no-wrap sm:flex-wrap justify-center text-center">
                               {%- if all_products[related_product_handle].metafields.global.display_name.value != nil -%}
                                 <span class="related-products-name w-full">{{ all_products[related_product_handle].metafields.global.display_name.value }}</span>
                               {%- else -%}
