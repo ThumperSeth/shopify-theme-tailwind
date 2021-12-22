@@ -104,7 +104,7 @@
                     
                       <div class="text-7xl text-left text-white font-medium" style="font-family:'Teko'; text-shadow: 2px 2px #000000;">{{ stuff | upcase }}</div>
                           <ul id="product-grid"class="grid grid-cols-2 negative-margin product-grid md:grid-cols-4 lg:grid-cols-4">      
-                              {% for product in productsArray %} 
+                             {%- render 'brand-svg' -%} {% for product in productsArray %} 
                               	{% assign tempCat = product.metafields.global.category | downcase %}
                             	{% assign productMake = product.metafields.global.make | downcase %} 
                                   {% if tempCat == stuff %}
@@ -123,7 +123,7 @@
                                                     %}
                                                 </li>
                             				{%- endif -%}
-                            			{% else %}{%- render 'brand-svg' -%}
+                            			{% else %}
                             				<li class="grid__item w-full align-center text-left">
                                                     {% render 'collection-card',
                                                         product_card_product: product,
