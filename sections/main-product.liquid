@@ -276,7 +276,7 @@ function swapImages(sent_img_src) {
        <!-- PICKUP AVAILABLILITY MODAL -->
             {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
             {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
-            <pickup-availability class="product__pickup-availabilities sm:w-full md:w-full lg:w-1/2"
+            <pickup-availability class="product__pickup-availabilities w-full"
                 {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
                 data-base-url="{{ shop.url }}{{ routes.root_url }}"
                 data-variant-id="{{ product.selected_or_first_available_variant.id }}"
