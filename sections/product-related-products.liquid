@@ -1,3 +1,4 @@
+<section class="w-full related-carousel">
 <div class="featured-cards">
   <div class="carousel">
       {% for block in section.blocks %}
@@ -13,6 +14,7 @@
       {% endfor %}
 	</div>
 </div>
+</section>
 {% assign nav_range = section.settings.navigation_amount %}
 {% style %}
   @media only screen and ( min-width: 1201px ) {
