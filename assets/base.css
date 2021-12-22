@@ -2480,6 +2480,7 @@ details-disclosure > details {
     text-shadow: 2px 3px 5px #555;
   }
   @media screen and (min-width: 750px) {
-    .text-align:center;
+    .product-section-title {
+    text-align:center;
   }
   }
