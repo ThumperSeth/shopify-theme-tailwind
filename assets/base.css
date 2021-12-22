@@ -2476,4 +2476,5 @@ details-disclosure > details {
     background-repeat: repeat-x;
     background-color: #ccc;
     font-size: 4rem !important;
+    text-shadow: 2px 3px 5px #555;
   }
