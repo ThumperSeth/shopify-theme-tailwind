@@ -1,109 +1,101 @@
-<style>
-.related-products-title {
-    font-size: 2rem;
-    font-family: Rajdhani;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-}
-
-.related-products-content {
-    font-family: Roboto;
-    font-weight: normal;
-    line-height: 1.6;
-    font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.related-products-wrapper {
-    margin: 10px 0;
-    padding: 20px;
-    max-width: 100%;
-    /*background: linear-gradient(180deg, #fff, #999, #ccc, #ccc, #ccc, #999, #fff);*/
-    text-align: left;
-    /*box-shadow: 7px 7px 10px #555;*/
-}
-
-.related-products-dummy {
-    padding: 10 px;
-    clear: both;
-}
-
-.related-products {
-    display: inline-block;
-}
-
-
-.related-products-name {
-    color: black;
-    font-size: 1.5rem;
-    font-weight:400;
-}
-
-
-.related-products-price {
-    color: #ca0000;
-    font-size: 1.5rem;
-}
-
-
-</style>
-<section class="related-products-section w-full flex flex-wrap mx-auto justify-center">
-    <div class="product-section-title related-products-title w-full text-3xl font-bold p-10">
-        RELATED PRODUCTS
-    </div>
-    <div class="related-products-content w-full p-10">
-        <div style="text-align:center; margin-top:2%;">
-            <h2 style="font-size:2.5rem; text-align:center;">Companion products that go with your <span style="font-style:oblique; font-weight:700;">{{ product.title }}</span>...</h2>
-            {% assign related_products = product.metafields.related-products %}
-            {% if related_products.size > 0 %}
-
-                {% for field in related_products %}
-                {% assign site_url = shop.url | append: "/products/" %}
-                {% assign related_product_handle = field | last %}
-                {% assign full_url = site_url | append: related_product_handle %}
-                {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
-                <a href="{{ all_products[related_product_handle].url }}">
-                    <div class="related-products-contents mx-auto justify-center w-full">
-                        <div class="related-products-image w-full mx-auto hover:shadow-2xl:shadow-white flex justify-center">
-                      		<img src="{{ all_products[related_product_handle].featured_image | img_url: '300x' }}" />
-                      	</div>
-                        <div class="related-products-container w-full flex lg:flex-no-wrap md:flex-no-wrap sm:flex-wrap justify-center text-center">
-                              {%- if all_products[related_product_handle].metafields.global.display_name.value != nil -%}
-                                <span class="related-products-name w-full">{{ all_products[related_product_handle].metafields.global.display_name.value }}</span>
-                              {%- else -%}
-                                <span class="related-products-name w-full">{{ all_products[related_product_handle].title }}</span>
-                              {%endif%}
-                                <span class="related-products-price w-full">{{ all_products[related_product_handle].price | money }}</span>
-                               
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            {%endif%}
+<div class="featured-cards">
+  <div class="carousel">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product_item] %}
+        <div class="carousel-cell">
+          <a href="{{ product.url }}">
+            <img data-flickity-lazyload="{{ product.featured_image | img_url: 'master' }}"  border="0" />
+            <h4>{{ product.title }}</h4>
+            <h4>{{ product.price | money }}</h4>
+            <div class="product-btn">Shop Now</div>
+          </a>
         </div>
-    </div>
-</section>
+      {% endfor %}
+	</div>
+</div>
+{% assign nav_range = section.settings.navigation_amount %}
+{% style %}
+  @media only screen and ( min-width: 1201px ) {
+    {% if nav_range == 2 %}
+      .featured-cards .carousel-cell {
+          width: calc(49% - 10px);
+      }
+  	{% elsif nav_range == 3 %}
+      .featured-cards .carousel-cell {
+      	width: calc(32% - 10px);
+      }
+  	{% elsif nav_range == 4 %}
+      .featured-cards .carousel-cell {
+      	width: calc(24% - 10px);
+      }
+  	{% endif %}
+  }
+  .flickity-page-dots .dot {
+  	background: {{ section.settings.navigation_color }};
+  }
+  .flickity-button-icon {
+  	color: {{ section.settings.navigation_color }};
+  }
+{% endstyle %}
+<script>
+var elem = document.querySelector('.featured-cards .carousel');
+var flkty = new Flickity( elem, {
+  contain: true,
+  imagesLoaded: true,
+  lazyLoad: 2,
+  wrapAround: true,
+  pageDots: false,
+});
+{% if request.design_mode %}
+  document.addEventListener("shopify:section:load", function(event) {
+  var elem = document.querySelector('.featured-cards .carousel');
+   var flkty = new Flickity( elem, {
+      contain: true,
+      imagesLoaded: true,
+      lazyLoad: 2,
+      wrapAround: true,
+      pageDots: false,
+    });
+ });
+{% endif %}
+</script>
 {% schema %}
 {
-"name": "Related Products",
-"settings": []
-}
+  "name": "Related Products Carousel",
+  "settings": [
+  	{
+      "type": "range",
+      "id": "navigation_amount",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "Change the number of cards in view"
+  	},
+    {
+      "type": "color",
+      "id": "navigation_color",
+      "label": "Change color of the pagination|navigation|scrollbar"
+    }
+  ],
+  "blocks": [
+  		{
+      "type": "card",
+      "name": "Product card",
+      "settings": [
+  		{
+          "type": "product",
+          "id": "product_item",
+          "label": "Choose the product you want displayed"
+  		}
+		]
+  		}
+  	],
+  	"presets": [
+  		{
+          "name": "Featured cards",
+          "category":"Custom"
+  		}
+  	]
+  }
 {% endschema %}
