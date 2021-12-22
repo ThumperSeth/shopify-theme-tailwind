@@ -74,7 +74,7 @@
             <h2 style="font-size:2.5rem; text-align:center;">Companion products that go with your <span style="font-style:oblique; font-weight:700;">{{ product.title }}</span>...</h2>
             {% assign related_products = product.metafields.related-products %}
             {% if related_products.size > 0 %}
-            <div class="related-products-wrapper w-full flex sm:flex-wrap">
+            <div class="related-products-wrapper w-full flex">
                 {% for field in related_products %}
                 {% assign site_url = shop.url | append: "/products/" %}
                 {% assign related_product_handle = field | last %}
