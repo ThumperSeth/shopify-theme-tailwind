@@ -101,6 +101,11 @@
       "settings": {
         "show_vendor": true
       }
+    },
+    "seths-sandbox": {
+      "type": "seths-sandbox",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -115,6 +120,7 @@
     "product-reviews",
     "product-related-products",
     "product-recommendations",
+    "seths-sandbox",
     "cart-items"
   ]
 }
