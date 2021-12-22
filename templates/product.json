@@ -116,7 +116,24 @@
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
-      "disabled": true,
+      "blocks": {
+        "2147a4fb-58ae-4187-8e74-174bd0135b7d": {
+          "type": "card",
+          "settings": {
+            "product_item": "1-000-watt-can-am-x3-max-rear-subwoofer-solution-gen-3"
+          }
+        },
+        "61a47cda-04d2-447e-91b7-b2e8b927c774": {
+          "type": "card",
+          "settings": {
+            "product_item": "rzr14-stg3"
+          }
+        }
+      },
+      "block_order": [
+        "2147a4fb-58ae-4187-8e74-174bd0135b7d",
+        "61a47cda-04d2-447e-91b7-b2e8b927c774"
+      ],
       "settings": {
         "navigation_amount": 3,
         "navigation_color": ""
