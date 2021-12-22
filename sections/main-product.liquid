@@ -273,8 +273,7 @@ function swapImages(sent_img_src) {
       		                </div>                           
                     {%- endcase -%}
                 {%- endfor -%}
-            </div>
-            <!-- PICKUP AVAILABLILITY MODAL -->
+       <!-- PICKUP AVAILABLILITY MODAL -->
             {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
             {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
             <pickup-availability class="product__pickup-availabilities sm:w-full md:w-full lg:w-1/2"
@@ -292,7 +291,9 @@ function swapImages(sent_img_src) {
                         </div>
                     </pickup-availability-preview>
                 </template>
-            </pickup-availability>
+            </pickup-availability>     
+      </div>
+           
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
         </div>    
         <!-- CART MODAL -->
