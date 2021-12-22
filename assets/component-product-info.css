@@ -19,13 +19,13 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  font-size:2.5rem;
+  /*font-size:2.5rem;*/
   /*font-size: 2.7vw;*/
   font-weight:NORMAL;
 }
 @media screen and (max-width:716px) {
   .product__title {
-    font-size:6.7vw; 
+    /*font-size:6.7vw; */
   }  
 }
 
