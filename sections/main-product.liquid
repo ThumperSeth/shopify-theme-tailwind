@@ -122,8 +122,8 @@ function swapImages(sent_img_src) {
                         {{- block.settings.text -}}
                       </p>
                   {%- when 'title' -%}
-                      <span class="product-make-and-model text-3xl" style="">
-                        {{ product.metafields.global.product_make | escape }} / {{ product.metafields.global.product_model | escape }}
+                      <span class="product-make-and-model text-4xl" style="">
+                        {{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                       </span>
                       <h1 class="product__title text-4xl" {{ block.shopify_attributes }}>
                         {{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
