@@ -89,7 +89,7 @@ function swapImages(sent_img_src) {
       <div id="thumbys">
         {% for pic in productPictres %}
         	<div id="thumby-{{ forloop.index }}">
-              <img src="{{ pic | img_url: "1024x1024" }}" alt="{{ pic.alt }}" />
+              <img src="{{ pic.src | img_url: "1024x1024" }}" alt="{{ pic.alt }}" />
         	</div>
         {% endfor %}
       </div>
