@@ -68,7 +68,7 @@
 
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
-{%- assign productPhotos = product.media | where: "media_type", "image" -%}
+{%- assign productPictures = product.media | where: "media_type", "image" -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
   <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'" />
@@ -85,6 +85,13 @@ function swapImages(sent_img_src) {
 	<div class="featured-image-section bg-blue-400 sm:w-5/6 md:w-5/6 lg:w-1/2">
       <div id="bigIMG" class="w-7/8">
       	<img src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />
+      </div>
+      <div id="thumbys">
+        {% for pic in productPictres %}
+        	<div id="thumby-{{ forloop.index }}">
+              <img src="{{ pic | img_url: "1024x1024" }}" alt="{{ pic.alt }}" />
+        	</div>
+        {% endfor %}
       </div>
     </div>
   <!-- PRODUCT INFORMATION -->
