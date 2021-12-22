@@ -1,6 +1,7 @@
 <div class="featured-cards">
 <div class="carousel">
 {% for block in section.blocks %}
+{% assign product = all_products[block.settings.product_item] %}
 <div class="carousel-cell">
 <a href="{{ product.url }}">
 <img data-flickity-lazyload="{{ product.featured_image | img_url: 'master' }}"  border="0" />
@@ -61,7 +62,7 @@ pageDots: false,
 </script>
 {% schema %}
 {
-"name": "Jacobs Sandbox",
+"name": "Product cards",
 "settings": [
 {
 "type": "range",
