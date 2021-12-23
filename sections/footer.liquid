@@ -108,7 +108,7 @@
           {%- for block in section.blocks -%}
             <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
-                <h2 class="text-5xl">{{- block.settings.heading | escape -}}</h2>
+                <h2 class="text-5xl pb-5">{{- block.settings.heading | escape -}}</h2>
               {%- endif -%}
 
               {%- case block.type -%}
@@ -278,7 +278,9 @@
           {%- endfor -%}
                     
                     <div class="flex flex-wrap mx-auto p-8 justify-center">
+                      <h2 class="text-5xl pb-5">
                       <a href="./pages/service?view=support">SUPPORT</a>
+                      </h2>
                     </div>
                    
       </div>
