@@ -28,12 +28,7 @@
           endif
         -%}
         <div class="footer__blocks-wrapper grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 {{ footer_grid_class }}">
-          {%- for block in section.blocks -%}
-            <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <h2 class="text-5xl">{{- block.settings.heading | escape -}}</h2>
-              {%- endif -%}
-<div class="flex flex-wrap mx-auto p-8 justify-left">
+          <div class="flex flex-wrap mx-auto p-8 justify-left">
                         <style>
                           .footer-make-link a {
                               font-family: "Teko";
@@ -78,6 +73,12 @@
                           </ul>
                         </div>
 </div>
+          {%- for block in section.blocks -%}
+            <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h2 class="text-5xl">{{- block.settings.heading | escape -}}</h2>
+              {%- endif -%}
+
               {%- case block.type -%}
                 {%- when 'text' -%}
                   <img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/TF_Nav_Logo_250x42_b6629372-bf35-4c4f-a794-18bd89e36171.png?v=1640278146" width="60%" />
