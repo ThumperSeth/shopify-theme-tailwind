@@ -22644,6 +22644,10 @@ variants: {
   letter-spacing: 0.1em;
 }
 
+.text-sky-500 {
+   color:#0ea59e; 
+}
+  
 .text-transparent {
   color: transparent;
 }
