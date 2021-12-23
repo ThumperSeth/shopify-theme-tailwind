@@ -55,11 +55,11 @@
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
-              assign footer_grid_class = 'grid-cols-5'
+              assign footer_grid_class = 'grid-cols-4'
             elsif section.blocks.size > 6
-              assign footer_grid_class = 'lg:grid-cols-5'
+              assign footer_grid_class = 'lg:grid-cols-4'
             elsif section.blocks.size > 4
-              assign footer_grid_class = 'md:grid-cols-5'
+              assign footer_grid_class = 'md:grid-cols-4'
             endif
           -%}
           <div class="footer__blocks-wrapper grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 {{ footer_grid_class }}">
