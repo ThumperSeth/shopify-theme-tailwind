@@ -1,3 +1,38 @@
+<style>
+  .footer-make-link a {
+    font-family: "Teko";
+    color: white;              
+  }
+  .footer-make-link a:hover {
+    text-decoration: underline;      
+  }
+  .footer-model-list {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc;
+
+  }
+  .footer-model-list a {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc;
+
+  }
+  .footer-model-list a:hover {
+    text-decoration: underline;  
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ccc;
+  }
+</style>
+
+
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -29,82 +64,47 @@
         -%}
         <div class="footer__blocks-wrapper grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 {{ footer_grid_class }}">
           <div class="flex flex-wrap mx-auto justify-left">
-                        <style>
-                          .footer-make-link a {
-                              font-family: "Teko";
-                              color: white;              
-                          }
-                          .footer-make-link a:hover {
-                              text-decoration: underline;      
-                          }
-                          .footer-model-list {
-                              font-family: "Rajdhani";
-                              font-style: normal;
-                              font-size: 1.5rem;
-                              font-weight: 400;
-                              color: #ccc;
-                              
-                          }
-                          .footer-model-list a {
-                              font-family: "Rajdhani";
-                              font-style: normal;
-                              font-size: 1.5rem;
-                              font-weight: 400;
-                              color: #ccc;
-                              
-                          }
-                          .footer-model-list a:hover {
-                              text-decoration: underline;  
-                              font-family: "Rajdhani";
-                              font-style: normal;
-                              font-size: 1.2rem;
-                              font-weight: 400;
-                              color: #ccc;
-                          }
-                        </style>
                         <div class="footer-block__details-content list-unstyled w-full">
-                          <h2 class="text-5xl pb-5">Shop by Make/Model</h2>
-                          <span class="footer-make-link text-3xl">
-                            <a href="http://thumperfab.com/collections/can-am">CAN-AM</a>
-                          </span>
-                          <span class="footer-model-list">
-                            <a href="http://thumperfab.com/collections/can-am/defender">DEFENDER</a>&nbsp;|&nbsp;
-                            <a href="http://thumperfab.com/collections/can-am/maverick">MAVERICK X3</a>
-                          </span>
-                          <br>
-                          <span class="footer-make-link text-3xl">
-                            <a href="http://thumperfab.com/collections/honda">HONDA</a>
-                          </span>
-                          <span class="footer-model-list">
-                            <a href="http://thumperfab.com/collections/honda/talon">TALON 1000R</a>
-                          </span>
-                          <br>
-                          <span class="footer-make-link text-3xl">
-                            <a href="http://thumperfab.com/collections/polaris">POLARIS</a>
-                          </span>
-                          <span class="footer-model-list">
-                            <a href="http://thumperfab.com/collections/polaris/general">GENERAL</a>&nbsp;|&nbsp;
-                            <a href="http://thumperfab.com/collections/polaris/ranger">RANGER</a>&nbsp;|&nbsp;
-                            <a href="http://thumperfab.com/collections/polaris/rzr">RZR</a>
-                          </span>
-                          <br>
-                          <span class="footer-make-link text-3xl">
-                            <a href="http://thumperfab.com/collections/tracker">TRACKER</a>
-                          </span>
-                          <span class="footer-model-list">
-                            <a href="http://thumperfab.com/collections/tracker/800sx">800SX</a>
-                          </span>     
-                          <br>
-                          <span class="footer-make-link text-3xl">
-                            <a href="http://thumperfab.com/collections/yamaha">YAMAHA</a>
-                          </span>
-                          <span class="footer-model-list">
-                            <a href="http://thumperfab.com/collections/yamaha/yxz">YXZ</a>
-                          </span>
-                          
-                                                  
+                            <h2 class="text-5xl pb-5">Shop by Make/Model</h2>
+                            <span class="footer-make-link text-3xl">
+                              <a href="http://thumperfab.com/collections/can-am">CAN-AM</a>
+                            </span>
+                            <span class="footer-model-list">
+                              <a href="http://thumperfab.com/collections/can-am/defender">DEFENDER</a>&nbsp;|&nbsp;
+                              <a href="http://thumperfab.com/collections/can-am/maverick">MAVERICK X3</a>
+                            </span>
+                            <br>
+                            <span class="footer-make-link text-3xl">
+                              <a href="http://thumperfab.com/collections/honda">HONDA</a>
+                            </span>
+                            <span class="footer-model-list">
+                              <a href="http://thumperfab.com/collections/honda/talon">TALON 1000R</a>
+                            </span>
+                            <br>
+                            <span class="footer-make-link text-3xl">
+                              <a href="http://thumperfab.com/collections/polaris">POLARIS</a>
+                            </span>
+                            <span class="footer-model-list">
+                              <a href="http://thumperfab.com/collections/polaris/general">GENERAL</a>&nbsp;|&nbsp;
+                              <a href="http://thumperfab.com/collections/polaris/ranger">RANGER</a>&nbsp;|&nbsp;
+                              <a href="http://thumperfab.com/collections/polaris/rzr">RZR</a>
+                            </span>
+                            <br>
+                            <span class="footer-make-link text-3xl">
+                              <a href="http://thumperfab.com/collections/tracker">TRACKER</a>
+                            </span>
+                            <span class="footer-model-list">
+                              <a href="http://thumperfab.com/collections/tracker/800sx">800SX</a>
+                            </span>     
+                            <br>
+                            <span class="footer-make-link text-3xl">
+                              <a href="http://thumperfab.com/collections/yamaha">YAMAHA</a>
+                            </span>
+                            <span class="footer-model-list">
+                              <a href="http://thumperfab.com/collections/yamaha/yxz">YXZ</a>
+                            </span>                                                  
                         </div>
-</div>
+					</div>
           {%- for block in section.blocks -%}
             <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
