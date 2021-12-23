@@ -13,6 +13,7 @@
         },
         "button": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop Audio Roofs",
             "button_link_1": "shopify:\/\/collections\/thumper-audio-roofs",
