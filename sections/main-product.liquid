@@ -123,6 +123,20 @@ function swapImages(sent_img_src) {
               </div>
       </div>
     </div>
+    {%- if first_3d_model -%}
+        <button
+          class="button button--full-width product__xr-button"
+          type="button"
+          aria-label="{{ 'products.product.xr_button_label' | t }}"
+          data-shopify-xr
+          data-shopify-model3d-id="{{ first_3d_model.id }}"
+          data-shopify-title="{{ product.title | escape }}"
+          data-shopify-xr-hidden
+        >
+          {% render 'icon-3d-model' %}
+          {{ 'products.product.xr_button' | t }}
+        </button>
+      {%- endif -%}
   <!-- PRODUCT INFORMATION -->
     <div class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10">
     	<div id="ProductInfo-{{ section.id }}">
