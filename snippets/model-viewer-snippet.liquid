@@ -8,7 +8,7 @@
   </button>
 
   <div id="ar-prompt">
-    <img src="../../assets/hand.png">
+    <img src="modelviewer.dev/assets/hand.png">
   </div>
 
   <button id="ar-failure">
@@ -34,7 +34,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "../../assets/ShopifyModels/" + name;
+    const base = "modelviewer.dev/assets/ShopifyModels/" + name;
     modelViewer.src = base + '.glb';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
@@ -61,7 +61,7 @@
   }
 
   #ar-button {
-    background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
+    background-image: url(modelviewer.dev/assets/ic_view_in_ar_new_googblue_48dp.png);
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 12px 50%;
