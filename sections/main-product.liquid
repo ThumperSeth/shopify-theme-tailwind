@@ -108,7 +108,22 @@ function swapImages(sent_img_src) {
   <!-- IMAGE VIEWER -->
 	<div class="featured-image-section sm:w-full md:w-1/2 lg:w-1/2 justify-center lg:ml-20 md:ml-10 sm:ml-5 max-h-screen">
       <div class="bigIMG-hover-zoom bigIMG-hover-zoom--point-zoom w-full overflow-hidden">
-      	<img id="bigIMG" class="bigIMG hover:scale-150" src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />
+        
+        
+        <model-viewer bounds="tight" src="1000_FWB-merged_maybe.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2.6" environment-image="neutral" exposure="1.1">
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+          <div id="ar-prompt">
+              <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+          </div>
+       </model-viewer>      
+        
+        
+      	<!--<img id="bigIMG" class="bigIMG hover:scale-150" src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />-->
       </div>
       <div id="thumbys" class="w-full p-8 inline-flex">
         {% for pic in productPictures %}
