@@ -129,9 +129,7 @@
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
-               <div class="flex flex-wrap mx-auto p-8 justify-center">
-                      <a href="./pages/service?view=support">SUPPORT</a>
-                    </div>
+              
                 {%- when 'image' -%}
                   <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                     {%- if block.settings.image != blank -%}
@@ -150,6 +148,9 @@
                     {%- endif -%}
                   </div>
                 {%- endcase -%}
+               <div class="flex flex-wrap mx-auto p-8 justify-center">
+                      <a href="./pages/service?view=support">SUPPORT</a>
+                    </div>
             </div>
           {%- endfor -%}
                     
