@@ -119,7 +119,7 @@ function swapImages(sent_img_src) {
        		{% endif %}
         {% endfor %}
        		 <div id="thumby-{{ forloop.index | plus: 1 }}" class="mx-auto block">
-                <img class="thumby" src="{{ pic.src | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
+                <img class="thumby" src="{{ first_3d_model | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
               </div>
       </div>
     </div>
