@@ -110,18 +110,19 @@ function swapImages(sent_img_src) {
       <div class="bigIMG-hover-zoom bigIMG-hover-zoom--point-zoom w-full overflow-hidden">
         
         
-        <model-viewer bounds="tight" src="1000_FWB-merged_maybe.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2.6" environment-image="neutral" exposure="1.1">
-          <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
-          </div>
-          <button slot="ar-button" id="ar-button">
-              View in your space
-          </button>
-          <div id="ar-prompt">
-              <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-          </div>
-       </model-viewer>      
-        
+        <model-viewer bounds="tight" src="merged.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate>
+
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
         
       	<!--<img id="bigIMG" class="bigIMG hover:scale-150" src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.featured_image.alt }}" />-->
       </div>
