@@ -27,50 +27,6 @@
             assign footer_grid_class = 'md:grid-cols-5'
           endif
         -%}
-      <div class="flex flex-wrap mx-auto p-8 justify-left">
-              <style>
-                .footer-make-link a {
-                    font-family: "Teko";
-                    color: white;              
-                }
-                .footer-make-link a:hover {
-                    text-decoration: underline;      
-                }
-                .footer-model-list a {
-                    font-family: "Teko";
-                    color: white;              
-                }
-                .footer-model-list a:hover {
-                    text-decoration: underline;      
-                }
-              </style>
-              <div class="footer-block__details-content list-unstyled w-1/2">
-                <h2 class="text-5xl">SHOP BY MAKE/MODEL</h2>
-                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/polaris">POLARIS</a></span>
-                <ul class="footer-model-list pb-5 text-4xl">
-                  <li>- <a href="http://thumperfab.com/collections/polaris/ranger">RANGER</a></li>
-                  <li>- <a href="http://thumperfab.com/collections/polaris/rzr">RZR</a></li>
-                  <li>- <a href="http://thumperfab.com/collections/polaris/general">GENERAL</a></li>
-                </ul>
-                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/tracker">TRACKER</a></span>
-                <ul class="footer-model-list text-4xl">
-                  <li>- <a href="http://thumperfab.com/collections/tracker/800sx">800 SX</a></li>
-                </ul>
-                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/can-am">CAN-AM</a></span>
-                <ul class="footer-model-list pb-5 text-4xl">
-                  <li>- <a href="http://thumperfab.com/collections/can-am/defender">DEFENDER</a></li>
-                  <li>- <a href="http://thumperfab.com/collections/can-am/maverick">MAVERICK X3</a></li>
-                </ul>
-                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/honda">HONDA</a></span>
-                <ul class="footer-model-list pb-5 text-4xl">
-                  <li>- <a href="http://thumperfab.com/collections/honda/talon">TALON</a></li>
-                </ul>
-                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/yamaha">YAMAHA</a></span>
-                <ul class="footer-model-list pb-5 text-4xl">
-                  <li>- <a href="http://thumperfab.com/collections/yamaha/yxz">YXZ</a></li>
-                </ul>
-              </div>
-            </div>
         <div class="footer__blocks-wrapper grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 {{ footer_grid_class }}">
           {%- for block in section.blocks -%}
             <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
@@ -115,7 +71,50 @@
                 {%- endcase -%}
             </div>
           {%- endfor -%}
-            
+          <div class="flex flex-wrap mx-auto p-8 justify-left">
+              <style>
+                .footer-make-link a {
+                    font-family: "Teko";
+                    color: white;              
+                }
+                .footer-make-link a:hover {
+                    text-decoration: underline;      
+                }
+                .footer-model-list a {
+                    font-family: "Teko";
+                    color: white;              
+                }
+                .footer-model-list a:hover {
+                    text-decoration: underline;      
+                }
+              </style>
+              <div class="footer-block__details-content list-unstyled w-1/2">
+                <h2 class="text-5xl">SHOP BY MAKE/MODEL</h2>
+                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/polaris">POLARIS</a></span>
+                <ul class="footer-model-list pb-5 text-4xl">
+                  <li>- <a href="http://thumperfab.com/collections/polaris/ranger">RANGER</a></li>
+                  <li>- <a href="http://thumperfab.com/collections/polaris/rzr">RZR</a></li>
+                  <li>- <a href="http://thumperfab.com/collections/polaris/general">GENERAL</a></li>
+                </ul>
+                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/tracker">TRACKER</a></span>
+                <ul class="footer-model-list text-4xl">
+                  <li>- <a href="http://thumperfab.com/collections/tracker/800sx">800 SX</a></li>
+                </ul>
+                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/can-am">CAN-AM</a></span>
+                <ul class="footer-model-list pb-5 text-4xl">
+                  <li>- <a href="http://thumperfab.com/collections/can-am/defender">DEFENDER</a></li>
+                  <li>- <a href="http://thumperfab.com/collections/can-am/maverick">MAVERICK X3</a></li>
+                </ul>
+                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/honda">HONDA</a></span>
+                <ul class="footer-model-list pb-5 text-4xl">
+                  <li>- <a href="http://thumperfab.com/collections/honda/talon">TALON</a></li>
+                </ul>
+                <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/yamaha">YAMAHA</a></span>
+                <ul class="footer-model-list pb-5 text-4xl">
+                  <li>- <a href="http://thumperfab.com/collections/yamaha/yxz">YXZ</a></li>
+                </ul>
+              </div>
+            </div>
             <div class="flex flex-wrap mx-auto p-8 justify-center">
               <a href="./pages/service?view=support">SUPPORT</a>
             </div>
