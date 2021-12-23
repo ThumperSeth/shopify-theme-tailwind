@@ -127,7 +127,7 @@
             "type": "text",
             "settings": {
               "heading": "Contact Us",
-              "subtext": "<p><strong>Thumper Fab<\/strong><br\/>5103 Elysian Fields Rd.<br\/>Marshall, Texas, USA 75672<\/p><p>Office: (903) 472-0928<br\/><a href=\"mailto:sales@thumperfab.com\" title=\"mailto:sales@thumperfab.com\">sales@thumperfab.com<\/a><\/p>"
+              "subtext": "<p>5103 Elysian Fields Rd.<br\/>Marshall, Texas, USA 75672<\/p><p>Office: (903) 472-0928<br\/><a href=\"mailto:sales@thumperfab.com\" title=\"mailto:sales@thumperfab.com\">sales@thumperfab.com<\/a><\/p>"
             }
           }
         },
