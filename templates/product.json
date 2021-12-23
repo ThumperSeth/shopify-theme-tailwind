@@ -107,6 +107,7 @@
     },
     "cage-options": {
       "type": "cage-options",
+      "disabled": true,
       "settings": {
       }
     },
@@ -118,6 +119,7 @@
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
+      "disabled": true,
       "settings": {
       }
     },
@@ -130,6 +132,7 @@
     },
     "164016466786c0923c": {
       "type": "apps",
+      "disabled": true,
       "blocks": {
         "b0ef11f7-24dc-4836-bea4-e59192f0df5f": {
           "type": "shopify:\/\/apps\/vitals-40-marketing-apps\/blocks\/ub-product-bundles\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
