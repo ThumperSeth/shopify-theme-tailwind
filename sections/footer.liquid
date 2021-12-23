@@ -14,19 +14,6 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 
-<script>
-  .footerBg {
-  		background:
-          linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-          linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-          linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-          linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-          linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-          linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-        background-color: #131313;
-        background-size: 20px 20px; 
-</script>
-
 <footer class="footer color-{{ section.settings.color_scheme }} gradient">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
@@ -352,7 +339,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      <div class="footerBg footer__column footer__column--info">
+      <div class="footer__column footer__column--info">
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
