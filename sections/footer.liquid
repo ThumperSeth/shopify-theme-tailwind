@@ -31,7 +31,7 @@
           {%- for block in section.blocks -%}
             <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
-                <h2 class="text-6xl">{{- block.settings.heading | escape -}}</h2>
+                <h2 class="text-5xl">{{- block.settings.heading | escape -}}</h2>
               {%- endif -%}
 
               {%- case block.type -%}
@@ -92,6 +92,7 @@
             }
           </style>
           <div class="footer-block__details-content list-unstyled w-1/2">
+            <h2 class="text-5xl">SHOP BY MAKE/MODEL</h2>
             <span class="footer-make-link text-3xl"><a href="http://thumperfab.com/collections/polaris">POLARIS</a></span>
             <ul class="footer-model-list pb-5 text-4xl">
               <li>- <a href="http://thumperfab.com/collections/polaris/ranger">RANGER</a></li>
