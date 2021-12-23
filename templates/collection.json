@@ -194,26 +194,15 @@
         "collapse_on_larger_devices": false
       }
     },
-    "1638991131cedcfdc1": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "collection_name",
-        "collection": "",
-        "products_to_show": 8,
-        "show_view_all": true,
-        "swipe_on_mobile": true,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "add_image_padding": false,
-        "show_image_outline": false,
-        "show_vendor": true,
-        "show_rating": true
-      }
-    },
     "shop-by-type-row": {
       "type": "shop-by-type-row",
       "settings": {
+      }
+    },
+    "1640302793c25028ad": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'pricing-snippet' %}"
       }
     }
   },
@@ -225,6 +214,6 @@
     "164001984912953b5d",
     "make-collection-grid",
     "shop-by-type-row",
-    "1638991131cedcfdc1"
+    "1640302793c25028ad"
   ]
 }
