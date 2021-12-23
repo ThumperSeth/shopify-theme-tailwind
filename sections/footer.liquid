@@ -117,44 +117,7 @@
                   <div class="text-2xl footer-model-list">
                     {{ block.settings.subtext }}
                   </div>
-                {%- when 'link_list' -%}
-                  {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                    <ul class="footer-block__details-content list-unstyled">
-                      {%- for link in block.settings.menu.links -%}
-                        <li class="footloose">
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                            {{ link.title }}
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-              
-                {%- when 'image' -%}
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
-                    {%- if block.settings.image != blank -%}
-                      {%- assign image_size = block.settings.image_width | append: 'x' -%}
-                      <img
-                        srcset= "{{ block.settings.image | img_url: image_size }}, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
-                        src="{{ block.settings.image | img_url: '400x' }}"
-                        alt="{{ block.settings.image.alt | escape }}"
-                        loading="lazy"
-                        width="{{ block.settings.image.width }}"
-                        height="{{ block.settings.image.height }}"
-                        style="max-width: min(100%, {{ block.settings.image_width }}px);"
-                      >
-                    {%- else -%}
-                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                    {%- endif -%}
-                  </div>
-                {%- endcase -%}
-            </div>
-          {%- endfor -%}
-                    
-                    <div class="flex flex-wrap mx-auto p-8 justify-center">
-                      <a href="./pages/service?view=support">SUPPORT</a>
-                    </div>
-                    <div class="footer-block--newsletter">
+               <div class="footer-block--newsletter">
                       {%- if section.settings.newsletter_enable -%}
                       <div class="footer-block__newsletter">
                         {%- if section.settings.newsletter_heading != blank -%}
@@ -280,6 +243,44 @@
                       </div>
                       {%- endif -%}
 </div>
+                {%- when 'link_list' -%}
+                  {%- if block.settings.menu != blank and block.settings.heading != blank -%}
+                    <ul class="footer-block__details-content list-unstyled">
+                      {%- for link in block.settings.menu.links -%}
+                        <li class="footloose">
+                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+              
+                {%- when 'image' -%}
+                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                    {%- if block.settings.image != blank -%}
+                      {%- assign image_size = block.settings.image_width | append: 'x' -%}
+                      <img
+                        srcset= "{{ block.settings.image | img_url: image_size }}, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
+                        src="{{ block.settings.image | img_url: '400x' }}"
+                        alt="{{ block.settings.image.alt | escape }}"
+                        loading="lazy"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                      >
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                    {%- endif -%}
+                  </div>
+                {%- endcase -%}
+            </div>
+          {%- endfor -%}
+                    
+                    <div class="flex flex-wrap mx-auto p-8 justify-center">
+                      <a href="./pages/service?view=support">SUPPORT</a>
+                    </div>
+                   
       </div>
       {%- endif -%}
     </div>
