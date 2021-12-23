@@ -106,8 +106,7 @@
                 </div>
             </div>
           {%- for block in section.blocks -%}
-            <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
-              {
+            <div class="footer-block" {{ block.shopify_attributes }}>
               <div class="footer-block  footer-block--menu" data-shopify-editor-block="{&quot;id&quot;:&quot;footer-0&quot;,&quot;type&quot;:&quot;link_list&quot;}"><h2 class="text-5xl pb-5">Quick links</h2><ul class="footer-block__details-content list-unstyled w-1/2"><li class="footloose">
                           <a href="/" class="link link--text list-menu__item list-menu__item--link list-menu__item--active">
                             Home
