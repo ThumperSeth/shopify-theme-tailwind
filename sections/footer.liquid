@@ -106,45 +106,11 @@
                 </div>
             </div>
           {%- for block in section.blocks -%}
-            <div class="footer-block">
-              <div class="footer-block">
-                <h2 class="text-5xl pb-5">Quick links</h2><ul class="footer-block__details-content list-unstyled w-1/2"><li class="footloose">
-                          <a href="/" class="link link--text list-menu__item list-menu__item--link list-menu__item--active">
-                            Home
-                          </a>
-                        </li><li class="footloose">
-                          <a href="/collections" class="link link--text list-menu__item list-menu__item--link">
-                            Shop
-                          </a>
-                        </li><li class="footloose">
-                          <a href="/pages/about" class="link link--text list-menu__item list-menu__item--link">
-                            About Us
-                          </a>
-                        </li><li class="footloose">
-                          <a href="/blogs/news" class="link link--text list-menu__item list-menu__item--link">
-                            News
-                          </a>
-                        </li><li class="footloose">
-                          <a href="/policies/privacy-policy" class="link link--text list-menu__item list-menu__item--link">
-                            Privacy Policy
-                          </a>
-                        </li><li class="footloose">
-                          <a href="/policies/refund-policy" class="link link--text list-menu__item list-menu__item--link">
-                            Refund Policy
-                          </a>
-                        </li><li class="footloose">
-                          <a href="/policies/shipping-policy" class="link link--text list-menu__item list-menu__item--link">
-                            Shipping Policy
-                          </a>
-                        </li><li class="footloose">
-                          <a href="http://thumper-fab.myshopify.com/pages/govx-id-military-discount" class="link link--text list-menu__item list-menu__item--link">
-                            Military &amp; First Responders
-                          </a>
-                        </li><li class="footloose">
-                          <a href="/pages/contact" class="link link--text list-menu__item list-menu__item--link">
-                            Contact
-                          </a>
-                        </li></ul></div>
+            <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h2 class="text-5xl pb-5">{{- block.settings.heading | escape -}}</h2>
+              {%- endif -%}
+              
 
               {%- case block.type -%}
                 {%- when 'text' -%}
