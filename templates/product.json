@@ -55,6 +55,11 @@
         "custom_liquid": "{% render 'mega-menu-snippet' %}\n\n{{ product.description }}"
       }
     },
+    "product-description": {
+      "type": "product-description",
+      "settings": {
+      }
+    },
     "product-features": {
       "type": "product-features",
       "settings": {
@@ -159,6 +164,7 @@
     "main",
     "lifestyle-images",
     "1640323939f825ff45",
+    "product-description",
     "product-features",
     "product-info-carousel",
     "product-fitment",
