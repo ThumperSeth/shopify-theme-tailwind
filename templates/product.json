@@ -52,7 +52,7 @@
     "1640323939f825ff45": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% render'mega-menu' %}\n\n{{ product.description }}"
+        "custom_liquid": "{% render 'mega-menu-snippet' %}\n\n{{ product.description }}"
       }
     },
     "product-features": {
