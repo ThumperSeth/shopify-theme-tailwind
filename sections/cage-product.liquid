@@ -307,7 +307,18 @@ function swapImage(sent_img_src) {
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                             {{ form | payment_terms }}
                         {%- endform -%}
-                      </div>    
+                      </div>
+          		  {%- when 'tf_buy_buttons' -%}
+          				<div class="buy-buttons tf-buy-buttons" {{ block.shopify_attributes }}>
+                        	<button id="AddToCart" type="submit" name="add" class="add-to-cart-button product-form__submit button button--full-width button--primary">
+                                      {%- if product.selected_or_first_available_variant.available -%}
+                                      {{ 'products.product.add_to_cart' | t | upcase }}
+                                      {%- else -%}
+                                      {{ 'products.product.sold_out' | t | upcase }}
+                                      {%- endif -%}
+                                    </button>
+          				</div>
+                            
                   {%- when 'buy_buttons' -%}
                       	<div class="buy-buttons" {{ block.shopify_attributes }}>
                             <product-form>
