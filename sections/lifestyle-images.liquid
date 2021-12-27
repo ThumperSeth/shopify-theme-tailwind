@@ -30,6 +30,9 @@ function swapImages(sent_img_src) {
   <!-- IMAGE VIEWER -->
 	<div class="mx-auto"><!--featured-image-section sm:w-full md:w-1/2 lg:w-1/2 flex flex-wrap justify-center lg:ml-20 md:ml-10 sm:ml-5 max-h-screen-->
       <div id="thumbys" class="w-full p-0 pt-0 inline-flex">
+         <div class="product-video-content w-full p-0" style="height: 512px; width:1024px">
+            <iframe class="w-full h-full" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         {% for pic in productPictures %}
         	{% if pic.alt contains "lifestyle" %}
               <div id="thumby-{{ forloop.index }}" class=" block">
@@ -37,9 +40,7 @@ function swapImages(sent_img_src) {
               </div>
        		{% endif %}
         {% endfor %}
-        <div class="product-video-content w-full p-0" style="height: 512px; width:1024px">
-		<iframe class="w-full h-full" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
+       
        		 
       </div>
     </div></div>
