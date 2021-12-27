@@ -25,6 +25,11 @@
           "settings": {
           }
         },
+        "tf_variant_picker": {
+          "type": "tf_variant_picker",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
