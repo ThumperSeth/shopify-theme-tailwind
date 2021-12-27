@@ -7,7 +7,7 @@
       }
     },
     "main": {
-      "type": "main-product",
+      "type": "cage-product",
       "blocks": {
         "vendor": {
           "type": "text",
