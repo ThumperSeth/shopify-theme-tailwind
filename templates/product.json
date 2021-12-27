@@ -55,12 +55,6 @@
       "settings": {
       }
     },
-    "1640323939f825ff45": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{{ product.description }}"
-      }
-    },
     "product-description": {
       "type": "product-description",
       "settings": {
@@ -68,6 +62,7 @@
     },
     "product-features": {
       "type": "product-features",
+      "disabled": true,
       "settings": {
       }
     },
@@ -171,7 +166,6 @@
     "big-product",
     "main",
     "lifestyle-images",
-    "1640323939f825ff45",
     "product-description",
     "product-features",
     "product-info-carousel",
