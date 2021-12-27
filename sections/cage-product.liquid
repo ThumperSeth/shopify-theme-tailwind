@@ -108,7 +108,7 @@ function swapImage(sent_img_src) {
 };
 
 function tfupdatePrice() {
-    var basePrice = {{ product.price | money_with_currency }};
+    var basePrice = {{ product.price }};
     var optionsPrices = 0;
     if (document.getElementById("has-grab-handles").checked) {
     	optionsPrices += 60;
