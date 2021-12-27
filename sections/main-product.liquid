@@ -118,7 +118,7 @@ function swapImages(sent_img_src) {
               </div>
 
       </div>
-      
+      {%- assign productPictures = product.media | where: "media_type", "image" -%}
       <div id="thumbys" class="w-5/6 p-8 inline-flex fuxed">
         {% for pic in productPictures %}
         	{% if pic.alt contains "main" %}
