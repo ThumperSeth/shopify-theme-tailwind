@@ -279,8 +279,10 @@ function tfupdatePrice() {
                           <fieldset class="js product-form__input">
                             <legend class="form__label">{{ option.name }}</legend>
                             {%- for value in option.values -%}
-                            <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
-                            <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/whip_tab_d312b7be-0267-4453-8c8d-111e56cf488b.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                            	<input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
+                            	<label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
+                            </div>
                             {%- endfor -%}
                           </fieldset>
                           {%- endfor -%}
