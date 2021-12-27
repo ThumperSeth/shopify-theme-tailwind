@@ -111,13 +111,13 @@ function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
     var optionsPrices = 0;
     var priceHTML = "";
-    if (document.getElementById("has-grab-handles").checked) {
+    if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices);
   console.log(priceHTML);
-  console.log(document.getElementsById("price-{{ section.id }}").innerHTML);
-    document.getElementsById("price-{{ section.id }}").innerHTML = priceHTML;
+  console.log(document.getElementById('price-{{ section.id }}').innerHTML);
+    document.getElementById('price-{{ section.id }}').innerHTML = priceHTML;
 };
   
 </script>
