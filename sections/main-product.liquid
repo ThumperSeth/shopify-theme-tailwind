@@ -114,7 +114,7 @@ function swapImages(sent_img_src) {
       <div class="w-full flex justify-center mx-auto">
       	<!-- Import the component -->
 		      <div class="mx-auto block">
-                <img id="bigIMG" src="{{ pic.src | img_url: "512x512" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
+                <img id="bigIMG" src="{{ pic.featured_image | img_url: "512x512" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
               </div>
 
       </div>
