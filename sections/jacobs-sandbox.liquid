@@ -12,9 +12,10 @@
 <script>
 var elem = document.querySelector('.jacobs-carousel .carousel');
 var flkty = new Flickity( elem, {
+  freescroll: true,
   contain: true,
   imagesLoaded: true,
-  wrapAround: false,
+  wrapAround: true,
   pageDots: false,
 });
 {% if request.design_mode %}
@@ -23,7 +24,7 @@ var flkty = new Flickity( elem, {
 var flkty = new Flickity( elem, {
   contain: true,
   imagesLoaded: true,
-  wrapAround: false,
+  wrapAround: true,
   pageDots: false,
 });
  });
