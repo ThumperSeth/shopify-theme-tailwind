@@ -108,9 +108,11 @@ function swapImage(sent_img_src) {
 }
   function updatePrice {
     var basePrice = {{ product.price | money_with_currency }};
+    var optionsPrices = 0;
     if (document.getElementById('has-grab-handles').checked) {
-    	
+    	optionsPrices += 60;
     }
+    document.getElementById('')
 }
 </script>
 <section class="w-full">
@@ -325,7 +327,7 @@ function swapImage(sent_img_src) {
                         </div>
                       </noscript>
                   {%- when 'price' -%}
-                      <div class="product-price" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                      <div class="product-price" id="price-{{ section.id }}" {{ block.shopify_attributes }} name="product-price">
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
                       <div {{ block.shopify_attributes }}>
