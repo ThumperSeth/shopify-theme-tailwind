@@ -89,6 +89,7 @@
     },
     "product-specs": {
       "type": "product-specs",
+      "disabled": true,
       "settings": {
       }
     },
