@@ -106,14 +106,7 @@
 function swapImage(sent_img_src) {
 	document.getElementById("bigIMG").src = sent_img_src;
 };
-  function updatePrice() {
-    var basePrice = {{ product.price | money_with_currency }};
-    var optionsPrices = 0;
-    if (document.getElementById("has-grab-handles").checked) {
-    	optionsPrices += 60;
-    }
-    document.getElementByName("product-price").innerHTML = concat("$",basePrice+optionsPrice);
-};
+  
 </script>
 <section class="w-full">
   <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6">
