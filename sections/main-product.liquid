@@ -1,4 +1,3 @@
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <link rel="stylesheet" href="https:{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-rating.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -113,13 +112,13 @@ function swapImages(sent_img_src) {
 	<div class="featured-image-section sm:w-full md:w-1/2 lg:w-1/2 flex flex-wrap justify-center lg:ml-20 md:ml-10 sm:ml-5 max-h-screen">
       <div class="w-full flex justify-center mx-auto">
       	<!-- Import the component -->
-
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 <!-- Use it like any other HTML element -->
-        <model-viewer style="width: 512px; height: 512px;" alt="" src="{{ first_3d_model | file_url }}" camera-controls="true" background-color="#f4f6f8" data-js-focus-visible="" ar-status="not-presenting" seamless-poster shadow-intensity="1" camera-controls></model-viewer>
-<!--=<model-viewer style="width: 512px; height: 512px;" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr" poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls></model-viewer>-->
+<model-viewer style="width: 512px; height: 512px;" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr" poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls></model-viewer>
       </div>
-      <div id="thumbys" class="w-5/6 p-8 inline-flex fuxed">
+      
+      <div id="thumbys" class="w-5/6 p-8 inline-flex">
         {% for pic in productPictures %}
         	{% if pic.alt contains "main" %}
               <div id="thumby-{{ forloop.index }}" class="mx-auto block">
