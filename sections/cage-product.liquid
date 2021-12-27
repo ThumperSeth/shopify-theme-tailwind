@@ -114,7 +114,7 @@ function swapImage(sent_img_src) {
       <div class="w-full flex justify-center mx-auto">
       	<!-- Import the component -->
 		      <div class="mx-auto block">
-                <img style="width:700px" id="bigIMG" src="{{ product.featured_image | img_url: "1024x1024" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ product.featured_image | img_url: "1024x1024" }}');" />
+                <img style="width:700px" id="bigIMG" src="{{ product.featured_image | img_url: "1024x1024" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');" />
               </div>
 
       </div>
@@ -123,7 +123,7 @@ function swapImage(sent_img_src) {
         {% for pic in productPictures %}
         	{% if pic.alt contains "main" %}
               <div id="thumby-{{ forloop.index }}" class="mx-auto block">
-                <img class="thumby" src="{{ pic.src | img_url: "250x250" }}" alt="{{ pic.alt }}" onHover="swapImage('{{ pic.src | img_url: "1024x1024" }}');" onMouseOut="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');"/>
+                <img class="thumby" src="{{ pic.src | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ pic.src | img_url: "1024x1024" }}');"/>
               </div>
        		{% endif %}
         {% endfor %}
