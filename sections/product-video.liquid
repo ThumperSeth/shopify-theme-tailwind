@@ -16,6 +16,8 @@
     }
 </style>
 
+{% if product.metafields.custom-video.custom_video %}
+  
 
 <section class="product-video-section w-full flex flex-wrap mx-auto justify-center">
   	<div class="product-section-title product-video-title w-full text-3xl font-bold p-10">
@@ -25,7 +27,8 @@
 		<iframe class="w-full h-full" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 </section>
-	
+	{% else %}
+{% endif %}
 
 {% schema %}
 {
