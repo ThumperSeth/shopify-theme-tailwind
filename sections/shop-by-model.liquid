@@ -41,7 +41,7 @@
                     {% if section.settings.image_ratio == 'adapt' %}
                       style="padding-bottom: 0"
                     {% endif %}>
-                    <img
+                    <img style="z-index:50;"
                       srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
                         {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
                         {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | img_url: '710x' }} 710w,{%- endif -%}
