@@ -1,6 +1,6 @@
 <section class="section">
 <div class="jacobs-carousel">
-  <div class="carousel">
+  <div class="main-carousel">
     <div class="carousel-cell"><img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/audio_category_card_500x500.jpg?v=1640048420"></div>
     <div class="carousel-cell"><img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/winches_category_card_500x500.jpg?v=1640044491"></div>
     <div class="carousel-cell"><img src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roofs_category_card_500x500.jpg?v=1640044492"></div>
@@ -10,7 +10,7 @@
 </div>
 </section>
 <script>
-var elem = document.querySelector('.jacobs-carousel .carousel');
+var elem = document.querySelector('.jacobs-carousel .main-carousel');
 var flkty = new Flickity( elem, {
   cellAlign: 'center',
   freescroll: true,
@@ -22,7 +22,7 @@ var flkty = new Flickity( elem, {
 });
 {% if request.design_mode %}
   document.addEventListener("shopify:section:load", function(event) {
-  var elem = document.querySelector('.jacobs-carousel .carousel');
+  var elem = document.querySelector('.jacobs-carousel .main-carousel');
 var flkty = new Flickity( elem, {
   freescroll: true,
   contain: true,
