@@ -1,14 +1,36 @@
-<section class="jacobs-section">
-
+<section class="section">
+<div class="jacobs-carousel">
 <div class="carousel">
-  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '1024x1024' }}"></div>
-  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '1024x1024' }}"></div>
-  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '1024x1024' }}"></div>
-  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '1024x1024' }}"></div>
-  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '1024x1024' }}"></div>
+  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '500x500' }}"></div>
+  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '500x500' }}"></div>
+  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '500x500' }}"></div>
+  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '500x500' }}"></div>
+  <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '500x500' }}"></div>
 </div>
+  </div>div>
 </section>
-
+<script>
+var elem = document.querySelector('.jacobs-carousel .carousel');
+var flkty = new Flickity( elem, {
+  contain: true,
+  imagesLoaded: true,
+  lazyLoad: 6,
+  wrapAround: true,
+  pageDots: false,
+});
+{% if request.design_mode %}
+  document.addEventListener("shopify:section:load", function(event) {
+  var elem = document.querySelector('.jacobs-carousel .carousel');
+   var flkty = new Flickity( elem, {
+      contain: true,
+      imagesLoaded: true,
+      lazyLoad: 6,
+      wrapAround: true,
+      pageDots: false,
+    });
+ });
+{% endif %}
+</script>
 {% schema %}
   {
     "name": "Jacobs Sandbox",
@@ -27,25 +49,5 @@
 
 {% javascript %}
 
-var elem = document.querySelector('.jacobs-section .carousel');
-var flkty = new Flickity( elem, {
-  contain: true,
-  imagesLoaded: true,
-  lazyLoad: 6,
-  wrapAround: true,
-  pageDots: false,
-});
-{% if request.design_mode %}
-  document.addEventListener("shopify:section:load", function(event) {
-  var elem = document.querySelector('.jacobs-section .carousel');
-   var flkty = new Flickity( elem, {
-      contain: true,
-      imagesLoaded: true,
-      lazyLoad: 6,
-      wrapAround: true,
-      pageDots: false,
-    });
- });
-{% endif %}
 
 {% endjavascript %}
