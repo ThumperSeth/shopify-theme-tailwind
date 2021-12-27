@@ -115,8 +115,7 @@ function tfupdatePrice() {
     	optionsPrices += 60;
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices);
-  console.log(priceHTML);
-  console.log(document.getElementById('price-{{ section.id }}').innerHTML);
+
     document.getElementById('price-{{ section.id }}').innerHTML = priceHTML;
 };
   
