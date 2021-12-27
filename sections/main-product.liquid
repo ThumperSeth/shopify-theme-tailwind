@@ -116,7 +116,19 @@ function swapImages(sent_img_src) {
 
 
 <!-- Use it like any other HTML element -->
-        <model-viewer style="width: 512px; height: 512px;" alt="" src="https://model3d.shopifycdn.com/models/o/f4d66bae17b469a3/Ranger_1000_FWB-front.glb" camera-controls="true" background-color="#f4f6f8" data-js-focus-visible="" ar-status="not-presenting" seamless-poster shadow-intensity="1" camera-controls></model-viewer>
+     <model-viewer id="transform" orientation="20deg 0 0" bounds="tight" shadow-intensity="1" camera-controls="" ar="" ar-modes="webxr scene-viewer quick-look" src="../../shared-assets/models/Astronaut.glb" alt="A 3D model of an astronaut" data-js-focus-visible="" ar-status="not-presenting">
+  <div class="controls">
+    <div>Roll: <input id="roll" value="20" size="3" class="number"> degrees</div>
+    <div>Pitch: <input id="pitch" value="0" size="3" class="number"> degrees</div>
+    <div>Yaw: <input id="yaw" value="0" size="3" class="number"> degrees</div>
+    <div>
+      Scale: X: <input id="x" value="1" size="3" class="number">,
+      Y: <input id="y" value="1" size="3" class="number">,
+      Z: <input id="z" value="1" size="3" class="number">
+    </div>
+    <button id="frame">Update Framing</button>
+  </div>
+</model-viewer>
 <!--=<model-viewer style="width: 512px; height: 512px;" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr" poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls></model-viewer>-->
       </div>
       
