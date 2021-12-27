@@ -88,13 +88,16 @@
         letter-spacing: 0px;
         font-size: initial;
     }
+    .product-section-title {
+       height:150px; 
+    }
 </style>
 
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <div>{{ currentModel }}</div>
-<div class="product-section-title w-full text-3xl font-bold p-2 shadow-2xl max-h-100">
+<div class="product-section-title w-full text-3xl font-bold p-2 shadow-2xl">
 	{% render 'tf-svg' %}    
 </div>
 <section id="ProductGridContainer">
