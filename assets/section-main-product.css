@@ -210,8 +210,8 @@ fieldset.product-form__input .form__label {
 }
 
 /**************************************************************************/
-/* CHECKBOXES
-.product-form__input input[type='radio'] {
+/* CHECKBOXES */
+.product-form__input input[type='checkbox'] {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
   position: absolute;
@@ -219,7 +219,7 @@ fieldset.product-form__input .form__label {
   width: 1px;
 }
 
-.product-form__input input[type='radio'] + label {
+.product-form__input input[type='checkbox'] + label {
   border: 0.1rem solid rgba(var(--color-foreground), 0.55);
   border-radius: 4rem;
   color: rgb(var(--color-foreground));
@@ -234,44 +234,44 @@ fieldset.product-form__input .form__label {
   cursor: pointer;
 }
 
-.product-form__input input[type='radio'] + label:hover {
+.product-form__input input[type='checkbox'] + label:hover {
   border: 0.1rem solid rgb(var(--color-foreground));
 }
 
-.product-form__input input[type='radio']:checked + label {
+.product-form__input input[type='checkbox']:checked + label {
   background-color: rgb(var(--color-foreground));
   color: rgb(var(--color-background));
 }
 
 @media screen and (forced-colors: active) {
-  .product-form__input input[type=radio]:checked + label {
+  .product-form__input input[type=checkbox]:checked + label {
     text-decoration: underline;
   }
 }
 
-.product-form__input input[type='radio']:checked + label::selection {
+.product-form__input input[type='checkbox']:checked + label::selection {
   background-color: rgba(var(--color-background), 0.3);
 }
 
-.product-form__input input[type='radio']:disabled + label {
+.product-form__input input[type='checkbox']:disabled + label {
   border-color: rgba(var(--color-foreground), 0.1);
   color: rgba(var(--color-foreground), 0.4);
   text-decoration: line-through;
 }
-.product-form__input input[type='radio']:focus-visible + label {
+.product-form__input input[type='checkbox']:focus-visible + label {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
 }
 
 /* Fallback */
-.product-form__input input[type='radio'].focused + label,
+.product-form__input input[type='checkbox'].focused + label,
 .no-js .shopify-payment-button__button [role="button"]:focus + label {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
 }
 
 /* No outline when focus-visible is available in the browser */
-.no-js .product-form__input input[type='radio']:focus:not(:focus-visible) + label {
+.no-js .product-form__input input[type='checkbox']:focus:not(:focus-visible) + label {
   box-shadow: none;
 }
 
