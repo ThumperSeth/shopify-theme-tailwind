@@ -1,5 +1,11 @@
 {
   "sections": {
+    "mega-menu": {
+      "type": "mega-menu",
+      "disabled": true,
+      "settings": {
+      }
+    },
     "1640571072e853f25d": {
       "type": "custom-liquid",
       "settings": {
@@ -213,6 +219,7 @@
     }
   },
   "order": [
+    "mega-menu",
     "1640571072e853f25d",
     "16371896537551f4cd",
     "banner",
