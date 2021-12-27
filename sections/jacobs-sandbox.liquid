@@ -16,7 +16,35 @@
 {% endschema %}
 
 {% stylesheet %}
+.flickity-page-dots .dot {
+  	background: {{ section.settings.navigation_color }};
+  }
+  .flickity-button-icon {
+  	color: {{ section.settings.navigation_color }};
+  }
 {% endstylesheet %}
 
 {% javascript %}
+
+var elem = document.querySelector('.related-cards .carousel');
+var flkty = new Flickity( elem, {
+  contain: true,
+  imagesLoaded: true,
+  lazyLoad: 6,
+  wrapAround: true,
+  pageDots: false,
+});
+{% if request.design_mode %}
+  document.addEventListener("shopify:section:load", function(event) {
+  var elem = document.querySelector('.related-cards .carousel');
+   var flkty = new Flickity( elem, {
+      contain: true,
+      imagesLoaded: true,
+      lazyLoad: 6,
+      wrapAround: true,
+      pageDots: false,
+    });
+ });
+{% endif %}
+
 {% endjavascript %}
