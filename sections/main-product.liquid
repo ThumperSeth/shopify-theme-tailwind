@@ -120,7 +120,7 @@ function swapImages(sent_img_src) {
 <!--=<model-viewer style="width: 512px; height: 512px;" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr" poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls></model-viewer>-->
       </div>
       <div>
-        <img src="{{ productPictures }}"/>
+        {{ productPictures }}
       </div>
       <div id="thumbys" class="w-5/6 p-8 inline-flex fuxed">
         {% for pic in productPictures %}
