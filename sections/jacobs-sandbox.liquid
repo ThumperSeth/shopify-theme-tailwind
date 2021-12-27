@@ -1,4 +1,5 @@
-<section class="section">
+<section class="jacobs-section">
+
 <div class="carousel">
   <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '1024x1024' }}"></div>
   <div class="carousel-cell"><img src="{{ product.featured_media | img_url: '1024x1024' }}"></div>
@@ -26,7 +27,7 @@
 
 {% javascript %}
 
-var elem = document.querySelector('.related-cards .carousel');
+var elem = document.querySelector('.jacobs-section .carousel');
 var flkty = new Flickity( elem, {
   contain: true,
   imagesLoaded: true,
@@ -36,7 +37,7 @@ var flkty = new Flickity( elem, {
 });
 {% if request.design_mode %}
   document.addEventListener("shopify:section:load", function(event) {
-  var elem = document.querySelector('.related-cards .carousel');
+  var elem = document.querySelector('.jacobs-section .carousel');
    var flkty = new Flickity( elem, {
       contain: true,
       imagesLoaded: true,
