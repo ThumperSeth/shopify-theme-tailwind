@@ -230,7 +230,12 @@ function swapImages(sent_img_src) {
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 				  {%- when 'tf_variant_picker' -%}
           			<div>
-          				TF Variant Picker Here
+          				<ul>
+                          <li>
+                          	<input type="checkbox" id="has-lo-brow" />
+                            <img src="{{ product.metafields.cage.has-lo-brow | img_src: "250x250" }}" />
+                          </li>
+                        </ul>
           			</div>
                   {%- when 'variant_picker' -%}
                       <div class="variant-wrapper">
