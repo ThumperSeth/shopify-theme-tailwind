@@ -1,5 +1,11 @@
 {
   "sections": {
+    "1640571072e853f25d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ mega-menu-snippet }}"
+      }
+    },
     "16371896537551f4cd": {
       "type": "image-banner",
       "disabled": true,
@@ -207,6 +213,7 @@
     }
   },
   "order": [
+    "1640571072e853f25d",
     "16371896537551f4cd",
     "banner",
     "16400180209b172696",
