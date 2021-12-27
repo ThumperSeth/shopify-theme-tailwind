@@ -22,11 +22,11 @@ var flkty = new Flickity( elem, {
   document.addEventListener("shopify:section:load", function(event) {
   var elem = document.querySelector('.jacobs-carousel .carousel');
 var flkty = new Flickity( elem, {
+  freescroll: true,
   contain: true,
   imagesLoaded: true,
   wrapAround: true,
   pageDots: false,
-});
  });
 {% endif %}
 </script>
