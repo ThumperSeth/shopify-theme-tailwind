@@ -244,8 +244,8 @@ function swapImage(sent_img_src) {
                             <legend class="form__label">Cage Options</legend>
                             <!-- GRAB HANDLES -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
-                              <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onSelect="">
-                              <label for="has-grab-handles">Grab Handles<br /><span class="text-gray-400 text-2xl">+$500</span></label>
+                              <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onChange="updatePrice();">
+                              <label for="has-grab-handles">Grab Handles<br /><span class="text-gray-400 text-2xl">+$60</span></label>
                             </div>
                             <!-- 5PT HARNESS -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/5-point_harness_mounts-4-seat_f290310c-a858-42d2-97e3-16d0d4944313.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
