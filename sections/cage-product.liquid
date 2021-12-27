@@ -128,7 +128,7 @@ function swapImage(sent_img_src) {
        		{% endif %}
         {% endfor %}
        		 <div id="thumby-{{ forloop.index | plus: 1 }}" class="mx-auto block">
-                <img class="thumby" src="{{ first_3d_model.preview_image | img_url: "250x250" }}" alt="{{ pic.alt }}" onHover="swapImage('{{ first_3d_model.preview_image | img_url: "1024x1024" }}');" onMouseOut="swapImage('{{ first_3d_model.preview_image | img_url: "1024x1024" }}');"/>
+                <img class="thumby" src="{{ first_3d_model.preview_image | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ first_3d_model.preview_image | img_url: "1024x1024" }}');" />
               </div>
       </div>
     </div>
