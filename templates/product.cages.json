@@ -11,6 +11,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.metafields.global.product_make.value }}",
             "text_style": "uppercase"
@@ -33,15 +34,15 @@
           "settings": {
           }
         },
+        "66c8d528-8d54-416b-b093-03c603580a61": {
+          "type": "tf_variant_picker",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
-          }
-        },
-        "66c8d528-8d54-416b-b093-03c603580a61": {
-          "type": "tf_variant_picker",
-          "settings": {
           }
         },
         "buy_buttons": {
@@ -67,8 +68,8 @@
         "title",
         "subtitle",
         "price",
-        "variant_picker",
         "66c8d528-8d54-416b-b093-03c603580a61",
+        "variant_picker",
         "buy_buttons",
         "description",
         "share"
