@@ -106,7 +106,7 @@
 function swapImage(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 }
-  function updatePrice {
+  function updatePrice() {
     var basePrice = {{ product.price | money_with_currency }};
     var optionsPrices = 0;
     if (document.getElementById('has-grab-handles').checked) {
