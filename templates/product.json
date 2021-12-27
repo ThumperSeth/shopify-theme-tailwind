@@ -1,5 +1,11 @@
 {
   "sections": {
+    "16405690123b9ce0f9": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'mega-menu-snippet' %}"
+      }
+    },
     "big-product": {
       "type": "big-product-viewer",
       "disabled": true,
@@ -160,6 +166,7 @@
     }
   },
   "order": [
+    "16405690123b9ce0f9",
     "big-product",
     "main",
     "lifestyle-images",
