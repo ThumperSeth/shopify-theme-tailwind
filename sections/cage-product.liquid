@@ -114,7 +114,8 @@ function tfupdatePrice() {
     if (document.getElementById("has-grab-handles").checked) {
     	optionsPrices += 60;
     }
-    document.getElementsByName("product-price").innerHTML = priceHTML.concat("$",basePrice+optionsPrices);
+    priceHTML += priceHTML.concat("$",basePrice+optionsPrices)
+    document.getElementsByName("product-price").innerHTML = priceHTML;
 };
   
 </script>
