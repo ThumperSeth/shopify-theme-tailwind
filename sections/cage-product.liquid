@@ -112,7 +112,7 @@ function swapImage(sent_img_src) {
     if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
     }
-    document.getElementById('')
+    document.getElementByName('product-price').innerHTML = concat("$",basePrice+optionsPrice);
 }
 </script>
 <section class="w-full">
