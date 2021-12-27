@@ -1,5 +1,11 @@
 {
   "sections": {
+    "mega-menu": {
+      "type": "mega-menu",
+      "disabled": true,
+      "settings": {
+      }
+    },
     "16371896537551f4cd": {
       "type": "image-banner",
       "disabled": true,
@@ -190,6 +196,7 @@
     }
   },
   "order": [
+    "mega-menu",
     "16371896537551f4cd",
     "banner",
     "163941199019137521",
