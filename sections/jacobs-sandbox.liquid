@@ -14,20 +14,20 @@ var elem = document.querySelector('.jacobs-carousel .carousel');
 var flkty = new Flickity( elem, {
   contain: true,
   imagesLoaded: true,
-  lazyLoad: 6,
-  wrapAround: true,
+  lazyLoad: 3,
+  wrapAround: false,
   pageDots: false,
 });
 {% if request.design_mode %}
   document.addEventListener("shopify:section:load", function(event) {
   var elem = document.querySelector('.jacobs-carousel .carousel');
-   var flkty = new Flickity( elem, {
-      contain: true,
-      imagesLoaded: true,
-      lazyLoad: 6,
-      wrapAround: true,
-      pageDots: false,
-    });
+var flkty = new Flickity( elem, {
+  contain: true,
+  imagesLoaded: true,
+  lazyLoad: 3,
+  wrapAround: false,
+  pageDots: false,
+});
  });
 {% endif %}
 </script>
