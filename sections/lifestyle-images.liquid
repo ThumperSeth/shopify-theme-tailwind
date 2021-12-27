@@ -37,7 +37,7 @@ function swapImages(sent_img_src) {
               </div>
        		{% endif %}
         {% endfor %}
-        <div class="product-video-content w-full p-10" style="height: 512pxpx;">
+        <div class="product-video-content w-full p-10" style="height: 512pxpx; width:1024px">
 		<iframe class="w-full h-full" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
        		 
