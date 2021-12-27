@@ -83,6 +83,13 @@
       "settings": {
       }
     },
+    "product-related-products": {
+      "type": "product-related-products",
+      "settings": {
+        "navigation_amount": 3,
+        "navigation_color": ""
+      }
+    },
     "product-specs": {
       "type": "product-specs",
       "disabled": true,
@@ -97,13 +104,6 @@
     "product-reviews": {
       "type": "product-reviews",
       "settings": {
-      }
-    },
-    "product-related-products": {
-      "type": "product-related-products",
-      "settings": {
-        "navigation_amount": 3,
-        "navigation_color": ""
       }
     },
     "product-recommendations": {
@@ -172,10 +172,10 @@
     "product-info-carousel",
     "product-fitment",
     "product-videos",
+    "product-related-products",
     "product-specs",
     "product-docs",
     "product-reviews",
-    "product-related-products",
     "product-recommendations",
     "cage-options",
     "seths-sandbox",
