@@ -131,7 +131,7 @@ function swapImages(sent_img_src) {
        		{% endif %}
         {% endfor %}
        		 <div id="thumby-{{ forloop.index | plus: 1 }}" class="mx-auto block">
-                <img class="thumby" src="{{ first_3d_model.preview_image | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ first_3d_model.preview_image | img_url: "1024x1024" }}');" />
+                <img class="bigIMG" id="bigIMG" src="{{ first_3d_model.preview_image | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ first_3d_model.preview_image | img_url: "1024x1024" }}');" />
               </div>
       </div>
     </div>
@@ -234,7 +234,7 @@ function swapImages(sent_img_src) {
 				  {%- when 'tf_variant_picker' -%}
           			<div>
           				TF Variant Picker Here
-          			</div>
+          </div>
                   {%- when 'variant_picker' -%}
                       <div class="variant-wrapper">
                         {%- unless product.has_only_default_variant -%}
