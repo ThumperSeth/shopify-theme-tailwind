@@ -110,10 +110,11 @@ function swapImage(sent_img_src) {
 function tfupdatePrice() {
     var basePrice = {{ product.price }};
     var optionsPrices = 0;
+    var priceHTML = "";
     if (document.getElementById("has-grab-handles").checked) {
     	optionsPrices += 60;
     }
-    document.getElementsByName("product-price").innerHTML = concat("$",basePrice+optionsPrice);
+    document.getElementsByName("product-price").innerHTML = priceHTML.concat("$",basePrice+optionsPrice);
 };
   
 </script>
