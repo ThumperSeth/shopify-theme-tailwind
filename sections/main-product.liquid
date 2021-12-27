@@ -113,7 +113,7 @@ function swapImages(sent_img_src) {
 	<div class="featured-image-section sm:w-full md:w-1/2 lg:w-1/2 flex flex-wrap justify-center lg:ml-20 md:ml-10 sm:ml-5 max-h-screen">
       <div class="w-full flex justify-center mx-auto">
       	<!-- Import the component -->
-		      <div id="thumby-{{ forloop.index }}" class="mx-auto block">
+		      <div class="mx-auto block">
                 <img  src="{{ pic.src | img_url: "512x512" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
               </div>
 
