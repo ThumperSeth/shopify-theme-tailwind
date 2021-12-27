@@ -2,7 +2,6 @@
   "sections": {
     "mega-menu": {
       "type": "mega-menu",
-      "disabled": true,
       "settings": {
       }
     },
