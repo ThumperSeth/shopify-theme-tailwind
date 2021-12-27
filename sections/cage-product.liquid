@@ -106,6 +106,12 @@
 function swapImage(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 }
+  function updatePrice {
+    var basePrice = {{ product.price | money_with_currency }};
+    if (document.getElementById('has-grab-handles').checked) {
+    	
+    }
+}
 </script>
 <section class="w-full">
   <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6">
@@ -236,7 +242,7 @@ function swapImage(sent_img_src) {
                             <legend class="form__label">Cage Options</legend>
                             <!-- GRAB HANDLES -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
-                              <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles">
+                              <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onSelect="">
                               <label for="has-grab-handles">Grab Handles<br /><span class="text-gray-400 text-2xl">+$500</span></label>
                             </div>
                             <!-- 5PT HARNESS -->
