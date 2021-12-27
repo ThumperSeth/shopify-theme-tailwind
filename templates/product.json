@@ -133,6 +133,7 @@
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
+      "disabled": true,
       "settings": {
       }
     },
