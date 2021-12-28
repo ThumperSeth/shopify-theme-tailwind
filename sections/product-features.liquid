@@ -26,8 +26,7 @@
 } 
     </style>
     
-    {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
-    {%- assign productPictures = product.media | where: "media_type", "image" -%}
+ 
     <div>
         <h3 class="product-features-title text-white bg-black text-8xl pt-10 pl-20 pb-0">FEATURES</h3>
     </div>
@@ -41,7 +40,9 @@
         </div>
         {% endif %}
         {% endfor %}
-      
+        <div class="product-features-content rounded-lg flex-wrap p-10 lg:w-full sm:w-full lg:text-5xl md:text-4xl sm:text-3xl mx-auto text-gray-200 flex justify-center items-center">
+            <div>{{ product.metafields.global.features }}</div>
+        </div>
 	</div>
     
 
