@@ -338,7 +338,7 @@ function swapImages(sent_img_src) {
                         {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
                         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
-                                    <div class="w-full flex inline-block gap-10 pb-10 pt-10">
+                                    <div class="w-full flex inline-block gap-10 pb-10 pt-10 justify-center">
                                         
                                         <div class=" bg-gray-200 p-2 rounded-xl shadow-lg pickup-availability-preview">
                                           
