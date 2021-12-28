@@ -725,15 +725,6 @@
             }
           }
         },
-        "shipping-info": {
-          "name": "Shipping Info",
-          "settings": {
-            "custom_liquid": {
-              "label": "Shipping Info Code",
-              "info": "asdf"
-            }
-          }
-        },
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
@@ -1070,7 +1061,7 @@
         "name": "Image banner"
       }
     },
-    "product-carousel": {
+    "product_carousel": {
       "name": "Product Carousel",
       "settings": {
         "image": {
