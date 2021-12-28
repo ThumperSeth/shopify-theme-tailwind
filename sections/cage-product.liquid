@@ -277,17 +277,17 @@ function tfupdatePrice() {
                             </div>
                             <!-- 5PT HARNESS -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/5-point_harness_mounts-4-seat_f290310c-a858-42d2-97e3-16d0d4944313.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
-                              <input type="checkbox" id="has-5pt-harness" name="has-5pt-harness" value="has-5pt-harness">
+                              <input type="checkbox" id="has-5pt-harness" name="has-5pt-harness" value="has-5pt-harness" onClick="tfupdatePrice();">
                               <label for="has-5pt-harness">5pt Harness</label>
                             </div>
                             <!-- Light bar Tab -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/light_bar_tab.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
-                              <input type="checkbox" id="has-light-bar" name="has-light-bar" value="has-light-bar">
+                              <input type="checkbox" id="has-light-bar" name="has-light-bar" value="has-light-bar" onClick="tfupdatePrice();">
                               <label for="has-light-bar">Light Bar Tab</label>
                             </div>
                             <!-- Whip Tab -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/whip_tab_d312b7be-0267-4453-8c8d-111e56cf488b.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
-                              <input type="checkbox" id="has-whip-tab" name="has-whip-tab" value="has-whip-tab">
+                              <input type="checkbox" id="has-whip-tab" name="has-whip-tab" value="has-whip-tab" onClick="tfupdatePrice();">
                               <label for="has-whip-tab">Whip Tab</label>
 							</div>
                           </div>
