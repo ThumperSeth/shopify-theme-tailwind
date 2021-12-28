@@ -137,7 +137,7 @@ function tfupdatePrice() {
   if (optionsPrices == 0) { 
     newPrice = newPrice.concat(priceHTML);
   } else {
-	newPrice = newPrice.concat(optionsHTML + "Total: " + priceHTML);
+	newPrice = newPrice.concat(optionsHTML + "<br />Total: " + priceHTML);
   }
   document.getElementById('price-{{ section.id }}').innerHTML = newPrice;
 };
