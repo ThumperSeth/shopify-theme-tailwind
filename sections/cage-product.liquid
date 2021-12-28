@@ -113,9 +113,14 @@ function tfupdatePrice() {
     var priceHTML = "";
     var optionsHTML = "Base Price: $" + basePrice + ".00<br/>";
   	var newPrice = "";
-    if (document.getElementById('has-grab-handles').checked) {
+    
+  	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
       	optionsHTML += "Grab Handles: +$60<br />";
+    }
+  	if (document.getElementById('has-5pt-harness').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "5pt Harness: +$100<br />";
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
   if (optionsPrices == 0) { 
