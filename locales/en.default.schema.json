@@ -726,7 +726,16 @@
           }
         },
         "shipping-info": {
-          "name": "Shipping Info"
+          "name": "Shipping Info",
+          "settings": {
+            "custom_liquid": {
+              "label": "Shipping Info Code",
+              "info": "{%- render 'shipping-info' -%}"
+            }
+          },
+          "presets": {
+            "name": "Custom Liquid"
+          }
         },
         "buy_buttons": {
           "name": "Buy buttons",
