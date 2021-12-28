@@ -58,7 +58,6 @@
     width:200px;
   }
 	.product-make-and-model {
-      	color: #aaa;
     	font-family: "Rajdhani";
       	font-weight: 600;
         letter-spacing: -0.8px;
@@ -182,7 +181,7 @@ function tfupdatePrice() {
                         {{- block.settings.text -}}
                       </p>
                   {%- when 'title' -%}
-                      <span class="product-make-and-model text-3xl" style="">
+                      <span class="product-make-and-model text-3xl text-gray-400" style="">
                         {{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                       </span>
                       <h1 class="product__title text-6xl" {{ block.shopify_attributes }}>
