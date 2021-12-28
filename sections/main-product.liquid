@@ -327,7 +327,7 @@ function swapImages(sent_img_src) {
                         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
                                     <div class="w-full flex inline-block gap-5 pb-5 ">
-                                        <div class="w-1/2 bg-gray-200 p-2 rounded-2xl shadow-2xl">
+                                        <div class="w-1/2 bg-gray-200 p-2 rounded-xl shadow-xl">
                                           <pickup-availability class="product__pickup-availabilities w-full" {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %} data-base-url="{{ shop.url }}{{ routes.root_url }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}" data-has-only-default-variant="{{ product.has_only_default_variant }}">
                                             <template>
                                               <pickup-availability-preview class="pickup-availability-preview">
@@ -340,7 +340,7 @@ function swapImages(sent_img_src) {
                                             </template>
                                           </pickup-availability>  
                                         </div>
-                                        <div class="w-1/2 bg-gray-200 p-2 rounded-2xl shadow-2xl pickup-availability-preview">
+                                        <div class="w-1/2 bg-gray-200 p-2 rounded-xl shadow-xl pickup-availability-preview">
                                           <svg class="icon icon-tick" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                             <path fill="#108043" stroke="#fff" d="M16.136 6.979h0l.003-.004a1.499 1.499 0 00-2.275-1.954l-5.945 6.777-1.858-1.859A1.499 1.499 0 103.94 12.06l2.999 3s0 0 0 0c.289.29.675.44 1.1.439h.019a1.5 1.5 0 001.08-.522l6.998-7.998z"></path>
                                           </svg>
