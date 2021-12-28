@@ -2474,7 +2474,7 @@ details-disclosure > details {
   
   .product-section-title {
     background: rgb(239,239,239);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 65%, rgba(145,145,145,1) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 45%, rgba(145,145,145,1) 100%);
    /* background-image: url('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/seamless_concrete-1.jpg?v=1640190454');*/
     /*background-image: url(https://cdn.shopify.com/s/files/1/0258/5424/6963/files/concrete_wall.png?v=1640301884);
     background-repeat: repeat-x;
