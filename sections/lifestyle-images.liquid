@@ -8,50 +8,42 @@
     }*/
 </style>
 <section class="lifestyle-images-section w-full flex justify-center">
-	<!--<div class="lifestyle-images-content w-full">
-    <img class="w-full" src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/RANGER_1000_FWB-lifestyle-1.jpg?v=1640100381">
-	</div>-->
-  
-  
-  {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
-{%- assign productPictures = product.media | where: "media_type", "image" -%}
-{%- if first_3d_model -%}
-  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
-  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'" />
-  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />
-{%- endif -%}
-<script>
-function swapImages(sent_img_src) {
-	document.getElementById('bigIMG').src = sent_img_src;
-}
-</script>
-<section class="w-full">
-  <div class="product-wrapper w-full flex flex-wrap border-t-2 border-b-2 border-black" style="background-color:#212121;"><!--lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6-->
-  <!-- IMAGE VIEWER -->
-	<div class="mx-auto"><!--featured-image-section sm:w-full md:w-1/2 lg:w-1/2 flex flex-wrap justify-center lg:ml-20 md:ml-10 sm:ml-5 max-h-screen-->
-      <div id="thumbys" class="w-full p-0 pt-0 inline-flex">
-         <div class="product-video-content w-full p-0" style="height: 512px; width:1024px">
+
+<div class="jacobs-carousel">
+  <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "lazyLoad": 5 }'>
+    <div class="carousel-cell">
+      <div class="product-video-content w-full p-0" style="height: 512px; width:1024px">
             <iframe class="w-full h-full" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        {% for pic in productPictures %}
+    </div>
+    <div class="carousel-cell">
+       {% for pic in productPictures %}
         	{% if pic.alt contains "lifestyle" %}
               <div id="thumby-{{ forloop.index }}" class=" block w-auto">
                 <img class="thumby w-full h-full" style="width:512px; height:512px;" src="{{ pic.src | img_url: "1024x" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
               </div>
        		{% endif %}
         {% endfor %}
-       
-       		 
-      </div>
-    </div></div>
-  
-  
-  
+    </div>
+    <div class="carousel-cell">
+      <img data-flickity-lazyload="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roofs_category_card_500x500.jpg?v=1640044492" />
+    </div>
+    <div class="carousel-cell">
+      <img data-flickity-lazyload="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/doors_category_card_500x500.jpg?v=1640044492" />
+    </div>
+    <div class="carousel-cell">
+      <img data-flickity-lazyload="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/cages_category_card_500x500.jpg?v=1640044492" />
+    </div>
+  </div>
+</div>
 </section>
-	
+
 {% schema %}
   {
     "name": "Lifestyle Images",
     "settings": []
   }
 {% endschema %}
+  
+  
+  
