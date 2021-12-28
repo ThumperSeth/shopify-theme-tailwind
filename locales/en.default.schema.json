@@ -732,9 +732,6 @@
               "label": "Shipping Info Code",
               "info": "{%- render 'shipping-info' -%}"
             }
-          },
-          "presets": {
-            "name": "Custom Liquid"
           }
         },
         "buy_buttons": {
