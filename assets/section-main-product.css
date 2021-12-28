@@ -130,7 +130,7 @@
 
 variant-radios,
 variant-selects {
-  display: block;
+  /*display: block;*/
 }
 
 .product-form__input--dropdown {
