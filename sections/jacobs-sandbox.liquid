@@ -1,8 +1,18 @@
+<style>
+	/*.lifestyle-images-content {
+    	background-image: url('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/RANGER_1000_FWB-lifestyle-1.jpg?v=1640100381');
+    	background-repeat: no-repeat;
+      	background-position: center;
+      	background-size: 100%, 100%;
+		min-height: 200px;
+    }*/
+</style>
+
+
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- assign productPictures = product.media | where: "media_type", "image" -%}
 
-<section class="section">
-<div class="jacobs-carousel">
+<section class="lifestyle-images-section w-full flex justify-center">
   <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "lazyLoad": 5 }'>
     <div class="carousel-cell">
       <div class="product-video-content w-full p-0" style="height: 512px; width:1024px">
@@ -29,7 +39,6 @@
       <img data-flickity-lazyload="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/cages_category_card_500x500.jpg?v=1640044492" />
     </div>-->
   </div>
-</div>
 </section>
 
 {% schema %}
