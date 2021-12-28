@@ -1862,7 +1862,7 @@ input[type='checkbox'] {
 .shopify-section-header-sticky {
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: -100;
 }
   @media screen and (min-width: 990px) {
     .shopify-section-header-sticky {
