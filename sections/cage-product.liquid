@@ -115,22 +115,22 @@ function tfupdatePrice() {
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl\"> + Grab Handles: +$60</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
     	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl\"> + 5pt Harness: +$10</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + 5pt Harness: +$10</span>";
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
     	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl\"> + Whip Tab: +$1</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Whip Tab: +$1</span>";
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
     	optionsPrices += 125;
-      	optionsHTML += "<span class=\"text-2xl\"> + Light Bar Tab: +$3</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Light Bar Tab: +$3</span>";
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
   if (optionsPrices == 0) { 
