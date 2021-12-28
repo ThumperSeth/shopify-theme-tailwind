@@ -118,7 +118,11 @@ function tfupdatePrice() {
       	optionsHTML += "Grab Handles: +$60<br />";
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
+  if (optionsPrices == 0) { 
+    newPrice = newPrice.concat(priceHTML);
+  } else {
 	newPrice = newPrice.concat(optionsHTML + "Total: " + priceHTML);
+  }
   document.getElementById('price-{{ section.id }}').innerHTML = newPrice;
 };
   
