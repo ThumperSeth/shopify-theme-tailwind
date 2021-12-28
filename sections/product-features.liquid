@@ -154,7 +154,7 @@
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- assign productPictures = product.media | where: "media_type", "image" -%}
 
-<div><h3 class="product-features-title text-white bg-black text-6xl pt-10 pb-2">FEATURES</h3></div>
+<div><h3 class="product-features-title text-white bg-black text-8xl pt-10 pb-0">FEATURES</h3></div>
 <div class="product-features-section w-full grid lg:grid-cols-2 sm:grid-cols-1 mx-auto justify-center shadow-2xl bg-black">
         <div class="product-features-container flex flex-wrap justify-center mx-auto ml-20 p-0">
             {% for pic in productPictures %}
