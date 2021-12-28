@@ -49,6 +49,31 @@
       <div class="carousel-slide absolute opacity-0" style="height:75vh;">
         <div class="block h-full w-full bg-yellow-500 text-white text-5xl text-center">
           Cage Options
+          <div class="variant-wrapper">
+                
+             <variant-radios class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+               {%- for option in product.options_with_values -%}
+               <legend class="form__label">{{ option.name }}</legend>
+               <div class="js product-form__input flex">
+
+                 {%- for value in option.values -%}
+                 {%- for variant in product.variants -%}
+                 {%- if variant.title contains value -%}
+                 <div onmouseenter="swapImage('{{ variant.image | img_url: "1024x1024" }}');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                   <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
+                   <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
+                 </div>
+                 {%- break -%}
+                 {%- endif -%}
+                 {%- endfor -%}
+                 {%- endfor -%}
+               </div>
+               {%- endfor -%}
+               <script type="application/json">
+                                                            {{ product.variants | json }} 
+               </script>
+             </variant-radios>
+        </div>
           <div>
             <div class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               <div class="form__label">Cage Options</div>
