@@ -283,12 +283,13 @@ function tfupdatePrice() {
                             {%- for variant in product.variants -%}
                               {%- if variant.title contains value -%}
 									<div onmouseenter="swapImage('{{ variant.image | img_url: "1024x1024" }}');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
-                              			<input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
-                            			<label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
-                            		</div>
+                              			
                               {%- endif -%}
-                            {%- endfor -%}                            
                             {%- endfor -%}
+                                      <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
+                            			<label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
+                            {%- endfor -%}
+                          	</div>
                           </div>
                           {%- endfor -%}
                           <script type="application/json">
