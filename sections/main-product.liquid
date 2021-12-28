@@ -301,6 +301,11 @@ function swapImages(sent_img_src) {
                       <div class="product-price" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
+          
+          
+          {%- render 'shipping-info' -%}
+          
+          
                       <div {{ block.shopify_attributes }}>
                         {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
