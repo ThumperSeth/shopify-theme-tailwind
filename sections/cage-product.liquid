@@ -244,9 +244,9 @@ function tfupdatePrice() {
 				  {%- when 'tf_variant_picker' -%}
           			<div>
           				<div class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                         
-                          <div class="js product-form__input">
-                            <div class="form__label">Cage Options</div>
+                         <div class="form__label">Cage Options</div>
+                          <div class="js product-form__input flex">
+                            
                             <!-- GRAB HANDLES -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onClick="tfupdatePrice();">
@@ -276,8 +276,8 @@ function tfupdatePrice() {
                         {%- if block.settings.picker_type == 'button' -%}
                         <variant-radios class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                           {%- for option in product.options_with_values -%}
-                          <fieldset class="js product-form__input">
-                            <legend class="form__label">{{ option.name }}</legend>
+                          <legend class="form__label">{{ option.name }}</legend>
+                          <fieldset class="js product-form__input">                            
                             {%- for value in option.values -%}
                             {% for variant in product.variants %}
                               {% if variant.title contains value %}
@@ -299,8 +299,8 @@ function tfupdatePrice() {
                         {%- else -%}
                         <variant-selects class="selector-wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                           {%- for option in product.options_with_values -%}
-                          <div class="product-form__input product-form__input--dropdown">
-                            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                          <div class="product-form__input product-form__input--dropdown">                            
                             <div class="select">
                               <select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="select__select" name="options[{{ option.name | escape }}]" form="product-form-{{ section.id }}">
                                 {%- for value in option.values -%}
