@@ -327,7 +327,7 @@ function swapImages(sent_img_src) {
                         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
                                     <div class="w-full flex inline-block gap-5 pb-10">
-                                        <div class="w-1/2 justify-self-start bg-gray-200 p-2 rounded-xl shadow-lg">
+                                        <div class="w-1/2 bg-gray-200 p-2 rounded-xl shadow-lg">
                                           <pickup-availability class="product__pickup-availabilities w-full" {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %} data-base-url="{{ shop.url }}{{ routes.root_url }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}" data-has-only-default-variant="{{ product.has_only_default_variant }}">
                                             <template>
                                               <pickup-availability-preview class="pickup-availability-preview">
