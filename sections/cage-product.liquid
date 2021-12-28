@@ -132,6 +132,7 @@ function tfupdatePrice() {
     	optionsPrices += 125;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Light Bar Tab: +$3</span>";
     }
+  
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
   if (optionsPrices == 0) { 
     newPrice = newPrice.concat(priceHTML);
@@ -287,6 +288,11 @@ function tfupdatePrice() {
                             <!-- Whip Tab -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/whip_tab_d312b7be-0267-4453-8c8d-111e56cf488b.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-whip-tab" name="has-whip-tab" value="has-whip-tab" onClick="tfupdatePrice();">
+                              <label for="has-whip-tab">Whip Tab</label>
+							</div>
+                            <!-- Seatbelt Harness Mount -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/whip_tab_d312b7be-0267-4453-8c8d-111e56cf488b.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-sb-harness" name="has-sb-harness" value="has-sb-harness" onClick="tfupdatePrice();">
                               <label for="has-whip-tab">Whip Tab</label>
 							</div>
                           </div>
