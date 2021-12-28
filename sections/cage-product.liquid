@@ -288,8 +288,9 @@ function tfupdatePrice() {
                             
                             	<input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
                             	<label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
-                            
+                            {% if variant.title contains value %}
 							</div>
+                            {% endif %}
                             {%- endfor -%}
 
                           </div>
