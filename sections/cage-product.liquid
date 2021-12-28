@@ -111,8 +111,10 @@ function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
     var optionsPrices = 0;
     var priceHTML = "";
+    var optionsHTML = "Base Price: $" + basePrice + ".00<br/>";
     if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
+      optionsHTML += "+$60 Grab Handles<br />
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
 
