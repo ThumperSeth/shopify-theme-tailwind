@@ -1,0 +1,187 @@
+{
+  "sections": {
+    "big-product": {
+      "type": "big-product-viewer",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "cage-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.metafields.global.product_make.value }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "66c8d528-8d54-416b-b093-03c603580a61": {
+          "type": "tf_variant_picker",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "subtitle",
+        "price",
+        "variant_picker",
+        "66c8d528-8d54-416b-b093-03c603580a61",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "hide_variants": true,
+        "enable_video_looping": false
+      }
+    },
+    "lifestyle-images": {
+      "type": "lifestyle-images",
+      "settings": {
+      }
+    },
+    "product-description": {
+      "type": "product-description",
+      "settings": {
+      }
+    },
+    "product-features": {
+      "type": "product-features",
+      "settings": {
+      }
+    },
+    "product-info-carousel": {
+      "type": "product-info-carousel",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-fitment": {
+      "type": "product-fitment",
+      "settings": {
+      }
+    },
+    "product-videos": {
+      "type": "product-video",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-related-products": {
+      "type": "product-related-products",
+      "settings": {
+        "navigation_amount": 3,
+        "navigation_color": ""
+      }
+    },
+    "product-specs": {
+      "type": "product-specs",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-docs": {
+      "type": "product-docs",
+      "settings": {
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "cage-options": {
+      "type": "cage-options",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "seths-sandbox": {
+      "type": "seths-sandbox",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "jacobs-sandbox": {
+      "type": "jacobs-sandbox",
+      "disabled": true,
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "big-product",
+    "main",
+    "lifestyle-images",
+    "product-description",
+    "product-features",
+    "product-info-carousel",
+    "product-fitment",
+    "product-videos",
+    "product-related-products",
+    "product-specs",
+    "product-docs",
+    "product-reviews",
+    "product-recommendations",
+    "cage-options",
+    "seths-sandbox",
+    "jacobs-sandbox"
+  ]
+}
