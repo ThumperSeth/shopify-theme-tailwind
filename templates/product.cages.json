@@ -6,62 +6,6 @@
       "settings": {
       }
     },
-    "lifestyle-images": {
-      "type": "lifestyle-images",
-      "settings": {
-      }
-    },
-    "product-description": {
-      "type": "product-description",
-      "settings": {
-      }
-    },
-    "product-features": {
-      "type": "product-features",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "product-info-carousel": {
-      "type": "product-info-carousel",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "product-fitment": {
-      "type": "product-fitment",
-      "settings": {
-      }
-    },
-    "product-videos": {
-      "type": "product-video",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "product-related-products": {
-      "type": "product-related-products",
-      "settings": {
-        "navigation_amount": 3,
-        "navigation_color": ""
-      }
-    },
-    "product-specs": {
-      "type": "product-specs",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "product-docs": {
-      "type": "product-docs",
-      "settings": {
-      }
-    },
-    "product-reviews": {
-      "type": "product-reviews",
-      "settings": {
-      }
-    },
     "main": {
       "type": "cage-product",
       "blocks": {
@@ -134,6 +78,61 @@
         "enable_sticky_info": true,
         "hide_variants": true,
         "enable_video_looping": false
+      }
+    },
+    "lifestyle-images": {
+      "type": "lifestyle-images",
+      "settings": {
+      }
+    },
+    "product-description": {
+      "type": "product-description",
+      "settings": {
+      }
+    },
+    "product-features": {
+      "type": "product-features",
+      "settings": {
+      }
+    },
+    "product-info-carousel": {
+      "type": "product-info-carousel",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-fitment": {
+      "type": "product-fitment",
+      "settings": {
+      }
+    },
+    "product-videos": {
+      "type": "product-video",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-related-products": {
+      "type": "product-related-products",
+      "settings": {
+        "navigation_amount": 3,
+        "navigation_color": ""
+      }
+    },
+    "product-specs": {
+      "type": "product-specs",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-docs": {
+      "type": "product-docs",
+      "settings": {
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
       }
     },
     "product-recommendations": {
