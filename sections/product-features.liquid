@@ -164,6 +164,12 @@
               <div id="thumby-{{ forloop.index | escape }}"class="product-features-image-wrapper  lg:w-1/2 sm:w-5/6 mx-auto flex flex-shrink justify-center items-center">
                 <img class="w-full h-full" style="width:max-content; height:auto;" src="{{ pic.src | img_url: "1024x" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
               </div>
+          <div id="thumby-{{ forloop.index | escape }}"class="product-features-image-wrapper  lg:w-1/2 sm:w-5/6 mx-auto flex flex-shrink justify-center items-center">
+                <img class="w-full h-full" style="width:max-content; height:auto;" src="{{ pic.src | img_url: "1024x" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
+              </div>
+          <div id="thumby-{{ forloop.index | escape }}"class="product-features-image-wrapper  lg:w-1/2 sm:w-5/6 mx-auto flex flex-shrink justify-center items-center">
+                <img class="w-full h-full" style="width:max-content; height:auto;" src="{{ pic.src | img_url: "1024x" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
+              </div>
         </div>
        {% endif %} 
         {% endfor %}
