@@ -132,6 +132,11 @@ function tfupdatePrice() {
     	optionsPrices += 125;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Light Bar Tab: +$125</span>";
     }
+  	/* SEATBELT HARNESS MOUNT */
+  	if (document.getElementById('has-sb-harness').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Seatbelt Harness: +$60</span>";
+    }
   
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
   if (optionsPrices == 0) { 
