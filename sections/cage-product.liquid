@@ -113,14 +113,25 @@ function tfupdatePrice() {
     var priceHTML = "";
     var optionsHTML = "Base Price: $" + basePrice + ".00<br/>";
   	var newPrice = "";
-    
+    /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
       	optionsHTML += "Grab Handles: +$60<br />";
     }
+  	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
     	optionsPrices += 60;
       	optionsHTML += "5pt Harness: +$100<br />";
+    }
+  	/* WHIP TAB */
+  	if (document.getElementById('has-whip-tab').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "Whip Tab: +$100<br />";
+    }
+  	/* LIGHT BAR TAB */
+  	if (document.getElementById('has-light-bar').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "Light Bar Tab: +$100<br />";
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
   if (optionsPrices == 0) { 
