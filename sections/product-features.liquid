@@ -1,15 +1,5 @@
 <style>
-.product-features-container {
-    /*background:
-          linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-          linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-          linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-          linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-          linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-          linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-        background-color: #131313;
-        background-size: 20px 20px; */
-}
+
 
 .product-features-title {
     font-family: 'Teko';
@@ -49,7 +39,7 @@
         {% for pic in productPictures %}
         {% if pic.alt contains "features" %}
         <div style="height:400px; margin-top:0; margin-left:15rem; z-index:10; opacity:1" id="thumby-{{ forloop.index | escape }}" class="product-features-image-wrapper  lg:w-full sm:w-5/6 mx-auto flex flex-shrink justify-center items-center">
-            <img class="w-full h-full" style="width:max-content; height:auto;" src="{{ pic.src | img_url: "1024x1024" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
+            <img class="w-full h-full" style="width:max-content; height:auto;" src="{{ pic.src | img_url: '1024x1024' }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: '1024x1024' }}');" />
         </div>
     </div>
     {% endif %}
