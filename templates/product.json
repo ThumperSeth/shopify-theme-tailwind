@@ -31,6 +31,12 @@
             "picker_type": "button"
           }
         },
+        "63b9aacb-cde8-4f04-a3e8-df02390c9e9f": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- render 'shipping-info' -%}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -42,6 +48,7 @@
         "title",
         "price",
         "variant_picker",
+        "63b9aacb-cde8-4f04-a3e8-df02390c9e9f",
         "buy_buttons"
       ],
       "settings": {
@@ -159,6 +166,12 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1640728110b8bf02da": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
     }
   },
   "order": [
@@ -180,6 +193,7 @@
     "seths-sandbox",
     "jacobs-sandbox",
     "cart-items",
-    "164016466786c0923c"
+    "164016466786c0923c",
+    "1640728110b8bf02da"
   ]
 }
