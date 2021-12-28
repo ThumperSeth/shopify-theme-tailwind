@@ -265,19 +265,6 @@ function tfupdatePrice() {
                       </share-button>
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 				  {%- when 'tf_variant_picker' -%}
-          <style>
-            .test:hover {
-              font-size: 0;
-            }
-
-            .test:hover:before {
-              font-size: small;
-              padding:5px;
-              background-color:lightgreen;
-              content: attr(data-hover);
-              transition: 0.3s;
-            }
-          </style>
           			<div>
           				<div class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                          <div class="form__label">Cage Options</div>
@@ -286,7 +273,7 @@ function tfupdatePrice() {
                             <!-- GRAB HANDLES -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onClick="tfupdatePrice();">
-                              <label for="has-grab-handles"><span class="test w-inherit" data-hover="$60">Grab Handles</span></label>
+                              <label for="has-grab-handles">Grab Handles</label>
                             </div>
                             <!-- 5PT HARNESS -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/5-point_harness_mounts-4-seat_f290310c-a858-42d2-97e3-16d0d4944313.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
