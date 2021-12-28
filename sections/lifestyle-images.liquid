@@ -9,6 +9,8 @@
   
 .flickity-page-dots .dot.is-selected {
     opacity: 1;
+    width:15px;
+    height:15px;
 }
 .flickity-page-dots .dot {
     background: ;
@@ -30,7 +32,7 @@
 {%- assign productPictures = product.media | where: "media_type", "image" -%}
 
 <section class="section">
-<div class="jacobs-carousel pb-8 px-0 mx-0 pt-2 bg-gray-800">
+<div class="jacobs-carousel pb-8 px-0 mx-0 pt-3 bg-gray-800">
   <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "lazyLoad": 5 }'>
     <div class="carousel-cell">
       <div class="product-video-content w-full p-0" style="height: 512px; width:1024px">
