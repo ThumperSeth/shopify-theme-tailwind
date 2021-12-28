@@ -730,7 +730,7 @@
           "settings": {
             "custom_liquid": {
               "label": "Shipping Info Code",
-              "info": "{%- render 'shipping-info' -%}"
+              "info": "asdf"
             }
           }
         },
