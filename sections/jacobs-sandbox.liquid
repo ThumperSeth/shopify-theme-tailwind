@@ -1,3 +1,6 @@
+ {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
+{%- assign productPictures = product.media | where: "media_type", "image" -%}
+
 <section class="section">
 <div class="jacobs-carousel">
   <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "lazyLoad": 5 }'>
