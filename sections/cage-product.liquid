@@ -137,7 +137,16 @@ function tfupdatePrice() {
     	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Seatbelt Harness: +$60</span>";
     }
-  
+  	/* ROOF INTRUSION */
+  	if (document.getElementById('has-roof-intrusion').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Roof Intrusion: +$60</span>";
+    }
+  	/* WINDSHIELD INTRUSION */
+  	if (document.getElementById('has-front-intrusion').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Front Intrusion: +$60</span>";
+    }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
   if (optionsPrices == 0) { 
     newPrice = newPrice.concat(priceHTML);
