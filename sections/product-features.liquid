@@ -32,16 +32,7 @@
         <h3 class="product-features-title text-white bg-black text-8xl pt-10 pl-20 pb-0">FEATURES</h3>
     </div>
     <div class="product-features-section w-full grid lg:grid-cols-2 sm:grid-cols-1 mx-auto justify-center shadow-2xl bg-black">
-        <div class="product-features-container flex flex-wrap justify-center mx-auto ml-20 p-0">
-            {% for pic in productPictures %}
-            {% if pic.alt contains "features" %}
-            <div style="height:400px; margin-top:0; margin-left:15rem; z-index:10; opacity:1" id="thumby-{{ forloop.index | escape }}" class="product-features-image-wrapper  lg:w-full sm:w-5/6 mx-auto flex flex-shrink justify-center items-center">
-                <img class="w-full h-full" style="width:max-content; height:auto;" src="{{ pic.src | img_url: '1024x1024' }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: '1024x1024' }}');" />
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-       
+        
 	</div>
     
 
