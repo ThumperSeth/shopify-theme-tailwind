@@ -22716,6 +22716,26 @@ variants: {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
+  .text-agray-100 {
+        color: #aaaaaa; 
+        }
+  .text-agray-200 {
+        color: #bbbbbb; 
+        }
+  .text-agray-300 {
+        color: #cccccc; 
+        }
+  .text-agray-100 {
+        color: #dddddd; 
+        }
+  .text-agray-400 {
+        color: #eeeeee; 
+        }
+  .text-agray-500 {
+        color: #; 
+        }
+
+    
 .text-red-50 {
   --tw-text-opacity: 1;
   color: rgba(254, 242, 242, var(--tw-text-opacity));
