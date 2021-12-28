@@ -114,7 +114,7 @@ function tfupdatePrice() {
     if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
     }
-    priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00 USD");
+    priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
 
     document.getElementById('price-{{ section.id }}').innerHTML = priceHTML;
 };
