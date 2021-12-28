@@ -155,9 +155,6 @@
 {%- assign productPictures = product.media | where: "media_type", "image" -%}
 
 <div class="product-features-section w-full grid lg:grid-cols-2 sm:grid-cols-1 mx-auto justify-center shadow-2xl bg-black">
-  	<div class="product-section-title product-features-title w-full text-3xl font-bold p-10 shadow-lg">
-		FEATURES
-	</div>
         <div class="product-features-container flex flex-wrap justify-center mx-auto ml-20 p-0">
             {% for pic in productPictures %}
             {% if pic.alt contains "features" %}  
@@ -174,7 +171,7 @@
        {% endif %} 
         {% endfor %}
         <div class="product-features-content rounded-lg flex-wrap p-10 lg:w-full sm:w-full lg:text-5xl md:text-4xl sm:text-3xl mx-auto text-gray-200 flex justify-center items-center">
-          {{ product.metafields.global.features }}
+          <h3>FEATURES</h3><div>{{ product.metafields.global.features }}</div>
         </div>
 </div>
 
