@@ -65,6 +65,11 @@
       "settings": {
       }
     },
+    "product-docs": {
+      "type": "product-docs",
+      "settings": {
+      }
+    },
     "product-fitment": {
       "type": "product-fitment",
       "settings": {
@@ -92,11 +97,6 @@
     "product-specs": {
       "type": "product-specs",
       "disabled": true,
-      "settings": {
-      }
-    },
-    "product-docs": {
-      "type": "product-docs",
       "settings": {
       }
     },
@@ -132,6 +132,7 @@
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
+      "disabled": true,
       "settings": {
       }
     },
@@ -167,12 +168,12 @@
     "lifestyle-images",
     "product-features",
     "product-description",
+    "product-docs",
     "product-fitment",
     "product-info-carousel",
     "product-videos",
     "product-related-products",
     "product-specs",
-    "product-docs",
     "product-reviews",
     "product-recommendations",
     "cage-options",
