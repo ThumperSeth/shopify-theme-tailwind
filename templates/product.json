@@ -31,10 +31,9 @@
             "picker_type": "button"
           }
         },
-        "63b9aacb-cde8-4f04-a3e8-df02390c9e9f": {
-          "type": "custom_liquid",
+        "shipping-info": {
+          "type": "shipping-info",
           "settings": {
-            "custom_liquid": "{%- render 'shipping-info' -%}"
           }
         },
         "buy_buttons": {
@@ -48,7 +47,7 @@
         "title",
         "price",
         "variant_picker",
-        "63b9aacb-cde8-4f04-a3e8-df02390c9e9f",
+        "shipping-info",
         "buy_buttons"
       ],
       "settings": {
