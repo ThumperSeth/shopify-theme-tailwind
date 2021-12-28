@@ -321,6 +321,18 @@ function swapImages(sent_img_src) {
                                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"> 
                               
                               
+                                  <div class="product-form__buttons">
+                                    <button id="AddToCart" type="submit" name="add" class="add-to-cart-button product-form__submit button button--full-width button--primary">
+                                      {%- if product.selected_or_first_available_variant.available -%}
+                                      {{ 'products.product.add_to_cart' | t | upcase }}
+                                      {%- else -%}
+                                      {{ 'products.product.sold_out' | t | upcase }}
+                                      {%- endif -%}
+                                    </button>
+                                    {%- if block.settings.show_dynamic_checkout -%}
+                                    {{ form | payment_button }}
+                                    {%- endif -%}
+                                  </div>
                               
                         <!-- PICKUP AVAILABLILITY MODAL -->
                         {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
@@ -361,18 +373,6 @@ function swapImages(sent_img_src) {
                           
                           
                           
-                                  <div class="product-form__buttons">
-                                    <button id="AddToCart" type="submit" name="add" class="add-to-cart-button product-form__submit button button--full-width button--primary">
-                                      {%- if product.selected_or_first_available_variant.available -%}
-                                      {{ 'products.product.add_to_cart' | t | upcase }}
-                                      {%- else -%}
-                                      {{ 'products.product.sold_out' | t | upcase }}
-                                      {%- endif -%}
-                                    </button>
-                                    {%- if block.settings.show_dynamic_checkout -%}
-                                    {{ form | payment_button }}
-                                    {%- endif -%}
-                                  </div>
                               {%- endform -%}
                             </product-form>
                   		</div>                           
