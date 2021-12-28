@@ -725,6 +725,9 @@
             }
           }
         },
+        "shipping-info": {
+          "name": "Shipping Info"
+        },
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
