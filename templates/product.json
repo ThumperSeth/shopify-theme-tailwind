@@ -12,12 +12,6 @@
       "settings": {
       }
     },
-    "164066706201cdfb9c": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "Back to"
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -171,7 +165,6 @@
   "order": [
     "16405690123b9ce0f9",
     "big-product",
-    "164066706201cdfb9c",
     "main",
     "lifestyle-images",
     "product-description",
