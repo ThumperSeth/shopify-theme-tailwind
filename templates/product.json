@@ -68,7 +68,6 @@
     },
     "product-info-carousel": {
       "type": "product-info-carousel",
-      "disabled": true,
       "settings": {
       }
     },
@@ -133,7 +132,6 @@
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
-      "disabled": true,
       "settings": {
       }
     },
