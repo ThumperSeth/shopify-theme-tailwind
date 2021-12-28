@@ -11,7 +11,7 @@
         background-size: 20px 20px; */
   }
   .product-features-title {
-		background-color: #ccc;
+		background-color: #fff;
     	font-family: 'Rajdhani';
         -webkit-text-size-adjust: 100%;
       	-webkit-font-smoothing: antialiased;
@@ -171,7 +171,7 @@
        {% endif %} 
         {% endfor %}
         <div class="product-features-content rounded-lg flex-wrap p-10 lg:w-full sm:w-full lg:text-5xl md:text-4xl sm:text-3xl mx-auto text-gray-200 flex justify-center items-center">
-          <h3>FEATURES</h3><div>{{ product.metafields.global.features }}</div>
+          <h3 class="product-features-title">FEATURES</h3><div>{{ product.metafields.global.features }}</div>
         </div>
 </div>
 
