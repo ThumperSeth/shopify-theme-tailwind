@@ -1864,6 +1864,22 @@ input[type='checkbox'] {
   position: -webkit-sticky;
   top: 0;
 }
+  @media screen and (min-width: 990px) {
+    .shopify-section-header-sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: -130;
+  }
+    
+  }
+  @media screen and (min-width: 750px) {
+    .shopify-section-header-sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+    
+  }
 
 .shopify-section-header-hidden {
   transform: translateY(-60%);
