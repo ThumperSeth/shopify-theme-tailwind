@@ -12,9 +12,22 @@
       "settings": {
       }
     },
+    "164066706201cdfb9c": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "Back to"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
+        "bdeacf9b-7f52-4039-9864-0c85093901e7": {
+          "type": "text",
+          "settings": {
+            "text": "Back to collection",
+            "text_style": "body"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -39,6 +52,7 @@
         }
       },
       "block_order": [
+        "bdeacf9b-7f52-4039-9864-0c85093901e7",
         "title",
         "price",
         "variant_picker",
@@ -165,6 +179,7 @@
   "order": [
     "16405690123b9ce0f9",
     "big-product",
+    "164066706201cdfb9c",
     "main",
     "lifestyle-images",
     "product-description",
