@@ -12,6 +12,12 @@
       "settings": {
       }
     },
+    "164066706201cdfb9c": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "Back to"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -55,29 +61,25 @@
       "settings": {
       }
     },
-    "product-features": {
-      "type": "product-features",
-      "settings": {
-      }
-    },
     "product-description": {
       "type": "product-description",
       "settings": {
       }
     },
-    "product-docs": {
-      "type": "product-docs",
-      "settings": {
-      }
-    },
-    "product-fitment": {
-      "type": "product-fitment",
+    "product-features": {
+      "type": "product-features",
+      "disabled": true,
       "settings": {
       }
     },
     "product-info-carousel": {
       "type": "product-info-carousel",
       "disabled": true,
+      "settings": {
+      }
+    },
+    "product-fitment": {
+      "type": "product-fitment",
       "settings": {
       }
     },
@@ -97,6 +99,11 @@
     "product-specs": {
       "type": "product-specs",
       "disabled": true,
+      "settings": {
+      }
+    },
+    "product-docs": {
+      "type": "product-docs",
       "settings": {
       }
     },
@@ -159,34 +166,28 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "1640728110b8bf02da": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": ""
-      }
     }
   },
   "order": [
     "16405690123b9ce0f9",
     "big-product",
+    "164066706201cdfb9c",
     "main",
     "lifestyle-images",
-    "product-features",
     "product-description",
-    "product-docs",
-    "product-fitment",
+    "product-features",
     "product-info-carousel",
+    "product-fitment",
     "product-videos",
     "product-related-products",
     "product-specs",
+    "product-docs",
     "product-reviews",
     "product-recommendations",
     "cage-options",
     "seths-sandbox",
     "jacobs-sandbox",
     "cart-items",
-    "164016466786c0923c",
-    "1640728110b8bf02da"
+    "164016466786c0923c"
   ]
 }
