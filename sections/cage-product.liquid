@@ -120,17 +120,17 @@ function tfupdatePrice() {
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
-    	optionsPrices += 10;
+    	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl\"> + 5pt Harness: +$10</span>";
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
-    	optionsPrices += 1;
+    	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl\"> + Whip Tab: +$1</span>";
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
-    	optionsPrices += 3;
+    	optionsPrices += 125;
       	optionsHTML += "<span class=\"text-2xl\"> + Light Bar Tab: +$3</span>";
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
