@@ -34,7 +34,7 @@
         "shipping-info": {
           "type": "shipping-info",
           "settings": {
-            "custom_liquid": ""
+            "custom_liquid": "{%- render 'shipping-info -%}"
           }
         },
         "buy_buttons": {
