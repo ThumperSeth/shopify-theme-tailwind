@@ -1,4 +1,30 @@
-
+<style>
+  .product-features-container {
+  		
+  }
+  .product-features-title {
+		background-color: #ccc;
+    	font-family: 'Rajdhani';
+        -webkit-text-size-adjust: 100%;
+      	-webkit-font-smoothing: antialiased;
+    }
+	.product-features-content {
+      	font-family: 'Teko', 'Roboto';
+      	font-weight: normal;
+      	line-height: 1.8;
+        font-size: 2rem;
+    	-webkit-text-size-adjust: 100%;
+      	-webkit-font-smoothing: antialiased;
+    }
+    .product-features-content ul {
+       list-style-type: disc;
+       
+    }
+  	.product-features-image-wrapper {
+	-webkit-animation: bounce-in-bottom 1.1s both;
+	        animation: bounce-in-bottom 1.1s both;
+} 
+    </style>
     
     {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
     {%- assign productPictures = product.media | where: "media_type", "image" -%}
@@ -21,27 +47,3 @@
 	</div>
     
 
-
-<!--<div class="product-features-section w-full flex flex-wrap mx-auto justify-center shadow-2xl bg-black">
-  	<!--<div class="product-section-title product-features-title w-full text-3xl font-bold p-10 shadow-lg">
-		FEATURES
-	</div>-->
-<!--    <div class="product-features-container flex flex-wrap justify-center mx-auto p-10">
-        <div class="product-features-image-wrapper  lg:w-1/2 sm:w-5/6 mx-auto flex flex-shrink justify-center items-center">
-          <img class="features-image w-5/6 h-auto" src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/ranger_1000_FWB_trans-1.png?v=1640121581"/>
-        </div>
-        <div class="product-features-content rounded-lg p-10 lg:w-1/2 sm:w-full lg:text-5xl md:text-5xl sm:text-3xl mx-auto text-gray-200 flex justify-center items-center">
-          {{ product.metafields.global.features }}
-        </div>
-    </div>
-</div>-->
-
-
-	
-
-{% schema %}
-{
-  "name": "Product Features",
-  "settings": []
-}
-{% endschema %}
