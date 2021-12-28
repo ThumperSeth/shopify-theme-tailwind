@@ -277,7 +277,8 @@ function tfupdatePrice() {
                         <variant-radios class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                           {%- for option in product.options_with_values -%}
                           <legend class="form__label">{{ option.name }}</legend>
-                          <fieldset class="js product-form__input">                            
+                          <fieldset class="js product-form__input">
+                            <div class="flex">
                             {%- for value in option.values -%}
                             {% for variant in product.variants %}
                               {% if variant.title contains value %}
@@ -290,6 +291,7 @@ function tfupdatePrice() {
                             
 							</div>
                             {%- endfor -%}
+                            </div>  
                           </fieldset>
                           {%- endfor -%}
                           <script type="application/json">
