@@ -55,14 +55,13 @@
       "settings": {
       }
     },
-    "product-description": {
-      "type": "product-description",
+    "product-features": {
+      "type": "product-features",
       "settings": {
       }
     },
-    "product-features": {
-      "type": "product-features",
-      "disabled": true,
+    "product-description": {
+      "type": "product-description",
       "settings": {
       }
     },
@@ -73,6 +72,7 @@
     },
     "product-info-carousel": {
       "type": "product-info-carousel",
+      "disabled": true,
       "settings": {
       }
     },
@@ -165,8 +165,8 @@
     "big-product",
     "main",
     "lifestyle-images",
-    "product-description",
     "product-features",
+    "product-description",
     "product-fitment",
     "product-info-carousel",
     "product-videos",
