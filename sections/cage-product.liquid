@@ -110,12 +110,12 @@ function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
     var optionsPrices = 0;
     var priceHTML = "";
-    var optionsHTML = "<span class=\"text-2xl text-agray-300\">Base Price: $" + basePrice + ".00</span>";
+    var optionsHTML = "<span class=\"text-2xl text-agray-200\">Base Price: $" + basePrice + ".00</span>";
   	var newPrice = "";
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl text-agray-300\"> + Grab Handles: +$60</span>";
+      	optionsHTML += "<span class=\"text-2xl text-agray-200\"> + Grab Handles: +$60</span>";
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
