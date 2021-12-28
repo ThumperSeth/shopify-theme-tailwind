@@ -150,8 +150,12 @@ function swapImages(sent_img_src) {
                         {{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                       </span>
                       <h1 class="product__title text-6xl" {{ block.shopify_attributes }}>
-                        {{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
-                      </h1>
+                      	{%- if product_card_product.metafields.global.display_name.value != nil -%}
+          		  			{{ product_card_product.metafields.global.display_name.value }}
+            			{%- else -%}
+          		    		{{ product_card_product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
+            			{%- endif -%}
+          			</h1>
                   {%- when 'description' -%}
                       {%- if product.description != blank -%}
                           <div class="product__description rte">
