@@ -65,7 +65,7 @@
           <div class="footer__blocks-wrapper grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 {{ footer_grid_class }}">
             <div class="flex flex-wrap mx-auto justify-left">
                 <div class="footer-block__details-content list-unstyled w-full">
-                    <h2 class="text-5xl pb-5">Shop by Make/Model</h2>
+                    <h2 class="text-5xl pb-5 text-gray-400">Shop by Make/Model</h2>
                     <span class="footer-make-link text-3xl">
                       <a href="http://thumperfab.com/collections/can-am">CAN-AM</a>
                     </span>
@@ -109,8 +109,7 @@
             <div class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
                 <h2 class="text-5xl pb-5">{{- block.settings.heading | escape -}}</h2>
-              {%- endif -%}
-              
+              {%- endif -%}              
               
 
               {%- case block.type -%}
