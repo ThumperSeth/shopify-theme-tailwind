@@ -1,5 +1,10 @@
 {
   "sections": {
+    "jacobs-sandbox": {
+      "type": "jacobs-sandbox",
+      "settings": {
+      }
+    },
     "16405690123b9ce0f9": {
       "type": "custom-liquid",
       "settings": {
@@ -131,12 +136,6 @@
       "settings": {
       }
     },
-    "jacobs-sandbox": {
-      "type": "jacobs-sandbox",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "cart-items": {
       "type": "main-cart-items",
       "disabled": true,
@@ -163,6 +162,7 @@
     }
   },
   "order": [
+    "jacobs-sandbox",
     "16405690123b9ce0f9",
     "big-product",
     "main",
@@ -179,7 +179,6 @@
     "product-recommendations",
     "cage-options",
     "seths-sandbox",
-    "jacobs-sandbox",
     "cart-items",
     "164016466786c0923c"
   ]
