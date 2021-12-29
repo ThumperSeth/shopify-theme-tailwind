@@ -62,7 +62,7 @@
     {% for pic in productPictures %}
     {% if pic.alt contains "lifestyle" %}
     <div class="carousel-cell">
-      <div id="slide-{{ forloop.index }}" class="block w-auto">
+      <div id="slide-{{ forloop.index }}" class="block w-1/4">
         <img class="w-1/4 h-full" src="{{ pic.src | img_url: "512x512" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
       </div>  
     </div>
