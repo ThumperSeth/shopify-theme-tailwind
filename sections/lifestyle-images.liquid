@@ -43,6 +43,24 @@
       background-color:#000;
   } 
 }
+  
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.youtube-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+  
+  
+  
 </style>
 
 
@@ -53,7 +71,9 @@
 <div class="jacobs-carousel bg-black">
   <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "lazyLoad": 5 }'>
     <div class="carousel-cell p-10">
-          <iframe src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="video-wrapper">
+    		<iframe class="youtube-video" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    	</div>
     </div>
     {% for pic in productPictures %}
     {% if pic.alt contains "lifestyle" %}
