@@ -61,7 +61,7 @@
     </div>
     {% for pic in productPictures %}
     {% if pic.alt contains "lifestyle" %}
-    <div class="carousel-cell">
+    <div class="carousel-cell p-10 w-1/2">
         <img class="carousel-cell-image" src="{{ pic.src | img_url: "512x512" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
     </div>
     {% endif %} 
