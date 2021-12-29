@@ -30,10 +30,6 @@
     cursor: pointer;
 }
   
-.carousel-cell {
-   position:relative !important; 
-}
-  
 .jacobs-carousel {
     /*background:
       linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -58,23 +54,14 @@
   <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "lazyLoad": 5 }'>
     <div class="carousel-cell pb-5">
       <div class="product-video-content w-full p-0" style="height: 512px; width:1024px">
-        <iframe class="w-full h-full drag" 
-                src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
+        <iframe class="w-full h-full drag" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
     {% for pic in productPictures %}
     {% if pic.alt contains "lifestyle" %}
     <div class="carousel-cell">
       <div id="thumby-{{ forloop.index | escape }}" class="block w-auto">
-        <img class="thumby w-full h-full" 
-             style="width:512px; height:512px;" 
-             src="{{ pic.src | img_url: "1024x" }}" 
-             alt="{{ pic.alt }}" 
-             onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
+        <img class="thumby w-full h-full" style="width:512px; height:512px;" src="{{ pic.src | img_url: "1024x" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
       </div>  
     </div>
     {% endif %} 
