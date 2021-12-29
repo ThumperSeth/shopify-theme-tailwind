@@ -1,14 +1,15 @@
 {
   "sections": {
+    "16405690123b9ce0f9": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "{% render 'mega-menu-snippet' %}"
+      }
+    },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
       "settings": {
-      }
-    },
-    "16405690123b9ce0f9": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% render 'mega-menu-snippet' %}"
       }
     },
     "big-product": {
@@ -162,8 +163,8 @@
     }
   },
   "order": [
-    "jacobs-sandbox",
     "16405690123b9ce0f9",
+    "jacobs-sandbox",
     "big-product",
     "main",
     "lifestyle-images",
