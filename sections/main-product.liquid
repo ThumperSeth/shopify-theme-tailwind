@@ -105,7 +105,56 @@
 <script>
 function swapImages(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
-}
+};
+function tfupdatePrice() {
+    var basePrice = {{ product.price | divided_by: 100 }};
+    var optionsPrices = 0;
+    var priceHTML = "";
+    var optionsHTML = "<span class=\"text-2xl text-grey-400\">Base Price: $" + basePrice + ".00</span>";
+  	var newPrice = "";
+    /* GRAB HANDLES */
+  	if (document.getElementById('has-grab-handles').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
+    }
+  	/* 5PT HARNESS */
+  	if (document.getElementById('has-5pt-harness').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + 5pt Harness: +$60</span>";
+    }
+  	/* WHIP TAB */
+  	if (document.getElementById('has-whip-tab').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Whip Tab: +$60</span>";
+    }
+  	/* LIGHT BAR TAB */
+  	if (document.getElementById('has-light-bar').checked) {
+    	optionsPrices += 125;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Light Bar Tab: +$125</span>";
+    }
+  	/* SEATBELT HARNESS MOUNT */
+  	if (document.getElementById('has-sb-harness').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Seatbelt Harness: +$60</span>";
+    }
+  	/* ROOF INTRUSION */
+  	if (document.getElementById('has-roof-intrusion').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Roof Intrusion: +$60</span>";
+    }
+  	/* WINDSHIELD INTRUSION */
+  	if (document.getElementById('has-front-intrusion').checked) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Front Intrusion: +$60</span>";
+    }
+    priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
+  if (optionsPrices == 0) { 
+    newPrice = newPrice.concat(priceHTML);
+  } else {
+	newPrice = newPrice.concat(optionsHTML + "<br />Total: " + priceHTML);
+  }
+  document.getElementById('price-{{ section.id }}').innerHTML = newPrice;
+};
 </script>
 <section class="w-full">
   <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6">
