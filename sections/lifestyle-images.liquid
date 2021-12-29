@@ -52,7 +52,7 @@
 <section class="section">
 <div class="jacobs-carousel bg-black">
   <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "lazyLoad": 5 }'>
-    <div class="carousel-cell">
+    <div class="carousel-cell p-10">
           <iframe src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     {% for pic in productPictures %}
