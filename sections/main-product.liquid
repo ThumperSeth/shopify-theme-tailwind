@@ -204,7 +204,7 @@ function swapImage(sent_img_src) {
       	cageLineItem += " + Front Intrusion";
       	cageSKUs += "32671264768051,";
     }
-     
+     	console.log(cageSKUs);
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
     	cageSKUs += selectedvariantID;
    		addAllItems(cageSKUs);
