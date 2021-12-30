@@ -141,7 +141,7 @@ function tfupdatePrice() {
     var optionsHTML = "<span class=\"text-2xl text-grey-400\">Base Price: $" + basePrice + ".00</span>";
   	var newPrice = "";
   	/* RAW */
-  	if (document.getElementById('cage-color').selected) {
+  	if (document.getElementById('cage-color').checked) {
     	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
     }
@@ -330,14 +330,14 @@ function tfupdatePrice() {
                           <div class="form__label mb-0">Cage Color</div>
                           	<div class="js product-form__input flex flex-wrap mb-0">
                           	<!-- COLOR -->
-                                <input class="color-radios" type="radio" id="cage-color" name="cage-color" value="Raw" onClick="tfupdatePrice();">
-                                <label for="cage-color">Raw</label>
+                                <input class="color-radios" type="radio" id="cage-color-raw" name="cage-color" value="Raw" onClick="tfupdatePrice();">
+                                <label for="cage-color-raw">Raw</label>
 
-                                <input class="color-radios" type="radio" id="cage-color2" name="cage-color" value="Black" onClick="tfupdatePrice();">
-                                <label for="cage-color2">Black</label>
+                                <input class="color-radios" type="radio" id="cage-color-black" name="cage-color" value="Black" onClick="tfupdatePrice();">
+                                <label for="cage-color-black">Black</label>
 
-                                <input class="color-radios" type="radio" id="cage-color3" name="cage-color" value="Custom" onClick="tfupdatePrice();">
-                                <label for="cage-color3">Custom</label>
+                                <input class="color-radios" type="radio" id="cage-color-custom" name="cage-color" value="Custom" onClick="tfupdatePrice();">
+                                <label for="cage-color-custom">Custom</label>
                       		</div>
                           
                           <div class="form__label mb-0">Brow Bar</div>
