@@ -155,7 +155,7 @@ function swapImage(sent_img_src) {
     	formData.items[0].id = {{ product.selected_or_first_available_variant.id }};
         formData.items[0].quantity = 1;
     	
-        console.log(formData);
+        console.log(JSON.stringify(formData));
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
