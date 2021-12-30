@@ -137,7 +137,7 @@ function swapImage(sent_img_src) {
   {%- if product.type == "Cages" -%}
   var cageColorCode = "";
   var cageBrowCode = "";
-  var cageBaseSKU = "{{ product.sku | split: "-" | first }}";
+  var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
   console.log(cageBaseSKU);
   {%- endif -%}
 function tfupdatePrice() {
