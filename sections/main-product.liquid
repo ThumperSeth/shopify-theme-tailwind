@@ -312,6 +312,11 @@ function tfupdatePrice() {
 				  {%- when 'tf_variant_picker' -%}
           			<div class="w-5/6 flex flex-wrap">
           				<div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                          <div class="form__label">Color</div>
+                          	<div class="js product-form__input flex flex-wrap">
+                            	
+                          	</div>
+                      	</div>
                          <div class="form__label">Seatbelt / Grab Handles</div>
                           <div class="js product-form__input flex flex-wrap">
                             
@@ -350,7 +355,7 @@ function tfupdatePrice() {
                       	</div>
                       	<div>
                           <div class="form__label">Fortification</div>
-                          div class="js product-form__input flex flex-wrap">
+                          <div class="js product-form__input flex flex-wrap">
                           <!-- FRONT INTRUSION -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/window_intrusion_bar-detail_a77d044b-9dfd-4eec-be52-6e8dda99c161.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-front-intrusion" name="has-front-intrusion" value="has-front-intrusion" onClick="tfupdatePrice();">
