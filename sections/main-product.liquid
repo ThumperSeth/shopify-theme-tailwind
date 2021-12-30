@@ -141,10 +141,18 @@ function swapImage(sent_img_src) {
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
   {%- endif -%}
   function addCageToCart(id_array) {        
-        let formData = {
-          'items': []
-   		};  
-    	formData.
+    /*    let formData = {
+          'items': [
+              {
+                  'id': sent_id,
+                  'quantity': sent_quantity
+          }]
+   		};  */
+    let formData = {
+      'items': []
+    }
+    	formData.items[0].id = {{ product.selected_or_first_available_variant.id }};
+        formData.items[0].quantity = 1;
         console.log(formData);
         fetch('/cart/add.js', {
             method: 'POST',
