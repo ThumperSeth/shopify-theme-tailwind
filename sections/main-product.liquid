@@ -152,7 +152,7 @@ function swapImage(sent_img_src) {
     let formData = {
       'items': [
         {
-        'id': {{ product.selected_or_first_available_variant.id }},
+        'id': parseInt("{{ product.selected_or_first_available_variant.id }}"),
         'quantity': 1,
       }
       ]
