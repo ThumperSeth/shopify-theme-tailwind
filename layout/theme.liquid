@@ -87,8 +87,10 @@
    		};        
         fetch('/cart/add.js', {
             method: 'POST',
+          credentials: 'same-origin',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+              'X-Requested-With':'xmlhttprequest'
             },
             body: JSON.stringify(formData)
         })
