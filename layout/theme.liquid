@@ -101,11 +101,11 @@
              error: function(){
          		// if it's not last one Move Along else update the cart number with the current quantity
           		if (Shopify.queue.length){
-            		Shopify.moveAlong()
+            		Shopify.moveAlong();
           		} else {
-            	$('#cart-number').replaceWith("<a href="/cart" id="cart-number">View cart (" + quantity + ")</a>")
+            		$('#cart-number').replaceWith("<a href="/cart" id="cart-number">View cart (" + quantity + ")</a>");
           		}
-          		}
+          	}
            });
         }
      	// If the queue is empty, we add 1 to cart
