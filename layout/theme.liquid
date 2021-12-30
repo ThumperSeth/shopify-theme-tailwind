@@ -83,22 +83,22 @@
           }]
    		};        
         fetch('/cart/add.js', {
-    body: JSON.stringify(addData),
-    credentials: 'same-origin',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
-    },
-    method: 'POST'
-  }).then(function(response) {
-    return response.json();
-  }).then(function(json) {
-    /* we have JSON */
-    console.log(json)
-  }).catch(function(err) {
-    /* uh oh, we have error. */
-    console.error(err)
-  });
+    		body: JSON.stringify(formData),
+    		credentials: 'same-origin',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
+            },
+    		method: 'POST'
+  		}).then(function(response) {
+    		return response.json();
+  		}).then(function(json) {
+    		/* we have JSON */
+    		console.log(json)
+  		}).catch(function(err) {
+    		/* uh oh, we have error. */
+    		console.error(err)
+  		});
       }
       function addSingleItemToCartWithProperties(sent_id, sent_quantity, sent_line_items) {
         let formData = {
@@ -106,13 +106,13 @@
               {
                   'id': parseInt(sent_id),
                   'quantity': sent_quantity,
-                'properties': {
+                'properties': [{
                   'Cage Options': sent_line_items
-                }
+                }]
           }]
    		};        
         fetch('/cart/add.js', {
-    body: JSON.stringify(addData),
+    body: JSON.stringify(formData),
     credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
