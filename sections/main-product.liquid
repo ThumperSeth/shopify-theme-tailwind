@@ -390,19 +390,12 @@ function tfupdatePrice() {
                       <div class="product-price" id="price-wrapper" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
-          
-          
-          
-          
-          
-                      <div {{ block.shopify_attributes }}>
+					  <div {{ block.shopify_attributes }}>
                         {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                             {{ form | payment_terms }}
                         {%- endform -%}
-                      </div>    
-          
-          
+                      </div>
                   {%- when 'buy_buttons' -%}
                       	<div class="mt-10 buy-buttons" {{ block.shopify_attributes }}>
                             <product-form class="product-form">
