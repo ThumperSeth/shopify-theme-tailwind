@@ -335,6 +335,7 @@ function tfupdatePrice() {
                         </div>
                       	<div>
                           	<div class="form__label">Accessory Tabs</div>
+                          		<div class="js product-form__input flex flex-wrap">
                         	<!-- LIGHT BAR TAB -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/light_bar_tab.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-light-bar" name="has-light-bar" value="has-light-bar" onClick="tfupdatePrice();">
@@ -345,9 +346,11 @@ function tfupdatePrice() {
                               <input type="checkbox" id="has-whip-tab" name="has-whip-tab" value="has-whip-tab" onClick="tfupdatePrice();">
                               <label for="has-whip-tab">Whip Tab</label>
 							</div>
+                          </div>
                       	</div>
                       	<div>
                           <div class="form__label">Fortification</div>
+                          div class="js product-form__input flex flex-wrap">
                           <!-- FRONT INTRUSION -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/window_intrusion_bar-detail_a77d044b-9dfd-4eec-be52-6e8dda99c161.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-front-intrusion" name="has-front-intrusion" value="has-front-intrusion" onClick="tfupdatePrice();">
@@ -358,6 +361,7 @@ function tfupdatePrice() {
                               <input type="checkbox" id="has-roof-intrusion" name="has-roof-intrusion" value="has-roof-intrusion" onClick="tfupdatePrice();">
                               <label for="has-roof-intrusion">Roof Intrusion Bar</label>
 							</div>
+                      	</div>
                       	</div>
           			</div>
                   {%- when 'variant_picker' -%}
