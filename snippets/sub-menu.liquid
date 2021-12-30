@@ -50,6 +50,12 @@
   	{%- case request.page_type -%}
     {%- when "index" -%}
     	display: none;
+    {%- when "cart" -%}
+    	display: none;
+    {%- when "page" -%}
+    	display: none;
+    {%- when "blog" -%}
+    	display: none;
   	{%- else -%}	
     	display: block; 
   	{%- endcase -%}
