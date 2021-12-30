@@ -144,22 +144,22 @@ function swapImage(sent_img_src) {
   function addCageToCart() { 
     if (document.getElementById('cage-color-raw').checked) {
       	cageLineItem += "Raw ";
-      	addSingleItemToCart(39680589234227,1);
+      	addSingleItemToCart();
     }
   	/* BLACK */
   	if (document.getElementById('cage-color-black').checked) {
       	cageLineItem += " + Black Powder Coat";
-      addSingleItemToCart(39680589266995,1);
+      addSingleItemToCart(,1);
     }
   	/* CUSTOM */
   	if (document.getElementById('cage-color-custom').checked) {
       	cageLineItem += " + Custom Color";
-      	addSingleItemToCart(39680589266995,1);
+      	addSingleItemToCart(,1);
     }
   	/* HI-BROW */
   	if (document.getElementById('hi-brow').checked) {
       	cageLineItem += " + Hi-Brow";
-      	addSingleItemToCart(39672440094771,1);
+      	addSingleItemToCart(,1);
     }
   	/* LO-BROW */
   	if (document.getElementById('lo-brow').checked) {
@@ -169,7 +169,7 @@ function swapImage(sent_img_src) {
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
       	cageLineItem += " + Grab Handles";
-      	addSingleItemToCart(39680589266995,1);
+      	addSingleItemToCart(,1);
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
@@ -454,6 +454,7 @@ function tfupdatePrice() {
                       </share-button>
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 				  {%- when 'tf_variant_picker' -%}
+          			{%- if request.page_type == "Cages" -%}
           			<div class="w-5/6 flex flex-wrap">
           				<div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                           <div class="form__label mb-0">Cage Color</div>
@@ -519,6 +520,7 @@ function tfupdatePrice() {
                       </div>
           		</div>
           </div>
+          		{% endif %}
                   {%- when 'variant_picker' -%}
 			{% if product.type != "Cages" %}
           	!!{{ product.type }}!!
