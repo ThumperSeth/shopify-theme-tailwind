@@ -144,52 +144,52 @@ function swapImage(sent_img_src) {
   function addCageToCart() { 
     if (document.getElementById('cage-color-raw').checked) {
       	cageLineItem += "Raw ";
-      	addSingleItemToCart();
+      	addSingleItemToCart(39680589234227,1);
     }
   	/* BLACK */
   	if (document.getElementById('cage-color-black').checked) {
       	cageLineItem += " + Black Powder Coat";
-      addSingleItemToCart(,1);
+      addSingleItemToCart(39680589266995,1);
     }
   	/* CUSTOM */
   	if (document.getElementById('cage-color-custom').checked) {
       	cageLineItem += " + Custom Color";
-      	addSingleItemToCart(,1);
+      	addSingleItemToCart(39680589266995,1);
     }
   	/* HI-BROW */
   	if (document.getElementById('hi-brow').checked) {
       	cageLineItem += " + Hi-Brow";
-      	addSingleItemToCart(,1);
+      	addSingleItemToCart(39672440094771,1);
     }
   	/* LO-BROW */
   	if (document.getElementById('lo-brow').checked) {
       	cageLineItem += " + Lo-Brow";
-      	addSingleItemToCart(,1);
+      	addSingleItemToCart(39672440094771,1);
     }
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
       	cageLineItem += " + Grab Handles";
-      	addSingleItemToCart(,1);
+      	addSingleItemToCart(32634861748275,1);
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
       	cageLineItem += " + 5pt Harness";
-      	addSingleItemToCart(,1);
+      	addSingleItemToCart(39554557837363,1);
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
       	cageLineItem += " + Whip Tab";
-      	addSingleItemToCart(,1);
+      	addSingleItemToCart(39361374257203,1);
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
       	cageLineItem += " + Light Bar Tab";
-      	addSingleItemToCart(,1);
+      	addSingleItemToCart(39361373274163,1);
     }
   	/* SEATBELT HARNESS MOUNT */
-  	if (document.getElementById('has-sb-harness').checked) {
-      	cageLineItem += " + Seatbelt Harness";
-      	addSingleItemToCart(,1);
+  	if (document.getElementById('has-sb-bung').checked) {
+      	cageLineItem += " + Seatbelt Bung";
+      	addSingleItemToCart(32671265816627,1);
     }
   	/* ROOF INTRUSION */
   	if (document.getElementById('has-roof-intrusion').checked) {
@@ -454,7 +454,6 @@ function tfupdatePrice() {
                       </share-button>
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 				  {%- when 'tf_variant_picker' -%}
-          			{%- if request.page_type == "Cages" -%}
           			<div class="w-5/6 flex flex-wrap">
           				<div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                           <div class="form__label mb-0">Cage Color</div>
@@ -520,7 +519,6 @@ function tfupdatePrice() {
                       </div>
           		</div>
           </div>
-          		{% endif %}
                   {%- when 'variant_picker' -%}
 			{% if product.type != "Cages" %}
           	!!{{ product.type }}!!
