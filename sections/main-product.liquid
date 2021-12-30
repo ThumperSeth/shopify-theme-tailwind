@@ -140,6 +140,7 @@ function swapImage(sent_img_src) {
   var cageBrowCode = "H";
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
   var cageLineItem = "";
+  var cageSKUs = "";
   {%- endif -%}
   
   function addCageToCart() {
@@ -170,41 +171,41 @@ function swapImage(sent_img_src) {
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
       	cageLineItem += " + Grab Handles";
-      	addSingleItemToCart(32634861748275,1,"");
+      	cageSKUs += "32634861748275,";
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
       	cageLineItem += " + 5pt Harness";
-      	addSingleItemToCart(39554557837363,1,"");
+      	cageSKUs += "39554557837363,";
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
       	cageLineItem += " + Whip Tab";
-      	addSingleItemToCart(39361374257203,1,"");
+      	cageSKUs += "39361374257203,";
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
       	cageLineItem += " + Light Bar Tab";
-      	addSingleItemToCart(39361373274163,1,"");
+      	cageSKUs += "39361373274163,";
     }
   	/* SEATBELT HARNESS MOUNT */
   	if (document.getElementById('has-sb-bung').checked) {
       	cageLineItem += " + Seatbelt Bung";
-      	addSingleItemToCart(32671265816627,1,"");
+      	cageSKUs += "32671265816627,";
     }
   	/* ROOF INTRUSION */
   	if (document.getElementById('has-roof-intrusion').checked) {
       	cageLineItem += " + Roof Intrusion";
-      	addSingleItemToCart(32671264997427,1,"");
+      	cageSKUs += "32671264997427,";
     }
   	/* WINDSHIELD INTRUSION */
   	if (document.getElementById('has-front-intrusion').checked) {
       	cageLineItem += " + Front Intrusion";
-      	addSingleItemToCart(32671264768051,1,"");
+      	cageSKUs += "32671264768051,";
     }
      
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
-    	addSingleItemToCart(selectedvariantID,1,cageLineItem);
+    	
    		
       }
 function tfupdatePrice() {
