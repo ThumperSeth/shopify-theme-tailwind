@@ -184,7 +184,7 @@ function tfupdatePrice() {
 
   <!-- PRODUCT INFORMATION -->
     <div id="ProductInfo-{{ section.id }}" class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10 mr-20">
-
+		<div id="ProductInfo-{{ section.id }}">
         	{%- assign product_form_id = 'product-form-' | append: section.id -%}
         	{%- for block in section.blocks -%}
             	{%- case block.type -%}
@@ -508,8 +508,8 @@ function tfupdatePrice() {
                 </div>
             </modal-dialog>
         {%- endfor -%}
-
-		</div>
+    </div>
+</div>
 </section>
 
 {% javascript %}
