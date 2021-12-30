@@ -42,9 +42,7 @@
 <script>
 var elem = document.querySelector('.related-cards .carousel');
 var flkty = new Flickity( elem, {
-  contain: true,
   imagesLoaded: true,
-  lazyLoad: 6,
   wrapAround: true,
   pageDots: false,
 });
@@ -52,9 +50,7 @@ var flkty = new Flickity( elem, {
   document.addEventListener("shopify:section:load", function(event) {
   var elem = document.querySelector('.related-cards .carousel');
    var flkty = new Flickity( elem, {
-      contain: true,
       imagesLoaded: true,
-      lazyLoad: 6,
       wrapAround: true,
       pageDots: false,
     });
