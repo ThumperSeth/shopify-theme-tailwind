@@ -159,6 +159,18 @@ function tfupdatePrice() {
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Custom Powder Coat: +$1200</span>";
       	numOfOptions++;
     }
+  	/* HI-BROW */
+  	if (document.getElementById('cage-color-custom').checked) {
+    	optionsPrices += 0;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Lo-Brow</span>";
+      	numOfOptions++;
+    }
+  	/* LO-BROW */
+  	if (document.getElementById('cage-color-custom').checked) {
+    	optionsPrices += 1200;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Custom Powder Coat: +$1200</span>";
+      	numOfOptions++;
+    }
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
