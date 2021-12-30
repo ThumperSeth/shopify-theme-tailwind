@@ -158,13 +158,13 @@ function tfupdatePrice() {
   	if (document.getElementById('cage-color-black').checked) {
     	optionsPrices += 1000;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Black Powder Coat: +$1000</span>";
-      	numOfOptions++;
+      	numOfOptions+=100;
     }
   	/* CUSTOM */
   	if (document.getElementById('cage-color-custom').checked) {
     	optionsPrices += 1200;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Custom Powder Coat: +$1200</span>";
-      	numOfOptions++;
+      	numOfOptions+=200;
     }
   	/* HI-BROW */
   	if (document.getElementById('hi-brow').checked) {
@@ -221,7 +221,7 @@ function tfupdatePrice() {
         numOfOptions++;
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
-  if (numOfOptions < 1) { 
+  if (numOfOptions < 100 || numOfOptions == 0) { 
     newPrice = newPrice.concat(priceHTML);
   } else {
 	newPrice = newPrice.concat(optionsHTML + "<br />Total: " + priceHTML);
