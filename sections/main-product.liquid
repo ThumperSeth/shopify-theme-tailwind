@@ -141,7 +141,54 @@ function swapImage(sent_img_src) {
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
   var cageLineItem = "";
   {%- endif -%}
-  function addCageToCart() {        
+  function addCageToCart() { 
+    if (document.getElementById('cage-color-raw').checked) {
+      	cageLineItem += "Raw ";
+    }
+  	/* BLACK */
+  	if (document.getElementById('cage-color-black').checked) {
+      	cageLineItem += " + Black Powder Coat";
+    }
+  	/* CUSTOM */
+  	if (document.getElementById('cage-color-custom').checked) {
+      	cageLineItem += " + Custom Color";
+    }
+  	/* HI-BROW */
+  	if (document.getElementById('hi-brow').checked) {
+      	cageLineItem += " + Hi-Brow";
+    }
+  	/* LO-BROW */
+  	if (document.getElementById('lo-brow').checked) {
+      	cageLineItem += " + Lo-Brow";
+    }
+    /* GRAB HANDLES */
+  	if (document.getElementById('has-grab-handles').checked) {
+      	cageLineItem += " + Grab Handles";
+    }
+  	/* 5PT HARNESS */
+  	if (document.getElementById('has-5pt-harness').checked) {
+      	cageLineItem += " + 5pt Harness";
+    }
+  	/* WHIP TAB */
+  	if (document.getElementById('has-whip-tab').checked) {
+      	cageLineItem += " + Whip Tab";
+    }
+  	/* LIGHT BAR TAB */
+  	if (document.getElementById('has-light-bar').checked) {
+      	cageLineItem += " + Light Bar Tab";
+    }
+  	/* SEATBELT HARNESS MOUNT */
+  	if (document.getElementById('has-sb-harness').checked) {
+      	cageLineItem += " + Seatbelt Harness";
+    }
+  	/* ROOF INTRUSION */
+  	if (document.getElementById('has-roof-intrusion').checked) {
+      	cageLineItem += " + Roof Intrusion";
+    }
+  	/* WINDSHIELD INTRUSION */
+  	if (document.getElementById('has-front-intrusion').checked) {
+      	cageLineItem += " + Front Intrusion";
+    }
     /*    let formData = {
           'items': [
               {
@@ -188,21 +235,21 @@ function tfupdatePrice() {
       	numOfOptions+=500;
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Raw</span>";
-      	cageLineItem += "Raw ";
+
     }
   	/* BLACK */
   	if (document.getElementById('cage-color-black').checked) {
     	optionsPrices += 1000;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Black Powder Coat ($1000)</span>";
       	cageColorCode = "BK";
-      	cageLineItem += " + Black Powder Coat";
+
       	numOfOptions++;
     }
   	/* CUSTOM */
   	if (document.getElementById('cage-color-custom').checked) {
     	optionsPrices += 1200;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Custom Powder Coat: ($1200)</span>";
-      	cageLineItem += " + Custom Color";
+
       	cageColorCode = "CC";
       	numOfOptions++;
     }
@@ -210,61 +257,60 @@ function tfupdatePrice() {
   	if (document.getElementById('hi-brow').checked) {
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Hi-Brow</span><br />";
-      	cageLineItem += " + Hi-Brow";
+
     }
   	/* LO-BROW */
   	if (document.getElementById('lo-brow').checked) {
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Lo-Brow</span><br />";
-      	cageLineItem += " + Lo-Brow";
-    }
+
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: ($60)</span>";
-      	cageLineItem += " + Grab Handles";
+
       	numOfOptions++;
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
     	optionsPrices += 400;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + 5pt Harness: ($400)</span>";
-      	cageLineItem += " + 5pt Harness";
+
       	numOfOptions++;
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
     	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Whip Tab: ($60)</span>";
-      	cageLineItem += " + Whip Tab";
+
       	numOfOptions++;
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
     	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Light Bar Tab: ($60)</span>";
-      	cageLineItem += " + Light Bar Tab";
+
       	numOfOptions++;
     }
   	/* SEATBELT HARNESS MOUNT */
   	if (document.getElementById('has-sb-harness').checked) {
     	optionsPrices += 100;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Seatbelt Harness: ($100)</span>";
-      	cageLineItem += " + Seatbelt Harness";
+
       	numOfOptions++;    
     }
   	/* ROOF INTRUSION */
   	if (document.getElementById('has-roof-intrusion').checked) {
     	optionsPrices += 85;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Roof Intrusion: ($85)</span>";
-      	cageLineItem += " + Roof Intrusion";
+
       	numOfOptions++;
     }
   	/* WINDSHIELD INTRUSION */
   	if (document.getElementById('has-front-intrusion').checked) {
     	optionsPrices += 85;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Front Intrusion: ($85)</span>";
-      	cageLineItem += " + Front Intrusion";
+
         numOfOptions++;
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
