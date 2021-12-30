@@ -162,18 +162,7 @@ function swapImage(sent_img_src) {
                   }]
           }]
    		};  
-      let formObj = JSON.parse(formData);            
-      formObj.push(
-        {
-          'items': [
-            {
-            	'id': parseInt("{{ product.selected_or_first_available_variant.id }}"),
-         		'quantity': 1
-          	}
-           ]
-      });
-
-    	
+          	
         console.log(JSON.stringify(formObj));
         fetch('/cart/add.js', {
             method: 'POST',
