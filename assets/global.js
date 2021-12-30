@@ -575,11 +575,6 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
     }
-    // When variant is changed post a message with the variant's data
-    window.postMessage({
-      type: 'variant_changed',
-      variant: this.currentVariant
-    }, '*')
   }
 
   updateOptions() {
@@ -656,14 +651,14 @@ class VariantSelects extends HTMLElement {
     fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
       .then((response) => response.text())
       .then((responseText) => {
-        const id = `price-wrapper`;
+        const id = `price-${this.dataset.section}`;
         const html = new DOMParser().parseFromString(responseText, 'text/html')
         const destination = document.getElementById(id);
         const source = html.getElementById(id);
 
         if (source && destination) destination.innerHTML = source.innerHTML;
 
-        const price = document.getElementById(`price-wrapper`);
+        const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('visibility-hidden');
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
@@ -693,7 +688,7 @@ class VariantSelects extends HTMLElement {
     const button = document.getElementById(`product-form-${this.dataset.section}`);
     const addButton = button.querySelector('[name="add"]');
     const addButtonText = button.querySelector('[name="add"] > span');
-    const price = document.getElementById(`price-wrapper`);
+    const price = document.getElementById(`price-${this.dataset.section}`);
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('visibility-hidden');
