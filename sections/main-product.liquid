@@ -207,7 +207,7 @@ function swapImage(sent_img_src) {
      
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
     	cageSKUs += selectedvariantID;
-   		addAllItems(cageSKUs.split(","));
+   		addAllItems(cageSKUs);
       }
 function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
