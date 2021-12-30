@@ -103,7 +103,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />
 {%- endif -%}
 <script>
-function swapImages(sent_img_src) {
+function swapImage(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 };
 function tfupdatePrice() {
@@ -153,7 +153,7 @@ function tfupdatePrice() {
   } else {
 	newPrice = newPrice.concat(optionsHTML + "<br />Total: " + priceHTML);
   }
-  document.getElementById('price-{{ section.id }}').innerHTML = newPrice;
+  document.getElementById('price-wrapper').innerHTML = newPrice;
 };
 </script>
 <section class="w-full">
@@ -168,7 +168,7 @@ function tfupdatePrice() {
 
       </div>
       {%- assign productPictures = product.media | where: "media_type", "image" -%}
-      <div id="thumbys" class="w-5/6 p-8 inline-flex fuxed">
+      <div id="thumbys" class="w-5/6 p-8 inline-flex flex">
         {% for pic in productPictures %}
         	{% if pic.alt contains "main" %}
               <div id="thumby-{{ forloop.index }}" class="mx-auto block">
@@ -183,8 +183,8 @@ function tfupdatePrice() {
     </div>
 
   <!-- PRODUCT INFORMATION -->
-    <div class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10 mr-20">
-    	<div id="ProductInfo-{{ section.id }}">
+    <div id="ProductInfo-{{ section.id }}" class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10 mr-20">
+
         	{%- assign product_form_id = 'product-form-' | append: section.id -%}
         	{%- for block in section.blocks -%}
             	{%- case block.type -%}
@@ -200,9 +200,9 @@ function tfupdatePrice() {
                       </span>
                       <h1 class="product__title text-6xl" {{ block.shopify_attributes }}>
                       	{%- if product.metafields.global.display_name != blank -%}
-          		  			!!{{ product.metafields.global.display_name }}!!
+          		  			{{ product.metafields.global.display_name }}
             			{%- else -%}
-          		    		??{{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
+          		    		{{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
             			{%- endif -%}
           			</h1>
                   {%- when 'description' -%}
@@ -282,108 +282,181 @@ function tfupdatePrice() {
                       </share-button>
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 				  {%- when 'tf_variant_picker' -%}
-          			<div>
-          				TF Variant Picker Here
-          			</div>
-                  {%- when 'variant_picker' -%}
-                      <div class="variant-wrapper">
-                        {%- unless product.has_only_default_variant -%}
-                        {%- if block.settings.picker_type == 'button' -%}
-                        <variant-radios class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                          {%- for option in product.options_with_values -%}
-                          <fieldset class="js product-form__input">
-                            <legend class="form__label">{{ option.name }}</legend>
-                            {%- for value in option.values -%}
-                            <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
-                            <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
-                            {%- endfor -%}
-                          </fieldset>
-                          {%- endfor -%}
-                          <script type="application/json">
-                                                            {{ product.variants | json }} 
-                          </script>
-                        </variant-radios>
-                        {%- else -%}
-                        <variant-selects class="selector-wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                          {%- for option in product.options_with_values -%}
-                          <div class="product-form__input product-form__input--dropdown">
-                            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
-                            <div class="select">
-                              <select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="select__select" name="options[{{ option.name | escape }}]" form="product-form-{{ section.id }}">
-                                {%- for value in option.values -%}
-                                <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
-                                {%- endfor -%}
-                              </select>
-                              {% render 'icon-caret' %}
+          			<div class="w-full">
+          				<div class="selector_wrapper no-js-hidden" data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                         <div class="form__label">Cage Options</div>
+                          <div class="js product-form__input flex sm:flex-wrap">
+                            
+                            <!-- GRAB HANDLES -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onClick="tfupdatePrice();">
+                              <label for="has-grab-handles">Grab Handles</label>
                             </div>
-                          </div>
-                          {%- endfor -%}
-                          <script type="application/json">
-                                                            {{ product.variants | json }}
-                          </script>
-                        </variant-selects>
-                        {%- endif -%}
-                        {%- endunless -%}   
-                      </div>
-                      <noscript>
-                        <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-                          <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
-                          <div class="select">
-                            <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
-                              {%- for variant in product.variants -%}
-                              <option
-                                      {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
-                                      {% if variant.available == false %}disabled{% endif %}
-                                      value="{{ variant.id }}"
-                                      >
-                                {{ variant.title }}
-                                {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                                                                - {{ variant.price | money | strip_html }}
-                              </option>
-                              {%- endfor -%}
-                            </select>
-                            {% render 'icon-caret' %}
+                            <!-- 5PT HARNESS -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/5-point_harness_mounts-4-seat_f290310c-a858-42d2-97e3-16d0d4944313.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-5pt-harness" name="has-5pt-harness" value="has-5pt-harness" onClick="tfupdatePrice();">
+                              <label for="has-5pt-harness">5pt Harness</label>
+                            </div>
+                            <!-- LIGHT BAR TAB -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/light_bar_tab.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-light-bar" name="has-light-bar" value="has-light-bar" onClick="tfupdatePrice();">
+                              <label for="has-light-bar">Light Bar Tab</label>
+                            </div>
+                            <!-- WHIP TAB -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/whip_tab_d312b7be-0267-4453-8c8d-111e56cf488b.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-whip-tab" name="has-whip-tab" value="has-whip-tab" onClick="tfupdatePrice();">
+                              <label for="has-whip-tab">Whip Tab</label>
+							</div>
+                            <!-- SEATBELT HARNESS -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/seatbelt_harness_mount.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-sb-harness" name="has-sb-harness" value="has-sb-harness" onClick="tfupdatePrice();">
+                              <label for="has-sb-harness">Seatbelt Harness Mount</label>
+							</div>
+                            <!-- FRONT INTRUSION -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/window_intrusion_bar-detail_a77d044b-9dfd-4eec-be52-6e8dda99c161.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-front-intrusion" name="has-front-intrusion" value="has-front-intrusion" onClick="tfupdatePrice();">
+                              <label for="has-front-intrusion">Front Intrusion Bar</label>
+							</div>
+                            <!-- ROOF INTRUSION -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roof_intrusion_bar-detail_3c35f7e4-331f-4cb0-a1b2-f659957e8eae.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-roof-intrusion" name="has-roof-intrusion" value="has-roof-intrusion" onClick="tfupdatePrice();">
+                              <label for="has-roof-intrusion">Roof Intrusion Bar</label>
+							</div>
                           </div>
                         </div>
-                      </noscript>
+          			</div>
+                  {%- when 'variant_picker' -%}
+
+            {%- unless product.has_only_default_variant -%}
+              {%- if block.settings.picker_type == 'button' -%}
+                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                  {%- for option in product.options_with_values -%}
+                      <fieldset class="js product-form__input">
+                        <legend class="form__label">{{ option.name }}</legend>
+                        {%- for value in option.values -%}
+                          <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                name="{{ option.name }}"
+                                value="{{ value | escape }}"
+                                form="{{ product_form_id }}"
+                                {% if option.selected_value == value %}checked{% endif %}
+                          >
+                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                            {{ value }}
+                          </label>
+                        {%- endfor -%}
+                      </fieldset>
+                  {%- endfor -%}
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                </variant-radios>
+              {%- else -%}
+                <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                  {%- for option in product.options_with_values -%}
+                    <div class="product-form__input product-form__input--dropdown">
+                      <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                        {{ option.name }}
+                      </label>
+                      <div class="select">
+                        <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                          class="select__select"
+                          name="options[{{ option.name | escape }}]"
+                          form="{{ product_form_id }}"
+                        >
+                          {%- for value in option.values -%}
+                            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                              {{ value }}
+                            </option>
+                          {%- endfor -%}
+                        </select>
+                        {% render 'icon-caret' %}
+                      </div>
+                    </div>
+                  {%- endfor -%}
+
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                </variant-selects>
+              {%- endif -%}
+            {%- endunless -%}
+
+            <noscript class="product-form__noscript-wrapper-{{ section.id }}">
+              <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
+                <div class="select">
+                  <select name="id" id="Variants-{{ section.id }}" class="select__select" form="{{ product_form_id }}">
+                    {%- for variant in product.variants -%}
+                      <option
+                        {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                        {% if variant.available == false %}disabled{% endif %}
+                        value="{{ variant.id }}"
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
+              </div>
+            </noscript>
                   {%- when 'price' -%}
-                      <div class="product-price" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                      <div class="product-price" id="price-wrapper" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
-          
-          
-          
-          
-          
-                      <div {{ block.shopify_attributes }}>
+					  <div {{ block.shopify_attributes }}>
                         {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                             {{ form | payment_terms }}
                         {%- endform -%}
-                      </div>    
-          
-          
+                      </div>
                   {%- when 'buy_buttons' -%}
                       	<div class="mt-10 buy-buttons" {{ block.shopify_attributes }}>
-                            <product-form>
-                              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"> 
-                              
-                              
-                                  <div class="product-form__buttons">
-                                    <button id="AddToCart" type="submit" name="add" class="add-to-cart-button product-form__submit button button--full-width button--primary">
-                                      {%- if product.selected_or_first_available_variant.available -%}
-                                      {{ 'products.product.add_to_cart' | t | upcase }}
-                                      {%- else -%}
-                                      {{ 'products.product.sold_out' | t | upcase }}
-                                      {%- endif -%}
-                                    </button>
-                                    {%- if block.settings.show_dynamic_checkout -%}
-                                    {{ form | payment_button }}
-                                    {%- endif -%}
-                                  </div>
-                              
-                        <!-- PICKUP AVAILABLILITY MODAL -->
+                            <product-form class="product-form">
+                <div class="product-form__error-message-wrapper" role="alert" hidden>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                    <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                    <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                    <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7" />
+                  </svg>
+                  <span class="product-form__error-message"></span>
+                </div>
+
+                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+                  <div class="product-form__buttons">
+                    <button
+                      type="submit"
+                      name="add"
+                      class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                    >
+                        <span>
+                          {%- if product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                          {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
+                          {%- endif -%}
+                        </span>
+                        <div class="loading-overlay__spinner hidden">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                          </svg>
+                        </div>
+                    </button>
+                    {%- if block.settings.show_dynamic_checkout -%}
+                      {{ form | payment_button }}
+                    {%- endif -%}
+                  </div>
+                {%- endform -%}
+              </product-form>
+                  		</div>                           
+                    {%- endcase -%}
+                {%- endfor -%}
+          <!-- PICKUP AVAILABLILITY MODAL -->
                         {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
                         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
@@ -419,15 +492,6 @@ function tfupdatePrice() {
 
                               <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
                               </div>    
-                          
-                          
-                          
-                              {%- endform -%}
-                            </product-form>
-                  		</div>                           
-                    {%- endcase -%}
-                {%- endfor -%}
-          
 
         <!-- CART MODAL -->
         {%- render 'cart-notification' -%}
@@ -444,6 +508,7 @@ function tfupdatePrice() {
                 </div>
             </modal-dialog>
         {%- endfor -%}
+
 		</div>
 </section>
 
@@ -479,15 +544,6 @@ function tfupdatePrice() {
 
   customElements.define('product-modal', ProductModal);
 {% endjavascript %}
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-
-{%- if first_3d_model -%}
-  <script type="application/json" id="ProductJSON-{{ product.id }}">
-    {{ product.media | where: 'media_type', 'model' | json }}
-  </script>
-
-  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
-{%- endif -%}
 
 {% schema %}
 {
