@@ -74,7 +74,29 @@
       [[ product.selected_or_first_available_variant.id ]]
       ********************************************************/
       var selectedVariantIDS = "{{ product.selected_or_first_available_variant.id }}";
-      function addSingleItemToCart(sent_id, sent_quantity, sent_line_items) {
+      function addSingleItemToCart(sent_id, sent_quantity) {
+        let formData = {
+          'items': [
+              {
+                  'id': parseInt(sent_id),
+                  'quantity': sent_quantity
+          }]
+   		};        
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            return response.json();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+      }
+      function addSingleItemToCartWithProperties(sent_id, sent_quantity, sent_line_items) {
         let formData = {
           'items': [
               {
