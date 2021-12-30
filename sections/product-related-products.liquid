@@ -1,4 +1,4 @@
-
+{% if product.metafields.related-products != nil %}
 <style>
  .related-products-title {
 		background-color: #ccc;
@@ -91,6 +91,8 @@ var flkty = new Flickity( elem, {
  });
 {% endif %}
 </script>
+
+{% endif %}
 {% schema %}
 {
   "name": "Related Products Carousel",
