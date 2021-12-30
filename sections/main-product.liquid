@@ -107,7 +107,7 @@ function swapImages(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 };
 function tfupdatePrice() {
-    var basePrice = {{ product.selected_or_first_available_variant.price | divided_by: 100 }};
+    var basePrice = {{ product.price | divided_by: 100 }};
     var optionsPrices = 0;
     var priceHTML = "";
     var optionsHTML = "<span class=\"text-2xl text-grey-400\">Base Price: $" + basePrice + ".00</span>";
