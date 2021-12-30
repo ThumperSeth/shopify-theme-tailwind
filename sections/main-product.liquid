@@ -387,7 +387,7 @@ function tfupdatePrice() {
                         </div>
                       </noscript>
                   {%- when 'price' -%}
-                      <div class="product-price" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                      <div class="product-price" id="price-wrapper" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
           
