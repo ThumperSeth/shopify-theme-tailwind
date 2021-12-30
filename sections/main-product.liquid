@@ -153,7 +153,6 @@ function tfupdatePrice() {
       	
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Raw: +$0</span>";
-      	numOfOptions++;
     }
   	/* BLACK */
   	if (document.getElementById('cage-color-black').checked) {
@@ -222,7 +221,7 @@ function tfupdatePrice() {
         numOfOptions++;
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
-  if (numOfOptions == 0) { 
+  if (numOfOptions < 1) { 
     newPrice = newPrice.concat(priceHTML);
   } else {
 	newPrice = newPrice.concat(optionsHTML + "<br />Total: " + priceHTML);
