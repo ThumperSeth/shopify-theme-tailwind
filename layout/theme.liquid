@@ -79,7 +79,10 @@
           'items': [
               {
                   'id': sent_id,
-                  'quantity': sent_quantity
+                  'quantity': sent_quantity,
+                'properties': {
+                  'Cage Options': sent_line_items
+                }
           }]
    		};        
         fetch('/cart/add.js', {
