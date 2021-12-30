@@ -134,6 +134,12 @@
 function swapImage(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 };
+  {%- if product.type == "Cages" -%}
+  var cageColorCode = "";
+  var cageBrowCode = "";
+  var cageBaseSKU = "{{ product.sku | split: "-" | first }}";
+  console.log(cageBaseSKU);
+  {%- endif -%}
 function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
     var optionsPrices = 0;
@@ -143,6 +149,7 @@ function tfupdatePrice() {
   	var newPrice = "";
   	/* RAW */
   	if (document.getElementById('cage-color-raw').checked) {
+      	
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Raw: +$0</span>";
       	numOfOptions++;
