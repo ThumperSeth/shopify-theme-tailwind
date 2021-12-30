@@ -85,7 +85,7 @@
       // If we still have requests in the queue, let's process the next one.
       if (Shopify.queue.length) {
         var request = Shopify.queue.shift();
-        var data = 'id='+ request.variantId + '&quantity=1'
+        var data = 'id='+ request.variantId + '&quantity=1';
         $.ajax({
           type: 'POST',
               url: '/cart/add.js',
