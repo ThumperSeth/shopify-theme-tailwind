@@ -141,7 +141,8 @@ function swapImage(sent_img_src) {
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
   var cageLineItem = "";
   {%- endif -%}
-  function addCageToCart() { 
+  function addCageToCart() {
+    	cageLineItem="";
     if (document.getElementById('cage-color-raw').checked) {
       	cageLineItem += "Raw ";
       	addSingleItemToCart(39672440062003,1);
