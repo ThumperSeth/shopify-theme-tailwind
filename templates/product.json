@@ -38,6 +38,11 @@
             "picker_type": "button"
           }
         },
+        "d4286f1e-a57d-4d6a-8cdb-a699c854ce99": {
+          "type": "tf_variant_picker",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -49,6 +54,7 @@
         "title",
         "price",
         "variant_picker",
+        "d4286f1e-a57d-4d6a-8cdb-a699c854ce99",
         "buy_buttons"
       ],
       "settings": {
@@ -110,6 +116,7 @@
     },
     "product-reviews": {
       "type": "product-reviews",
+      "disabled": true,
       "settings": {
       }
     },
