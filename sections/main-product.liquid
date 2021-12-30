@@ -152,11 +152,12 @@ function swapImage(sent_img_src) {
     let formData = {
       'items': [{
         'id': {{ product.selected_or_first_available_variant.id }},
-        'quantity': 1        
+        'quantity': 1,
+        'properties': []
       }]
     }
-    	formData.items[0].id = {{ product.selected_or_first_available_variant.id }};
-        formData.items[0].quantity = 1;
+    formData.items[1] = { };
+
     	
         console.log(JSON.stringify(formData));
         fetch('/cart/add.js', {
