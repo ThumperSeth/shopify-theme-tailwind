@@ -84,6 +84,7 @@
           		variantId: product,
         	});
          }
+    	}
       	Shopify.moveAlong = function() {
       		// If we still have requests in the queue, let's process the next one.
       		if (Shopify.queue.length) {
@@ -98,9 +99,9 @@
             	Shopify.moveAlong();
           		quantity += 1;
          	},
-             error: function(){
+             error: function() {
          		// if it's not last one Move Along else update the cart number with the current quantity
-          		if (Shopify.queue.length){
+          		if (Shopify.queue.length) {
             		Shopify.moveAlong();
           		} else {
        //     		$('#cart-number').replaceWith("<a href='/cart' id='cart-number'>View cart (" + quantity + ")</a>");
