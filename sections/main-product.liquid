@@ -446,6 +446,7 @@ function tfupdatePrice() {
                       </share-button>
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 				  {%- when 'tf_variant_picker' -%}
+          			{% if product.type == "Cages" %}
           			<div class="w-5/6 flex flex-wrap">
           				<div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                           <div class="form__label mb-0">Cage Color</div>
@@ -511,6 +512,7 @@ function tfupdatePrice() {
                       </div>
           		</div>
           </div>
+          	{% endif %}
                   {%- when 'variant_picker' -%}
 			{% if product.type != "Cages" %}
           	!!{{ product.type }}!!
