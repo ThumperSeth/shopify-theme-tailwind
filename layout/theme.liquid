@@ -117,6 +117,9 @@
        };
     Shopify.moveAlong();
   };
+      function addToCartOk(quantity){  
+    	$('#cart-number').replaceWith("<a href="/cart" id="cart-number">View cart (" + quantity + ")</a>");
+	}
       
       /*********************************************************
       [[ product.selected_or_first_available_variant.id ]]
