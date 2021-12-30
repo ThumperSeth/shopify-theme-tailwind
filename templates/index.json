@@ -116,6 +116,7 @@
     },
     "what-customers-say": {
       "type": "what-customers-say",
+      "disabled": true,
       "settings": {
       }
     },
