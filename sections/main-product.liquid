@@ -142,54 +142,7 @@ function swapImage(sent_img_src) {
   var cageLineItem = "";
   {%- endif -%}
   function addCageToCart() { 
-    cageLineItem = "";
-    if (document.getElementById('cage-color-raw').checked) {
-      	cageLineItem += "Raw ";
-    }
-  	/* BLACK */
-  	if (document.getElementById('cage-color-black').checked) {
-      	cageLineItem += " + Black Powder Coat";
-    }
-  	/* CUSTOM */
-  	if (document.getElementById('cage-color-custom').checked) {
-      	cageLineItem += " + Custom Color";
-    }
-  	/* HI-BROW */
-  	if (document.getElementById('hi-brow').checked) {
-      	cageLineItem += " + Hi-Brow";
-    }
-  	/* LO-BROW */
-  	if (document.getElementById('lo-brow').checked) {
-      	cageLineItem += " + Lo-Brow";
-    }
-    /* GRAB HANDLES */
-  	if (document.getElementById('has-grab-handles').checked) {
-      	cageLineItem += " + Grab Handles";
-    }
-  	/* 5PT HARNESS */
-  	if (document.getElementById('has-5pt-harness').checked) {
-      	cageLineItem += " + 5pt Harness";
-    }
-  	/* WHIP TAB */
-  	if (document.getElementById('has-whip-tab').checked) {
-      	cageLineItem += " + Whip Tab";
-    }
-  	/* LIGHT BAR TAB */
-  	if (document.getElementById('has-light-bar').checked) {
-      	cageLineItem += " + Light Bar Tab";
-    }
-  	/* SEATBELT HARNESS MOUNT */
-  	if (document.getElementById('has-sb-harness').checked) {
-      	cageLineItem += " + Seatbelt Harness";
-    }
-  	/* ROOF INTRUSION */
-  	if (document.getElementById('has-roof-intrusion').checked) {
-      	cageLineItem += " + Roof Intrusion";
-    }
-  	/* WINDSHIELD INTRUSION */
-  	if (document.getElementById('has-front-intrusion').checked) {
-      	cageLineItem += " + Front Intrusion";
-    }
+    
     /*    let formData = {
           'items': [
               {
