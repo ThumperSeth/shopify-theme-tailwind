@@ -168,7 +168,7 @@ function tfupdatePrice() {
 
       </div>
       {%- assign productPictures = product.media | where: "media_type", "image" -%}
-      <div id="thumbys" class="w-5/6 p-8 inline-flex fuxed">
+      <div id="thumbys" class="w-5/6 p-8 inline-flex flex">
         {% for pic in productPictures %}
         	{% if pic.alt contains "main" %}
               <div id="thumby-{{ forloop.index }}" class="mx-auto block">
