@@ -149,7 +149,17 @@ function swapImage(sent_img_src) {
                   'quantity': sent_quantity
           }]
    		};  */
-    let formData = {};
+    	let formData = {
+          'items': [
+              {
+                  'id': parseInt("{{ product.selected_or_first_available_variant.id }}"),
+                  'quantity': 1
+                                 'properties': [
+                                 {
+                                 	'did': 'thiswork'
+                                 }]
+          }]
+   		};  
       let formObj = JSON.parse(formData);            
       formObj.push(
         {
