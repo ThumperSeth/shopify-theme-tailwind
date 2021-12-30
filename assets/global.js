@@ -640,11 +640,11 @@ class VariantSelects extends HTMLElement {
   }
 
   removeErrorMessage() {
-    const section = this.closest('section');
-    if (!section) return;
-
-    const productForm = section.querySelector('product-form');
-    if (productForm) productForm.handleErrorMessage();
+//    const section = this.closest('section');
+//    if (!section) return;
+//
+ //   const productForm = section.querySelector('product-form');
+  //  if (productForm) productForm.handleErrorMessage();
   }
 
   renderProductInfo() {
