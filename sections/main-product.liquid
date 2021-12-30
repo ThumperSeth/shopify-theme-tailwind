@@ -153,7 +153,7 @@ function swapImage(sent_img_src) {
       'items': []
     }
       formObj = JSON.parse(formData);            
-    formObj['items'].push({'id': parseInt("{{ product.selected_or_first_available_variant.sku }}"),'quantity': 1, 'properties':[{ "testing": "did this work" }]});
+    formObj.push({'items': [{'id': parseInt("{{ product.selected_or_first_available_variant.sku }}"),'quantity': 1, 'properties':[{ "testing": "did this work" }]}]});
 
     	
         console.log(JSON.stringify(formObj));
