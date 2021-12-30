@@ -189,14 +189,7 @@ function swapImage(sent_img_src) {
   	if (document.getElementById('has-front-intrusion').checked) {
       	cageLineItem += " + Front Intrusion";
     }
-    /*    let formData = {
-          'items': [
-              {
-                  'id': sent_id,
-                  'quantity': sent_quantity
-          }]
-   		};  */
-    
+     
     	var variantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
     	let tfformData = {
           'items': [
