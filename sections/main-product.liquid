@@ -151,7 +151,7 @@ function swapImage(sent_img_src) {
    		};  */
     
     	var variantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
-    	let formData = {
+    	let tfformData = {
           'items': [
               {
                   'id': variantID,
@@ -163,7 +163,7 @@ function swapImage(sent_img_src) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(tfformData)
           
         })
         .then(response => {
