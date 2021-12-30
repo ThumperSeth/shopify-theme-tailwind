@@ -140,12 +140,17 @@ function tfupdatePrice() {
     var priceHTML = "";
     var optionsHTML = "<span class=\"text-2xl text-grey-400\">Base Price: $" + basePrice + ".00</span>";
   	var newPrice = "";
-  /* BLACK */
+  	/* RAW */
+  	if (document.getElementById('cage-color').selected) {
+    	optionsPrices += 60;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
+    }
+  	/* BLACK */
   	if (document.getElementById('cage-color').checked) {
     	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
     }
-  /* GRAB HANDLES */
+  	/* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
