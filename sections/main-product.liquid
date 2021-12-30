@@ -319,7 +319,7 @@ function tfupdatePrice() {
   document.getElementById('price-wrapper').innerHTML = newPrice;
 };
   
-  document.addEventListener("load",setTimeout("tfupdatePrice()",2000));
+  document.onload = setTimeout("tfupdatePrice()",2500));
 </script>
 <section class="w-full">
   <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6">
