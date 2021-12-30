@@ -427,7 +427,7 @@ function tfupdatePrice() {
           </div>
                   {%- when 'variant_picker' -%}
 			{% if product.type != "Cages" %}
-          	
+          	!!{{ product.type }}!!
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
