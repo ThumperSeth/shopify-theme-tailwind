@@ -149,10 +149,12 @@ function swapImage(sent_img_src) {
                   'quantity': sent_quantity
           }]
    		};  */
+    
+    	var variantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
     	let formData = {
           'items': [
               {
-                  'id': parseInt("{{ product.selected_or_first_available_variant.id }}"),
+                  'id': variantID,
                   'quantity': 1,
                   'properties': [
                   {
