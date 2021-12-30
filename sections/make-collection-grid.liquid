@@ -133,7 +133,7 @@
                               	{% assign tempCat = product.metafields.global.category | downcase %}
                             	{% assign productMake = product.metafields.global.make | downcase %} 
                                   {% if tempCat == stuff %}
-                                  	{% if productMake == currentBrand or productMake contains currentBrand %}
+                                  	{% if productMake == currentBrand or productMake contains currentBrand or currentBrand == "all" %}
                             			{% if currentModel %}
                             				{% if currentModel == product.metafields.global.product_model %}
                             					{%- assign numberOfItemsInSection = numberOfItemsInSection | plus: 1 -%}
