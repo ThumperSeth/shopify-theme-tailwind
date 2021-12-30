@@ -103,7 +103,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />
 {%- endif -%}
 <script>
-function swapImage(sent_img_src) {
+function swapImages(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 };
 function tfupdatePrice() {
@@ -153,7 +153,7 @@ function tfupdatePrice() {
   } else {
 	newPrice = newPrice.concat(optionsHTML + "<br />Total: " + priceHTML);
   }
-  document.getElementById('price-wrapper').innerHTML = newPrice;
+  document.getElementById('price-{{ section.id }}').innerHTML = newPrice;
 };
 </script>
 <section class="w-full">
@@ -163,7 +163,7 @@ function tfupdatePrice() {
       <div class="w-full flex justify-center mx-auto">
       	<!-- Import the component -->
 		      <div class="mx-auto block">
-                <img style="width:600px" id="bigIMG" src="{{ product.featured_image | img_url: "1024x1024" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ product.featured_image | img_url: "1024x1024" }}');" />
+                <img style="width:700px" id="bigIMG" src="{{ product.featured_image | img_url: "1024x1024" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ product.featured_image | img_url: "1024x1024" }}');" />
               </div>
 
       </div>
@@ -183,8 +183,8 @@ function tfupdatePrice() {
     </div>
 
   <!-- PRODUCT INFORMATION -->
-    <div id="ProductInfo-{{ section.id }}" class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 justify-center">
-		<div id="ProductInfo-{{ section.id }}" class="ml-20">
+    <div class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10 mr-20">
+    	<div id="ProductInfo-{{ section.id }}">
         	{%- assign product_form_id = 'product-form-' | append: section.id -%}
         	{%- for block in section.blocks -%}
             	{%- case block.type -%}
@@ -282,10 +282,10 @@ function tfupdatePrice() {
                       </share-button>
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 				  {%- when 'tf_variant_picker' -%}
-          			<div class="w-5/6 flex flex-wrap">
-          				<div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+          			<div>
+          				<div class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                          <div class="form__label">Cage Options</div>
-                          <div class="js product-form__input flex flex-wrap">
+                          <div class="js product-form__input flex">
                             
                             <!-- GRAB HANDLES -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
@@ -326,133 +326,109 @@ function tfupdatePrice() {
                         </div>
           			</div>
                   {%- when 'variant_picker' -%}
-
-            {%- unless product.has_only_default_variant -%}
-              {%- if block.settings.picker_type == 'button' -%}
-                <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                  {%- for option in product.options_with_values -%}
-                      <fieldset class="js product-form__input">
-                        <legend class="form__label">{{ option.name }}</legend>
-                        {%- for value in option.values -%}
-                          <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                name="{{ option.name }}"
-                                value="{{ value | escape }}"
-                                form="{{ product_form_id }}"
-                                {% if option.selected_value == value %}checked{% endif %}
-                          >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
-                        {%- endfor -%}
-                      </fieldset>
-                  {%- endfor -%}
-                  <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
-                </variant-radios>
-              {%- else -%}
-                <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                  {%- for option in product.options_with_values -%}
-                    <div class="product-form__input product-form__input--dropdown">
-                      <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-                        {{ option.name }}
-                      </label>
-                      <div class="select">
-                        <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
-                          class="select__select"
-                          name="options[{{ option.name | escape }}]"
-                          form="{{ product_form_id }}"
-                        >
-                          {%- for value in option.values -%}
-                            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                              {{ value }}
-                            </option>
+                      <div class="variant-wrapper">
+                        {%- unless product.has_only_default_variant -%}
+                        {%- if block.settings.picker_type == 'button' -%}
+                        <variant-radios class="selector_wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                          {%- for option in product.options_with_values -%}
+                          <fieldset class="js product-form__input">
+                            <legend class="form__label">{{ option.name }}</legend>
+                            {%- for value in option.values -%}
+                            <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="product-form-{{ section.id }}" {% if option.selected_value == value %}checked{% endif %}>
+                            <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }}</label>
+                            {%- endfor -%}
+                          </fieldset>
                           {%- endfor -%}
-                        </select>
-                        {% render 'icon-caret' %}
+                          <script type="application/json">
+                                                            {{ product.variants | json }} 
+                          </script>
+                        </variant-radios>
+                        {%- else -%}
+                        <variant-selects class="selector-wrapper no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                          {%- for option in product.options_with_values -%}
+                          <div class="product-form__input product-form__input--dropdown">
+                            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                            <div class="select">
+                              <select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="select__select" name="options[{{ option.name | escape }}]" form="product-form-{{ section.id }}">
+                                {%- for value in option.values -%}
+                                <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
+                                {%- endfor -%}
+                              </select>
+                              {% render 'icon-caret' %}
+                            </div>
+                          </div>
+                          {%- endfor -%}
+                          <script type="application/json">
+                                                            {{ product.variants | json }}
+                          </script>
+                        </variant-selects>
+                        {%- endif -%}
+                        {%- endunless -%}   
                       </div>
-                    </div>
-                  {%- endfor -%}
-
-                  <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
-                </variant-selects>
-              {%- endif -%}
-            {%- endunless -%}
-
-            <noscript class="product-form__noscript-wrapper-{{ section.id }}">
-              <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-                <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
-                <div class="select">
-                  <select name="id" id="Variants-{{ section.id }}" class="select__select" form="{{ product_form_id }}">
-                    {%- for variant in product.variants -%}
-                      <option
-                        {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
-                        {% if variant.available == false %}disabled{% endif %}
-                        value="{{ variant.id }}"
-                      >
-                        {{ variant.title }}
-                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                        - {{ variant.price | money | strip_html }}
-                      </option>
-                    {%- endfor -%}
-                  </select>
-                  {% render 'icon-caret' %}
-                </div>
-              </div>
-            </noscript>
+                      <noscript>
+                        <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                          <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
+                          <div class="select">
+                            <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
+                              {%- for variant in product.variants -%}
+                              <option
+                                      {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                                      {% if variant.available == false %}disabled{% endif %}
+                                      value="{{ variant.id }}"
+                                      >
+                                {{ variant.title }}
+                                {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                                                                - {{ variant.price | money | strip_html }}
+                              </option>
+                              {%- endfor -%}
+                            </select>
+                            {% render 'icon-caret' %}
+                          </div>
+                        </div>
+                      </noscript>
                   {%- when 'price' -%}
-                      <div class="product-price" id="price-wrapper" {{ block.shopify_attributes }}>
+                      <div class="product-price" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
-					  <div {{ block.shopify_attributes }}>
+          
+          
+          
+          
+          
+                      <div {{ block.shopify_attributes }}>
                         {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                             {{ form | payment_terms }}
                         {%- endform -%}
-                      </div>
+                      </div>    
+          
+          
                   {%- when 'buy_buttons' -%}
                       	<div class="mt-10 buy-buttons" {{ block.shopify_attributes }}>
-                            <product-form class="product-form">
-                <div class="product-form__error-message-wrapper" role="alert" hidden>
-                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
-                    <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-                    <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-                    <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7" />
-                  </svg>
-                  <span class="product-form__error-message"></span>
-                </div>
-
-                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-                  <div class="product-form__buttons">
-                    <button
-                      type="submit"
-                      name="add"
-                      class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                    {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                    >
-                        <span>
-                          {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.add_to_cart' | t }}
-                          {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
-                          {%- endif -%}
-                        </span>
-                        <div class="loading-overlay__spinner hidden">
-                          <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                          </svg>
-                        </div>
-                    </button>
-                    {%- if block.settings.show_dynamic_checkout -%}
-                      {{ form | payment_button }}
-                    {%- endif -%}
-                  </div>
-                {%- endform -%}
-              </product-form>
+                            <product-form>
+                              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"> 
+                              
+                              
+                                  <div class="product-form__buttons">
+                                    <button id="AddToCart" type="submit" name="add" class="add-to-cart-button product-form__submit button button--full-width button--primary">
+                                      {%- if product.selected_or_first_available_variant.available -%}
+                                      {{ 'products.product.add_to_cart' | t | upcase }}
+                                      {%- else -%}
+                                      {{ 'products.product.sold_out' | t | upcase }}
+                                      {%- endif -%}
+                                    </button>
+                                    {%- if block.settings.show_dynamic_checkout -%}
+                                    {{ form | payment_button }}
+                                    {%- endif -%}
+                                  </div>
+                              
+                        
+                          
+                          
+                          
+                              {%- endform -%}
+                            </product-form>
                   		</div>                           
                     {%- endcase -%}
                 {%- endfor -%}
@@ -476,11 +452,7 @@ function tfupdatePrice() {
                                       	</div>
                                       
                                         <div class="min-w-0 bg-gray-200 p-2 rounded-xl shadow-lg">
-                                          <pickup-availability class="product__pickup-availabilities w-full"
-                                          	{% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
-                                            data-base-url="{{ shop.url }}{{ routes.root_url }}"
-                                            data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-                                            data-has-only-default-variant="{{ product.has_only_default_variant }}">
+                                          <pickup-availability class="product__pickup-availabilities w-full" {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %} data-base-url="{{ shop.url }}{{ routes.root_url }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}" data-has-only-default-variant="{{ product.has_only_default_variant }}">
                                             <template>
                                               <pickup-availability-preview class="pickup-availability-preview">
                                                 {% render 'icon-unavailable' %}
@@ -512,8 +484,7 @@ function tfupdatePrice() {
                 </div>
             </modal-dialog>
         {%- endfor -%}
-    </div>
-</div>
+		</div>
 </section>
 
 {% javascript %}
