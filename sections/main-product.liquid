@@ -311,7 +311,7 @@ function tfupdatePrice() {
         numOfOptions++;
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
-  if (numOfOptions >= 0) { 
+  if (numOfOptions == 0) { 
     newPrice = newPrice.concat(priceHTML);
   } else {
 	newPrice = newPrice.concat(optionsHTML + "<br />Total: " + priceHTML);
