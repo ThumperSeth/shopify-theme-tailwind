@@ -152,18 +152,18 @@ function tfupdatePrice() {
   	if (document.getElementById('cage-color-raw').checked) {
       	numOfOptions+=500;
     	optionsPrices += 0;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Raw: +$0</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Raw</span>";
     }
   	/* BLACK */
   	if (document.getElementById('cage-color-black').checked) {
     	optionsPrices += 1000;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Black Powder Coat: +$1000</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Black Powder Coat ($1000)</span>";
       	numOfOptions++;
     }
   	/* CUSTOM */
   	if (document.getElementById('cage-color-custom').checked) {
     	optionsPrices += 1200;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Custom Powder Coat: +$1200</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Custom Powder Coat: ($1200)</span>";
       	numOfOptions++;
     }
   	/* HI-BROW */
@@ -179,43 +179,43 @@ function tfupdatePrice() {
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
     	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: ($60)</span>";
       	numOfOptions++;
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
     	optionsPrices += 400;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + 5pt Harness: +$400</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + 5pt Harness: ($400)</span>";
       	numOfOptions++;
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
     	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Whip Tab: +$60</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Whip Tab: ($60)</span>";
       	numOfOptions++;
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
     	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Light Bar Tab: +$60</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Light Bar Tab: ($60)</span>";
       	numOfOptions++;
     }
   	/* SEATBELT HARNESS MOUNT */
   	if (document.getElementById('has-sb-harness').checked) {
     	optionsPrices += 100;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Seatbelt Harness: +$100</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Seatbelt Harness: ($100)</span>";
       	numOfOptions++;    
     }
   	/* ROOF INTRUSION */
   	if (document.getElementById('has-roof-intrusion').checked) {
     	optionsPrices += 85;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Roof Intrusion: +$85</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Roof Intrusion: ($85)</span>";
       	numOfOptions++;
     }
   	/* WINDSHIELD INTRUSION */
   	if (document.getElementById('has-front-intrusion').checked) {
     	optionsPrices += 85;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Front Intrusion: +$85</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Front Intrusion: ($85)</span>";
         numOfOptions++;
     }
     priceHTML += priceHTML.concat("$",basePrice+optionsPrices,".00");
