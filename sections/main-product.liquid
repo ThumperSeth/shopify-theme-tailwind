@@ -163,13 +163,13 @@ function swapImage(sent_img_src) {
           }]
    		};  
           	
-        console.log(JSON.stringify(formObj));
+        console.log(JSON.stringify(formData));
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formObj)
+            body: JSON.stringify(formData)
           
         })
         .then(response => {
