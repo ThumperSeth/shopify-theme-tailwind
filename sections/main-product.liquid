@@ -426,7 +426,7 @@ function tfupdatePrice() {
           		</div>
           </div>
                   {%- when 'variant_picker' -%}
-
+			{% if product.type != "cage" %}
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
@@ -502,6 +502,7 @@ function tfupdatePrice() {
                 </div>
               </div>
             </noscript>
+          			{% endif %}
                   {%- when 'price' -%}
                       <div class="product-price" id="price-wrapper" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
