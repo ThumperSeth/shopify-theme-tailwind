@@ -150,7 +150,10 @@ function swapImage(sent_img_src) {
           }]
    		};  */
     let formData = {
-      'items': []
+      'items': [{
+        'id': ' 
+        
+      }]
     }
     	formData.items[0].id = {{ product.selected_or_first_available_variant.id }};
         formData.items[0].quantity = 1;
