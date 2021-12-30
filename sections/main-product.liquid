@@ -159,39 +159,19 @@
             // if it's not last one Move Along else update the cart number with the current quantity
             if (Shopify.queue.length) {
               Shopify.moveAlong();
-            } else {
-                   		$('#cart-number').replaceWith("<a href='/cart' id='cart-number'>View cart (" + quantity + ")</a>");
-            }
+            } 
           }
         });
       }
       // If the queue is empty, we add 1 to cart
       else {
         quantity += 1;
-        addToCartOk(quantity);
+
       }
     };
     Shopify.moveAlong();
   };
-  function addToCartOk(quantity){  
-    $('#cart-number').replaceWith("<a href="/cart" id="cart-number">View cart (" + quantity + ")</a>");
-  }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   
   
