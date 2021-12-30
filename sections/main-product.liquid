@@ -141,19 +141,19 @@ function tfupdatePrice() {
     var optionsHTML = "<span class=\"text-2xl text-grey-400\">Base Price: $" + basePrice + ".00</span>";
   	var newPrice = "";
   	/* RAW */
-  	if (document.getElementById('cage-color').checked) {
-    	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
+  	if (document.getElementById('cage-color-raw').checked) {
+    	optionsPrices += 0;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Raw: +$0</span>";
     }
   	/* BLACK */
-  	if (document.getElementById('cage-color').checked) {
-    	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
+  	if (document.getElementById('cage-color-black').checked) {
+    	optionsPrices += 1000;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Black Powder Coat: +$1000</span>";
     }
-  	/* GRAB HANDLES */
-  	if (document.getElementById('has-grab-handles').checked) {
-    	optionsPrices += 60;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Grab Handles: +$60</span>";
+  	/* CUSTOM */
+  	if (document.getElementById('cage-color-custom').checked) {
+    	optionsPrices += 1200;
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Custom Powder Coat: +$1200</span>";
     }
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
