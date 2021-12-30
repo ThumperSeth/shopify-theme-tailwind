@@ -481,10 +481,7 @@ function tfupdatePrice() {
                   </div>
                 {%- endform -%}
               </product-form>
-                  		</div>                           
-                    {%- endcase -%}
-                {%- endfor -%}
-          <!-- PICKUP AVAILABLILITY MODAL -->
+                          <!-- PICKUP AVAILABLILITY MODAL -->
                         {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
                         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
@@ -517,7 +514,11 @@ function tfupdatePrice() {
                               		</div><!-- end product info {{ section.id }} -->
 
                               <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
-                              </div>    
+                              </div>   
+                  		</div>                           
+                    {%- endcase -%}
+                {%- endfor -%}
+           
 
         <!-- CART MODAL -->
         {%- render 'cart-notification' -%}
