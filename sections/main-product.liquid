@@ -203,31 +203,8 @@ function swapImage(sent_img_src) {
     }
      
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
-    	let tfformData = {
-          'items': [
-              {
-                  'id': parseInt("{{ product.selected_or_first_available_variant.id }}"),
-                  'quantity': 1,
-                  'properties': {
-                  	'Cage Options': cageLineItem
-                  }
-          }]
-   		}; 
-           console.log(JSON.stringify(tfformData));
-            fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(tfformData)
-          
-        })
-        .then(response => {
-            return response.json();
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+    	addSingleItemToCart(selectedvariantID,1,cageLineItem);
+   		
       }
 function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
