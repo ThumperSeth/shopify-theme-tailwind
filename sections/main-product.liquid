@@ -157,10 +157,11 @@ function swapImage(sent_img_src) {
       }
       ]
     }
-      formData.items[0].push({'properties':[{ "testing": "did this work" }]});
+      formObj = JSON.parse(formData);            
+      formObj['items'][0].push({'properties':[{ "testing": "did this work" }]});
 
     	
-        console.log(JSON.stringify(formData));
+        console.log(JSON.stringify(formObj));
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
