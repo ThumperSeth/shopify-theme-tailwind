@@ -203,7 +203,7 @@ function swapImage(sent_img_src) {
     }
      
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
-    	console.log(addSingleItemToCartWithProperties(selectedvariantID,1,cageLineItem));
+    	setTimeout(addSingleItemToCartWithProperties(selectedvariantID,1,cageLineItem),3000);
    		
       }
 function tfupdatePrice() {
