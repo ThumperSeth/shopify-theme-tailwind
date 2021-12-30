@@ -142,6 +142,7 @@ function swapImage(sent_img_src) {
   var cageLineItem = "";
   {%- endif -%}
   function addCageToCart() { 
+    cageLineItem = "";
     if (document.getElementById('cage-color-raw').checked) {
       	cageLineItem += "Raw ";
     }
