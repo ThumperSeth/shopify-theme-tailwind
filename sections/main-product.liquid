@@ -144,50 +144,62 @@ function swapImage(sent_img_src) {
   function addCageToCart() { 
     if (document.getElementById('cage-color-raw').checked) {
       	cageLineItem += "Raw ";
+      	addSingleItemToCart();
     }
   	/* BLACK */
   	if (document.getElementById('cage-color-black').checked) {
       	cageLineItem += " + Black Powder Coat";
+      addSingleItemToCart();
     }
   	/* CUSTOM */
   	if (document.getElementById('cage-color-custom').checked) {
       	cageLineItem += " + Custom Color";
+      	addSingleItemToCart();
     }
   	/* HI-BROW */
   	if (document.getElementById('hi-brow').checked) {
       	cageLineItem += " + Hi-Brow";
+      	addSingleItemToCart();
     }
   	/* LO-BROW */
   	if (document.getElementById('lo-brow').checked) {
       	cageLineItem += " + Lo-Brow";
+      	addSingleItemToCart();
     }
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
       	cageLineItem += " + Grab Handles";
+      	addSingleItemToCart();
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
       	cageLineItem += " + 5pt Harness";
+      	addSingleItemToCart();
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
       	cageLineItem += " + Whip Tab";
+      	addSingleItemToCart();
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
       	cageLineItem += " + Light Bar Tab";
+      	addSingleItemToCart();
     }
   	/* SEATBELT HARNESS MOUNT */
   	if (document.getElementById('has-sb-harness').checked) {
       	cageLineItem += " + Seatbelt Harness";
+      	addSingleItemToCart();
     }
   	/* ROOF INTRUSION */
   	if (document.getElementById('has-roof-intrusion').checked) {
       	cageLineItem += " + Roof Intrusion";
+      	addSingleItemToCart();
     }
   	/* WINDSHIELD INTRUSION */
   	if (document.getElementById('has-front-intrusion').checked) {
       	cageLineItem += " + Front Intrusion";
+      	addSingleItemToCart();
     }
      
     	var variantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
