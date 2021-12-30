@@ -9,7 +9,6 @@
     },
     "jacobs-sandbox": {
       "type": "jacobs-sandbox",
-      "disabled": true,
       "settings": {
       }
     },
@@ -172,7 +171,7 @@
     "1640882418950f5c3b": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>$offcanvas-padding-y:               $modal-inner-padding;\n$offcanvas-padding-x:               $modal-inner-padding;\n$offcanvas-horizontal-width:        400px;\n$offcanvas-vertical-height:         30vh;\n$offcanvas-transition-duration:     .3s;\n$offcanvas-border-color:            $modal-content-border-color;\n$offcanvas-border-width:            $modal-content-border-width;\n$offcanvas-title-line-height:       $modal-title-line-height;\n$offcanvas-bg-color:                $modal-content-bg;\n$offcanvas-color:                   $modal-content-color;\n$offcanvas-body-backdrop-color:     rgba($modal-backdrop-bg, $modal-backdrop-opacity);\n$offcanvas-box-shadow:              $modal-content-box-shadow-xs;<\/style>\n\n\n<button\n  class=\"btn btn-primary\"\n  type=\"button\"\n  data-mdb-toggle=\"offcanvas\"\n  data-mdb-target=\"#offcanvasRight\"\n  aria-controls=\"offcanvasRight\"\n>\n  Toggle right offcanvas\n<\/button>\n\n<div\n  class=\"offcanvas offcanvas-end\"\n  tabindex=\"-1\"\n  id=\"offcanvasRight\"\n  aria-labelledby=\"offcanvasRightLabel\"\n>\n  <div class=\"offcanvas-header\">\n    <h5 id=\"offcanvasRightLabel\">Offcanvas right<\/h5>\n    <button\n      type=\"button\"\n      class=\"btn-close text-reset\"\n      data-mdb-dismiss=\"offcanvas\"\n      aria-label=\"Close\"\n    ><\/button>\n  <\/div>\n  <div class=\"offcanvas-body\">...<\/div>\n<\/div>"
+        "custom_liquid": ""
       }
     }
   },
