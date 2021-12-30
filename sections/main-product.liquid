@@ -318,6 +318,7 @@ function tfupdatePrice() {
   }
   document.getElementById('price-wrapper').innerHTML = newPrice;
 };
+  document.addEventListener("load","tfupdatePrice();");
 </script>
 <section class="w-full">
   <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6">
