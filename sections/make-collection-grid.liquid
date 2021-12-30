@@ -128,6 +128,7 @@
                                   <li><a href="#">Crew Cab</a></li>
                                 </ul>  
                               </div>
+                            {%- assign numberOfItemsInSection = 0 -%}
                             {% for product in productsArray %} 
                               	{% assign tempCat = product.metafields.global.category | downcase %}
                             	{% assign productMake = product.metafields.global.make | downcase %} 
@@ -135,7 +136,7 @@
                                   	{% if productMake == currentBrand or productMake contains currentBrand %}
                             			{% if currentModel %}
                             				{% if currentModel == product.metafields.global.product_model %}
-                            
+                            					{%- assign numberOfItemsInSection = numberOfItemsInSection | plus: 1 -%}
                                                 <li class="grid__item w-full align-center text-left">
                                                     {% render 'collection-card',
                                                         product_card_product: product,
@@ -149,6 +150,7 @@
                                                 </li>
                             				{%- endif -%}
                             			{% else %}
+                           					 {%- assign numberOfItemsInSection = numberOfItemsInSection | plus: 1 -%}
                             				<li class="grid__item w-full align-center text-left">
                                                     {% render 'collection-card',
                                                         product_card_product: product,
@@ -165,8 +167,14 @@
                                   {%- endif -%}           
                               {%- endfor -%}
                           </ul>
+                    
                   </div>
               </div>
+      		{% if numberOfItemsInSection == 0 %}
+      			<style>
+                  .{{ stuff }}-section { display: "none"; }
+      			</style>
+      		{% endif %}
        {%- endfor -%}
   </div>
 </section>
