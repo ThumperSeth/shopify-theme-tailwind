@@ -314,7 +314,11 @@ function tfupdatePrice() {
           				<div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                           <div class="form__label">Color</div>
                           	<div class="js product-form__input flex flex-wrap">
-                            	
+                          	<!-- COLOR -->
+                            <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+                              <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onClick="tfupdatePrice();">
+                              <label for="has-grab-handles">Grab Handles</label>
+                            </div>
                           	</div>
                       	</div>
                          <div class="form__label">Seatbelt / Grab Handles</div>
