@@ -183,7 +183,7 @@ function tfupdatePrice() {
     </div>
 
   <!-- PRODUCT INFORMATION -->
-    <div class="product-information-section flex flex-col sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10 mr-20">
+    <div class="product-information-section flex flex-col flex-wrap sm:w-full md:w-1/2 lg:w-1/2 mt-20 ml-10 mr-20">
     	<div id="ProductInfo-{{ section.id }}" class="w-3/4">
         	{%- assign product_form_id = 'product-form-' | append: section.id -%}
         	{%- for block in section.blocks -%}
