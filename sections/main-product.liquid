@@ -139,6 +139,7 @@ function swapImage(sent_img_src) {
   var cageColorCode = "X";
   var cageBrowCode = "H";
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
+  var cageLineItem = "";
   {%- endif -%}
   function addCageToCart(id_array) {        
     /*    let formData = {
@@ -153,6 +154,7 @@ function swapImage(sent_img_src) {
     }
     	formData.items[0].id = {{ product.selected_or_first_available_variant.id }};
         formData.items[0].quantity = 1;
+    	
         console.log(formData);
         fetch('/cart/add.js', {
             method: 'POST',
