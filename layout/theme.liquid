@@ -83,18 +83,22 @@
           }]
    		};        
         fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => {
-            return response.json();
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+    body: JSON.stringify(addData),
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
+    },
+    method: 'POST'
+  }).then(function(response) {
+    return response.json();
+  }).then(function(json) {
+    /* we have JSON */
+    console.log(json)
+  }).catch(function(err) {
+    /* uh oh, we have error. */
+    console.error(err)
+  });
       }
       function addSingleItemToCartWithProperties(sent_id, sent_quantity, sent_line_items) {
         let formData = {
@@ -108,18 +112,24 @@
           }]
    		};        
         fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => {
-            return response.json();
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+    body: JSON.stringify(addData),
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
+    },
+    method: 'POST'
+  }).then(function(response) {
+    return response.json();
+  }).then(function(json) {
+    /* we have JSON */
+    console.log(json)
+  }).catch(function(err) {
+    /* uh oh, we have error. */
+    console.error(err)
+  });
+   
+};
       }
     </script>
     <!-- CONTENT FOR HEADER -->
