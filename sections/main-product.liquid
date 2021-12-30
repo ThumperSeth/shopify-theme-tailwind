@@ -162,14 +162,15 @@ function swapImage(sent_img_src) {
                   }]
           }]
    		};  
-          	
-        console.log(JSON.stringify(formData));
+        const obj = JSON.parse(formData);
+    	
+        console.log(JSON.stringify(obj));
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(obj)
           
         })
         .then(response => {
