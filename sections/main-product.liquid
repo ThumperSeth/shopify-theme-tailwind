@@ -140,9 +140,27 @@ function swapImage(sent_img_src) {
   var cageBrowCode = "H";
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
   {%- endif -%}
-  function tfupdateSKU() {
-  		
-  }
+  function addCageToCart(id_array) {        
+        let formData = {
+          'items': []
+   		};  
+    	formData.
+        console.log(formData);
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          
+        })
+        .then(response => {
+            return response.json();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+      }
 function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
     var optionsPrices = 0;
