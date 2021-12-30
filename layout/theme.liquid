@@ -74,7 +74,7 @@
       [[ product.selected_or_first_available_variant.id ]]
       ********************************************************/
       var selectedVariantIDS = "{{ product.selected_or_first_available_variant.id }}";
-      function addSingleItemToCart(sent_id, sent_quantity) {
+      function addSingleItemToCart(sent_id, sent_quantity, sent_line_items) {
         let formData = {
           'items': [
               {
