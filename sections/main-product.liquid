@@ -212,7 +212,8 @@ function swapImage(sent_img_src) {
                   	'Cage Options': cageLineItem
                   }
           }]
-   		};  
+   		}; 
+           console.log(JSON.stringify(tfformData));
             fetch('/cart/add.js', {
             method: 'POST',
             headers: {
