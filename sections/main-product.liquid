@@ -134,12 +134,13 @@
 function swapImage(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 };
+  
   {%- if product.type == "Cages" -%}
   var cageColorCode = "";
   var cageBrowCode = "";
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
-  console.log(cageBaseSKU);
   {%- endif -%}
+  
 function tfupdatePrice() {
     var basePrice = {{ product.price | divided_by: 100 }};
     var optionsPrices = 0;
