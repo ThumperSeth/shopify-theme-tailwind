@@ -76,24 +76,24 @@
     <script>
       
       function addAllItems(array){
-    Shopify.queue = [];
-      var quantity = {{ cart.item_count }} ;
-      var newArray = array.split(',');
-      for (var i = 0; i < newArray.length; i++) {
-        product = newArray[i]
-        Shopify.queue.push({
-          variantId: product,
-        });
-          }
-      Shopify.moveAlong = function() {
-      // If we still have requests in the queue, let's process the next one.
-      if (Shopify.queue.length) {
-        var request = Shopify.queue.shift();
-        var data = 'id='+ request.variantId + '&quantity=1';
-        $.ajax({
-          type: 'POST',
-              url: '/cart/add.js',
-          dataType: 'json',
+    	Shopify.queue = [];
+      	var quantity = {{ cart.item_count }} ;
+      	var newArray = array.split(',');
+      	for (var i = 0; i < newArray.length; i++) {
+        	product = newArray[i];
+        	Shopify.queue.push({
+          		variantId: product,
+        	});
+         }
+      	Shopify.moveAlong = function() {
+      		// If we still have requests in the queue, let's process the next one.
+      		if (Shopify.queue.length) {
+        	var request = Shopify.queue.shift();
+        	var data = 'id='+ request.variantId + '&quantity=1';
+        	$.ajax({
+          		type: 'POST',
+              	url: '/cart/add.js',
+          		dataType: 'json',
           data: data,
           success: function(res){
             Shopify.moveAlong();
