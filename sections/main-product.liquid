@@ -151,8 +151,8 @@ function swapImage(sent_img_src) {
    		};  */
     let formData = {
       'items': [{
-        'id': ' 
-        
+        'id': {{ product.selected_or_first_available_variant.id }},
+        'quantity': 1        
       }]
     }
     	formData.items[0].id = {{ product.selected_or_first_available_variant.id }};
