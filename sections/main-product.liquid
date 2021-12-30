@@ -384,8 +384,7 @@ function tfupdatePrice() {
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/5-point_harness_mounts-4-seat_f290310c-a858-42d2-97e3-16d0d4944313.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-5pt-harness" name="has-5pt-harness" value="has-5pt-harness" onClick="tfupdatePrice();">
                               <label for="has-5pt-harness">5pt Harness</label>
-                            </div>
-                            
+                            </div>                            
                             <!-- SEATBELT HARNESS -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/seatbelt_harness_mount.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-sb-harness" name="has-sb-harness" value="has-sb-harness" onClick="tfupdatePrice();">
@@ -402,11 +401,7 @@ function tfupdatePrice() {
                               <label for="has-whip-tab">Whip Tab</label>
 							</div>
                           </div>
-                      </div>
-                      	<div>
-                          <div class="form__label">Fortification</div>
-                          <div class="js product-form__input flex flex-wrap">
-                          <!-- FRONT INTRUSION -->
+                                 <!-- FRONT INTRUSION -->
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/window_intrusion_bar-detail_a77d044b-9dfd-4eec-be52-6e8dda99c161.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
                               <input type="checkbox" id="has-front-intrusion" name="has-front-intrusion" value="has-front-intrusion" onClick="tfupdatePrice();">
                               <label for="has-front-intrusion">Front Intrusion Bar</label>
@@ -416,8 +411,7 @@ function tfupdatePrice() {
                               <input type="checkbox" id="has-roof-intrusion" name="has-roof-intrusion" value="has-roof-intrusion" onClick="tfupdatePrice();">
                               <label for="has-roof-intrusion">Roof Intrusion Bar</label>
 							</div>
-                      	</div>
-          			</div>
+                      </div>
           		</div>
           </div>
                   {%- when 'variant_picker' -%}
