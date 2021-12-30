@@ -94,7 +94,32 @@
         .catch((error) => {
             console.error('Error:', error);
         });
-      }   
+      }
+      
+      function addCageToCart(id_array) {
+        let formData = {
+          'items': [
+              {
+                  'id': sent_id,
+                  'quantity': sent_quantity
+          }]
+   		};
+        console.log(formData);
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          
+        })
+        .then(response => {
+            return response.json();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+      }
     </script>
     <!-- CONTENT FOR HEADER -->
     {{ content_for_header }}
