@@ -150,15 +150,10 @@ function swapImage(sent_img_src) {
           }]
    		};  */
     let formData = {
-      'items': [
-        {
-        'id': parseInt("{{ product.selected_or_first_available_variant.id }}"),
-        'quantity': 1,
-      }
-      ]
+      'items': []
     }
       formObj = JSON.parse(formData);            
-      formObj['items'][0].push({'properties':[{ "testing": "did this work" }]});
+    formObj['items'].push({'id': parseInt("{{ product.selected_or_first_available_variant.sku }}"),'quantity': 1, 'properties':[{ "testing": "did this work" }]});
 
     	
         console.log(JSON.stringify(formObj));
@@ -167,7 +162,7 @@ function swapImage(sent_img_src) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formObj)
           
         })
         .then(response => {
