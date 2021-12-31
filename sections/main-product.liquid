@@ -363,7 +363,7 @@ function tfupdatePrice() {
       {%- assign productPictures = product.media | where: "media_type", "image" -%}
       <div id="thumbys" class="w-5/6 p-8 inline-flex flex">
         {% for pic in productPictures %}
-        	{% unless pic.alt contains "features" %}
+        	{% unless pic.alt contains "lifestyle" %}
               <div id="thumby-{{ forloop.index }}" class="mx-auto block">
                 <img class="thumby" src="{{ pic.src | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ pic.src | img_url: "1024x1024" }}');" />
               </div>
