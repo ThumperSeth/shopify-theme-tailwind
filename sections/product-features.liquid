@@ -33,7 +33,7 @@
     </div>
     <div class="product-features-section w-full grid lg:grid-cols-2 sm:grid-cols-1 mx-auto justify-center shadow-2xl bg-black">
       {% for pic in productPictures %}
-        <div class="product-features-container flex flex-wrap justify-center  ml-0 p-0">
+        <div class="product-features-container flex flex-wrap justify-betweem  ml-0 p-0">
             
             {% if pic.alt contains "features" %}
             <div style="height:400px; margin-top:0; margin-left:15rem; z-index:10; opacity:1" id="thumby-{{ forloop.index | escape }}" class="product-features-image-wrapper  lg:w-full sm:w-5/6 mx-auto flex flex-shrink justify-center items-center">
