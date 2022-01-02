@@ -623,6 +623,7 @@ function tfupdatePrice() {
               </div>
             </noscript>
           			{% endif %}
+          <div class="affirm-as-low-as"></div>
                   {%- when 'price' -%}
                       <div class="product-price" id="price-wrapper" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
