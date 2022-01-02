@@ -217,9 +217,12 @@ This file can be re-written at any time.
   {% capture cur %}{% include "booster-currency" %}{% endcapture %}{% unless cur contains "Liquid error" %}{{ cur }}{% endunless %}
 	{% render 'vitals-loader' %}
 
-
-
+{% include 'bucks-cc' %}
+            
   {% render 'shogun-head' %}
+
+{% render 'gsf-conversion-pixels' %}
+
 </head>
 
 
