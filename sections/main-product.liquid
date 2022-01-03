@@ -690,7 +690,7 @@ function tfupdatePrice() {
                         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
                           
-                          <div class="flex flex-wrap -mx-4 overflow-hidden">
+                          <div class="flex flex-col flex-wrap -mx-4 overflow-hidden">
 
                             <div class="my-4 px-4 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
                               <!-- Column Content -->
@@ -705,7 +705,7 @@ function tfupdatePrice() {
                           
                           
                           
-                                    <div class="w-full flex inline-block gap-10 pb-10 pt-10 justify-left">
+                                    <div class="w-full flex inline-block gap-10 pb-10 pt-10 pr-20 justify-left">
                                         
                                         <div class=" bg-gray-200 p-2 rounded-xl shadow-lg">
                                           
