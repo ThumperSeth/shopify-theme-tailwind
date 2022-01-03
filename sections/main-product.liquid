@@ -137,8 +137,8 @@
 {%- assign productPictures = product.media | where: "media_type", "image" -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
-  <!--<link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'" />
-  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />-->
+  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'" />
+  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />
 {%- endif -%}
 <script>
   function addAllItems(array) {
@@ -193,7 +193,7 @@ function swapImage(sent_img_src) {
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
   var cageLineItem = "";
   var cageSKUs = "";
-  {%- endif -%}
+
   
   function addCageToCart() {
     	cageLineItem="";
@@ -351,7 +351,7 @@ function tfupdatePrice() {
   }
   document.getElementById('price-wrapper').innerHTML = newPrice;
 };
-  
+  {% endif %}
   document.onload = setTimeout("tfupdatePrice()",3500);
   document.onload = document.getElementById('price-wrapper').addEventListener("DOMSubtreeModified", "tfupdatePrice()");
 </script>
@@ -375,9 +375,9 @@ function tfupdatePrice() {
               </div>
        		{% endunless %}
         {% endfor %}
-       		<!-- <div id="thumby-{{ forloop.index | plus: 1 }}" class="mx-auto block">
+       		 <div id="thumby-{{ forloop.index | plus: 1 }}" class="mx-auto block">
                 <img class="thumby" src="{{ first_3d_model.preview_image | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ first_3d_model.preview_image | img_url: "1024x1024" }}');" />
-              </div>-->
+              </div>
       </div>
     </div>
 
@@ -403,11 +403,6 @@ function tfupdatePrice() {
             			{%- else -%}
           		    		{{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
             			{%- endif -%}
-                        <div style="font-family:'Teko';">
-                      <span style="color:#555;" class="text-4xl mt-0">SKU: </span>
-                        {% assign current_variant = product.selected_or_first_available_variant %}
-                        <span class="variant-sku text-4xl mt--2">{{ current_variant.sku }}</span>
-          			</div>
           			</h1>
                   {%- when 'description' -%}
                       {%- if product.description != blank -%}
@@ -646,9 +641,7 @@ function tfupdatePrice() {
                   {%- when 'buy_buttons' -%}
                       	<div class="buy-now-wrapper mt-10 buy-buttons w-full" {{ block.shopify_attributes }}>
                           {% if product.type == "Cages" %}
-                          <button type="button" 
-                                  class="buy-now-button w-full rounded-xl text-4xl font-weight-700 product-form__submit bg-red-700 text-white-700 px-24 py-8" 
-                                  onClick="addCageToCart();">ADD TO CART</button>
+                          <button type="button" class="buy-now-button w-full rounded-xl text-4xl font-weight-700 product-form__submit bg-red-700 text-white-700 px-24 py-8" onClick="addCageToCart();">ADD TO CART</button>
                           {% else %}
                           <product-form class="product-form">
                 <div class="product-form__error-message-wrapper" role="alert" hidden>
