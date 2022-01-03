@@ -2508,3 +2508,10 @@ details-disclosure > details {
   .vtl-pr-review-stars-snippet {
     display:block!important;
   }
+    
+    
+ shopify-policy__container {
+    max-width:200ch;
+    padding-left:5rem;
+    padding-right:5rem;
+ }
