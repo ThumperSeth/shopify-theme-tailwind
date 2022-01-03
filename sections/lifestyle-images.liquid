@@ -53,7 +53,7 @@
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- assign productPictures = product.media | where: "media_type", "image" -%}
 
-<section class="section">
+<section class="sectio bg-black">
 <div class="jacobs-carousel bg-black">
   <div class="main-carousel flex flex-col mb-32 bg-black" data-flickity='{ "freeScroll": true, "wrapAround": true, "imagesLoaded": true  }'>
     {% if product.metafields.custom-video.custom_video != blank %}
