@@ -717,33 +717,3 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const productJson = [...document.querySelectorAll('[id^=ProductJson-')];
-  if (productJson.length > 0) {
-    productJson.forEach((product) => {
-      const sectionId = product.id.replace("ProductJson-", "shopify-section-");
-      const variantSKU = document.querySelector('#' + sectionId + ' .variant-sku');
-      const inputSelects = [...document.querySelectorAll('#' + sectionId + ' .single-option-selector')];
-      const productInfo = JSON.parse(product.innerHTML);
-      const inputValues = [];
-      const optionValues = [];
-      let count = 0;
-      inputSelects.forEach((input) => {
-        inputValues.push(input.value);
-        optionValues.push(count);
-        input.addEventListener('change', (evt) => {
-          const currentValue = evt.currentTarget.value.toString();
-          const changedIndex = inputSelects.indexOf(evt.target);
-          inputValues[changedIndex] = currentValue;
-          variantSKU.innerText = ' ';
-          productInfo.variants.forEach((variant) => {
-            if (JSON.stringify(variant.options) == JSON.stringify(inputValues)) {
-              variantSKU.innerText = variant.sku;
-            }
-          });
-        });
-        count += 1;
-      });
-    });
-  }
-});
