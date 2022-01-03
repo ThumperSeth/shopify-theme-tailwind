@@ -405,8 +405,8 @@ function tfupdatePrice() {
             			{%- endif -%}
                         <div style="font-family:'Teko';">
                       <span style="color:#555;" class="text-4xl mt-0">SKU: </span>
-                        <a href="#">{% assign current_variant = product.selected_or_first_available_variant %}
-                        <span class="variant-sku text-4xl mt--2">{{ current_variant.sku }}</span></a>
+                        {% assign current_variant = product.selected_or_first_available_variant %}
+                        <span class="variant-sku text-4xl mt--2">{{ current_variant.sku }}</span>
           			</div>
           			</h1>
           			<script type="application/ld+json">
