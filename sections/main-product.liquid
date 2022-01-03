@@ -398,7 +398,7 @@ function tfupdatePrice() {
                       <span class="product-make-and-model text-3xl" style="">
                         {{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                       </span>
-                      <h1 class="product__title text-6xl mb-20" {{ block.shopify_attributes }}>
+                      <h1 class="product__title text-6xl pb-20" {{ block.shopify_attributes }}>
                       	{%- if product.metafields.global.display_name != blank -%}
           		  			{{ product.metafields.global.display_name }}
             			{%- else -%}
