@@ -55,9 +55,9 @@
 
 <section class="section bg-black">
 <div class="jacobs-carousel bg-black">
-  <div class="main-carousel bg-black" data-flickity='{ "freeScroll": true, "wrapAround": true, "imagesLoaded": true  }'>
+  <div class="main-carousel flex flex-col bg-black" data-flickity='{ "freeScroll": true, "wrapAround": true, "imagesLoaded": true  }'>
     {% if product.metafields.custom-video.custom_video != blank %}
-    <div class="carousel-cell min-w-0 pt-2 w-1/2 align-center bg-black">
+    <div class="carousel-cell min-w-0 pt-2 align-center bg-black">
 		<div class="relative overflow-hidden max-w-full" style="width:1280px; height:512px;">
     		<iframe class="absolute top-0 left-0 w-full h-full" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     	</div>
