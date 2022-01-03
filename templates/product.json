@@ -68,13 +68,13 @@
       "settings": {
       }
     },
-    "product-description": {
-      "type": "product-description",
+    "product-features": {
+      "type": "product-features",
       "settings": {
       }
     },
-    "product-features": {
-      "type": "product-features",
+    "product-description": {
+      "type": "product-description",
       "settings": {
       }
     },
@@ -181,8 +181,8 @@
     "big-product",
     "main",
     "lifestyle-images",
-    "product-description",
     "product-features",
+    "product-description",
     "product-info-carousel",
     "product-fitment",
     "product-videos",
