@@ -65,7 +65,7 @@
     {% endif %}
     {% for pic in productPictures %}
     {% if pic.alt contains "lifestyle" %}
-    <div class="carousel-cell w-1/4 h-full pt-2 flex justify-center">
+    <div class="carousel-cell  h-full pt-2 flex justify-center">
         <img class="carousel-cell-image" src="{{ pic.src | img_url: "512x512" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
     </div>
     {% endif %} 
