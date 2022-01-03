@@ -29,6 +29,7 @@
   	
   }
 </style>
+{% if product.metafields.related-products != blank %}
 <section class="w-7/8 related-carousel-section pl-10 pr-10">
   <div class="related-products-title w-full text-4xl font-bold p-10">
 		RELATED PRODUCTS
@@ -61,6 +62,7 @@
 	</div>
 </div>
 </section>
+{% endif %}
 {% assign nav_range = section.settings.navigation_amount %}
 {% style %}
 
