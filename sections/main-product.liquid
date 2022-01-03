@@ -403,6 +403,7 @@ function tfupdatePrice() {
             			{%- else -%}
           		    		{{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
             			{%- endif -%}
+                        <br>{{ product.sku }}
           			</h1>
                   {%- when 'description' -%}
                       {%- if product.description != blank -%}
