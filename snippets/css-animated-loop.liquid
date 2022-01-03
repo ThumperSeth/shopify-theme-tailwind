@@ -8,16 +8,16 @@ body {
 
 }
 
-#clouds{
+/*#clouds{
 	padding: 100px 0;
 	background: #c9dbe9;
 	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
 	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
 	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
-}
+}*/
 
 /*Time to finalise the cloud shape*/
-.cloud {
+/*.cloud {
  width: 100%;
   height: 50px;
   margin-top: 0px;
@@ -42,10 +42,10 @@ body {
 	
 }
 
-
+*/
 
 /*Time to animate*/
-.x1 {
+/*.x1 {
     top:100px;
 	-webkit-animation: moveclouds 6s cubic-bezier(1, -0.5, 0, .5) infinite;
 	-moz-animation: moveclouds 6s cubic-bezier(1, -0.5, 0, .5) infinite;
@@ -54,7 +54,7 @@ body {
 }
 
 /*variable speed, opacity, and position of clouds for realistic effect*/
-.x2 {
+/*.x2 {
 	left: 200px;
     top: 100px;
 	-webkit-transform: scale(0.6);
@@ -64,7 +64,7 @@ body {
 	
 	/*Speed will also be proportional to the size and opacity*/
 	/*More the speed. Less the time in 's' = seconds*/
-	-webkit-animation: moveclouds 25s cubic-bezier(1, -0.01, 0, 1.01) infinite;
+/*	-webkit-animation: moveclouds 25s cubic-bezier(1, -0.01, 0, 1.01) infinite;
 	-moz-animation: moveclouds 25s cubic-bezier(1, -0.01, 0, 1.01) infinite;
 	-o-animation: moveclouds 25s cubic-bezier(1, -0.01, 0, 1.01) infinite;
      animation-direction:alternate;
@@ -78,7 +78,7 @@ body {
 	transform: scale(0.8);
 	opacity: 0.8; /*opacity proportional to the size*/
 	
-	-webkit-animation: moveclouds 20s cubic-bezier(1, -0.01, 0, 1.01) infinite;
+/*	-webkit-animation: moveclouds 20s cubic-bezier(1, -0.01, 0, 1.01) infinite;
 	-moz-animation: moveclouds 20s cubic-bezier(1, -0.01, 0, 1.01) infinite;
 	-o-animation: moveclouds 20s cubic-bezier(1, -0.01, 0, 1.01) infinite;
     animation-direction:alternate;
@@ -105,10 +105,10 @@ Steps:
 2. Animate them to move across the screen
 3. Stylize the clouds(can be done as step #2 also)
 -->
-<div>
+<!--<div>
 	<div class="cloud x1">&nbsp;</div>
 	<!-- Time for multiple clouds to dance around -->
-	<div class="cloud x2">&nbsp;</div>
+<!--	<div class="cloud x2">&nbsp;</div>
 	<div class="cloud x3">&nbsp;</div>
 </div>
 <!-- Thats the markup! -->
