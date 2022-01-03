@@ -4,11 +4,11 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="w-5/6">
+<div class="page-width">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="w-full">
+  <div class="rte w-full">
     {{ page.content }}
   </div>
 </div>
