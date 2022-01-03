@@ -403,12 +403,13 @@ function tfupdatePrice() {
             			{%- else -%}
           		    		{{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
             			{%- endif -%}
-          			</h1>
-          			<div style="font-family:'Teko';">
+                        <div style="font-family:'Teko';">
                       <span style="color:#777;" class="text-4xl mt-0">SKU: </span>
                         <a href="#">{% assign current_variant = product.selected_or_first_available_variant %}
                         <span class="variant-sku text-4xl mt-0">{{ current_variant.sku }}</span></a>
           			</div>
+          			</h1>
+          			
                   {%- when 'description' -%}
                       {%- if product.description != blank -%}
                           <div class="product__description rte">
