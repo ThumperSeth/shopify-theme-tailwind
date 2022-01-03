@@ -75,7 +75,6 @@
     },
     "product-features": {
       "type": "product-features",
-      "disabled": true,
       "settings": {
       }
     },
