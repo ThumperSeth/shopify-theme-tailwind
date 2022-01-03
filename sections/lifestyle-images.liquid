@@ -57,7 +57,7 @@
 <div class="jacobs-carousel bg-black">
   <div class="main-carousel flex flex-col bg-black" data-flickity='{ "freeScroll": true, "wrapAround": true, "imagesLoaded": true  }'>
     {% if product.metafields.custom-video.custom_video != blank %}
-    <div class="carousel-cell min-w-0 pt-2 align-center bg-black">
+    <div class="carousel-cell min-w-0 pt-2 w-1/2 align-center bg-black">
 		<div class="relative overflow-hidden max-w-full" style="width:1280px; height:512px;">
     		<iframe class="absolute top-0 left-0 w-full h-full" src="{{ product.metafields.custom-video.custom_video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     	</div>
@@ -65,7 +65,7 @@
     {% endif %}
     {% for pic in productPictures %}
     {% if pic.alt contains "lifestyle" %}
-    <div class="carousel-cell w-1/2 pt-2 flex justify-center">
+    <div class="carousel-cell w-full pt-2 flex justify-center">
         <img class="carousel-cell-image" src="{{ pic.src | img_url: "512x512" }}" alt="{{ pic.alt }}" onClick="swapImages('{{ pic.src | img_url: "1024x1024" }}');" />
     </div>
     {% endif %} 
