@@ -2503,4 +2503,8 @@ details-disclosure > details {
     .product-section-title {
     text-align:center;
   }
+  }*/
+    
+  .vtl-pr-review-stars-snippet {
+    display:block!important;
   }
