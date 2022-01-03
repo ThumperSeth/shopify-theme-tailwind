@@ -19,11 +19,12 @@
   }
   
   .test:hover {
-    display:hidden;
+    z-index:50;
+    padding:20px;
   }
 
   .test:hover:before {
-  
+    z-index:30;
     content: attr(data-hover);
   }
 </style>
