@@ -279,7 +279,7 @@ function swapImage(sent_img_src) {
 
     /* SOLID ROOF */
     {% if product.metafields.cage.solid-roof != blank %}
-      {% assign solidRoof = product.metafields.cage.solid-roof %}
+      {% assign solidRoof = product.metafields.cage.solid-roof.value %}
   	if (document.getElementById('has-solid-roof').checked) {
     	optionsPrices += 85;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Solid Roof: ({{ solidRoof.price }})</span>";   	
