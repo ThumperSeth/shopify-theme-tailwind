@@ -64,12 +64,19 @@ function swapImage(sent_img_src) {
 };
   
   {%- if product.type == "Cages" -%}
-  var cageColorCode = "X";
-  var cageBrowCode = "H";
-  var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}";
-  var cageLineItem = "";
-  var cageSKUs = "";
-
+  	/**************************************************************/
+	/* cage product javascript by seth nobles for thumperfab
+	/**************************************************************/
+  var cageColorCode = "X"; //set cage color initially to default value of RAW
+  var cageBrowCode = "H";  //set cage brow initially to default value of Hi 
+  var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}"; // find the base SKU minus color and brow data
+  var cageLineItem = ""; // initialize cage line item to nothing
+  var cageSKUs = "";     // initialize cage SKU options to nothing
+  	/**************************************************************/
+	/* addCageToCart function
+    /* triggered when the buy button is pressed on a tf cage product
+    /* in order to ensure the correct data is sent to the cart
+	/**************************************************************/
   
   function addCageToCart() {
     	cageLineItem="";
