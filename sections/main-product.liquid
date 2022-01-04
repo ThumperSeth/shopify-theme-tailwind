@@ -26,7 +26,7 @@
     }
   }]);
 </script>
-
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <link rel="stylesheet" href="https:{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-rating.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -34,7 +34,6 @@
 <link rel="stylesheet" href="https:{{ 'component-accordion.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
-
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 <style>
@@ -71,6 +70,7 @@
           {% assign brandColor = "#ccc" %}
   {% endcase %}
 {% endfor %}
+
 <style>
   .buy-now-button {
   	font-family: "Rajdhani";
@@ -356,33 +356,46 @@ function tfupdatePrice() {
   document.onload = document.getElementById('price-wrapper').addEventListener("DOMSubtreeModified", "tfupdatePrice()");
     {% endif %}
 </script>
-<section class="w-full">
-  <div class="product-wrapper w-full flex flex-wrap lg:flex-nowrap md:flex-nowrap sm:flex-wrap justify-center lg:mt-12 md:-10 sm:mt-6">
-  <!-- IMAGE VIEWER -->
-	<div class="featured-image-section sm:w-full md:w-1/2 lg:w-1/2 flex flex-wrap justify-center lg:ml-20 md:ml-10 sm:ml-5">
-      <div class="w-full flex justify-center mx-auto">
-      	<!-- Import the component -->
-		      <div class="mx-auto block">
-                <img style="width:600px" id="bigIMG" src="{{ product.featured_image | img_url: "1024x1024" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');" />
-              </div>
 
-      </div>
-      {%- assign productPictures = product.media | where: "media_type", "image" -%}
-      <div id="thumbys" class="w-5/6 p-8 inline-flex flex">
-        {% for pic in productPictures %}
-        	{% unless pic.alt contains "lifestyle" %}
-              <div id="thumby-{{ forloop.index }}" class="mx-auto block">
-                <img class="thumby" src="{{ pic.src | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ pic.src | img_url: "1024x1024" }}');" />
-              </div>
-       		{% endunless %}
-        {% endfor %}
-       		<!-- <div id="thumby-{{ forloop.index | plus: 1 }}" class="mx-auto block">
-                <img class="thumby" src="{{ first_3d_model.preview_image | img_url: "250x250" }}" alt="{{ pic.alt }}" onClick="swapImage('{{ first_3d_model.preview_image | img_url: "1024x1024" }}');" />
-              </div>-->
-      </div>
-    </div>
 
+<section class="w-5/6 mx-auto">
+    <div class="lg:flex-row md:flex-row  sm:flex-col flex flex-shrink justify-center lg:mt-12 md:-10 sm:mt-6">
+        <!-- IMAGE VIEWER -->
+        <div class="lg:w-1/2 md:w-1/2 sm:w-full">
+            {% if product.images != null %}
+            <div class="carousel product__image-slider" role="document" aria-label="{{ 'products.modal.label' | t }}" tabindex="0">
+                {%- for media in product.media -%}
+                <div class="carousel-cell">
+                    {% if media.media_type == "video" %}
+                    {{ media | media_tag: image_size: "720x", autoplay: true, loop: loop, controls: true, preload:
+                    "none", autoplay: true, height: "100%", width: "100%" }}
+                    {% else %}
+                    <img data-flickity-lazyload-srcset="{{ media | img_url: '1440x' }} 1440w,{{ media | img_url: '1080x' }} 1080w,{{ media | img_url: '720x' }} 767w, {{ media | img_url: '480x' }} 480w" sizes="(min-width: 480px) 1440px, 1080px, 767px, 480px"
+                        data-flickity-lazyload-src="{{ media | img_url: 'master' }}" alt="{{ media.alt | escape }}" border="0" data-media-id="{{ media.id }}" />
+                    {% endif %}
+                </div>
+                {%- endfor -%}
+            </div>
+            {% if product.images.size > 1 %}
+            <div class="carousel product__image-thumbnail">
+                {%- for media in product.media -%}
+                <div class="carousel-cell">
+                    <img data-flickity-lazyload-srcset="{{ media | img_url: '1440x' }} 1440w,{{ media | img_url: '1080x' }} 1080w,{{ media | img_url: '720x' }} 767w,{{ media | img_url: '480x' }} 480w"
+                        sizes="(min-width: 480px) 1440px, 1080px, 767px, 480px"
+                        data-flickity-lazyload-src="{{ media | img_url: 'master' }}" alt="{{ media.alt | escape }}"
+                        border="0" data-media-id="{{ media_id }}" />
+                </div>
+                {%- endfor -%}
+            </div>
+            {% endif %}
+            {% else %}
+            {{ 'product-1' | placeholder_svg_tag }}
+            {% endif %}
+        </div>
   <!-- PRODUCT INFORMATION -->
+    
+    
+    
     <div id="ProductInfo-{{ section.id }}" class="product-information-section sm:w-full md:w-1/2 lg:w-1/2 mt-20 justify-center">
 		<div id="ProductInfo-{{ section.id }}" class="ml-20">
         	{%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -793,6 +806,34 @@ function tfupdatePrice() {
 
   customElements.define('product-modal', ProductModal);
 {% endjavascript %}
+
+
+
+<script>
+  var elem = document.querySelector('.carousel.product__image-slider');
+  var flkty = new Flickity( elem, {
+    contain: true,
+    imagesLoaded: true,
+    lazyLoad: 1,
+    wrapAround: true,
+    pageDots: false,
+    {% if product.images.size < 2 %}
+    prevNextButtons: false,
+    {% endif %}
+    adaptiveHeight: true
+  });
+  
+  var elemThumbnail = document.querySelector('.carousel.product__image-thumbnail');
+  var flktyB = new Flickity( elemThumbnail, {
+    asNavFor: '.carousel.product__image-slider',
+    contain: true,
+    imagesLoaded: true,
+    lazyLoad: 4,
+    pageDots: false,
+    prevNextButtons: false
+  });
+</script>
+
 
 {% schema %}
 {
