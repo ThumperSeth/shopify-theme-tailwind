@@ -309,7 +309,7 @@ function swapImage(sent_img_src) {
     {% assign tfWindshield = product.metafields.cage.windshield.value %}
   	if (document.getElementById('has-windshield').checked) {
     	optionsPrices += parseInt("{{ tfWindsheild.price | number | divided_by: 100 }}");
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield : ({{ tfWindsheild.price | money | remove: ".00" | remove: "USD" }}}})</span>";   	
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield: ({{ tfWindsheild.price | money | remove: ".00" | remove: "USD" }}}})</span>";   	
         numOfOptions++;
     }
     {% endif %}
@@ -318,7 +318,7 @@ function swapImage(sent_img_src) {
     {% assign tfWindshield2 = product.metafields.cage.windshield-2.value %}
     if (document.getElementById('has-windshield-2').checked) {
     	optionsPrices += parseInt("{{ tfWindshield2.price }}");
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + {{ product.metafields.cage.windsheild-2.title }} : ({{ product.metafields.cage.windsheild-2.price }})</span>";	
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield: ({{ product.metafields.cage.windsheild-2.price }})</span>";	
         numOfOptions++;
     }
     {% endif %}
@@ -327,7 +327,7 @@ function swapImage(sent_img_src) {
   	{% assign tfWindshield3 = product.metafields.cage.windshield-3.value %}
   	if (document.getElementById('has-windshield-3').checked) {
     	optionsPrices += parseInt("{{ tfWindshield3.price }}");
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + {{ product.metafields.cage.windsheild-3.title }} : ({{ product.metafields.cage.windsheild-3.price }})</span>";
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield: ({{ product.metafields.cage.windsheild-3.price }})</span>";
         numOfOptions++;
     }
     {% endif %}
