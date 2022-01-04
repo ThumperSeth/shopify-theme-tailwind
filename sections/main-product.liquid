@@ -480,6 +480,9 @@ function swapImage(sent_img_src) {
                     {% endif %}
                 </div>
                 {%- endfor -%}
+              	<div class="carousel-cell">
+                	<img id="bigIMG" data-flickity-lazyload-src="" alt="" border="0" data-media-id="bigIMG" />
+              	</div>
             </div>
             {% if product.images.size > 1 %}
             <div class="carousel product__image-thumbnail mt-10">
