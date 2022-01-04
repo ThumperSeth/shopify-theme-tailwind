@@ -389,7 +389,7 @@ function tfupdatePrice() {
                 {%- endfor -%}
             </div>
             {% if product.images.size > 1 %}
-            <div class="carousel product__image-thumbnail">
+            <div class="carousel product__image-thumbnail mt-5">
                 {%- for media in product.media -%}
                 <div class="carousel-cell">
                     <img data-flickity-lazyload-srcset="{{ media | img_url: '1440x' }} 1440w,{{ media | img_url: '1080x' }} 1080w,{{ media | img_url: '720x' }} 767w,{{ media | img_url: '480x' }} 480w"
