@@ -314,17 +314,19 @@ function swapImage(sent_img_src) {
     }
     {% endif %}
     /* WINDSHIELD OPTION 2 */
-  	{% if product.metafields.cage.windsheild-2 != blank %} 
+  	{% if product.metafields.cage.windsheild-2 != blank %}
+    {% assign tfWindshield2 = product.metafields.cage.windshield-2.value %}
     if (document.getElementById('has-windshield-2').checked) {
-    	optionsPrices += parseInt("{{ product.metafields.cage.windsheild-2.price }}");
+    	optionsPrices += parseInt("{{ tfWindshield2.price }}");
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + {{ product.metafields.cage.windsheild-2.title }} : ({{ product.metafields.cage.windsheild-2.price }})</span>";	
         numOfOptions++;
     }
     {% endif %}
     /* WINDSHIELD OPTION 3 */
-    {% if product.metafields.cage.windsheild-3 != blank %} 
+    {% if product.metafields.cage.windsheild-3 != blank %}
+  	{% assign tfWindshield3 = product.metafields.cage.windshield-3.value %}
   	if (document.getElementById('has-windshield-3').checked) {
-    	optionsPrices += {{ product.metafields.cage.windsheild-3.price }};
+    	optionsPrices += {{ tfWindshield3.price }};
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + {{ product.metafields.cage.windsheild-3.title }} : ({{ product.metafields.cage.windsheild-3.price }})</span>";
         numOfOptions++;
     }
