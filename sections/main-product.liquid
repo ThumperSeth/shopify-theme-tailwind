@@ -317,7 +317,7 @@ function swapImage(sent_img_src) {
   	{% if product.metafields.cage.windsheild-2 != blank %}
     {% assign tfWindshield2 = product.metafields.cage.windshield-2.value %}
     if (document.getElementById('has-windshield-2').checked) {
-    	optionsPrices += parseInt("{{ tfWindshield2.price }}");
+    	optionsPrices += parseInt("{{ tfWindshield2.price | number | divided_by: 100 }}");
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield: ({{ tfWindshield2.price | money | remove: ".00" | remove: "USD" }})</span>";	
         numOfOptions++;
     }
@@ -326,7 +326,7 @@ function swapImage(sent_img_src) {
     {% if product.metafields.cage.windsheild-3 != blank %}
   	{% assign tfWindshield3 = product.metafields.cage.windshield-3.value %}
   	if (document.getElementById('has-windshield-3').checked) {
-    	optionsPrices += parseInt("{{ tfWindshield3.price }}");
+    	optionsPrices += parseInt("{{ tfWindshield3.price | number | divided_by: 100 }}");
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield: ({{ tfWindshield3.price | money | remove: ".00" | remove: "USD" }})</span>";
         numOfOptions++;
     }
