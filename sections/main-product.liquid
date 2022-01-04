@@ -144,9 +144,10 @@ function swapImage(sent_img_src) {
     /************************/
     /* SOLID ROOF */
     {% if product.metafields.cage.solid-roof != blank %} 
+    {% assign solidRoof = product.metafields.cage.solid-roof.value %}
   	if (document.getElementById('has-solid-roof').checked) {
       	cageLineItem += " + Solid Roof";
-      	cageSKUs += "{{ product.metafields.cage.solid-roof.id }},";
+      	cageSKUs += "{{ solid-roof.id }},";
     }
     {% endif %}
     /* SUN ROOF */
