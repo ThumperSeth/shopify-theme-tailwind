@@ -163,9 +163,10 @@ function swapImage(sent_img_src) {
     /************************/
     /* WINDSHIELD OPTION 1 */
     {% if product.metafields.cage.windsheild != blank %}
+    {% assign tfwindsheild = product.metafields.cage.windshield.value %}
     if (document.getElementById('has-windsheild-1').checked) {
       	cageLineItem += " + Windsheild";
-      	cageSKUs += "{{ product.metafields.cage.windsheild.id }},";
+      	cageSKUs += "{{ tfwindsheild.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 2 */
