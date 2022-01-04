@@ -151,10 +151,11 @@ function swapImage(sent_img_src) {
     }
     {% endif %}
     /* SUN ROOF */
-    {% if product.metafields.cage.sun-roof != blank %} 
+    {% if product.metafields.cage.sun-roof != blank %}
+    {% assign sunRoof = product.metafields.cage.solid-roof.value %}
   	if (document.getElementById('has-sun-roof').checked) {
       	cageLineItem += " + Sun Roof";
-      	cageSKUs += "{{ product.metafields.cage.sun-roof.id }},";
+      	cageSKUs += "{{ sunRoof.id }},";
     }
     {% endif %}
     /************************/
