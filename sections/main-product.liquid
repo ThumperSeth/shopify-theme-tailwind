@@ -7,6 +7,16 @@
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 <!-- JAVASCRIPT NONSENSE -->
+<script>
+  /**************************************************************/
+/* swapImage function */
+/* accepts http src of image youn would like to swap the main img for */
+/* swaps the main product image with the one sent to the function */
+/**************************************************************/
+function swapImage(sent_img_src) {
+	document.getElementById('bigIMG').src = sent_img_src;
+};
+</script>
 <script  type="text/javascript">
   /************************************/
   /* addAllItems function             */
@@ -54,14 +64,7 @@
     Shopify.moveAlong();
   };
   
-/**************************************************************/
-/* swapImage function */
-/* accepts http src of image youn would like to swap the main img for */
-/* swaps the main product image with the one sent to the function */
-/**************************************************************/
-function swapImage(sent_img_src) {
-	document.getElementById('bigIMG').src = sent_img_src;
-};
+
   
   {%- if product.type == "Cages" -%}
   	/**************************************************************/
