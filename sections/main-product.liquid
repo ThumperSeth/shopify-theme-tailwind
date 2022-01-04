@@ -154,19 +154,19 @@ function swapImage(sent_img_src) {
     /* WINDSHEILD OPTIONS
     /************************/
     /* WINDSHIELD OPTION 1 */
-  	if (document.getElementById('has-front-intrusion').checked) {
-      	cageLineItem += " + Front Intrusion";
-      	cageSKUs += "32671264768051,";
+  	if (document.getElementById('has-windsheild-1').checked) {
+      	cageLineItem += " + Windsheild";
+      	cageSKUs += "{{ product.metafields.cage.windsheild.id }},";
     }
     /* WINDSHIELD OPTION 2 */
-  	if (document.getElementById('has-front-intrusion').checked) {
-      	cageLineItem += " + Front Intrusion";
-      	cageSKUs += "32671264768051,";
+  	if (document.getElementById('has-windsheild-2').checked) {
+      	cageLineItem += " + Windsheild";
+      	cageSKUs += "{{ product.metafields.cage.windsheild-2.id }},";
     }
     /* WINDSHIELD OPTION 3 */
-  	if (document.getElementById('has-front-intrusion').checked) {
-      	cageLineItem += " + Front Intrusion";
-      	cageSKUs += "32671264768051,";
+  	if (document.getElementById('has-windsheild-3').checked) {
+      	cageLineItem += " + Windshield";
+      	cageSKUs += "{{ product.metafields.cage.windsheild-3.id }},";
     }
      	console.log(cageSKUs);
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
