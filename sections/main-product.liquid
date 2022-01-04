@@ -468,6 +468,9 @@ function swapImage(sent_img_src) {
         <div class="lg:w-1/2 md:w-1/2 sm:w-full">
             {% if product.images != null %}
             <div class="carousel product__image-slider" role="document" aria-label="{{ 'products.modal.label' | t }}" tabindex="0">
+              	<div class="carousel-cell hidden">
+                	<img id="bigIMG" src="" />
+              	</div>
                 {%- for media in product.media -%}
                 <div class="carousel-cell">
                     {% if media.media_type == "video" %}
