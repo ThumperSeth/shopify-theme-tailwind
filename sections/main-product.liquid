@@ -235,13 +235,13 @@ function swapImage(sent_img_src) {
     /* SOLID ROOF */
   	if (document.getElementById('has-solid-roof').checked) {
     	optionsPrices += 85;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Solid Roof: ($85)</span>";   	
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Solid Roof: ({{ product.metafields.cage.solid-roof.price }})</span>";   	
         numOfOptions++;
     }
     /* SUN ROOF */
   	if (document.getElementById('has-sun-roof').checked) {
     	optionsPrices += 85;
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Sun Roof: ($85)</span>";   	
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Sun Roof: ({{ product.metafields.cage.sun-roof.price }})</span>";   	
         numOfOptions++;
     }
       
