@@ -72,12 +72,12 @@ function swapImage(sent_img_src) {
   var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}"; // find the base SKU minus color and brow data
   var cageLineItem = ""; // initialize cage line item to nothing
   var cageSKUs = "";     // initialize cage SKU options to nothing
+  
   	/**************************************************************/
 	/* addCageToCart function
     /* triggered when the buy button is pressed on a tf cage product
     /* in order to ensure the correct data is sent to the cart
 	/**************************************************************/
-  
   function addCageToCart() {
     	cageLineItem="";
     	cageSKUs = "";
@@ -87,22 +87,18 @@ function swapImage(sent_img_src) {
   	/* BLACK */
   	if (document.getElementById('cage-color-black').checked) {
       	cageLineItem += " + Black Powder Coat";
-
     }
   	/* CUSTOM */
   	if (document.getElementById('cage-color-custom').checked) {
       	cageLineItem += " + Custom Color";
-
     }
   	/* HI-BROW */
   	if (document.getElementById('hi-brow').checked) {
       	cageLineItem += " + Hi-Brow";
-
     }
   	/* LO-BROW */
   	if (document.getElementById('lo-brow').checked) {
       	cageLineItem += " + Lo-Brow";
-
     }
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
