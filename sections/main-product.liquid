@@ -164,25 +164,25 @@ function swapImage(sent_img_src) {
     /* WINDSHIELD OPTION 1 */
     {% if product.metafields.cage.windsheild != blank %}
     {% assign tfwindsheild = product.metafields.cage.windshield.value %}
-    if (document.getElementById('has-windsheild-1').checked) {
-      	cageLineItem += " + Windsheild";
-      	cageSKUs += "{{ tfwindsheild.id }},";
+    if (document.getElementById('has-windshield').checked) {
+      	cageLineItem += " + Windshield";
+      	cageSKUs += "{{ tfwindshield.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 2 */
     {% if product.metafields.cage.windsheild-2 != blank %}
     {% assign tfwindsheild2 = product.metafields.cage.windshield-2.value %}
-    if (document.getElementById('has-windsheild-2').checked) {
-      	cageLineItem += " + Windsheild";
-      	cageSKUs += "{{ tfwindsheild-2.id }},";
+    if (document.getElementById('has-windshield-2').checked) {
+      	cageLineItem += " + Windshield";
+      	cageSKUs += "{{ tfwindshield-2.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 3 */
     {% if product.metafields.cage.windsheild-3 != blank %}
     {% assign tfwindsheild3 = product.metafields.cage.windshield-3.value %}
-  	if (document.getElementById('has-windsheild-3').checked) {
+  	if (document.getElementById('has-windshield-3').checked) {
       	cageLineItem += " + Windshield";
-      	cageSKUs += "{{ tfwindsheild3.id }},";
+      	cageSKUs += "{{ tfwindshield3.id }},";
     }
     {% endif %}
      	console.log(cageSKUs);
