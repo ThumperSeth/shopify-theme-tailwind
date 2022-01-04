@@ -6,144 +6,7 @@
 <link rel="stylesheet" href="https:{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
-<script type="text/javascript">
-  var _learnq = _learnq || [];
-
-  var item = {
-    Name: {{ product.title|json }},
-    ProductID: {{ product.id|json }},
-    Categories: {{ product.collections|map:'title'|json }},
-    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
-    URL: "{{ shop.secure_url }}{{ product.url }}",
-    Brand: {{ product.vendor|json }},
-    Price: {{ product.price|money|json }},
-    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
-  };
-
-  _learnq.push(['track', 'Viewed Product', item]);
-  _learnq.push(['trackViewedItem', {
-    Title: item.Name,
-    ItemId: item.ProductID,
-    Categories: item.Categories,
-    ImageUrl: item.ImageURL,
-    Url: item.URL,
-    Metadata: {
-      Brand: item.Brand,
-      Price: item.Price,
-      CompareAtPrice: item.CompareAtPrice
-    }
-  }]);
-</script>
-<style>
-	.dpo-container {
-     display: none !important; 
-    }
-</style>
-<!-- DETECT BRAND IN URL -->
-{% assign url_parts = request.path | split: "/" %}
-{% for part in url_parts %}
-  {% case part %}
-      {% when "polaris" %}
-          {% assign currentBrand  = "polaris" %}
-          {% assign brandColor = "#305799" %}
-          {% break %}
-      {% when "yamaha" %}
-          {% assign currentBrand  = "yamaha" %}
-          {% assign brandColor = "#CCCCCB" %}
-          {% break %}
-      {% when "can-am" %}
-          {% assign currentBrand  = "can-am" %}
-          {% assign brandColor = "#fdc832" %}
-          {% break %}
-      {% when "tracker" %}
-          {% assign currentBrand  = "tracker" %}
-          {% assign brandColor = "#262526" %}
-          {% break %}
-      {% when "honda" %}
-          {% assign currentBrand  = "honda" %}
-          {% assign brandColor = "#e0262f" %}
-          {% break %}
-      {% else %}
-          {% assign currentBrand = "all" %}
-          {% assign brandColor = "#ccc" %}
-  {% endcase %}
-{% endfor %}
-
-<style>
-  .buy-now-button {
-  	font-family: "Rajdhani";
-    font-weight: 700;
-    color: #FFF;
- 
-  }
-  .featured-image-section {
-    
-    height:auto;
-  }
-  .bigIMG {
-     max-height:550px;
-     margin:auto;
-  }
-  .thumby {
-    cursor: pointer;
-    width:200px;
-  }
-	.product-make-and-model {
-      	color: #ababab;
-    	font-family: "Rajdhani";
-      	font-weight: 600;
-        letter-spacing: -0.8px;
-    }
-  .product-price {
-      	color: #000000;
-    	font-family: "Rajdhani" !important;
-      	font-weight: 700;
-        letter-spacing: -0.8px;
-        font-size: 2.5rem;
-        padding-bottom:2rem;
-    }
-  .add-to-cart-button {
-    
-    font-family: "Rajdhani" !important;
-      	font-weight: 700;
-        font-size: 1.5rem;
-    width:1024px;
-  }
-  
-  .button {
-    width:100%; 
-    min-height:55px;
-  }
-  
-  .bigIMG-hover-zoom--point-zoom img {
-    cursor: zoom-in;
-    transform-origin: 65% 75%;
-    transition: transform .5s, filter .2s ease-out;
-  }    
-
-  .bigIMG-hover-zoom--point-zoom:hover img {
-    cursor: zoom-in;
-  	transform:scale(5);
-    -ms-transform:scale(5); /* IE 9 */
-    -moz-transform:scale(5); /* Firefox */
-    -webkit-transform:scale(5); /* Safari and Chrome */
-    -o-transform:scale(5); /* Opera */
-  }
-  .cage-option {
-   	padding:0.5rem 1rem!important; 
-    font-size:1.2rem!important;
-  }
-</style>
-
-
-{%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
-{%- assign productPictures = product.media | where: "media_type", "image" -%}
-{%- if first_3d_model -%}
-  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
-  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'" />
-  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />
-{%- endif -%}
-<script>
+<script  type="text/javascript">
   function addAllItems(array) {
     Shopify.queue = [];
     var quantity = {{ cart.item_count }} ;
@@ -360,6 +223,139 @@ function tfupdatePrice() {
     {% endif %}
 </script>
 
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+<style>
+	.dpo-container {
+     display: none !important; 
+    }
+  .buy-now-button {
+  	font-family: "Rajdhani";
+    font-weight: 700;
+    color: #FFF;
+ 
+  }
+  .featured-image-section {
+    
+    height:auto;
+  }
+  .bigIMG {
+     max-height:550px;
+     margin:auto;
+  }
+  .thumby {
+    cursor: pointer;
+    width:200px;
+  }
+	.product-make-and-model {
+      	color: #ababab;
+    	font-family: "Rajdhani";
+      	font-weight: 600;
+        letter-spacing: -0.8px;
+    }
+  .product-price {
+      	color: #000000;
+    	font-family: "Rajdhani" !important;
+      	font-weight: 700;
+        letter-spacing: -0.8px;
+        font-size: 2.5rem;
+        padding-bottom:2rem;
+    }
+  .add-to-cart-button {
+    
+    font-family: "Rajdhani" !important;
+      	font-weight: 700;
+        font-size: 1.5rem;
+    width:1024px;
+  }
+  
+  .button {
+    width:100%; 
+    min-height:55px;
+  }
+  
+  .bigIMG-hover-zoom--point-zoom img {
+    cursor: zoom-in;
+    transform-origin: 65% 75%;
+    transition: transform .5s, filter .2s ease-out;
+  }    
+
+  .bigIMG-hover-zoom--point-zoom:hover img {
+    cursor: zoom-in;
+  	transform:scale(5);
+    -ms-transform:scale(5); /* IE 9 */
+    -moz-transform:scale(5); /* Firefox */
+    -webkit-transform:scale(5); /* Safari and Chrome */
+    -o-transform:scale(5); /* Opera */
+  }
+  .cage-option {
+   	padding:0.5rem 1rem!important; 
+    font-size:1.2rem!important;
+  }
+</style>
+<!-- DETECT BRAND IN URL -->
+{% assign url_parts = request.path | split: "/" %}
+{% for part in url_parts %}
+  {% case part %}
+      {% when "polaris" %}
+          {% assign currentBrand  = "polaris" %}
+          {% assign brandColor = "#305799" %}
+          {% break %}
+      {% when "yamaha" %}
+          {% assign currentBrand  = "yamaha" %}
+          {% assign brandColor = "#CCCCCB" %}
+          {% break %}
+      {% when "can-am" %}
+          {% assign currentBrand  = "can-am" %}
+          {% assign brandColor = "#fdc832" %}
+          {% break %}
+      {% when "tracker" %}
+          {% assign currentBrand  = "tracker" %}
+          {% assign brandColor = "#262526" %}
+          {% break %}
+      {% when "honda" %}
+          {% assign currentBrand  = "honda" %}
+          {% assign brandColor = "#e0262f" %}
+          {% break %}
+      {% else %}
+          {% assign currentBrand = "all" %}
+          {% assign brandColor = "#ccc" %}
+  {% endcase %}
+{% endfor %}
+
+{%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
+{%- assign productPictures = product.media | where: "media_type", "image" -%}
+{%- if first_3d_model -%}
+  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
+  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'" />
+  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'" />
+{%- endif -%}
 
 <section class="w-5/6 mx-auto">
     <div class="flex-col lg:flex-row md:flex-row  sm:flex-col flex flex-shrink justify-center mt-6 lg:mt-12 md:mt-10 sm:mt-6">
