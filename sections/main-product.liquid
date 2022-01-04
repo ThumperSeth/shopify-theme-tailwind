@@ -309,7 +309,7 @@ function swapImage(sent_img_src) {
     {% assign tfWindshield = product.metafields.cage.windshield.value %}
   	if (document.getElementById('has-windshield').checked) {
     	optionsPrices += parseInt("{{ tfWindsheild.price | number | divided_by: 100 }}");
-      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield: ({{ tfWindsheild.price | money | remove: ".00" | remove: "USD" }})</span>";   	
+      	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Windshield: ({{ tfWindshield.price | money | remove: ".00" | remove: "USD" }})</span>";   	
         numOfOptions++;
     }
     {% endif %}
