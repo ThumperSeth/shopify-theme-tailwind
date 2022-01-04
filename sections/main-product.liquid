@@ -142,12 +142,12 @@ function swapImage(sent_img_src) {
     /* SOLID ROOF */
   	if (document.getElementById('has-solid-roof').checked) {
       	cageLineItem += " + Front Intrusion";
-      	cageSKUs += "32671264768051,";
+      	cageSKUs += "{{ product.metafields.cage.solid-roof.id }},";
     }
     /* SUN ROOF */
   	if (document.getElementById('has-sun-roof').checked) {
       	cageLineItem += " + Front Intrusion";
-      	cageSKUs += "32671264768051,";
+      	cageSKUs += "{{ product.metafields.cage.sun-roof.id }},";
     }
     
     /************************/
