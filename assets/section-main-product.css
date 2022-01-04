@@ -99,7 +99,7 @@
 /* Product form */
 
 .product-form {
-  display: inline-flex;
+  display: block;
 }
 
 .product-form__error-message-wrapper:not([hidden]) {
