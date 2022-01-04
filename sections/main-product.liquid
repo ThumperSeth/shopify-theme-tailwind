@@ -143,14 +143,14 @@ function swapImage(sent_img_src) {
     /* ROOF OPTIONS
     /************************/
     /* SOLID ROOF */
-    {% if product.metafields.cage.solid-roof != blank %}
+    {% if product.metafields.cage.solid-roof != blank %} 
   	if (document.getElementById('has-solid-roof').checked) {
       	cageLineItem += " + Solid Roof";
       	cageSKUs += "{{ product.metafields.cage.solid-roof.id }},";
     }
     {% endif %}
     /* SUN ROOF */
-    {% if product.metafields.cage.sun-roof != blank %}
+    {% if product.metafields.cage.sun-roof != blank %} 
   	if (document.getElementById('has-sun-roof').checked) {
       	cageLineItem += " + Sun Roof";
       	cageSKUs += "{{ product.metafields.cage.sun-roof.id }},";
@@ -160,21 +160,21 @@ function swapImage(sent_img_src) {
     /* WINDSHEILD OPTIONS
     /************************/
     /* WINDSHIELD OPTION 1 */
-    {% if product.metafields.cage.windsheild != blank %} {
+    {% if product.metafields.cage.windsheild != blank %}
     if (document.getElementById('has-windsheild-1').checked) {
       	cageLineItem += " + Windsheild";
       	cageSKUs += "{{ product.metafields.cage.windsheild.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 2 */
-    {% if product.metafields.cage.windsheild-2 != blank %} {
-  	if (document.getElementById('has-windsheild-2').checked) {
+    {% if product.metafields.cage.windsheild-2 != blank %}
+    if (document.getElementById('has-windsheild-2').checked) {
       	cageLineItem += " + Windsheild";
       	cageSKUs += "{{ product.metafields.cage.windsheild-2.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 3 */
-    {% if product.metafields.cage.windsheild-3 != blank %} {
+    {% if product.metafields.cage.windsheild-3 != blank %} 
   	if (document.getElementById('has-windsheild-3').checked) {
       	cageLineItem += " + Windshield";
       	cageSKUs += "{{ product.metafields.cage.windsheild-3.id }},";
