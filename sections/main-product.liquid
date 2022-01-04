@@ -135,6 +135,35 @@ function swapImage(sent_img_src) {
       	cageLineItem += " + Front Intrusion";
       	cageSKUs += "32671264768051,";
     }
+    
+    /************************/
+    /* ROOF OPTIONS
+    /************************/
+    /* SOLID ROOF */
+  	if (document.getElementById('has-solid-roof').checked) {
+      	cageLineItem += " + Front Intrusion";
+      	cageSKUs += "32671264768051,";
+    }
+    /* SUN ROOF */
+  	if (document.getElementById('has-sun-roof').checked) {
+      	cageLineItem += " + Front Intrusion";
+      	cageSKUs += "32671264768051,";
+    }
+    /* WINDSHIELD INTRUSION */
+  	if (document.getElementById('has-front-intrusion').checked) {
+      	cageLineItem += " + Front Intrusion";
+      	cageSKUs += "32671264768051,";
+    }
+    /* WINDSHIELD INTRUSION */
+  	if (document.getElementById('has-front-intrusion').checked) {
+      	cageLineItem += " + Front Intrusion";
+      	cageSKUs += "32671264768051,";
+    }
+    /* WINDSHIELD INTRUSION */
+  	if (document.getElementById('has-front-intrusion').checked) {
+      	cageLineItem += " + Front Intrusion";
+      	cageSKUs += "32671264768051,";
+    }
      	console.log(cageSKUs);
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
     	cageSKUs += selectedvariantID;
