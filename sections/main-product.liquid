@@ -142,14 +142,14 @@ function swapImage(sent_img_src) {
     /* SOLID ROOF */
     {% if product.metafields.cage.solid-roof != blank %}
   	if (document.getElementById('has-solid-roof').checked) {
-      	cageLineItem += " + Front Intrusion";
+      	cageLineItem += " + Solid Roof";
       	cageSKUs += "{{ product.metafields.cage.solid-roof.id }},";
     }
     {% endif %}
     /* SUN ROOF */
     {% if product.metafields.cage.sun-roof != blank %}
   	if (document.getElementById('has-sun-roof').checked) {
-      	cageLineItem += " + Front Intrusion";
+      	cageLineItem += " + Sun Roof";
       	cageSKUs += "{{ product.metafields.cage.sun-roof.id }},";
     }
     {% endif %}
