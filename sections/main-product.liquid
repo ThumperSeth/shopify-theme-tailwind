@@ -278,7 +278,7 @@ function swapImage(sent_img_src) {
    /*******************************************/
 
     /* SOLID ROOF */
-    {% if product.metafields.cage.windsheild-3 != blank %} 
+    {% if product.metafields.cage.solid-roof != blank %} 
   	if (document.getElementById('has-solid-roof').checked) {
     	optionsPrices += 85;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Solid Roof: ({{ product.metafields.cage.solid-roof.price }})</span>";   	
@@ -286,7 +286,7 @@ function swapImage(sent_img_src) {
     }
    	{% endif %}
     /* SUN ROOF */
-	{% if product.metafields.cage.windsheild-3 != blank %}
+	{% if product.metafields.cage.sun-roof != blank %}
   	if (document.getElementById('has-sun-roof').checked) {
     	optionsPrices += 85;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Sun Roof: ({{ product.metafields.cage.sun-roof.price }})</span>";   	
@@ -298,7 +298,7 @@ function swapImage(sent_img_src) {
    /*******************************************/
       
     /* WINDSHIELD OPTION 1 */
-    {% if product.metafields.cage.windsheild-3 != blank %} 
+    {% if product.metafields.cage.windsheild-1 != blank %} 
   	if (document.getElementById('has-windshield-1').checked) {
     	optionsPrices += {{ product.metafields.cage.windsheild.price }};
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + {{ product.metafields.cage.windsheild.title }} : ({{ product.metafields.cage.windsheild.price }})</span>";   	
@@ -306,7 +306,7 @@ function swapImage(sent_img_src) {
     }
     {% endif %}
     /* WINDSHIELD OPTION 2 */
-  	{% if product.metafields.cage.windsheild-3 != blank %} 
+  	{% if product.metafields.cage.windsheild-2 != blank %} 
     if (document.getElementById('has-windshield-2').checked) {
     	optionsPrices += {{ product.metafields.cage.windsheild-2.price }};
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + {{ product.metafields.cage.windsheild-2.title }} : ({{ product.metafields.cage.windsheild-2.price }})</span>";	
