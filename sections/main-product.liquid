@@ -171,16 +171,18 @@ function swapImage(sent_img_src) {
     {% endif %}
     /* WINDSHIELD OPTION 2 */
     {% if product.metafields.cage.windsheild-2 != blank %}
+    {% assign tfwindsheild2 = product.metafields.cage.windshield-2.value %}
     if (document.getElementById('has-windsheild-2').checked) {
       	cageLineItem += " + Windsheild";
-      	cageSKUs += "{{ product.metafields.cage.windsheild-2.id }},";
+      	cageSKUs += "{{ tfwindsheild-2.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 3 */
-    {% if product.metafields.cage.windsheild-3 != blank %} 
+    {% if product.metafields.cage.windsheild-3 != blank %}
+    {% assign tfwindsheild3 = product.metafields.cage.windshield-3.value %}
   	if (document.getElementById('has-windsheild-3').checked) {
       	cageLineItem += " + Windshield";
-      	cageSKUs += "{{ product.metafields.cage.windsheild-3.id }},";
+      	cageSKUs += "{{ tfwindsheild3.id }},";
     }
     {% endif %}
      	console.log(cageSKUs);
