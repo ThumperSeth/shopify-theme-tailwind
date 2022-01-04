@@ -26,6 +26,7 @@
 } 
     </style>
     
+    {% if product.metafields.global.features != blank %}
     {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
     {%- assign productPictures = product.media | where: "media_type", "image" -%}
     <div>
@@ -48,7 +49,7 @@
             <div>{{ product.metafields.global.features }}</div>
         </div>
 	</div>
-    
+    {% endif %}
 
 
 <!--<div class="product-features-section w-full flex flex-wrap mx-auto justify-center shadow-2xl bg-black">
