@@ -26,7 +26,7 @@
     }
   }]);
 </script>
-
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <link rel="stylesheet" href="https:{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-rating.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https:{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -704,48 +704,50 @@ function tfupdatePrice() {
                         {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
                         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
-                          
-                          <div class="flex flex-wrap -mx-4 overflow-hidden">
+                       <div class="flex flex-wrap -mx-4 overflow-hidden">
 
                             <div class="my-4 px-4 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-                              <!-- Column Content -->
+                                <!-- Column Content -->
                             </div>
 
                             <div class="my-4 px-4 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-                              <!-- Column Content -->
+                                <!-- Column Content -->
                             </div>
 
-                          </div>
-                          
-                          
-                          
-                          
-                                    <div class="w-full flex-col flex inline-block gap-10 pb-10 pt-10 pr-20 justify-left">
-                                        
-                                        <div class=" bg-gray-200 p-2 rounded-xl shadow-lg">
-                                          
-                                          <div class="flex inline-block min-w-0">
-                                            <span class="pl-5 my-auto"><img style="height:60px;" src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/same-day-icon.png?v=1640729343"/></span>
-                               
-                                            <p class="caption-large max-w-sm p-2"><strong><i>SAME-DAY-SHIPPING</i></strong><br>
-                                              <span class="font-bold" style="color:#108043">In-stock</span> Most orders placed before 1:00 p.m. CST ship same day (except weekends and holidays)
-                                            </p>                
-                                          </div>
-                                      	</div>
-                                      
-                                        <div class="min-w-0 bg-gray-200 p-2 rounded-xl shadow-lg">
-                                          <pickup-availability class="pickup-availability product__pickup-availabilities w-full" {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %} data-base-url="{{ shop.url }}{{ routes.root_url }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}" data-has-only-default-variant="{{ product.has_only_default_variant }}">
-                                            <template>
-                                              <pickup-availability-preview class="pickup-availability-preview">
-                                                {% render 'icon-unavailable' %}
-                                                <div class="pickup-availability-info">
-                                                  <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
-                                                  <button class="pickup-availability-button link link--text underlined-link">{{ 'products.product.pickup_availability.refresh' | t }}</button>
-                                                </div>
-                                              </pickup-availability-preview>
-                                            </template>
-                                          </pickup-availability>  
-                                        </div>
+                        </div>
+                        <div class="w-full flex-col flex inline-block gap-10 pb-10 pt-10 pr-20 justify-left">
+
+                            <div class=" bg-gray-200 p-2 rounded-xl shadow-lg">
+
+                                <div class="flex inline-block min-w-0">
+                                    <span class="pl-5 my-auto"><img style="height:60px;"
+                                            src="https://cdn.shopify.com/s/files/1/0258/5424/6963/files/same-day-icon.png?v=1640729343" /></span>
+
+                                    <p class="caption-large max-w-sm p-2"><strong><i>SAME-DAY-SHIPPING</i></strong><br>
+                                        <span class="font-bold" style="color:#108043">In-stock</span> Most orders placed before 1:00 p.m. CST
+                                        ship same day (except weekends and holidays)
+                                    </p>
+                                </div>
+                            </div>
+
+    <div class="min-w-0 bg-gray-200 p-2 rounded-xl shadow-lg">
+        <pickup-availability class="pickup-availability product__pickup-availabilities w-full" {% if
+            product.selected_or_first_available_variant.available and pick_up_availabilities.size> 0 %} available{%
+            endif %} data-base-url="{{ shop.url }}{{ routes.root_url }}" data-variant-id="{{
+            product.selected_or_first_available_variant.id }}" data-has-only-default-variant="{{
+            product.has_only_default_variant }}">
+            <template>
+                <pickup-availability-preview class="pickup-availability-preview">
+                    {% render 'icon-unavailable' %}
+                    <div class="pickup-availability-info">
+                        <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+                        <button class="pickup-availability-button link link--text underlined-link">{{
+                            'products.product.pickup_availability.refresh' | t }}</button>
+                    </div>
+                </pickup-availability-preview>
+            </template>
+        </pickup-availability>
+    </div>
                               		</div><!-- end product info {{ section.id }} -->
 
                               <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
