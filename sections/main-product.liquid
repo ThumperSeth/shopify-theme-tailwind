@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 <!-- JAVASCRIPT NONSENSE -->
 <script  type="text/javascript">
+  /************************************/
+  /* addAllItems function             */
+  /* accepts: array of variant IDs    */
+  /* add all ids in array to cart     */
+  /************************************/
   function addAllItems(array) {
     Shopify.queue = [];
     var quantity = {{ cart.item_count }} ;
