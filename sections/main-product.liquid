@@ -701,8 +701,8 @@ function swapImage(sent_img_src) {
                             <!-- WINDSHIELD -->
                             {% if product.metafields.cage.windsheild != blank %} 
                             <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roof_intrusion_bar-detail_3c35f7e4-331f-4cb0-a1b2-f659957e8eae.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
-                              <input type="checkbox" id="has-windsheild" name="has-windsheild" value="has-windsheild" onClick="tfupdatePrice();">
-                              <label for="has-windsheild" class="cage-option">Windshield</label>
+                              <input type="checkbox" id="has-windshield" name="has-windshield" value="has-windshield" onClick="tfupdatePrice();">
+                              <label for="has-windshield" class="cage-option">Windshield</label>
 							</div>
                             {% endif %}
                       </div>
