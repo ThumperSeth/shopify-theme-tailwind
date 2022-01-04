@@ -295,7 +295,7 @@ function swapImage(sent_img_src) {
 	{% if product.metafields.cage.sun-roof != blank %}
       {% assign sunRoof = product.metafields.cage.sun-roof.value %}
   	if (document.getElementById('has-sun-roof').checked) {
-    	optionsPrices += 85;
+    	optionsPrices += parseInt("{{ sunRoof.price | number | divided_by: 100 }}");
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Sun Roof: ({{ sunRoof.price }})</span>";   	
         numOfOptions++;
     }
