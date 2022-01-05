@@ -52,12 +52,13 @@ function swapImage(sent_img_src) {
         var request = Shopify.queue.shift();
         var data = 'id='+ request.variantId + '&quantity=1';
         if (cageSKU == request.variantId) {
+          console.log("cage line item: ",cageLineItem);
         	$.ajax({
          		type: 'POST',
           		url: '/cart/add.js',
           		dataType: 'json',
           		data: data,
-                properties: { 'Cage_Options' : encodeURIComponent(cageLineItem) },
+                properties: { 'Cage Optionzzz' : encodeURIComponent(cageLineItem) },
           		success: function(res){
             		Shopify.moveAlong();
             		quantity += 1;
