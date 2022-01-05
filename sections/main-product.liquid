@@ -53,7 +53,22 @@ function swapImage(sent_img_src) {
         var data = 'id='+ request.variantId + '&quantity=1';
         var properties = "cage options
         if (cageSKU == request.variantId) {
-          
+          $.ajax({
+          		type: 'POST',
+          		url: '/cart/add.js',
+          		dataType: 'json',
+          		data: data,
+          		success: function(res){
+            	Shopify.moveAlong();
+            	quantity += 1;
+          	},
+          	error: function() {
+            	// if it's not last one Move Along else update the cart number with the current quantity
+            	if (Shopify.queue.length) {
+              		Shopify.moveAlong();
+            	} 
+          	}
+        	});
         } else {
         	$.ajax({
           		type: 'POST',
