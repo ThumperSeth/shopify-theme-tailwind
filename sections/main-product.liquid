@@ -57,7 +57,7 @@ function swapImage(sent_img_src) {
           		url: '/cart/add.js',
           		dataType: 'json',
           		data: data,
-                properties: { 'Cage Options' : cageLineItem },
+                properties: { 'Cage_Options' : cageLineItem },
           		success: function(res){
             		Shopify.moveAlong();
             		quantity += 1;
