@@ -24,7 +24,7 @@ function swapImage(sent_img_src) {
   /* add all ids in array to cart     */
   /************************************/
   function addAllItems(array) {
-    var cageSKU = parseInt{{ product.selected_or_first_available_variant.id }};
+    var cageSKU = parseInt("{{ product.selected_or_first_available_variant.id }}");
     Shopify.queue = [];
     var quantity = {{ cart.item_count }} ;
     var newArray = array.split(',');
