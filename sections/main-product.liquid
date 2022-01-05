@@ -23,6 +23,17 @@ function swapImage(sent_img_src) {
   /* accepts: array of variant IDs    */
   /* add all ids in array to cart     */
   /************************************/
+  	/**************************************************************/
+	/* cage product javascript by seth nobles for thumperfab
+	/**************************************************************/
+  var cageColorCode = "X"; //set cage color initially to default value of RAW
+  var cageBrowCode = "H";  //set cage brow initially to default value of Hi 
+  var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}"; // find the base SKU minus color and brow data
+  var cageLineItem = ""; // initialize cage line item to nothing
+  var cageSKUs = "";     // initialize cage SKU options to nothing
+
+  
+  
   function addAllItems(array) {
     var cageSKU = parseInt("{{ product.selected_or_first_available_variant.id }}");
     Shopify.queue = [];
@@ -40,6 +51,10 @@ function swapImage(sent_img_src) {
       if (Shopify.queue.length) {
         var request = Shopify.queue.shift();
         var data = 'id='+ request.variantId + '&quantity=1';
+        if (cageSKU == request.variantId) {
+        	console.log("we win!");  
+        }
+        data += cage
         $.ajax({
           type: 'POST',
           url: '/cart/add.js',
@@ -70,14 +85,6 @@ function swapImage(sent_img_src) {
 
   
   {%- if product.type == "Cages" -%}
-  	/**************************************************************/
-	/* cage product javascript by seth nobles for thumperfab
-	/**************************************************************/
-  var cageColorCode = "X"; //set cage color initially to default value of RAW
-  var cageBrowCode = "H";  //set cage brow initially to default value of Hi 
-  var cageBaseSKU = "{{ product.selected_or_first_available_variant.sku | split: "-" | first }}"; // find the base SKU minus color and brow data
-  var cageLineItem = ""; // initialize cage line item to nothing
-  var cageSKUs = "";     // initialize cage SKU options to nothing
   
   	/**************************************************************/
 	/* addCageToCart function
