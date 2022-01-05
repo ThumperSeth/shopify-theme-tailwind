@@ -78,7 +78,7 @@
   </div>
 </div>
 
-<script>
+{% javascript %}
   class CartNote extends HTMLElement {
     constructor() {
       super();
@@ -91,7 +91,7 @@
   }
 
   customElements.define('cart-note', CartNote);
-</script>
+{% endjavascript %}
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
