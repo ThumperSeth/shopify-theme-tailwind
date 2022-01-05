@@ -27,6 +27,7 @@ function swapImage(sent_img_src) {
     Shopify.queue = [];
     var quantity = {{ cart.item_count }} ;
     var newArray = array.split(',');
+    let arrayCount = newArray.length;
     for (var i = 0; i < newArray.length; i++) {
       product = newArray[i];
       Shopify.queue.push({
@@ -62,6 +63,7 @@ function swapImage(sent_img_src) {
       }
     };
     Shopify.moveAlong();
+    
   };
   
 
@@ -543,7 +545,7 @@ function swapImage(sent_img_src) {
           		    		{{ product.title | remove: "Rockford Fosgate" | remove: "Polaris" | remove: "Can-Am" | remove: "Honda" | remove: "Tracker" | remove: "Yamaha" | remove: "Warn" | remove: "KFI" | escape }}
             			{%- endif -%}
           			</h1>
-                            {%- assign current_variant = product.selected_or_first_available_variant -%}
+                  {%- assign current_variant = product.selected_or_first_available_variant -%}
                   <span class="text-2xl">SKU: {{ current_variant.sku }}</span>
                   {%- when 'description' -%}
                       {%- if product.description != blank -%}
