@@ -51,7 +51,7 @@ function swapImage(sent_img_src) {
       if (Shopify.queue.length) {
         var request = Shopify.queue.shift();
         var data = 'id='+ request.variantId + '&quantity=1';
-        var properties = "cage options
+        
         if (cageSKU == request.variantId) {
           $.ajax({
           		type: 'POST',
