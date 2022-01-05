@@ -24,6 +24,7 @@ function swapImage(sent_img_src) {
   /* add all ids in array to cart     */
   /************************************/
   function addAllItems(array) {
+    var cageSKU = parseInt{{ product.selected_or_first_available_variant.id }};
     Shopify.queue = [];
     var quantity = {{ cart.item_count }} ;
     var newArray = array.split(',');
@@ -84,6 +85,7 @@ function swapImage(sent_img_src) {
     /* in order to ensure the correct data is sent to the cart
 	/**************************************************************/
   function addCageToCart() {
+    document.getElementById('').
     	cageLineItem="";
     	cageSKUs = "";
     if (document.getElementById('cage-color-raw').checked) {
@@ -191,6 +193,7 @@ function swapImage(sent_img_src) {
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
     	cageSKUs += selectedvariantID;
    		addAllItems(cageSKUs);
+    
     }
   
   	/*******************************************************************************************/
@@ -790,7 +793,7 @@ function swapImage(sent_img_src) {
               </div>
             </noscript>
           			{% endif %}
-          <div class="affirm-as-low-as"></div>
+          			<div class="affirm-as-low-as"></div>
                   {%- when 'price' -%}
                       <div class="product-price pt-5 text-6xl" id="price-wrapper" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -824,6 +827,7 @@ function swapImage(sent_img_src) {
                                   style="font-weight:700; font-size:2.2rem; font-family:'Rajdhani';"
                                   type="submit"
                                   name="add"
+                                  id=""
                                   class="prod-button shadow-xl rounded-xl product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                                 >
