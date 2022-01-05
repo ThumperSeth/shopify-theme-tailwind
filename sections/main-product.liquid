@@ -60,16 +60,16 @@ function swapImage(sent_img_src) {
           		data: data,
             	properties: { 'Cage Options' : cageLineItem },
           		success: function(res){
-            	Shopify.moveAlong();
-            	quantity += 1;
-          	},
-          	error: function() {
-            	// if it's not last one Move Along else update the cart number with the current quantity
-            	if (Shopify.queue.length) {
-              		Shopify.moveAlong();
-            	} 
-          	}
-        	});
+            		Shopify.moveAlong();
+            		quantity += 1;
+          		},
+          		error: function() {
+            		// if it's not last one Move Along else update the cart number with the current quantity
+            		if (Shopify.queue.length) {
+              			Shopify.moveAlong();
+            		} 
+          		}
+          });
         } else {
         	$.ajax({
           		type: 'POST',
@@ -77,15 +77,15 @@ function swapImage(sent_img_src) {
           		dataType: 'json',
           		data: data,
           		success: function(res){
-            	Shopify.moveAlong();
-            	quantity += 1;
-          	},
-          	error: function() {
-            	// if it's not last one Move Along else update the cart number with the current quantity
-            	if (Shopify.queue.length) {
-              		Shopify.moveAlong();
-            	} 
-          	}
+            		Shopify.moveAlong();
+            		quantity += 1;
+          		},
+          		error: function() {
+                  // if it's not last one Move Along else update the cart number with the current quantity
+                  if (Shopify.queue.length) {
+                      Shopify.moveAlong();
+                  } 
+          		}
         	});
       	}
         // If the queue is empty, we add 1 to cart
