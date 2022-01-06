@@ -132,7 +132,7 @@ function swapImage(sent_img_src) {
     	
     /* VARIABLES */
     cageLineItem=""; // line item thats sent to the cart with the cage product, contains solected options
-    cageSKUs = "";   // array of skus that need to be sent ot the cart
+    cageIDs = "";   // array of skus that need to be sent ot the cart
     
     
     /*  RAW  */
@@ -158,37 +158,37 @@ function swapImage(sent_img_src) {
     /* GRAB HANDLES */
   	if (document.getElementById('has-grab-handles').checked) {
       	cageLineItem += " + Grab Handles";
-      	cageSKUs += "32634861748275,";
+      	cageIDs += "32634861748275,";
     }
   	/* 5PT HARNESS */
   	if (document.getElementById('has-5pt-harness').checked) {
       	cageLineItem += " + 5pt Harness";
-      	cageSKUs += "39554557837363,";
+      	cageIDs += "39554557837363,";
     }
   	/* WHIP TAB */
   	if (document.getElementById('has-whip-tab').checked) {
       	cageLineItem += " + Whip Tab";
-      	cageSKUs += "39361374257203,";
+      	cageIDs += "39361374257203,";
     }
   	/* LIGHT BAR TAB */
   	if (document.getElementById('has-light-bar').checked) {
       	cageLineItem += " + Light Bar Tab";
-      	cageSKUs += "39361373274163,";
+      	cageIDs += "39361373274163,";
     }
   	/* SEATBELT HARNESS MOUNT */
   	if (document.getElementById('has-sb-bung').checked) {
       	cageLineItem += " + Seatbelt Bung";
-      	cageSKUs += "32671265816627,";
+      	cageIDs += "32671265816627,";
     }
   	/* ROOF INTRUSION */
   	if (document.getElementById('has-roof-intrusion').checked) {
       	cageLineItem += " + Roof Intrusion";
-      	cageSKUs += "32671264997427,";
+      	cageIDs += "32671264997427,";
     }
   	/* WINDSHIELD INTRUSION */
   	if (document.getElementById('has-front-intrusion').checked) {
       	cageLineItem += " + Front Intrusion";
-      	cageSKUs += "32671264768051,";
+      	cageIDs += "32671264768051,";
     }
     
     /************************/
@@ -199,7 +199,7 @@ function swapImage(sent_img_src) {
     {% assign solidRoof = product.metafields.cage.solid-roof.value %}
   	if (document.getElementById('has-solid-roof').checked) {
       	cageLineItem += " + Solid Roof";
-      	cageSKUs += "{{ solidRoof.id }},";
+      	cageIDs += "{{ solidRoof.id }},";
     }
     {% endif %}
     /* SUN ROOF */
@@ -207,7 +207,7 @@ function swapImage(sent_img_src) {
     {% assign sunRoof = product.metafields.cage.solid-roof.value %}
   	if (document.getElementById('has-sun-roof').checked) {
       	cageLineItem += " + Sun Roof";
-      	cageSKUs += "{{ sunRoof.id }},";
+      	cageIDs += "{{ sunRoof.id }},";
     }
     {% endif %}
     /************************/
@@ -218,7 +218,7 @@ function swapImage(sent_img_src) {
     {% assign tfwindshield = product.metafields.cage.windshield.value %}
     if (document.getElementById('has-windshield').checked) {
       	cageLineItem += " + Windshield";
-      	cageSKUs += "{{ tfwindshield.id }},";
+      	cageIDs += "{{ tfwindshield.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 2 */
@@ -226,7 +226,7 @@ function swapImage(sent_img_src) {
     {% assign tfwindshield2 = product.metafields.cage.windshield-2.value %}
     if (document.getElementById('has-windshield-2').checked) {
       	cageLineItem += " + Windshield";
-      	cageSKUs += "{{ tfwindshield-2.id }},";
+      	cageIDs += "{{ tfwindshield-2.id }},";
     }
     {% endif %}
     /* WINDSHIELD OPTION 3 */
@@ -234,13 +234,13 @@ function swapImage(sent_img_src) {
     {% assign tfwindshield3 = product.metafields.cage.windshield-3.value %}
   	if (document.getElementById('has-windshield-3').checked) {
       	cageLineItem += " + Windshield";
-      	cageSKUs += "{{ tfwindshield3.id }},";
+      	cageIDs += "{{ tfwindshield3.id }},";
     }
     {% endif %}
-     	console.log(cageSKUs);
+    	console.log("cage ids being sent:",cageIDs);
     	var selectedvariantID = parseInt("{{ product.selected_or_first_available_variant.id }}");
-    	cageSKUs += selectedvariantID;
-   		addAllItems(cageSKUs);
+    	cageIDs += selectedvariantID;
+   		addAllItems(cageIDs);
     
     }
   
