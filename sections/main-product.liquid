@@ -59,7 +59,10 @@ function swapImage(sent_img_src) {
           		dataType: 'json',
               	data: {
                   id: request.variantId,
-                  quantity: 1
+                  quantity: 1,
+                  properties: {
+                    'Cage Goodies': cageLineItem
+                  }
                 },
           		success: function(res){
               		console.log("cage sent to cart successfully!");
