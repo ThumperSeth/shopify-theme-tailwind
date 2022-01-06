@@ -894,7 +894,7 @@ function swapImage(sent_img_src) {
                                   type="submit"
                                   name="add"
                                   id="buy-now-button"
-                                  class="product-form__submit prod-button shadow-xl rounded-xl product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                                  class="prod-button shadow-xl rounded-xl product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                                 >
                                     <span>
