@@ -205,7 +205,9 @@
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
   <!-- nasty lil buggar -->
+    {% comment %}
     {% capture cur %}{% include "booster-currency" %}{% endcapture %}{% unless cur contains "Liquid error" %}{{ cur }}{% endunless %}
+    {% endcomment %}
   <!-- end nasty buggar -->
     <!-- RENDERING VITALS NONSENSE -->
     {% render 'vitals-loader' %}
