@@ -84,6 +84,7 @@ function swapImage(sent_img_src) {
             dataType: 'json',
             data: data,
             success: function(res){
+              console.log('option sent successfully: ', data);
               Shopify.moveAlong();
               quantity += 1;
             },
