@@ -69,6 +69,7 @@ function swapImage(sent_img_src) {
             		quantity += 1;
           		},
           		error: function() {
+              			console.log("!!!somethings not right captain!!!");
             		// if it's not last one Move Along else update the cart number with the current quantity
             		if (Shopify.queue.length) {
               			Shopify.moveAlong();
@@ -86,6 +87,7 @@ function swapImage(sent_img_src) {
               quantity += 1;
             },
             error: function() {
+              console.log("!!!somethings not right captain!!!");
               // if it's not last one Move Along else update the cart number with the current quantity
               if (Shopify.queue.length) {
                 Shopify.moveAlong();
