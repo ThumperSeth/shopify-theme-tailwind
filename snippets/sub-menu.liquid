@@ -107,11 +107,12 @@
     <span>&nbsp;&nbsp;
       {% for item in typeArray %}
 
-      {% if request.path contains product_type %} 
-      	<a class="{{ item }}-section" style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="/{{ currentBrand }}/{{ product_type }}">{{ product_type }}</a>
-      	&nbsp;&nbsp;•
+      {% if request.path contains product_type %}
+      	<span class="{{ item }}-section">
+      	<a style="color:black;font-weight:500;text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);" href="/{{ currentBrand }}/{{ product_type }}">{{ product_type }}</a>
+          &nbsp;&nbsp;•</span>
       {% else %}
-      	<a class="{{ item }}-section" href="/collections/{{ currentBrand }}#{{ item | downcase }}">{{ item | upcase }}</a>
+      <span class="{{ item }}-section"><a href="/collections/{{ currentBrand }}#{{ item | downcase }}">{{ item | upcase }}</a></span>
       {% unless forloop.last %}
       &nbsp;<span style="margin-top:15px !important;font-weight:900;">.</span>&nbsp;   
       {% endunless %}
