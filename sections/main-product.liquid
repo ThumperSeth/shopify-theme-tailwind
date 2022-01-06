@@ -255,6 +255,7 @@ function swapImage(sent_img_src) {
     var priceHTML = "";
     var optionsHTML = "<span class=\"text-2xl text-grey-400\">Base Price: $" + basePrice + ".00</span>";
   	var newPrice = "";
+    var skuHTML = "";
   	/* RAW */
   	if (document.getElementById('cage-color-raw').checked) {
     	optionsPrices += 0;
@@ -279,12 +280,14 @@ function swapImage(sent_img_src) {
   	if (document.getElementById('hi-brow').checked) {
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Hi-Brow</span><br />";
+        cageBrowCode = "B";
       	numOfOptions++;
     }
   	/* LO-BROW */
   	if (document.getElementById('lo-brow').checked) {
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Lo-Brow</span><br />";
+      	cageBrowCode = "L";
       	numOfOptions++;
       	
     }
