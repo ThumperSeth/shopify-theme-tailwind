@@ -581,6 +581,7 @@ class VariantSelects extends HTMLElement {
       this.updateURL();
       this.updateVariantInput();
       this.renderProductInfo();
+      
     }
   }
 
@@ -661,6 +662,7 @@ class VariantSelects extends HTMLElement {
     fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
       .then((response) => response.text())
       .then((responseText) => {
+      	tfupdateSKU(variant.sku);
         const id = `price-wrapper`;
         const html = new DOMParser().parseFromString(responseText, 'text/html')
         const destination = document.getElementById(id);
