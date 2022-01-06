@@ -114,8 +114,8 @@ function swapImage(sent_img_src) {
     /* in order to ensure the correct data is sent to the cart
 	/**************************************************************/
   function addCageToCart() {
-    	cageLineItem="";
-    	cageSKUs = "";
+    	cageLineItem=""; // line item thats sent to the cart with the cage product, contains solected options
+    	cageSKUs = "";   // array of skus that need to be sent ot the cart
     if (document.getElementById('cage-color-raw').checked) {
       	cageLineItem += "Raw ";
     }
