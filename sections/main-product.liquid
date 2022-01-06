@@ -36,6 +36,10 @@ function swapImage(sent_img_src) {
     console.log('THIS IS GUNSMOKE.');
   };
   
+  function tfupdateSKU(newSKU) {
+    document.getElementById('sku-wrapper').innerHTML = "SKU:" + newSKU;   
+  }
+  
   function addAllItems(array) {
     var cageSKU = parseInt("{{ product.selected_or_first_available_variant.id }}");
     Shopify.queue = [];
@@ -842,7 +846,7 @@ function swapImage(sent_img_src) {
                   {%- when 'buy_buttons' -%}
                       	<div class="buy-now-wrapper mt-8 buy-buttons w-full" {{ block.shopify_attributes }}>
                           {% if product.type == "Cages" %}
-                          <button type="button" class="buy-now-button w-full rounded-xl text-4xl font-weight-700 product-form__submit bg-red-700 text-white-700 px-24 py-8" onClick="addCageToCart();">ADD TO CART</button>
+                          <button id="buy-now-button" type="button" class="buy-now-button w-full rounded-xl text-4xl font-weight-700 product-form__submit bg-red-700 text-white-700 px-24 py-8" onClick="addCageToCart();">ADD TO CART</button>
                           {% else %}
                           <product-form class="product-form">
                             <div class="product-form__error-message-wrapper" role="alert" hidden>
