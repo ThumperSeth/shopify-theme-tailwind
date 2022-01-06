@@ -204,8 +204,10 @@
     {%- endif -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-  {% capture cur %}{% include "booster-currency" %}{% endcapture %}{% unless cur contains "Liquid error" %}{{ cur }}{% endunless %}
-	<!-- RENDERING VITALS NONSENSE -->
+  <!-- nasty lil buggar -->
+    {% capture cur %}{% include "booster-currency" %}{% endcapture %}{% unless cur contains "Liquid error" %}{{ cur }}{% endunless %}
+  <!-- end nasty buggar -->
+    <!-- RENDERING VITALS NONSENSE -->
     {% render 'vitals-loader' %}
 	<!-- RENDERING BUCKS NONSENSE -->
 {% include 'bucks-cc' %}
