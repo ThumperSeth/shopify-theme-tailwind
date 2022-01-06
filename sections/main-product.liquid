@@ -34,7 +34,11 @@ function swapImage(sent_img_src) {
 
   function moveAlongLilDoggie() {
     console.log('THIS IS GUNSMOKE.');
-    document.getElementById('buy-now-button').innerHTML = "Cage is in your Cart!";
+    let buyMeowButton = document.getElementById('buy-now-button');
+    buyMeowButton.classList.remove("border-b-4");
+    buyMeowButton.classList.remove("border-red-400");
+    buyMeowButton.innerHTML = "Cage is in your Cart!";
+    
   };
   
   function tfupdateSKU(newSKU) {
@@ -42,7 +46,10 @@ function swapImage(sent_img_src) {
   }
   
   function addAllItems(array) {
+    document.getElementById('buy-now-button').classList.add("border-b-4");
+    document.getElementById('buy-now-button').classList.add("border-red-400");
     document.getElementById('buy-now-button').innerHTML = "Moving items to cart...";
+    
     var cageSKU = parseInt("{{ product.selected_or_first_available_variant.id }}");
     Shopify.queue = [];
     var quantity = {{ cart.item_count }} ;
