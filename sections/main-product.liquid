@@ -58,7 +58,7 @@ function swapImage(sent_img_src) {
           		url: '/cart/add.js',
           		dataType: 'json',
               	data: {
-                  id: request.variantId,
+                  id: parseInt(request.variantId),
                   quantity: 1,
                   properties: { 
                     'Cage Optionzzz' : 'testies'
