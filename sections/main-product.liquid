@@ -787,10 +787,12 @@ function swapImage(sent_img_src) {
                       <fieldset class="js product-form__input">
                         <legend class="form__label">{{ option.name }}</legend>
                         {%- for value in option.values -%}
+                        	{% assign current_variant = product.selected_or_first_available_variant %}
+							
                           <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
-                                onClick="tfupdateSKU('{{ value.sku }}')";
+                                onClick="tfupdateSKU('{{ current_variant.sku }}')";
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
