@@ -32,7 +32,9 @@ function swapImage(sent_img_src) {
   var cageLineItem = ""; // initialize cage line item to nothing
   var cageSKUs = "";     // initialize cage SKU options to nothing
 
-  
+  function moveAlongLilDoggie() {
+    
+  };
   
   function addAllItems(array) {
     var cageSKU = parseInt("{{ product.selected_or_first_available_variant.id }}");
@@ -66,8 +68,7 @@ function swapImage(sent_img_src) {
                 },
           		success: function(res){
               		console.log("cage sent to cart successfully!");
-            		Shopify.moveAlong();
-            		quantity += 1;
+            		moveAlongLilDoggie();
           		},
           		error: function() {
               			console.log("!!!somethings not right with the cage captain!!!");
