@@ -280,7 +280,7 @@ function swapImage(sent_img_src) {
   	if (document.getElementById('hi-brow').checked) {
     	optionsPrices += 0;
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Hi-Brow</span><br />";
-        cageBrowCode = "B";
+        cageBrowCode = "H";
       	numOfOptions++;
     }
   	/* LO-BROW */
@@ -333,6 +333,17 @@ function swapImage(sent_img_src) {
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Front Intrusion: ($85)</span>";   	
         numOfOptions++;
     }
+    
+      
+   /*******************************************/
+   /* Set up SKU for Cage itself
+   /* combine the base cage sku, the brow code,
+   /* and the color code, then add to the
+   /* SKU HTML variable
+   /*******************************************/
+   skuHTML = cageBaseSKU + "-" + cageBrowCode + "-" + cageColorCode;
+   console.log("skuHTML:",skuHTML);   
+      
       
    /*******************************************/
    /************* ROOF OPTIONS **********/
@@ -345,6 +356,7 @@ function swapImage(sent_img_src) {
     	optionsPrices += parseInt("{{ solidRoof.price | number | divided_by: 100 }}");
       	optionsHTML += "<span class=\"text-2xl text-gray-400\"> + Solid Roof: ({{ solidRoof.price | money | remove: ".00" | remove: "USD"}})</span>";   	
         numOfOptions++;
+      	
     }
    	{% endif %}
     /* SUN ROOF */
