@@ -183,7 +183,7 @@
         margin: 0;
       }
     {% endstyle %}
-
+	
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'index.css' | asset_url | stylesheet_tag }}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -205,12 +205,13 @@
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
   {% capture cur %}{% include "booster-currency" %}{% endcapture %}{% unless cur contains "Liquid error" %}{{ cur }}{% endunless %}
-	{% render 'vitals-loader' %}
-
+	<!-- RENDERING VITALS NONSENSE -->
+    {% render 'vitals-loader' %}
+	<!-- RENDERING BUCKS NONSENSE -->
 {% include 'bucks-cc' %}
-            
+	<!-- RENDERING VITALS NONSENSE -->
   {% render 'shogun-head' %}
-
+	<!-- RENDERING GSF NONSENSE -->
 {% render 'gsf-conversion-pixels' %}
 </head>
 
