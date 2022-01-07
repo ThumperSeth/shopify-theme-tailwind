@@ -640,6 +640,7 @@ function swapImage(sent_img_src) {
                           </div>
                         </details>
                       </div>
+<!-- QUANTITY SELECTOR -->
                   {%- when 'quantity_selector' -%}
                       <div class="quantity-wrapper product-form__input product-form__quantity" {{ block.shopify_attributes }}>
                         <style>
@@ -660,12 +661,14 @@ function swapImage(sent_img_src) {
                           </button>
                         </quantity-input>
                       </div>
-                  {%- when 'popup' -%}
+<!-- POPUP -->
+          			{%- when 'popup' -%}
                       <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                         <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.link_label | default: block.settings.page.title }}</button>
                       </modal-opener>
                       <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">{{ block.settings.link_label }}</a>
-                  {%- when 'share' -%}
+<!-- SHARE -->
+          			{%- when 'share' -%}
                       <share-button class="share-button" {{ block.shopify_attributes }}>
                         <button class="share-button__button button button--tertiary hidden">
                           {% render 'icon-share' %}
@@ -692,7 +695,8 @@ function swapImage(sent_img_src) {
                         </details>
                       </share-button>
                       <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
-				  {%- when 'tf_variant_picker' -%}
+<!-- TF VARIANT PICKER -->
+          			{%- when 'tf_variant_picker' -%}
           			{% if product.type == "Cages" %}
           			<div class="w-5/6 flex flex-wrap">
           				<div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
