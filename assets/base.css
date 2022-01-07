@@ -2514,6 +2514,7 @@ details-disclosure > details {
  .shopify-policy__container h1 {
   	 font-size: 3rem;
 	line-height: 1;
+   padding-bottom: 2rem;
  }
  .shopify-policy__container .rte {
   	font-size: 1.875rem;
