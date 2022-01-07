@@ -595,11 +595,13 @@ function swapImage(sent_img_src) {
             	{%- case block.type -%}
                   {%- when '@app' -%}
                   	{% render block %}
-                  {%- when 'text' -%}
+  <!-- TEXT -->
+          			{%- when 'text' -%}
                       <p class="product__text">
                         {{- block.settings.text -}}
                       </p>
-                  {%- when 'title' -%}
+  <!-- TITLE-->
+                  	{%- when 'title' -%}
                       <span class="product-make-and-model text-3xl" style="">
                         {{ product.metafields.global.product_make | upcase | escape }} / {{ product.metafields.global.product_model | upcase | escape }}
                       </span>
@@ -612,13 +614,15 @@ function swapImage(sent_img_src) {
           			</h1>
                   {%- assign current_variant = product.selected_or_first_available_variant -%}
                   <span id="sku-wrapper" class="text-2xl">SKU: {{ current_variant.sku }}</span>
-                  {%- when 'description' -%}
+  <!-- DESCRIPTION -->
+          			{%- when 'description' -%}
                       {%- if product.description != blank -%}
                           <div class="product__description rte">
                             {{ product.description }}
                           </div>
                       {%- endif -%}
-                  {%- when 'collapsible_tab' -%}
+  <!-- COLLAPSIBLE TAB -->
+          			{%- when 'collapsible_tab' -%}
                       <div class="product__accordion accordion" {{ block.shopify_attributes }}>
                         <details>
                           <summary>
