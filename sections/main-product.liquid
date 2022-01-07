@@ -869,8 +869,9 @@ function swapImage(sent_img_src) {
               </div>
             </noscript>
           			{% endif %}
-          			<div class="affirm-as-low-as"></div>
-                  {%- when 'price' -%}
+		         <div class="affirm-as-low-as"></div>
+<!-- PRICE -->
+          			{%- when 'price' -%}
                       <div class="product-price pt-5 text-6xl" id="price-wrapper" {{ block.shopify_attributes }}>
                         {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                       </div>
@@ -880,6 +881,7 @@ function swapImage(sent_img_src) {
                             {{ form | payment_terms }}
                         {%- endform -%}
                       </div>
+<!-- BUY BUTTONS -->
                   {%- when 'buy_buttons' -%}
                       	<div class="product-form__buttons buy-now-wrapper mt-8 buy-buttons w-full" {{ block.shopify_attributes }}>
                           {% if product.type == "Cages" %}
