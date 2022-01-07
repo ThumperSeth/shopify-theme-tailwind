@@ -1593,7 +1593,7 @@ details[open] > .share-button__fallback {
   resize: vertical;
 }
 
-input[type='checkbox'] {
+.toggle input[type='checkbox'] {
   display: inline-block;
   width: auto;
   margin-right: 0.5rem;
