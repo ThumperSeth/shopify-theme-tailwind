@@ -786,7 +786,9 @@ function swapImage(sent_img_src) {
           </div>
           <script>tfupdatePrice();</script>
           	{% endif %}
-                  {%- when 'variant_picker' -%}
+
+<!-- QUANTITY SELECTOR -->
+          {%- when 'variant_picker' -%}
 			{% if product.type != "Cages" %}
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
