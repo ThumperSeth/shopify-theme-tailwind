@@ -8,6 +8,21 @@
 {% assign url_parts = request.path | downcase | split: "/" %}
 {% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
 {% for part in url_parts %}
+	{% assign downPart = part | downcase %}
+	{% case downPart %}
+		{% when "accents" %}
+		{% when "accessories" %}
+		{% when "audio" %}
+		{% when "bumpers" %}
+		{% when "cages" %}
+		{% when "doors" %}
+		{% when "lighting" %}
+		{% when "roofs" %}
+		{% when "winches" %}
+	{% endcase %}
+{% endfor %}
+
+{% for part in url_parts %}
 {% assign downPart = part | downcase %}
 {% case downPart %}
 	{% when "polaris" %}
