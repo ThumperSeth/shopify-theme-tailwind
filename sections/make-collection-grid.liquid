@@ -7,36 +7,36 @@
 <!-- DETECT MAKE & MODEL IN URL -->
 {% assign url_parts = request.path | downcase | split: "/" %}
 {% assign typeArray = "accents,accessories,audio,bumpers,cages,doors,lighting,roofs,winches" | split: ',' %}
-{% assign onlyShow = "" %}
+{% assign onlyShow = "ALL" %}
 {% for part in url_parts %}
 	{% assign downPart = part | downcase %}
 	{% case downPart %}
 		{% when "accents" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "accessories" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "audio" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "bumpers" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "cages" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "doors" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "lighting" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "roofs" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 		{% when "winches" %}
-			{% assign onlyShow = "" %}
+			{% assign onlyShow = downPart %}
 			{% break %}
 	{% endcase %}
 {% endfor %}
