@@ -1598,7 +1598,7 @@ details[open] > .share-button__fallback {
   margin-right: 0.5rem;
 }
   
-input[type='checkbox'] {
+.old-checkbox input[type='checkbox'] {
   display: inline-block;
   width: auto;
   margin-right: 0.5rem;
