@@ -2511,6 +2511,11 @@ details-disclosure > details {
     
  }
     
+ .shopify-policy__container h1 {
+  	 font-size: 3rem;
+	line-height: 1;
+ }
+    
 .product__image-slider {
   width: 100%;
 }
