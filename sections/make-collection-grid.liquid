@@ -140,6 +140,9 @@
       	{% endpaginate %}
       	
         {% assign numberOfItemsInSection = 0 %}
+      	{% unless onlyShow == "ALL" %}
+      		{% assign typeArray = onlyShow %}
+      	{% endunless %}
         {% for stuff in typeArray %}
               <div class="{{ stuff }}-section w-full grid justify-items-center" style="background: rgb(255,255,255 0.5); background: linear-gradient(0deg, rgba(220,220,220,0.5) 90%, {{ brandRGBA }} 100%);">
                   <div class="w-11/12 justify-items-center pb-20"> 
