@@ -1595,6 +1595,11 @@ details[open] > .share-button__fallback {
 
 .toggle input[type='checkbox'] {
   display: inline-block;
+  margin-right: 0.5rem;
+}
+  
+input[type='checkbox'] {
+  display: inline-block;
   width: auto;
   margin-right: 0.5rem;
 }
