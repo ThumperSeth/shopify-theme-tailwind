@@ -2504,8 +2504,7 @@ details-disclosure > details {
   }
     
     
- shopify-policy__container {
-    max-width:200ch!important;
+ .shopify-policy__container {
     padding-left:5rem;
     padding-right:5rem;
  }
