@@ -218,8 +218,8 @@
 	<!-- RENDERING GSF NONSENSE -->
 {% render 'gsf-conversion-pixels' %}
     <!-- tw elements -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    
+
+    {{ 'tw-elements.min.css' | asset_url | stylesheet_tag }}
 </head>
 
   <body class="gradient">
