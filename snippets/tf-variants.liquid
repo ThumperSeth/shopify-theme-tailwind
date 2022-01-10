@@ -23,18 +23,21 @@
       <label for="lo-brow">Lo-Brow</label>
     </div>
     <!-- ROOF OPTIONS -->
+    {% if product.metafields.cage.solid-roof != blank or product.metafields.cage.solid-roof != blank %}
     <div class="form__label mb-0">Roof Options:</div>
     <div class="js product-form__input flex flex-wrap mb-0">
       <input type="radio" id="no-roof" name="roof-radios" value="No Roof" onClick="tfupdatePrice();" checked>
       <label for="no-roof">No Roof</label>
-
-      <input type="radio" id="has-solid-roof" name="roof-radios" value="Solid Roof" onClick="tfupdatePrice();">
-      <label for="has-solid-roof">Solid Roof</label>
-      
-      <input type="radio" id="has-sun-roof" name="roof-radios" value="Sun Roof" onClick="tfupdatePrice();">
-      <label for="has-sun-roof">Sun Roof</label>
+ 	  {% if product.metafields.cage.solid-roof != blank %} 
+      	<input type="radio" id="has-solid-roof" name="roof-radios" value="Solid Roof" onClick="tfupdatePrice();">
+      	<label for="has-solid-roof">Solid Roof</label>
+      {% endif %}
+      {% if product.metafields.cage.sun-roof != blank %} 
+      	<input type="radio" id="has-sun-roof" name="roof-radios" value="Sun Roof" onClick="tfupdatePrice();">
+      	<label for="has-sun-roof">Sun Roof</label>
+      {% endif %}
     </div>   
-    
+    {% endif %}
 	<!-- CAGE OPTIONS -->
     <div class="form__label">Cage Options</div>
     <div class="js product-form__input flex-wrap lg:flex-col sm:flex-col md:flex-col text-xl mb-0">
