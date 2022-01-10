@@ -1,9 +1,9 @@
 {% if product.type == "Cages" %}
 <div class="w-5/6 flex flex-wrap">
   <div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-    <div class="form__label mb-0">Cage Color</div>
-    <div class="js product-form__input flex flex-wrap mb-0">
       <!-- COLOR -->
+    <div class="form__label mb-0">Cage Color:</div>
+    <div class="js product-form__input flex flex-wrap mb-0">
       <input class="color-radios" type="radio" id="cage-color-raw" name="cage-color" value="Raw" onClick="tfupdatePrice();" checked>
       <label for="cage-color-raw">Raw</label>
 
@@ -13,18 +13,31 @@
       <input class="color-radios" type="radio" id="cage-color-custom" name="cage-color" value="Custom" onClick="tfupdatePrice();">
       <label for="cage-color-custom">Custom</label>
     </div>
-
-    <div class="form__label mb-0">Brow Bar</div>
+	<!-- BROW BARS -->
+    <div class="form__label mb-0">Brow Bar:</div>
     <div class="js product-form__input flex flex-wrap mb-0">
-      <!-- BROW BARS -->
       <input type="radio" id="hi-brow" name="brow-bar-radios" value="Hi-Brow" onClick="tfupdatePrice();" checked>
       <label for="hi-brow">Hi-Brow</label>
 
       <input type="radio" id="lo-brow" name="brow-bar-radios" value="Lo-Brow" onClick="tfupdatePrice();">
       <label for="lo-brow">Lo-Brow</label>
     </div>
+    <!-- ROOF OPTIONS -->
+    <div class="form__label mb-0">Roof Options:</div>
+    <div class="js product-form__input flex flex-wrap mb-0">
+      <input type="radio" id="no-roof" name="roof-radios" value="No Roof" onClick="tfupdatePrice();" checked>
+      <label for="no-roof">No Roof</label>
+
+      <input type="radio" id="solid-roof" name="roof-radios" value="Solid Roof" onClick="tfupdatePrice();">
+      <label for="solid-roof">Solid Roof</label>
+      
+      <input type="radio" id="sun-roof" name="roof-radios" value="Sun Roof" onClick="tfupdatePrice();">
+      <label for="sun-roof">Sun Roof</label>
+    </div>
     
-<!-- CAGE OPTIONS -->
+    
+    
+	<!-- CAGE OPTIONS -->
     <div class="form__label">Cage Options</div>
     <div class="js product-form__input flex-wrap lg:flex-col sm:flex-col md:flex-col text-xl mb-0">
 
