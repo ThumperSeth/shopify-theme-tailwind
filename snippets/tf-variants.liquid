@@ -1,0 +1,89 @@
+{% if product.type == "Cages" %}
+<div class="w-5/6 flex flex-wrap">
+  <div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+    <div class="form__label mb-0">Cage Color</div>
+    <div class="js product-form__input flex flex-wrap mb-0">
+      <!-- COLOR -->
+      <input class="color-radios" type="radio" id="cage-color-raw" name="cage-color" value="Raw" onClick="tfupdatePrice();" checked>
+      <label for="cage-color-raw">Raw</label>
+
+      <input class="color-radios" type="radio" id="cage-color-black" name="cage-color" value="Black" onClick="tfupdatePrice();">
+      <label for="cage-color-black">Black</label>
+
+      <input class="color-radios" type="radio" id="cage-color-custom" name="cage-color" value="Custom" onClick="tfupdatePrice();">
+      <label for="cage-color-custom">Custom</label>
+    </div>
+
+    <div class="form__label mb-0">Brow Bar</div>
+    <div class="js product-form__input flex flex-wrap mb-0">
+      <!-- BROW BARS -->
+      <input type="radio" id="hi-brow" name="brow-bar-radios" value="Hi-Brow" onClick="tfupdatePrice();" checked>
+      <label for="hi-brow">Hi-Brow</label>
+
+      <input type="radio" id="lo-brow" name="brow-bar-radios" value="Lo-Brow" onClick="tfupdatePrice();">
+      <label for="lo-brow">Lo-Brow</label>
+    </div>
+    <div class="form__label">Cage Options</div>
+    <div class="js product-form__input flex-wrap lg:flex-col sm:flex-col md:flex-col text-xl mb-0">
+
+      <!-- GRAB HANDLES -->
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/grab_handles-detail_369fd9cd-0bd8-4bd6-9e8e-447d9fd8da09.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-grab-handles" name="has-grab-handles" value="has-grab-handles" onClick="tfupdatePrice();">
+        <label for="has-grab-handles" class="cage-option">Grab Handles</label>
+      </div>
+      <!-- 5PT HARNESS -->
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/5-point_harness_mounts-4-seat_f290310c-a858-42d2-97e3-16d0d4944313.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-5pt-harness" name="has-5pt-harness" value="has-5pt-harness" onClick="tfupdatePrice();">
+        <label for="has-5pt-harness" class="cage-option">5pt Harness</label>
+      </div>                            
+      <!-- SEATBELT HARNESS -->
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/seatbelt_harness_mount.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-sb-bung" name="has-sb-bung" value="has-sb-bung" onClick="tfupdatePrice();">
+        <label for="has-sb-bung" class="cage-option">Seatbelt Bung</label>
+      </div>
+      <!-- LIGHT BAR TAB -->
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/light_bar_tab.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-light-bar" name="has-light-bar" value="has-light-bar" onClick="tfupdatePrice();">
+        <label for="has-light-bar" class="cage-option">Light Bar Tab</label>
+      </div>
+      <!-- WHIP TAB -->
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/whip_tab_d312b7be-0267-4453-8c8d-111e56cf488b.jpg?v=1640147565');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-whip-tab" name="has-whip-tab" value="has-whip-tab" onClick="tfupdatePrice();">
+        <label for="has-whip-tab" class="cage-option">Whip Tab</label>
+      </div>
+      <!-- FRONT INTRUSION -->
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/window_intrusion_bar-detail_a77d044b-9dfd-4eec-be52-6e8dda99c161.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-front-intrusion" name="has-front-intrusion" value="has-front-intrusion" onClick="tfupdatePrice();">
+        <label for="has-front-intrusion" class="cage-option">Front Intrusion Bar</label>
+      </div>
+      <!-- ROOF INTRUSION -->
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roof_intrusion_bar-detail_3c35f7e4-331f-4cb0-a1b2-f659957e8eae.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-roof-intrusion" name="has-roof-intrusion" value="has-roof-intrusion" onClick="tfupdatePrice();">
+        <label for="has-roof-intrusion" class="cage-option">Roof Intrusion Bar</label>
+      </div>
+      <!-- SOLID ROOF -->
+      {% if product.metafields.cage.solid-roof != blank %} 
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roof_intrusion_bar-detail_3c35f7e4-331f-4cb0-a1b2-f659957e8eae.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-solid-roof" name="has-solid-roof" value="has-solid-roof" onClick="tfupdatePrice();">
+        <label for="has-solid-roof" class="cage-option">Solid Roof</label>
+      </div>
+      {% endif %}
+      <!-- SUN ROOF -->
+      {% if product.metafields.cage.sun-roof != blank %} 
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roof_intrusion_bar-detail_3c35f7e4-331f-4cb0-a1b2-f659957e8eae.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-sun-roof" name="has-sun-roof" value="has-sun-roof" onClick="tfupdatePrice();">
+        <label for="has-sun-roof" class="cage-option">Sun Roof</label>
+      </div>
+      {% endif %}
+      <!-- WINDSHIELD -->
+      {% if product.metafields.cage.windsheild != blank %} 
+      <div onmouseenter="swapImage('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/roof_intrusion_bar-detail_3c35f7e4-331f-4cb0-a1b2-f659957e8eae.jpg?v=1640147566');" onmouseleave="swapImage('{{ product.featured_image | img_url: "1024x1024" }}');">
+        <input type="checkbox" id="has-windshield" name="has-windshield" value="has-windshield" onClick="tfupdatePrice();">
+        <label for="has-windshield" class="cage-option">Windshield</label>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<script>tfupdatePrice();</script>
+{% endif %}
