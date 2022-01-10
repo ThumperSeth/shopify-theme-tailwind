@@ -224,6 +224,9 @@ This file can be re-written at any time.
   {% render 'shogun-head' %}
 	<!-- RENDERING GSF NONSENSE -->
 {% render 'gsf-conversion-pixels' %}
+    <!-- tw elements -->
+
+    {{ 'tw-elements.min.css' | asset_url | stylesheet_tag }}
 
 </head>
 
@@ -258,6 +261,7 @@ This file can be re-written at any time.
       }
     </script>
 <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   <style type="text/css">
     body, html {
       width: 100% !important;
