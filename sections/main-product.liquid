@@ -8,23 +8,18 @@
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 <!-- JAVASCRIPT NONSENSE -->
 <script>
-/**************************************************************/
-/* swapImage function */
+/**********************************************************************/
+/* swapImage function                                                 */
 /* accepts http src of image youn would like to swap the main img for */
-/* swaps the main product image with the one sent to the function */
-/**************************************************************/
+/* swaps the main product image with the one sent to the function     */
+/**********************************************************************/
 function swapImage(sent_img_src) {
 	document.getElementById('bigIMG').src = sent_img_src;
 };
 </script>
 <script type="text/javascript">
-  /************************************/
-  /* addAllItems function             */
-  /* accepts: array of variant IDs    */
-  /* add all ids in array to cart     */
-  /************************************/
   	/**************************************************************/
-	/* cage product javascript by seth nobles for thumperfab
+	/* cage product javascript by seth nobles for thumperfab      */
 	/**************************************************************/
   var cageColorCode = "X"; //set cage color initially to default value of RAW
   var cageBrowCode = "H";  //set cage brow initially to default value of Hi 
@@ -45,6 +40,11 @@ function swapImage(sent_img_src) {
     document.getElementById('sku-wrapper').innerHTML = "SKU:" + newSKU;   
   }
   
+  /************************************/
+  /* addAllItems function             */
+  /* accepts: array of variant IDs    */
+  /* add all ids in array to cart     */
+  /************************************/
   function addAllItems(array) {
     document.getElementById('buy-now-button').classList.add("border-b-4");
     document.getElementById('buy-now-button').classList.add("border-red-400");
