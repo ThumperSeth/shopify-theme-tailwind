@@ -2481,6 +2481,19 @@ details-disclosure > details {
   .make-menu a:active {
     color: black !important;
 }
+  
+  .index-section-title {
+    border-bottom:1px dotted #fefefe;
+    background: rgb(239,239,239);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(145,145,145,1) 100%);
+   /* background-image: url('https://cdn.shopify.com/s/files/1/0258/5424/6963/files/seamless_concrete-1.jpg?v=1640190454');*/
+    /*background-image: url(https://cdn.shopify.com/s/files/1/0258/5424/6963/files/concrete_wall.png?v=1640301884);*/
+    background-repeat: repeat-x;
+    background-color: #ccc;
+    font-size: 4rem !important;
+    text-shadow: 2px 3px 5px #555;
+  }
+  
   .related-products-title {
     border-bottom:1px dotted #fefefe;
     background: rgb(239,239,239);
