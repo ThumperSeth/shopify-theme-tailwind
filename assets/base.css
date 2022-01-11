@@ -2495,7 +2495,7 @@ details-disclosure > details {
   }
   @media screen and (min-width: 750px) {
     .product-section-title {
-    text-align:center;
+    text-align:left;
   }
   }*/
     
