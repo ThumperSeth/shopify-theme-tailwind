@@ -1,3 +1,6 @@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+                    <!-- CAGES -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 {% if product.type == "Cages" %}
 <div class="w-5/6 flex flex-wrap">
   <div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
@@ -98,6 +101,28 @@
         <label for="has-windshield" class="cage-option">Windshield</label>
       </div>
       {% endif %}
+    </div>
+  </div>
+</div>
+<script>tfupdatePrice();</script>
+{% endif %}
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+                    <!-- BUMPERS -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+{% if product.type == "Cages" %}
+<div class="w-5/6 flex flex-wrap">
+  <div data-section="tf-{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+      <!-- COLOR -->
+    <div class="form__label mb-0">Bumper Color:</div>
+    <div class="js product-form__input flex flex-wrap mb-0">
+      <input class="color-radios" type="radio" id="cage-color-raw" name="cage-color" value="Raw" onClick="tfupdatePrice();" checked>
+      <label for="cage-color-raw">Raw</label>
+
+      <input class="color-radios" type="radio" id="cage-color-black" name="cage-color" value="Black" onClick="tfupdatePrice();">
+      <label for="cage-color-black">Black</label>
+
+      <input class="color-radios" type="radio" id="cage-color-custom" name="cage-color" value="Custom" onClick="tfupdatePrice();">
+      <label for="cage-color-custom">Custom</label>
     </div>
   </div>
 </div>
