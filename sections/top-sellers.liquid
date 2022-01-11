@@ -17,8 +17,8 @@
     assign more_in_collection = true
   endif
 -%}
-<section id="top-sellers" class="top-sellers page-width">
-<div class="collection page-width{% if section.settings.swipe_on_mobile == true and section.settings.collection.all_products_count > 2 and section.settings.products_to_show > 2 %} page-width-desktop{% endif %}">
+<section id="top-sellers" class="top-sellers w-full">
+<div class="collection {% if section.settings.swipe_on_mobile == true and section.settings.collection.all_products_count > 2 and section.settings.products_to_show > 2 %} page-width-desktop{% endif %}">
   <div class="w-full">
     <div class="index-section-title w-full text-6xl bg-gray-400 text-center pt-5" style="font-family: Teko;">FEATURED FAB</div>
 
