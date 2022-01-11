@@ -40,6 +40,7 @@
   	
   }
 </style>
+{% if product.metafields.global.fitment != blank %}
 <div class="product-fitment-section w-full flex flex-wrap mx-left justify-center">
   <!--	<div class="product-section-title product-fitment-title w-full text-3xl font-bold p-10 shadow-lg">
 		FITMENT GUIDE
@@ -65,7 +66,7 @@
     </div>
 	</div>
 </div>
-
+{% endif %}
 
 
 {% schema %}
