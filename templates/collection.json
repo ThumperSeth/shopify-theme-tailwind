@@ -208,6 +208,7 @@
     },
     "1640302793c25028ad": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{% render 'popup-modal' %}"
       }
