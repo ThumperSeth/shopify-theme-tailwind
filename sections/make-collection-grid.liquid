@@ -131,7 +131,6 @@
 <div class="product-section-title w-full text-3xl font-bold p-2 shadow-2xl">
 	{% render 'tf-svg' %}    
 </div>
-<section id="ProductGridContainer page-width">
 	<div class="collection w-full align-center justify-items-center">
         <div class="loading-overlay gradient"></div>
       	{% paginate collections.all.products by 500 %}
@@ -212,7 +211,6 @@
       		{% endif %}
        {%- endfor -%}
   </div>
-</section>
 
 {% schema %}
 {
