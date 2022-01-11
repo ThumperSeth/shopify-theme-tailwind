@@ -46,13 +46,14 @@ function swapImage(sent_img_src) {
   /* add all ids in array to cart     */
   /************************************/
   function addAllItems(array) {
+    /* CHANGE THE CLASSES AND TEXT OF THE BUY NOW BUTTON */
     document.getElementById('buy-now-button').classList.add("border-b-4");
     document.getElementById('buy-now-button').classList.add("border-red-400");
     document.getElementById('buy-now-button').innerHTML = "Moving items to cart...";
     
     var cageSKU = parseInt("{{ product.selected_or_first_available_variant.id }}");
     Shopify.queue = [];
-    var quantity = {{ cart.item_count }} ;
+    var quantity = {{ cart.item_count }};
     var newArray = array.split(',');
     let arrayCount = newArray.length;
     for (var i = 0; i < newArray.length; i++) {
