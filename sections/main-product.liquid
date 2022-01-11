@@ -543,7 +543,7 @@ function swapImage(sent_img_src) {
           {% assign brandColor = "#ccc" %}
   {% endcase %}
 {% endfor %}
-
+<!-- END DETECT BRAND IN URL -->
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- assign productPictures = product.media | where: "media_type", "image" -%}
 {%- if first_3d_model -%}
