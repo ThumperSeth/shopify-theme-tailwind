@@ -44,7 +44,7 @@
                 {% assign related_product_handle = field | last %}
                 {% assign full_url = site_url | append: related_product_handle %}
                 {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
-                <div class="carousel-cell flex flex-col justify-center w-1/3">
+                <div class="carousel-cell flex flex-wrap justify-center w-1/3">
                   <a href="{{ all_products[related_product_handle].url }}">
                     <img src="{{ all_products[related_product_handle].featured_media | img_url: '200x200' }}"  border="0" />
                     {%- if all_products[related_product_handle].metafields.global.display_name.value != nil -%}
