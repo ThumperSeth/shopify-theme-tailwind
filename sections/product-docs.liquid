@@ -41,8 +41,8 @@
           <div>
             <h2 class="text-gray-700 text-xl md:text-2xl font-bold">{{ product.title | upcase }} PRODUCT INSTALLATION VIDEO</h2>
           </div>
-			<div class="relative overflow-hidden pr-5 pl-5" style="width:800px; height:400px;">
-    		<iframe class="absolute top-0 left-0 w-full"style="width:800px; height:400px;" src="{{ product.metafields.media.installation-video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="relative overflow-hidden pr-5 pl-5" style="width:800px; height:420px;">
+    		<iframe class="absolute top-0 left-0 w-full"style="width:800px; height:420px;" src="{{ product.metafields.media.installation-video | replace: '/watch?v=', '/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     	</div>
         </div>
         {% endif %}
